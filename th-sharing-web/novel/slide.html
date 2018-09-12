@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="{templates}/static/css/new/novel.slider.css">
+<section id="nv_slider">
+  <div class="ribbon">
+    <a href="#">ยอดนิยม</a>
+  </div>
+  <div class="container" id="slider_width">
+    <div class="row">
+      <div id="slider">
+        <figure>
+          {小说:数量=5;排序=总点击}
+          <div class="slide-item" id="slider-{i}">
+            <div class="col s12 m8 l8 slider-left">
+              <div class="slider-content">
+                <p class="slider_text-sub">{小说作者}</p>
+                <h3 class="slider_text-big">{小说名字}</h3>
+                <p class="slider_text-normal">{小说简介:500}...</p>
+                <p class="slider_text-normal">อ่านทั้งหมด : {小说总点击} ครั้ง</p>
+                <a class="waves-effect waves-light btn" href="{url}" target="_blank"><i class="material-icons left">book</i>อ่านเรื่องนี้</a>
+              </div>
+            </div>
+            <div class="col s12 m4 l4 slider-right">
+              <div class="slider_img-box center">
+                <img class="slider_img" src="{小说封面}" alt="{小说名字}" />
+              </div>
+            </div>
+          </div>
+          {/小说}
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>

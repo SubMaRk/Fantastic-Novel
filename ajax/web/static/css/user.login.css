@@ -1,0 +1,45 @@
+#login_page {
+}
+#no_mgb {margin-bottom:unset!important;}
+#login_width {
+  width: 100% !important;
+}
+
+.user_nolog {
+  text-align: center;
+  padding-top: 5px;
+}
+
+.zoom-center {
+  font-size: 4rem;
+}
+
+.login_text {
+  font-size: 1.4rem;
+  text-align: center;
+  margin: unset;
+  padding-bottom: 10px;
+}
+
+#login_style {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+#reg_page {
+  padding-top: 5px;
+}
+
+#reg_width {
+  width: 100% !important;
+}
+.reg_text {
+  font-size: 1.4rem;
+  text-align: center;
+  margin: unset;
+  padding-bottom: 10px;
+}
+
+#reg_form {
+  padding-left: 40px;
+  padding-right: 40px;
+}

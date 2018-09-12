@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="th" dir="ltr" id="index">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Language" content="utf-8">
+  <meta http-equiv="Pragma" content="no-cache">
+  <title>ลงทะเบียน ~ {网站名}</title>
+  <meta name="keywords" content="ลงทะเบียน">
+  <meta name="description" content="ลงทะเบียนเป็นสมาชิกเพื่อใช้งานเว็บไซต์ TH-SHARING">
+  <!-- OG META TAGS -->
+  <meta property="og.title" content="ลงทะเบียน ~ {网站名}">
+  <meta property="og.description" content="ลงทะเบียนเป็นสมาชิกเพื่อใช้งานเว็บไซต์ TH-SHARING">
+  <meta property="og.type" content="website">
+  <meta property="og.url" content="{当前url}/module/user/reg.php">
+  <meta property="og.image" content="{logo}">
+  <meta property="fb:pages" content="268246090218455">
+  <!-- Other META TAGS -->
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Global JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="{templates}/static/css/alertify.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script>
+    window.onerror = function() {
+      return true;
+    }
+  </script>
+</head>
+<body>
+<link rel="stylesheet" href="{templates}/static/css/user.reg.css">
+  <section id="reg_page">
+    <div class="container" id="reg_width">
+      <div class="row" id="no_mgb">
+        <form class="col s12" id="reg_form" name="reg_form">
+          <div class="row" id="no_mgb">
+            <div class="user_nolog">
+              <i class="material-icons zoom-center">account_box</i>
+              <p class="reg_text">
+                โปรดกรอกข้อมูลเพื่อลงทะเบียน
+              </p>
+            </div>
+            {表单锁}
+			<input type="hidden" name="type" value="reg" />
+            <div class="input-field col s12">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="user_name" type="text" class="viladate" name="name" />
+              <label for="user_name">ชื่อผู้ใช้</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">lock</i>
+              <input id="user_password_1" type="password" class="validate" name="psw" />
+              <label for="user_password_1">รหัสผ่าน</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">lock</i>
+              <input id="user_password_2" type="password" class="validate" name="repsw" />
+              <label for="user_password_2">ยืนยันรหัสผ่าน</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">email</i>
+              <input id="user_mail" type="email" class="viladate" name="email" />
+              <label for="user_mail">อีเมล์</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">fingerprint</i> {登录验证码开启}
+              <input id="code" type="text" name="code" style="width:70%" />{登录验证码}{/登录验证码开启}
+              <label for="cpde">โค้ดยืนยัน</label>
+            </div>
+            <div class="input-field col s12 center">
+              <input type="hidden" name="time" value="2592000" />
+              <input type="hidden" name="remember" value="1" />
+              <button class="waves-effect waves-light btn" value="true" type="submit" name="submit" id="reg">ลงทะเบียน</button>
+              <p class="message">
+                มีบัญชีอยฤู่แล้วใช่ไหม? <a href="javascript:easydialog_url('user.login','เข้าสู่ระบบ','',390,500)">เข้าสู่ระบบเลย!</a><br /> หรือ <a href="{找回密码}">ลืมรหัสผ่าน?</a>
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <div class="alertify-logs bottom right"></div>
+</body>
+</html>
+
+<script src="/files/js/common.js"></script>
+<script>
+$(function(){
+	//注册
+	$("#reg").click(function(){
+		var name=$("#reg_form [name=name]").val();
+		var psw=$("#reg_form [name=psw]").val();
+		var repsw=$("#reg_form [name=repsw]").val();
+		var email=$("#reg_form [name=email]").val();
+
+		if(name.length>16 || name.length<5){
+			//easydialog_alert('对不起，账号长度只能为5-16个字符！','','','');
+			alertify.error("ขออภัย! ชื่อผู้ใช้ต้องมีความยาว 3-16 ตัวอักษร");
+			return false;
+		}else if(psw.length>16 || psw.length<5){
+			//easydialog_alert('对不起，密码长度只能为5-16个字符！','','','');
+			alertify.error("ขออภัย! รหัสผ่านต้องมีความยาว 6-16 ตัวอักษร");
+			return false;
+		}else if( psw != repsw ){
+			//easydialog_alert('对不起，两次输入的密码不一致！','','','');
+			alertify.error("ขออภัย! รหัสทั้งสองไม่ตรงกัน");
+			return false;
+		}else if( !isEmail(email) ){
+			//easydialog_alert('对不起，邮箱格式错误！','','','');
+			alertify.error("ขออภัย! ที่อยู่อีเมล์ไม่ถูกต้อง");
+			return false;
+		}else if( $("#reg_form [name=code]") && $("#reg_form [name=code]").val() == ''){
+			//easydialog_alert('对不起，请输入验证码！','','','');
+			alertify.error("ขออภัย! โค้ดยืนยันไม่ถูกต้อง");
+			return false;
+		}else{
+			easydialog_loading();
+			$.ajax({
+				type:"POST",
+				url:"{注册提交地址}&ajax=yes",
+				data:$("[name=reg_form]").serializeArray(),
+				dataType:"json",
+				success:function(data){
+					if( data.code != 200 ){
+						alertify.success(data.msg);
+					}else{
+						easydialog_autoclose('ลงทะเบียนเรียบร้อยแล้ว! กำลักำลังจะเปลี่ยนไปหน้าข้อมูลส่วนตัวใน 2 วินาที','success');
+						if( self!=top ){
+							setTimeout(function(){window.parent.location='{用户中心}';},1500);
+						}else{
+							setTimeout(function(){window.location='{用户中心}';},1500);
+						}
+					}
+				},
+				async:true,
+			});
+			return false; 
+		}
+	})
+})
+</script>
