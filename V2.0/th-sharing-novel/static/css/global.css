@@ -1,0 +1,57 @@
+/***************************
+/** FILE NAME : global.css
+/** Created by SubMaRk
+/** Date Created : 24/12/2561
+/***************************
+
+/* GLOBAL */
+#nv_global_w {width:90%!important}
+
+/* NAV */
+nav .brand-logo {
+  margin-left: 30px;
+  margin-top: -5px;
+}
+nav a, nav ul a {
+  color: #000 !important;
+}
+.dropdown-content {
+  min-width: 150px !important;
+  top: unset !important;
+}
+#nv_login {
+  display: none;
+}
+#nv_logout {
+  display: none;
+}
+
+/* SLIDER */
+.slider .indicators .indicator-item {
+  background-color: #666666;
+  border: 3px solid #ffffff;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.slider .indicators .indicator-item.active {
+  background-color: #ffffff;
+}
+.slider {
+  width: 900px;
+  margin: 0 auto;
+}
+.slider .indicators {
+  bottom: 60px;
+  z-index: 100;
+  /* text-align: left; */
+}
+
+/* FOOTER */
+#friend_link {}
+
+#footer {}
+  .nv_ft_top {}
+    .nv_ft_sitemap {}
+    .nv_ft_link {}
+  .nv_ft_bottom {}

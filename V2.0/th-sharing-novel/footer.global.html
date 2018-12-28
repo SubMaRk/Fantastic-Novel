@@ -1,0 +1,88 @@
+<section id="friend_link">
+  <div class="container">
+    <div class="col s12 left">
+
+    </div>
+  </div>
+</section>
+
+<section id="footer">
+  <div class="page-footer white">
+    <div class="container" id="nv_global_w">
+      <div class="row">
+        <div class="col l3 m3 s12">
+          <h5 class="black-text">TH-SHARING</h5>
+          <p class="black-text text-lighten-4">แวะมาอ่านนิยายได้ที่นี่</p>
+        </div>
+        <div class="col l3 m3 s12">
+          <h5 class="black-text">ข้อมูลทั่วไป</h5>
+          <ul>
+            <li><a class="black-text text-lighten-3" href="">+ การใช้งาน +</a></li>
+    				<li><a class="black-text text-lighten-3" href="">+ คำถามที่พบบ่อย +</a></li>
+    				<li><a class="black-text text-lighten-3" href="">+ เงื่อนไขการใช้งาน +</a></li>
+    				<li><a class="black-text text-lighten-3" href="">+ นโยบายความเป็นส่วนตัว +</a></li>
+    				<li><a class="black-text text-lighten-3" href="">+ รายงานการละเมิด +</a></li>
+    				<li><a class="black-text text-lighten-3" href="">+ ติดต่อเรา +</a></li>
+    				<li><a class="black-text text-lighten-3" href="">+ เกี่ยวกับ +</a></li>
+          </ul>
+        </div>
+        <div class="col l3 m3 s12">
+          <h5 class="black-text">แผนผังเว็บไซต์</h5>
+          <ul>
+            <li><a class="black-text text-lighten-3" href="{网站地图:html}" title="Sitemap HTML">Sitemap HTML</a></li>
+            <li><a class="black-text text-lighten-3" href="{网站地图:xml}" title="Sitemap XML">Sitemap XML</a></li>
+            <li><a class="black-text text-lighten-3" href="{网站地图:rss}" title="RSS">RSS</a></li>
+          </ul>
+        </div>
+        <div class="col l3 m3 s12">
+          <h5 class="black-text">เว็บในเครือ</h5>
+          <ul>
+            <li><a class="black-text text-lighten-3" href="https://th-sharing.com">+ TH-SHARING +</a></li>
+            <li><a class="black-text text-lighten-3" href="https://nv.th-sharing.com">+ อ่านนิยาย +</a></li>
+            <li><a class="black-text text-lighten-3" href="https://md.th-sharing.com">+ สื่อบันเทิง +</a></li>
+            <li><a class="black-text text-lighten-3" href="https://sl.th-sharing.com">+ ย่อลิ้งก์ +</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="nv_ft_bottom">
+      <div class="footer-copyright black">
+        <div class="left">
+          &copy 2017-2019 <a href="{首页}"> {网站名} </a> All Rights Reserved.
+        </div>
+        <div class="right">
+          Designed by <a href="https://www.facebook.com/NumSubMaRk" target="_blank"> SubMaRk </a>Powered by <a href="http://www.weimengcms.com" target="_blank"> WeiMengCMS </a>V4.235.476 (Up to date)
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  $(document).ready(function() {
+    $('.modal').modal();
+    $(".dropdown-trigger").dropdown();
+    $('.nv_nav_left').sidenav({
+      edge:'left',
+      draggable:true,
+    });
+    $('.nv_nav_right').sidenav({
+      edge:'right',
+      draggable:true,
+    });
+    $('.collapsible').collapsible();
+    $('.slider').slider({
+      duratiion:300,
+    });
+  });
+  $(document).ready(function() {
+    $.get("{url:ajax;user.getinfo}", function(data) {
+      if (data.code == 200) {
+        document.getElementById('nv_login').style.display = 'block';
+      } else if (data.code == 300) {
+        document.getElementById('nv_logout').style.display = 'block';
+      }
+    }, "json")
+  });
+</script>
+</body>
+</html>

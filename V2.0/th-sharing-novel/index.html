@@ -1,0 +1,159 @@
+<!-- Load Header -->
+{header:header/index.html}
+  <body>
+
+<!-- Load Global Nav -->
+{header:novel/nav.html}
+<!-- Load Slide -->
+{header:novel/slider.html}
+<section id="nv_index">
+  <div class="container" id="nv_global_w">
+    <div class="row">
+      <div class="col s12 m9 l9 left" id="nv_content">
+        <!-- Novel Recommend -->
+        <div class="nv_text_rec">
+
+        </div>
+        <div class="nv_rec">
+          {小说:排序=最新入库;数量=3}
+          <div class="tile">
+            <img src="{小说封面}" title="{小说名字}" alt="{小说名字}" />
+            <div class="text">
+              <h4 class="animate-text">{小说名字}</h4>
+              <h5 class="animate-text">แปลโดย : {小说作者}</h5>
+              <p class="animate-text">{小说简介:100}...</p>
+              <p class="animate-text">หมวดหมู่ : {小说分类名字}</p>
+              <p class="animate-text">อ่านทั้งหมด : {小说总点击} ครั้ง</p>
+              <div class="btn-read">
+                <a href="{url}" class="waves-effect waves-light btn animate-text" title="{小说名字}" target="_blank"><i class="material-icons">book</i>อ่านเรื่องนี้</a>
+              </div>
+            </div>
+          </div>
+          {/小说}
+        </div>
+        <!-- Novel New Series -->
+        <div class="nv_text_new">
+
+        </div>
+        <div class="nv_new">
+          {小说:排序=最新入库;数量=3}
+          <div class="tile">
+            <img src="{小说封面}" title="{小说名字}" alt="{小说名字}" />
+            <div class="text">
+              <h4 class="animate-text">{小说名字}</h4>
+              <h5 class="animate-text">แปลโดย : {小说作者}</h5>
+              <p class="animate-text">{小说简介:100}...</p>
+              <p class="animate-text">หมวดหมู่ : {小说分类名字}</p>
+              <p class="animate-text">อ่านทั้งหมด : {小说总点击} ครั้ง</p>
+              <div class="btn-read">
+                <a href="{url}" class="waves-effect waves-light btn animate-text" title="{小说名字}" target="_blank"><i class="material-icons">book</i>อ่านเรื่องนี้</a>
+              </div>
+            </div>
+          </div>
+          {/小说}
+        </div>
+        <!-- Novel last update -->
+        <div class="nv_text_last">
+
+        </div>
+        <div class="nv_lastup">
+        {小说:排序=最新更新;数量=6}
+          <div class="tile">
+            <img src="{小说封面}" title="{小说名字}" alt="{小说名字}" />
+            <div class="text">
+              <h4 class="animate-text">{小说名字}</h4>
+              <h5 class="animate-text">แปลโดย : {小说作者}</h5>
+              <p class="animate-text">{小说简介:100}...</p>
+              <p class="animate-text">{小说最新章节名字:50}</p>
+              <p class="animate-text">{小说更新时间}</p>
+              <div class="btn-read">
+                <a href="{rurl}" class="waves-effect waves-light btn animate-text" title="{小说最新章节名字}" target="_blank"><i class="material-icons mgr-8">book</i>อ่านเลย</a>
+              </div>
+            </div>
+          </div>
+        {/小说}
+        </div>
+        <!-- Novel Last Update table -->
+        <div class="nv_lastup_t" id="nv_table_w">
+          <div class="nv_table">
+            <table class="highlight bordered">
+              <tbody>
+              {小说:排序=最新更新;数量=15}
+                <tr>
+                  <td width="35%"><a href="{turl}" id="name" target="_blank" title="{小说分类名字}">【{小说分类名字}】</a><a href="{url}" target="_blank" class="ft-weight" title="{小说名字}">{小说名字}</a></td>
+    							<td width="30%"><a href="{rurl}" target="_blank" title="{小说最新章节名字}">{小说最新章节名字:50}</a></td>
+    						  <td width="20%" id="translator">ผู้แปล : {小说作者}</td>
+    							<td width="15%">{小说更新时间}</td>
+    						</tr>
+              {/小说}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- Novel Sidebar -->
+      <div class="col s12 m3 l3 right" id="nv_sidebar">
+        <!-- Novel Facebook Page -->
+        <div class="nv_text_fbpage">
+
+        </div>
+        <div class="nv_fb_content">
+          <div class="fb-page" data-href="https://www.facebook.com/thsharing/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/thsharing/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/thsharing/">Th-Sharing ชุมชนแห่งการแบ่งปัน</a></blockquote>
+          </div>
+        </div>
+        <!-- Novel Popular Ranking Tabs -->
+        <div class="nv_text_ranking">
+
+        </div>
+        <div class="nv_ranking">
+          <ul class="tabs" id="tabs_swipe">
+            <li class="tab col s3"><a href="#swipe-1">วัน</a></li>
+            <li class="tab col s5"><a href="#swipe-2">เดือน</a></li>
+            <li class="tab col s4"><a href="#swipe-3">ปี</a></li>
+          </ul>
+          <!-- Daily Ranking -->
+          <div class="col s12" id="swipe-1">
+          {小说:排序=日点击;数量=10}
+            <ul class="novel_daily_ranking">
+              <div class="collection-item">
+                <div class="{i:1,2,3}novel_order_color{/i} {i:>3}novel_order_gray{/i}">{i}</div>
+                <a href="{url}" title="{小说名字}" class="novel_ranking_name">{小说名字}</a> {i:1}<i class="material-icons md-red">whatshot</i>{/i} {i:2}<i class="material-icons md-pink">whatshot</i>{/i} {i:3}<i class="material-icons md-orange">whatshot</i>{/i} {i:4}<i class="material-icons md-yellow">whatshot</i>{/i} {i:5}<i class="material-icons md-green">whatshot</i>{/i} {i:>5}<i class="material-icons md-dark">whatshot</i>{/i}
+              </div>
+            </ul>
+          {/小说}
+          </div>
+          <!-- Weekly Ranking -->
+          <div class="col s12" id="swipe-2">
+          {小说:排序=周点击;数量=10}
+            <ul class="novel_weekly_ranking">
+              <div class="collection-item">
+                <div class="{i:1,2,3}novel_order_color{/i} {i:>3}novel_order_gray{/i}">{i}</div>
+                <a href="{url}" title="{小说名字}" class="novel_ranking_name">{小说名字}</a> {i:1}<i class="material-icons md-red">whatshot</i>{/i} {i:2}<i class="material-icons md-pink">whatshot</i>{/i} {i:3}<i class="material-icons md-orange">whatshot</i>{/i} {i:4}<i class="material-icons md-yellow">whatshot</i>{/i} {i:5}<i class="material-icons md-green">whatshot</i>{/i} {i:>5}<i class="material-icons md-dark">whatshot</i>{/i}
+              </div>
+            </ul>
+          {/小说}
+          </div>
+          <!-- Monthly Ranking -->
+          <div class="col s12" id="swipe-3">
+            {小说:排序=月点击;数量=10}
+            <ul class="novel_monthly_ranking">
+              <div class="collection-item">
+                <div class="{i:1,2,3}novel_order_color{/i} {i:>3}novel_order_gray{/i}">{i}</div>
+                <a href="{url}" title="{小说名字}" class="novel_ranking_name">{小说名字}</a> {i:1}<i class="material-icons md-red">whatshot</i>{/i} {i:2}<i class="material-icons md-pink">whatshot</i>{/i} {i:3}<i class="material-icons md-orange">whatshot</i>{/i} {i:4}<i class="material-icons md-yellow">whatshot</i>{/i} {i:5}<i class="material-icons md-green">whatshot</i>{/i} {i:>5}<i class="material-icons md-dark">whatshot</i>{/i}
+              </div>
+            </ul>
+           {/小说}
+          </div>
+        </div>
+        <!-- Novel Tags List -->
+        <div class="nv_text_tag">
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Load Footer -->
+{header:footer.global.html}
