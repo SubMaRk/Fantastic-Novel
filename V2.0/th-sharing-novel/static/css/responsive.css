@@ -1,0 +1,57 @@
+/* Css for TH-SHARING.COM
+/* Created by SubMaRK 2018-03-22
+/* Last updated 2018-03-22
+*/
+
+
+@media only screen and (max-width: 320px){
+  #nv_reg_w {
+    width:90%!important;
+  }
+}
+
+@media only screen and (max-width: 993px){
+  #nv_pc_login {display: none!important;}
+  #nv_pc_logout {display: none!important;}
+}
+@media only screen and (min-width: 993px){
+  #nv_m_login {display: none!important;}
+  #nv_m_logout {display: none!important;}
+}
+@media (min-width: 321px) and (max-width: 480px){
+  #nv_reg_w {
+    width:80%!important;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px){
+  #nv_reg_w {
+    width:40%!important;
+  }
+}
+@media (min-width: 769px) and (max-width: 993px){
+}
+@media (min-width: 994px) and (max-width: 1280px){
+}
+@media (min-width: 1281px) and (max-width: 1366px){
+  #nv_reg_w {
+    width:30%!important;
+  }
+}
+@media (min-width: 1367px) and (max-width: 1440px){
+
+}
+@media (min-width: 1441px) and (max-width: 1600px){
+
+}
+@media (min-width: 1601px) and (max-width: 1920px){
+
+}
+@media (min-width: 1921px) and (max-width: 2560px){
+
+}
+@media (min-width: 2561px) and (max-width: 3840px){
+
+}
+@media only screen and (min-width: 3840px){
+
+}
