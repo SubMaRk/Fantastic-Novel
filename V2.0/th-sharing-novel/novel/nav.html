@@ -1,8 +1,9 @@
 <section id="nav">
   <div class="navbar-fixed">
-    <nav class="white">
+    <nav class="white" data-aos="fade-down"  data-aos-duration="500">
       <a href="#" data-target="nav_main" class="sidenav-trigger left"><i class="material-icons">menu</i></a>
-      <a href="#" data-target="nav_user" class="sidenav-trigger right"><i class="material-icons">account_circle</i></a>
+      <a href="#" data-target="nav_user_login" id="nv_m_login" class="sidenav-trigger right"><i class="material-icons">account_circle</i></a>
+      <a href="#" data-target="nav_user_logout" id="nv_m_logout" class="sidenav-trigger right"><i class="material-icons">account_circle</i></a>
       <div class="nav-wrapper">
         <a href="{首页}" title="{网站名}" class="brand-logo left"><span>TH-SHARING</span></a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
@@ -28,7 +29,7 @@
             <li><a href="#" title="เกี่ยวกับ">เกี่ยวกับ</a></li>
           </ul>
           <li><a href="https://drive.google.com/file/d/1r9PxGi-6FLoynn0Gb-bqsu42qO30fwj1/view?usp=sharing" target="_blank">ลงนิยาย</a></li>
-          <li>
+          <!--<li>
             <form id="nv_search_bar" action="{搜索提交地址}" method="post">
               <div class="input-field">
                 <input type="hidden" name="module" value="novel">
@@ -38,15 +39,31 @@
                 <i class="material-icons">close</i>
               </div>
             </form>
-          </li>
+          </li>-->
+        </ul>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="right">
-            <a href="#" class="dropdown-trigger" id="nv_login" data-target="nv_drop_login"><img class="circle" id="user_icon" src="{用户头像}" /></a>
+            <a href="#" class="dropdown-trigger" id="nv_pc_login" data-target="nv_drop_login" ><img class="circle" id="user_icon" src="{用户头像}" /></a>
             <ul id="nv_drop_login" class="dropdown-content">
+              <li><a href="#" class="subheader center">ศูนย์ผู้ใช้</a></li>
+              <li><a href="{用户中心}"><i class="material-icons">home</i>พื้นที่ส่วนตัว</a></li>
+              <li><a href="{头像设置}"><i class="material-icons">account_box</i>รูปประจำตัว</a></li>
+              <li><a href="{消息列表}"><i class="material-icons">message</i>ข้อความ</a></li>
+              <li><a href="{我的书架}"><i class="material-icons">collections_bookmark</i>ชั้นหนังสือ</a></li>
+              <li><a href="{我的收藏}"><i class="material-icons">favorite</i>เรื่องที่ชอบ</a></li>
+              <li><a href="{签到中心}"><i class="material-icons">assignment_ind</i>เช็คชื่อ</a></li>
+              <li><a href="{退出登录}"><i class="material-icons">exit_to_app</i>ออกจากระบบ</a></li>
+              <li><a href="#" class="subheader center">ศูนย์นักเขียน</a></li>
+              <li><a href="{作家首页}"><i class="material-icons">home</i>หนักหลัก</a></li>
+              <li><a href="{小说作品列表}"><i class="material-icons">book</i>จัดการนิยาย</a></li>
+              <li><a href="{文章投稿列表}"><i class="material-icons">note_add</i>จัดการบทความ</a></li>
+              <!--
               <li><a href="{用户中心}" title="ศูนย์ผู้ใช้">ศูนย์ผู้ใช้</a></li>
               <li><a href="{头像设置}" title="เปลี่ยนรูปโปรไฟล์">เปลี่ยนรูปโปรไฟล์</a></li>
               <li><a href="{退出登录}" title="ออกจากระบบ">ออกจากระบบ</a></li>
+              -->
             </ul>
-            <a href="#" class="dropdown-trigger" id="nv_logout" data-target="nv_drop_logout"><i class="material-icons">account_circle</i></a>
+            <a href="#" class="dropdown-trigger" id="nv_pc_logout" data-target="nv_drop_logout"><i class="material-icons">account_circle</i></a>
             <ul id="nv_drop_logout" class="dropdown-content">
               <li><a href="javascript:easydialog_url('user.login','เข้าสู่ระบบ','',390,500)" title="เข้าสู่ระบบ">เข้าสู่ระบบ</a></li>
               <li><a href="#reg" class="modal-trigger" title="ลงทะเบียน">ลงทะเบียน</a></li>
@@ -94,7 +111,7 @@
     </li>
     <li><a href="https://drive.google.com/file/d/1r9PxGi-6FLoynn0Gb-bqsu42qO30fwj1/view?usp=sharing" target="_blank"><i class="material-icons">open_in_new</i>ลงนิยาย</a></li>
   </ul>
-  <ul id="nav_user" class="sidenav nv_nav_right">
+  <ul id="nav_user_login" class="sidenav nv_nav_right">
     <li>
       <div class="user-view">
         <a href="#user"><img class="circle" src="{用户头像}" alt=""></a>
@@ -105,10 +122,6 @@
     <li><div class="divider"></div></li>
     <li><a href="#" class="subheader">ศูนย์ผู้ใช้</a></li>
     <li><div class="divider"></div></li>
-    <li><a href="javascript:easydialog_url('user.login','เข้าสู่ระบบ','',390,500)" title="เข้าสู่ระบบ">เข้าสู่ระบบ</a></li>
-    <li><a href="#reg" class="modal-trigger" title="ลงทะเบียน">ลงทะเบียน</a></li>
-    <li><a href="{找回密码}"><i class="material-icons">exit_to_app</i>กู้คืนรหัสผ่าน</a></li>
-    <li><div class="divider"></div></li>
     <li><a href="{用户中心}"><i class="material-icons">home</i>พื้นที่ส่วนตัว</a></li>
     <li><a href="{头像设置}"><i class="material-icons">account_box</i>รูปประจำตัว</a></li>
     <li><a href="{消息列表}"><i class="material-icons">message</i>ข้อความ</a></li>
@@ -116,14 +129,17 @@
     <li><a href="{我的收藏}"><i class="material-icons">favorite</i>เรื่องที่ชอบ</a></li>
     <li><a href="{签到中心}"><i class="material-icons">assignment_ind</i>เช็คชื่อ</a></li>
     <li><a href="{退出登录}"><i class="material-icons">exit_to_app</i>ออกจากระบบ</a></li>
-      <!--
-      <li><div class="divider"></div></li>
-      <li><a href="#" class="subheader">ศูนย์นักเขียน</a></li>
-      <li><div class="divider"></div></li>
-      <li><a href="{作家首页}"><i class="material-icons">home</i>หนักหลัก</a></li>
-      <li><a href="{小说作品列表}"><i class="material-icons">book</i>จัดการนิยาย</a></li>
-      <li><a href="{文章投稿列表}"><i class="material-icons">note_add</i>จัดการบทความ</a></li>
-      -->
+    <li><div class="divider"></div></li>
+    <li><a href="#" class="subheader">ศูนย์นักเขียน</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="{作家首页}"><i class="material-icons">home</i>หนักหลัก</a></li>
+    <li><a href="{小说作品列表}"><i class="material-icons">book</i>จัดการนิยาย</a></li>
+    <li><a href="{文章投稿列表}"><i class="material-icons">note_add</i>จัดการบทความ</a></li>
+  </ul>
+  <ul id="nav_user_logout" class="sidenav nv_nav_right">
+    <li><a href="{登录}" title="เข้าสู่ระบบ">เข้าสู่ระบบ</a></li>
+    <li><a href="#reg" class="modal-trigger" title="ลงทะเบียน">ลงทะเบียน</a></li>
+    <li><a href="{找回密码}"><i class="material-icons">exit_to_app</i>กู้คืนรหัสผ่าน</a></li>
   </ul>
   <!-- Modal Structure -->
   <div id="reg" class="modal modal-fixed-footer">
@@ -147,7 +163,7 @@
     </div>
     <div class="modal-footer">
       <a href="#" class="modal-close waves-effect waves-green btn-flat">ยกเลิก</a>
-      <a href="javascript:easydialog_url('user.reg','ลงทะเบียน','',390,500)" class="modal-close waves-effect waves-green btn-flat">ยอมรับ</a>
+      <a href="{注册}" class="modal-close waves-effect waves-green btn-flat">ยอมรับ</a>
     </div>
   </div>
 </section>
