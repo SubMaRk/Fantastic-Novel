@@ -1,5 +1,5 @@
 <section id="friend_link">
-  <div class="container">
+  <div class="container" data-aos="fade-down"  data-aos-duration="500" data-aos-delay="100">
     <div class="col s12 left">
 
     </div>
@@ -8,7 +8,7 @@
 
 <section id="footer">
   <div class="page-footer white">
-    <div class="container" id="nv_global_w">
+    <div class="container" id="nv_global_w" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
       <div class="row">
         <div class="col l3 m3 s12">
           <h5 class="black-text">TH-SHARING</h5>
@@ -73,16 +73,24 @@
     $('.slider').slider({
       duratiion:300,
     });
+    $('ul.tabs').tabs();
   });
   $(document).ready(function() {
     $.get("{url:ajax;user.getinfo}", function(data) {
       if (data.code == 200) {
-        document.getElementById('nv_login').style.display = 'block';
+        document.getElementById('nv_m_login').style.display = 'block';
+        document.getElementById('nv_pc_login').style.display = 'block';
+        document.getElementById('nv_m_logout').style.display = 'none';
+        document.getElementById('nv_pc_logout').style.display = 'none';
       } else if (data.code == 300) {
-        document.getElementById('nv_logout').style.display = 'block';
+        document.getElementById('nv_m_logout').style.display = 'block';
+        document.getElementById('nv_pc_logout').style.display = 'block';
+        document.getElementById('nv_m_login').style.display = 'none';
+        document.getElementById('nv_pc_login').style.display = 'none';
       }
     }, "json")
   });
+  AOS.init();
 </script>
 </body>
 </html>

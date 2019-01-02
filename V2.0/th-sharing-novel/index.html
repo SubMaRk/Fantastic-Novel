@@ -115,10 +115,10 @@
           <!-- Daily Ranking -->
           <div class="col s12" id="swipe-1">
           {小说:排序=日点击;数量=10}
-            <ul class="novel_daily_ranking">
+            <ul class="nv_daily_ranking">
               <div class="collection-item">
-                <div class="{i:1,2,3}novel_order_color{/i} {i:>3}novel_order_gray{/i}">{i}</div>
-                <a href="{url}" title="{小说名字}" class="novel_ranking_name">{小说名字}</a> {i:1}<i class="material-icons md-red">whatshot</i>{/i} {i:2}<i class="material-icons md-pink">whatshot</i>{/i} {i:3}<i class="material-icons md-orange">whatshot</i>{/i} {i:4}<i class="material-icons md-yellow">whatshot</i>{/i} {i:5}<i class="material-icons md-green">whatshot</i>{/i} {i:>5}<i class="material-icons md-dark">whatshot</i>{/i}
+                <div class="{i:1,2,3}nv_order_color{/i} {i:>3}nv_order_gray{/i}">{i}</div>
+                <a href="{url}" title="{小说名字}" class="nv_ranking_n">{小说名字}</a> {i:1}<i class="material-icons md-red">whatshot</i>{/i} {i:2}<i class="material-icons md-pink">whatshot</i>{/i} {i:3}<i class="material-icons md-orange">whatshot</i>{/i} {i:4}<i class="material-icons md-yellow">whatshot</i>{/i} {i:5}<i class="material-icons md-green">whatshot</i>{/i} {i:>5}<i class="material-icons md-dark">whatshot</i>{/i}
               </div>
             </ul>
           {/小说}
@@ -126,10 +126,10 @@
           <!-- Weekly Ranking -->
           <div class="col s12" id="swipe-2">
           {小说:排序=周点击;数量=10}
-            <ul class="novel_weekly_ranking">
+            <ul class="nv_weekly_ranking">
               <div class="collection-item">
-                <div class="{i:1,2,3}novel_order_color{/i} {i:>3}novel_order_gray{/i}">{i}</div>
-                <a href="{url}" title="{小说名字}" class="novel_ranking_name">{小说名字}</a> {i:1}<i class="material-icons md-red">whatshot</i>{/i} {i:2}<i class="material-icons md-pink">whatshot</i>{/i} {i:3}<i class="material-icons md-orange">whatshot</i>{/i} {i:4}<i class="material-icons md-yellow">whatshot</i>{/i} {i:5}<i class="material-icons md-green">whatshot</i>{/i} {i:>5}<i class="material-icons md-dark">whatshot</i>{/i}
+                <div class="{i:1,2,3}nv_order_color{/i} {i:>3}nv_order_gray{/i}">{i}</div>
+                <a href="{url}" title="{小说名字}" class="nv_ranking_n">{小说名字}</a> {i:1}<i class="material-icons md-red">whatshot</i>{/i} {i:2}<i class="material-icons md-pink">whatshot</i>{/i} {i:3}<i class="material-icons md-orange">whatshot</i>{/i} {i:4}<i class="material-icons md-yellow">whatshot</i>{/i} {i:5}<i class="material-icons md-green">whatshot</i>{/i} {i:>5}<i class="material-icons md-dark">whatshot</i>{/i}
               </div>
             </ul>
           {/小说}
@@ -137,10 +137,10 @@
           <!-- Monthly Ranking -->
           <div class="col s12" id="swipe-3">
             {小说:排序=月点击;数量=10}
-            <ul class="novel_monthly_ranking">
+            <ul class="nv_monthly_ranking">
               <div class="collection-item">
-                <div class="{i:1,2,3}novel_order_color{/i} {i:>3}novel_order_gray{/i}">{i}</div>
-                <a href="{url}" title="{小说名字}" class="novel_ranking_name">{小说名字}</a> {i:1}<i class="material-icons md-red">whatshot</i>{/i} {i:2}<i class="material-icons md-pink">whatshot</i>{/i} {i:3}<i class="material-icons md-orange">whatshot</i>{/i} {i:4}<i class="material-icons md-yellow">whatshot</i>{/i} {i:5}<i class="material-icons md-green">whatshot</i>{/i} {i:>5}<i class="material-icons md-dark">whatshot</i>{/i}
+                <div class="{i:1,2,3}nv_order_color{/i} {i:>3}nv_order_gray{/i}">{i}</div>
+                <a href="{url}" title="{小说名字}" class="nv_ranking_n">{小说名字}</a> {i:1}<i class="material-icons md-red">whatshot</i>{/i} {i:2}<i class="material-icons md-pink">whatshot</i>{/i} {i:3}<i class="material-icons md-orange">whatshot</i>{/i} {i:4}<i class="material-icons md-yellow">whatshot</i>{/i} {i:5}<i class="material-icons md-green">whatshot</i>{/i} {i:>5}<i class="material-icons md-dark">whatshot</i>{/i}
               </div>
             </ul>
            {/小说}
@@ -150,7 +150,13 @@
         <div class="nv_text_tag">
 
         </div>
-        
+        <div class="nv_tag_item">
+          <ul>
+            <div id="nv_tag">
+              {小说分类:}<a href="{surl}" class="nv_tag_color_{i}" title="{小说分类名字}">{小说分类名字}</a>{/小说分类}
+            </div>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
