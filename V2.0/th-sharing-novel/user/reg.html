@@ -1,0 +1,52 @@
+{header:header/user.reg.html}
+<section id="nv_reg">
+  <main>
+    <center>
+      <div class="nv_img_f">
+        <a href="#"><i class="material-icons">account_circle</i></a>
+        <h5>กรอกข้อมูลลงทะเบียน</h5>
+      </div>
+      <div class="container" id="nv_reg_w">
+        <div class="row z-depth-3">
+          <form class="col s12 nv_form" action="{注册提交地址}" method="post">
+          {表单锁}
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="user_name" type="text" class="viladate" name="name" />
+                <label for="user_name">ชื่อผู้ใช้</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">lock</i>
+                <input id="user_password_1" type="password" class="validate" name="psw" />
+                <label for="user_password_1">รหัสผ่าน</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">lock</i>
+                <input id="user_password_2" type="password" class="validate" name="repsw" />
+                <label for="user_password_2">ยืนยันรหัสผ่าน</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">email</i>
+                <input id="user_mail" type="email" class="viladate" name="email" />
+                <label for="user_mail">อีเมล์</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">fingerprint</i> {登录验证码开启}
+                <input id="code" type="text" name="code" style="width:70%" />{登录验证码}{/登录验证码开启}
+                <label for="code">โค้ดยืนยัน</label>
+              </div>
+              <div class="input-field col s12 center">
+                <button class="waves-effect waves-light btn" value="true" type="submit" name="submit">ลงทะเบียน</button>
+                <p class="message">
+                  มีบัญชีอยู่แล้วใช่ไหม? <a href="{登录}">เข้าสู่ระบบ</a> เลย!<br /> หรือ <a href="{找回密码}">ลืมรหัสผ่าน?</a>
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </center>
+  </main>
+</section>
+{header:footer.global.html}
