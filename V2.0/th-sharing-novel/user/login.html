@@ -1,0 +1,44 @@
+{header:header/user.login.html}
+<section id="nv_login">
+  <main>
+    <center>
+      <div class="nv_img_f">
+        <a href="#"><i class="material-icons">account_circle</i></a>
+        <h5>โปรดเข้าสู่ระบบ</h5>
+      </div>
+      <div class="container" id="nv_user_w">
+        <div class="row z-depth-3">
+          <form class="col s12 nv_form" action="{登录提交地址}" method="post">
+          {表单锁}
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="user_name" type="text" class="viladate" name="name" />
+                <label for="user_name">ชื่อผู้ใช้</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">lock</i>
+                <input id="user_password_1" type="password" class="validate" name="psw" />
+                <label for="user_password_1">รหัสผ่าน</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">fingerprint</i> {登录验证码开启}
+                <input id="code" type="text" name="code" style="width:70%" />{登录验证码}{/登录验证码开启}
+                <label for="code">โค้ดยืนยัน</label>
+              </div>
+              <div class="input-field col s12 center">
+                <input type="hidden" name="time" value="2592000" />
+                <input type="hidden" name="remember" value="1" />
+                <button class="waves-effect waves-light btn" value="true" type="submit" name="submit">เข้าสู่ระบบ</button>
+                <p class="message">
+                  ยังไม่มีบัญชีใช่ไหม? <a href="{注册}">ลงทะเบียน</a> กับเรา!<br /> หรือ <a href="{找回密码}">ลืมรหัสผ่าน?</a>
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </center>
+  </main>
+</section>
+{header:footer.global.html}
