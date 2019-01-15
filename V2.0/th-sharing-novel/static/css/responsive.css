@@ -8,8 +8,19 @@
   #nv_reg_w {
     width:90%!important;
   }
+  .nv_tag_item a {
+    width:100%!important;
+  }
 }
+@media only screen and (max-width: 568px){
+  #slider {display: none!important;}
+  .nv_new,.nv_rec,.nv_lastup,.nv_fb_content,.nv_ranking,.nv_tag_item {
+    text-align: center!important;
+  }
+}
+@media only screen and (max-width: 768px){
 
+}
 @media only screen and (max-width: 993px){
   #nv_pc_login {display: none!important;}
   #nv_pc_logout {display: none!important;}
@@ -22,13 +33,45 @@
   #nv_reg_w {
     width:80%!important;
   }
+  #up-btn img {
+    pading: 10px 5px!important;
+  }
+  .scroll-top-button {pading: 10px 5px!important;}
 }
 @media (min-width: 481px) and (max-width: 768px){
   #nv_reg_w {
     width:40%!important;
   }
+  .slider {
+    width:90%!important;
+  }
 }
 @media (min-width: 769px) and (max-width: 993px){
+  .sidenav {
+    width: 250px!important;
+  }
+  .sidenav li {
+    line-height: 40px!important;
+  }
+  .sidenav li>a {
+    height: 40px!important;
+    line-height: 45px!important;
+    font-size: 1.4rem;
+  }
+  .sidenav .subheader {
+    font-size: 1.4rem;
+    line-height: 50px;
+  }
+  .sidenav .collapsible-body {
+    margin-left: 10px;
+  }
+  .sidenav .collapsible-header, .sidenav.fixed .collapsible-header {
+    padding: 0px 0px 0px 32px!important;
+  }
+  .sidenav li>a>i, .sidenav li>a>[class^="mdi-"], .sidenav li>a li>a>[class*="mdi-"], .sidenav li>a>i.material-icons {
+    line-height: 40px!important;
+    height: 40px!important;
+  }
 }
 @media (min-width: 994px) and (max-width: 1280px){
 }
