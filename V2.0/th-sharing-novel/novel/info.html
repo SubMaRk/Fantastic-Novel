@@ -1,0 +1,177 @@
+<!-- Load Header -->
+{header:header/novel.info.html}
+<!-- Load Global body -->
+{header:novel/global.body.html}
+<!-- Load Global Nav -->
+{header:novel/nav.html}
+<section id="nv_info">
+  <div class="container" id="nv_global_w">
+    <div class="row">
+      <!-- Novel Info -->
+      <div class="col s12 m9 l9" id="nv_content">
+        <!-- Main Info -->
+        <div class="nv_info_main col s12">
+          <div class="nv_text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <h5>ข้อมูลนิยาย <i class="fas fa-book"></i></h5>
+          </div>
+          <div class="col s12 m4 l4 center" id="nv_info_img" data-aos="fade-right" data-aos-duration="500" data-aos-delay="500">
+            <img class="lazy z-depth-3" src="{templates}/static/image/book.svg" data-src="{封面}" alt="{名字}">
+            <label class="nv_info_status">{进程}</label>
+          </div>
+          <div class="col s12 m8 l8" id="nv_info_detail" data-aos="fade-right" data-aos-duration="500" data-aos-delay="500">
+            <div class="nv_info_title">
+              <p><strong>{名字} </strong><span>(ID : {id}) <a href="javascript:easyDialog.open({container : 'messsage',});" title="รายงาน"><i class="fas fa-exclamation-triangle fas-yellow"></i></a></span></p>
+            </div>
+            <div>
+              <p>ให้คะแนน : {评分模版} คะแนน : <strong> {评分} </strong> ( {评分人数} คนที่ให้ ) </p>
+            </div>
+            <p>เข้าชมวันนี้ : {日点击} ครั้ง | สัปดาห์นี้ : {周点击} ครั้ง | เดือนนี้ : {月点击} ครั้ง | ทั้งหมด : {总点击} ครั้ง</p>
+            <p>ผู้แต่ง : <strong><a href="{header:novel/fb_link.html}" target="_blank" title="{header:novel/fb_name.html}">{作者}</a></strong><span> | </span>แปลอังกฤษ : <strong>{header:novel/source_eng.html}</strong><span>| ต้นฉบับ : <strong>{header:novel/raw_link.html}</strong></span></p>
+            <p>อัพเดทล่าสุด : <span>{小说章节列表:排序=章节倒序;数量=1}{小说章节创建时间}{/小说章节列表}</span></p>
+            <div class="nv_tag_item" id="nv_info_tag" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+              <p>ป้ายกำกับ <i class="fas fa-tags"></i></p>
+              {标签:10}<a id="nv_tag_info" href="javascript:void(0);" class="nv_tag_color_{i}" title="{小说分类名字}">{标签标题}</a>{/标签}
+            </div>
+            <div class="nv_info_btn left">
+              <a href="{立即阅读}" title="เริ่มอ่าน {名字}" class="waves-effect waves-light btn white"><i class="fas fa-book"></i> อ่านเรื่องนี้</a>
+              {未收藏}<a class="waves-effect waves-light btn white" data-url="{加入收藏}" title="เพิ่ม" href="javascript:void(0);"><i class="far fa-heart fas-pink"></i> ชอบ</a>{/未收藏}
+              {已收藏}<a class="waves-effect waves-light btn white" title="เพิ่มเข้ารายการที่ชอบไปแล้ว" href="javascript:easydialog_alert('คุณได้เพิ่มเรื่องนี้เข้ารายการที่ชอบแล้ว','','no');"><i class="fas fa-heart fas-pink"></i> ชอบแล้ว</a>{/已收藏}
+              {未书架}<a class="waves-effect waves-light btn white" data-url="{加入书架}" title="เพิ่มเข้าชั้น" href="javascript:void(0);"><i class="far fa-books"></i> เพิ่มเข้าชั้น</a>{/未书架}
+              {已书架}<a class="waves-effect waves-light btn white" title="เพิ่มข้าชั้นหนังสือไปแล้ว" href="javascript:easydialog_alert('คุณได้เพิ่มเข้าชั้นหนังสือไปแล้ว','','no');"><i class="fas fa-books"></i> เพิ่มเข้าชั้นแล้ว</a>{/已书架}
+            </div>
+          </div>
+        </div>
+        <!-- Novel Sumary -->
+        <div class="nv_sumary">
+          <div class="nv_text_block z-depth-3" id="nv_sumary" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <h5>เนื้อเรื่องย่อ</h5>
+          </div>
+          <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">{简介}</p>
+        </div>
+        <!-- Table of Content -->
+        <div class="nv_info_table_content">
+          <div class="nv_text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <h5>สารบัญเรื่อง <span>{名字}</span></h5>
+          </div>
+          {小说分卷列表:}
+          <div class="nv_list">
+            {无数据}<p data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">เรื่องนี้ยังไม่มีบทใด ๆ</p>{/无数据}
+            <ul class="collapsible {i:1}hide{/i}">
+              <li class="{i:2}active{/i}">
+                <div class="collapsible-header" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+                  <i class="fas fa-book"></i><span> {小说分卷名字}</span>
+                </div>
+                <div class="collapsible-body" id="nv_list_chapter" data-aos-duration="500" data-aos-delay="500">
+                  <ul>
+                    {小说章节列表:分卷id={小说分卷id}}<li data-aos="fade-left" data-aos-duration="500" data-aos-delay="500"><a href="{url}" title="{小说章节名字}">{小说章节名字:40}</a></li>{/小说章节列表}
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          {/小说分卷列表}
+        </div>
+        <!-- Additional writing work -->
+        <div class="nv_additional_writing">
+          <div class="nv_text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <h5>ผลงานเพิ่มเติมของ <strong>{作者}</strong></h5>
+          </div>
+          <div class="nv_additional_writing_list">
+            <ul class="nv_writing_list">
+              {同作者小说:数量=5}
+              {无数据}<div class="no_more_work" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">ยังไม่มีผลงานเพิ่มเติม</div>{/无数据}
+              <li data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+                <a href="{url}" target="_self" class="nv_book_list">
+                  <div class="nv_book_list_cover">
+                    <img src="{封面}" alt="{名字}">
+                  </div>
+                  <div class="nv_name">{名字}</div>
+                  <span class="author"><i class="fas fa-user-edit"></i> {作者}</span>
+                  <span class="tag"><i class="fas fa-tag"></i> {分类名字}</span>
+                  <button href="{url}" title="เริ่มอ่าน {名字}" class="waves-effect waves-light btn white"><i class="fas fa-book"></i>อ่านเรื่องนี้</button>
+                </a>
+              </li>
+              {/同作者小说}
+            </ul>
+          </div>
+        </div>
+        <!-- Comment -->
+        <div class="nv_comment">
+          <div class="nv_text_block z-depth-3" data-aos="fade-left" data-aos-duration="500" data-aos-delay="500">
+            <h5>แสดงความคิดเห็น <i class="fas fa-comments"></i></h5><span class="right">ทั้งหมด : <em>{评论量}</em> ความคิดเห็น</span>
+          </div>
+          <div class="nv_comment_main">
+            <ul class="nv_comment_show">
+              {评论:数量=10;排序=最新}
+              <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+                <div class="nv_comment_img">
+                  <img src="{评论用户头像}" alt="{评论用户昵称}">
+                </div>
+                <div class="nv_comment_user">{评论用户昵称}</div>
+                <p class="nv_comment_content">{评论内容}</p>
+                <div class="nv_comment_info">
+                  <span class="nv_date">{评论时间}</span>
+                  <span class="nv_count">#{i}</span>
+                </div>
+              </li>
+              {/评论}
+            </ul>
+            <div class="nv_comment_more">
+              <a class="waves-effect waves-light btn white" href="{评论列表}">ดูความคิดเห็นเพิ่มเติม</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m3 l3" id="nv_sidebar">
+        <!-- Author Info -->
+        <div class="nv_author">
+          <div class="nv_text_block z-depth-3" data-aos="fade-left" data-aos-duration="500" data-aos-delay="500">
+            <h5>ข้อมูลผู้เขียน</h5>
+          </div>
+          <div class="nv_author_info" data-aos="fade-left" data-aos-duration="500" data-aos-delay="500">
+            <img src="{作者头像}" alt="{作者}">
+            <dl class="nv_author_detail">
+              <dt>{作者}</dt>
+              <dd>ระดับ : {作者等级}</dd>
+              <dd>เช็คชื่อ : {是否签约}</dd>
+              <dd>ชั้นหนังสือ : {是否上架}</dd>
+            </dl>
+          </div>
+          <div class="nv_author_notice" data-aos="fade-left" data-aos-duration="500" data-aos-delay="500">
+            <h5>ประกาศ</h5>
+            <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">{作者公告}</p>
+          </div>
+        </div>
+        <!-- Author FB Fanpage -->
+        <div class="nv_author_fb_page">
+          <div class="nv_text_block z-depth-3" data-aos="fade-left" data-aos-duration="500" data-aos-delay="500">
+            <h5>ติดตามผู้เขียนบนเฟซบุ๊ค <i class="fab fa-facebook"></i></h5>
+          </div>
+          <div class="fb-page" data-aos="fade-left" data-aos-duration="500" data-aos-delay="500" data-href="{header:novel/fb_link.html}" data-tabs="timeline, messages" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+            data-show-facepile="true">
+            <blockquote cite="{header:novel/fb_link.html}" class="fb-xfbml-parse-ignore"><a href="{header:novel/fb_link.html}">{header:novel/fb_name.html}</a></blockquote>
+          </div>
+        </div>
+        <!-- Novel Recommend -->
+        <div class="nv_rec">
+          <div class="nv_text_block z-depth-3" data-aos="fade-left" data-aos-duration="500" data-aos-delay="500">
+            <h5>นิยายแนะนำ <i class="fal fa-award"></i></h5>
+          </div>
+          <div class="nv_rec_list">
+            <ul>
+              {同分类小说:数量=10}
+              <li data-aos="fade-left" data-aos-duration="500" data-aos-delay="500">
+                <img src="{小说封面}" alt="{小说名字}">
+                <a href="{url}" target="_self" title="{小说名字}">{小说名字}</a>
+                <p>{小说简介:100}...</p>
+              </li>
+              {/同分类小说}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Load Footer -->
+{footer:footer.global.html}
