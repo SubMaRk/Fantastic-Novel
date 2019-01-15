@@ -1,0 +1,129 @@
+<!-- Load Header -->
+{header:header/novel.read.html}
+<!-- Load Main Global Body -->
+{header:novel/global.body.html}
+<link id="readMode" rel="stylesheet" href="{templates}/static/css/novel/readmode/default.css">
+<!-- Nav -->
+<section id="nav">
+  <div class="navbar-fixed" id="nv_nav_read">
+    <nav class="white nv_nav" data-aos="fade-down" data-aos-duration="500">
+      <a href="{首页}" target="_self" class="waves-effect white waves-light btn left"><i class="fa fa-home"></i></a>
+      <a href="#modal-settings" class="waves-effect white waves-light btn modal-trigger right"><i class="fa fa-cog"></i></a>
+    </nav>
+  </div>
+  <div class="modal" id="modal-settings">
+    <div class="modal-content center">
+      <h5>ตั้งค่า</h5>
+      <div class="selectFont">
+        <h5 class="z-depth-3"><i class="fas fa-font"></i> เลือกแบบอักษร</h5>
+        <a href="javascript:;" data-cmd="resetFont" data-type="0" onclick="changefont(this)" class="waves-effect white btn">Arial</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="1" onclick="changefont(this)" class="waves-effect white btn">BoonJot</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="2" onclick="changefont(this)" class="waves-effect white btn">FC Lamoon</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="3" onclick="changefont(this)" class="waves-effect white btn">JS ToomTam</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="4" onclick="changefont(this)" class="waves-effect white btn">Layiji Mahaniyom</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="5" onclick="changefont(this)" class="waves-effect white btn">TF Arluck</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="6" onclick="changefont(this)" class="waves-effect white btn">TF NopScript</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="7" onclick="changefont(this)" class="waves-effect white btn">TH Charmonman</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="8" onclick="changefont(this)" class="waves-effect white btn">TH Dan Vi Vek</a>
+      </div>
+      <div class="fontSize">
+        <h5 class="z-depth-3"><i class="fas fa-text-width"></i> ปรับขนาดอักษร</h5>
+        <a href="javascript:;" data-cmd="resetFont" data-type="0" onclick="changefontsize(this)" class="waves-effect white btn"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="2" onclick="changefontsize(this)" class="waves-effect white btn">คืนค่า</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="1" onclick="changefontsize(this)" class="waves-effect white btn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+        <br />
+        <a href="javascript:;" data-cmd="resetFont" data-type="0" onclick="changefontweight(this)" class="waves-effect white btn">ปกติ</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="1" onclick="changefontweight(this)" class="waves-effect white btn">ตัวหนา</a>
+      </div>
+      <div class="readMode">
+        <h5 class="z-depth-3"><i class="fas fa-adjust"></i> เลือกโหมดอ่าน</h5>
+        <a href="javascript:;" onclick="swapStyleSheet('{templates}/static/css/novel/readmode/default.css')" class="waves-effect white waves-light btn"><i class="fas fa-sun"></i> กลางวัน</a>
+        <a href="javascript:;" onclick="swapStyleSheet('{templates}/static/css/novel/readmode/dark.css')" class="waves-effect white waves-light btn"><i class="fas fa-moon"></i> กลางคืน</a>
+        <a href="javascript:;" onclick="swapStyleSheet('{templates}/static/css/novel/readmode/eyescare.css')" class="waves-effect white waves-light btn"><i class="fas fa-eye"></i> ถนอมสายตา</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="main">
+  <div class="container" id="nv_read_w">
+    <div class="row">
+      <div class="col s12">
+        <div class="nv_chapter_info center z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+          <h3>{章节名字}</h3>
+          <p>เรื่อง : <span><a href="{内容链接}" target="_self">{名字}</a> ({拼音})</span></p>
+          <p>ผู้แต่ง : <span>{作者}</span> <span>|</span> หมวดหมู่ : <span><a href="{分类链接}" target="_self">{类型}</a></span> <span>|</span> สถานะ : <span>{进程}</span></p>
+          <p>Facebook Page : <a href="{header:novel/fb_link.html}" target="_blank" title="{header:novel/fb_name.html}">{header:novel/fb_name.html}</a></p>
+        </div>
+        <div class="nv_read z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+          {已订阅}<div class="content noselect">{章节内容}</div>{/已订阅}
+        </div>
+        <div class="nv_control center z-depth-3">
+          <a href="{上一章}" target="_self" class="waves-effect white  waves-light btn"><i class="fas fa-angle-left"></i> บทที่แล้ว</a>
+          <a href="{目录链接}" target="_self" class="waves-effect white  waves-light btn"><i class="fas fa-bars"></i> สารบัญ</a>
+          <a href="{下一章}" target="_self" class="waves-effect white  waves-light btn">บทถัดไป <i class="fas fa-angle-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="footer">
+  <div class="page-footer white">
+    <div class="container" id="nv_global_w">
+      <div class="col s12 center">
+        <a href="https://www.copyscape.com/" target="_blank"><img src="{templates}/static/image/copyscape.png" width="130" height="46" border="0" alt="Protected by Copyscape" title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page." /></a>
+        <span style="padding-right:10px;"></span>
+        <a href="https://ifastnet.com/portal/aff.php?aff=25156" target="_blank"><img src="{templates}/static/image/ifastnet.png" height="46" alt="Hosted on IFastNet" title="Ifastnet.com is a Premium Hosting Provider, VPS hosting and dedicated servers. Over 5,000,000 websites trust us for their hosting needs." /></a>
+      </div>
+    </div>
+    <div class="nv_ft_bottom">
+      <div class="footer-copyright black col s12">
+        <div style="margin:auto;">
+          <span>
+            &copy 2017-2019 <a href="{首页}"> {网站名} </a> All Rights Reserved.
+          </span>
+          <span>
+            Designed by <a href="https://www.facebook.com/NumSubMaRk" target="_blank"> SubMaRk </a>Powered by <a href="http://www.weimengcms.com" target="_blank"> WeiMengCMS </a>V4.235.476 (Up to date)
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Javascript for Read Page -->
+<script>
+  $(document).ready(function() {
+    $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      //opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '15%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+        alert("Ready");
+        console.log(modal, trigger);
+      },
+      complete: function() {
+        alert('Closed');
+      } // Callback for Modal close
+    });
+  });
+  scroller.init();
+  AOS.init();
+  //Add Previous / Next / Table of Chapter keys
+  document.onkeydown = gopage;
+  var prevpage = "{上一章}";
+  var nextpage = "{下一章}";
+  var gototable = "{目录链接}";
+
+  function gopage() {
+    var event = event ? event : window.event;
+    if (event.keyCode == 37) location = prevpage;
+    if (event.keyCode == 39) location = nextpage;
+    if (event.keyCode == 13) location = gototable;
+  };
+</script>
+<script src="{templates}/static/js/switch.read.js"></script>
+</body>
+
+</html>
