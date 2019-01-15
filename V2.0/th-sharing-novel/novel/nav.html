@@ -1,12 +1,12 @@
 <section id="nav">
   <div class="navbar-fixed">
     <nav class="white" data-aos="fade-down"  data-aos-duration="500">
-      <a href="#" data-target="nav_main" class="sidenav-trigger left"><i class="material-icons">menu</i></a>
-      <a href="#" data-target="nav_user_login" id="nv_m_login" class="sidenav-trigger right"><i class="material-icons">account_circle</i></a>
-      <a href="#" data-target="nav_user_logout" id="nv_m_logout" class="sidenav-trigger right"><i class="material-icons">account_circle</i></a>
+      <a href="#" data-target="nav_main" class="sidenav-trigger left"><i class="fas fa-bars"></i></a>
+      <a href="#" data-target="nav_user_login" id="nv_m_login" class="sidenav-trigger right"><img class="circle" id="user_icon" src="{用户头像}" /></a>
+      <a href="#" data-target="nav_user_logout" id="nv_m_logout" class="sidenav-trigger right"><i class="fas fa-user-circle"></i></a>
       <div class="nav-wrapper">
-        <a href="{首页}" title="{网站名}" class="brand-logo left"><span>TH-SHARING</span></a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <a href="{首页}" title="{网站名}" class="brand-logo"><span>TH-SHARING</span></a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down nv_nav_main">
           <li><a href="{首页}">หน้าหลัก</a></li>
           <li><a href="{全部小说}">เรื่องทั้งหมด</a></li>
           <!-- Dropdown trigger -->
@@ -41,33 +41,28 @@
             </form>
           </li>-->
         </ul>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <ul id="nav-mobile nv_nav_second" class="right hide-on-med-and-down">
           <li class="right">
             <a href="#" class="dropdown-trigger" id="nv_pc_login" data-target="nv_drop_login" ><img class="circle" id="user_icon" src="{用户头像}" /></a>
             <ul id="nv_drop_login" class="dropdown-content">
               <li><a href="#" class="subheader center">ศูนย์ผู้ใช้</a></li>
-              <li><a href="{用户中心}"><i class="material-icons">home</i>พื้นที่ส่วนตัว</a></li>
-              <li><a href="{头像设置}"><i class="material-icons">account_box</i>รูปประจำตัว</a></li>
-              <li><a href="{消息列表}"><i class="material-icons">message</i>ข้อความ</a></li>
-              <li><a href="{我的书架}"><i class="material-icons">collections_bookmark</i>ชั้นหนังสือ</a></li>
-              <li><a href="{我的收藏}"><i class="material-icons">favorite</i>เรื่องที่ชอบ</a></li>
-              <li><a href="{签到中心}"><i class="material-icons">assignment_ind</i>เช็คชื่อ</a></li>
-              <li><a href="{退出登录}"><i class="material-icons">exit_to_app</i>ออกจากระบบ</a></li>
+              <li><a href="{用户中心}"><i class="far fa-home"></i>พื้นที่ส่วนตัว</a></li>
+              <li><a href="{头像设置}"><i class="far fa-users-cog"></i>รูปประจำตัว</a></li>
+              <li><a href="{消息列表}"><i class="far fa-envelope"></i>ข้อความ</a></li>
+              <li><a href="{我的书架}"><i class="far fa-books"></i>ชั้นหนังสือ</a></li>
+              <li><a href="{我的收藏}"><i class="far fa-heart"></i>เรื่องที่ชอบ</a></li>
+              <li><a href="{签到中心}"><i class="far fa-calendar-check"></i>เช็คชื่อ</a></li>
+              <li><a href="{退出登录}"><i class="far fa-sign-out"></i>ออกจากระบบ</a></li>
               <li><a href="#" class="subheader center">ศูนย์นักเขียน</a></li>
-              <li><a href="{作家首页}"><i class="material-icons">home</i>หนักหลัก</a></li>
-              <li><a href="{小说作品列表}"><i class="material-icons">book</i>จัดการนิยาย</a></li>
-              <li><a href="{文章投稿列表}"><i class="material-icons">note_add</i>จัดการบทความ</a></li>
-              <!--
-              <li><a href="{用户中心}" title="ศูนย์ผู้ใช้">ศูนย์ผู้ใช้</a></li>
-              <li><a href="{头像设置}" title="เปลี่ยนรูปโปรไฟล์">เปลี่ยนรูปโปรไฟล์</a></li>
-              <li><a href="{退出登录}" title="ออกจากระบบ">ออกจากระบบ</a></li>
-              -->
+              <li><a href="{作家首页}"><i class="far fa-home"></i>หนักหลัก</a></li>
+              <li><a href="{小说作品列表}"><i class="far fa-edit"></i>จัดการนิยาย</a></li>
+              <li><a href="{文章投稿列表}"><i class="far fa-edit"></i>จัดการบทความ</a></li>
             </ul>
-            <a href="#" class="dropdown-trigger" id="nv_pc_logout" data-target="nv_drop_logout"><i class="material-icons">account_circle</i></a>
+            <a href="#" class="dropdown-trigger" id="nv_pc_logout" data-target="nv_drop_logout"><i class="fas fa-user"></i></a>
             <ul id="nv_drop_logout" class="dropdown-content">
-              <li><a href="javascript:easydialog_url('user.login','เข้าสู่ระบบ','',390,500)" title="เข้าสู่ระบบ">เข้าสู่ระบบ</a></li>
-              <li><a href="#reg" class="modal-trigger" title="ลงทะเบียน">ลงทะเบียน</a></li>
-              <li><a href="{找回密码}" title="กู้คืนรหัสผ่าน">กู้คืนรหัสผ่าน</a></li>
+              <li><a href="{登录}" title="เข้าสู่ระบบ"><i class="far fa-sign-in"></i>เข้าสู่ระบบ</a></li>
+              <li><a href="#reg" class="modal-trigger" title="ลงทะเบียน"><i class="far fa-user-plus"></i>ลงทะเบียน</a></li>
+              <li><a href="{找回密码}" title="กู้คืนรหัสผ่าน"><i class="far fa-lock"></i>กู้คืนรหัสผ่าน</a></li>
             </ul>
           </li>
         </ul>
@@ -76,34 +71,34 @@
   </div>
   <!-- Main Sidenav -->
   <ul id="nav_main" class="sidenav nv_nav_left">
-    <li><a href="{首页}"><i class="material-icons">home</i>หน้าหลัก</a></li>
-    <li><a href="{全部小说}"><i class="material-icons">book</i>นิยายทั้งหมด</a></li>
+    <li><a href="{首页}"><i class="fas fa-home"></i>หน้าหลัก</a></li>
+    <li><a href="{全部小说}"><i class="fas fa-book"></i>นิยายทั้งหมด</a></li>
     <li class="no-padding">
       <ul class="collapsible collapsible-accordion">
         <li>
-          <a href="#" class="collapsible-header"><i class="material-icons">widgets</i>หมวดหมู่<i class="material-icons right">arrow_drop_down</i></a>
+          <a href="#" class="collapsible-header"><i class="fas fa-th-large"></i>หมวดหมู่<i class="fas fa-angle-down right"></i></a>
           <div class="collapsible-body">
             <ul>
-            {小说分类:数量=15;排序=分类排序}<li><a href="{url}" title="{小说分类名字}">{小说分类名字}</a></li>{/小说分类}
+            {小说分类:数量=15;排序=分类排序}<li><a href="{url}" title="{小说分类名字}"><i class="far fa-arrow-alt-right"></i>{小说分类名字}</a></li>{/小说分类}
             </ul>
           </div>
         </li>
       </ul>
     </li>
-    <li><a href="{小说排行首页}"><i class="material-icons">star</i>อันดับ</a></li>
+    <li><a href="{小说排行首页}"><i class="fas fa-star"></i>อันดับ</a></li>
     <li class="no-padding">
       <ul class="collapsible collapsible-accordion">
         <li>
-          <a href="#" class="collapsible-header"><i class="material-icons">contacts</i>เกี่ยวกับ<i class="material-icons right">arrow_drop_down</i></a>
+          <a href="#" class="collapsible-header"><i class="material-icons">contacts</i>เกี่ยวกับ<i class="fas fa-angle-down right"></i></a>
           <div class="collapsible-body">
             <ul>
-              <li><a href="#" title="สนับสนุน">สนุนสนุนผู้แปล</a></li>
-              <li><a href="#" title="การใช้งาน">การใช้งาน</a></li>
-              <li><a href="#" title="คำถามที่พบบ่อย">คำถามที่พบบ่อย</a></li>
-              <li><a href="#" title="รายงานการละเมิด">รายงานการละเมิด</a></li>
-              <li><a href="#" title="ติดต่อเรา">ติดต่อเรา</a></li>
-              <li><a href="#" title="ช่วยเหลือเว็บไซต์">ช่วยเหลือเว็บไซต์</a></li>
-              <li><a href="#" title="เกี่ยวกับ">เกี่ยวกับ</a></li>
+              <li><a href="#" title="สนับสนุน"><i class="far fa-arrow-alt-right"></i>สนุนสนุนผู้แปล</a></li>
+              <li><a href="#" title="การใช้งาน"><i class="far fa-arrow-alt-right"></i>การใช้งาน</a></li>
+              <li><a href="#" title="คำถามที่พบบ่อย"><i class="far fa-arrow-alt-right"></i>คำถามที่พบบ่อย</a></li>
+              <li><a href="#" title="รายงานการละเมิด"><i class="far fa-arrow-alt-right"></i>รายงานการละเมิด</a></li>
+              <li><a href="#" title="ติดต่อเรา"><i class="far fa-arrow-alt-right"></i>ติดต่อเรา</a></li>
+              <li><a href="#" title="ช่วยเหลือเว็บไซต์"><i class="far fa-arrow-alt-right"></i>ช่วยเหลือเว็บไซต์</a></li>
+              <li><a href="#" title="เกี่ยวกับ"><i class="far fa-arrow-alt-right"></i>เกี่ยวกับ</a></li>
             </ul>
           </div>
         </li>
@@ -114,32 +109,32 @@
   <ul id="nav_user_login" class="sidenav nv_nav_right">
     <li>
       <div class="user-view">
-        <a href="#user"><img class="circle" src="{用户头像}" alt=""></a>
-        <a href="#name">{用户名}</a>
-        <a href="#email"></a>
+        <a id="#user" href="#"><img class="circle" src="{用户头像}" alt=""></a>
+        <a id="name"href="#">{用户名}</a>
+        <a id="email" href="#"></a>
       </div>
     </li>
     <li><div class="divider"></div></li>
-    <li><a href="#" class="subheader">ศูนย์ผู้ใช้</a></li>
+    <li><a href="#" class="subheader center">ศูนย์ผู้ใช้</a></li>
     <li><div class="divider"></div></li>
-    <li><a href="{用户中心}"><i class="material-icons">home</i>พื้นที่ส่วนตัว</a></li>
-    <li><a href="{头像设置}"><i class="material-icons">account_box</i>รูปประจำตัว</a></li>
-    <li><a href="{消息列表}"><i class="material-icons">message</i>ข้อความ</a></li>
-    <li><a href="{我的书架}"><i class="material-icons">collections_bookmark</i>ชั้นหนังสือ</a></li>
-    <li><a href="{我的收藏}"><i class="material-icons">favorite</i>เรื่องที่ชอบ</a></li>
-    <li><a href="{签到中心}"><i class="material-icons">assignment_ind</i>เช็คชื่อ</a></li>
-    <li><a href="{退出登录}"><i class="material-icons">exit_to_app</i>ออกจากระบบ</a></li>
+    <li><a href="{用户中心}"><i class="far fa-home"></i>พื้นที่ส่วนตัว</a></li>
+    <li><a href="{头像设置}"><i class="far fa-users-cog"></i>รูปประจำตัว</a></li>
+    <li><a href="{消息列表}"><i class="far fa-envelope"></i>ข้อความ</a></li>
+    <li><a href="{我的书架}"><i class="far fa-books"></i>ชั้นหนังสือ</a></li>
+    <li><a href="{我的收藏}"><i class="far fa-heart"></i>เรื่องที่ชอบ</a></li>
+    <li><a href="{签到中心}"><i class="far fa-calendar-check"></i>เช็คชื่อ</a></li>
+    <li><a href="{退出登录}"><i class="far fa-sign-out"></i>ออกจากระบบ</a></li>
     <li><div class="divider"></div></li>
-    <li><a href="#" class="subheader">ศูนย์นักเขียน</a></li>
+    <li><a href="#" class="subheader center">ศูนย์นักเขียน</a></li>
     <li><div class="divider"></div></li>
-    <li><a href="{作家首页}"><i class="material-icons">home</i>หนักหลัก</a></li>
-    <li><a href="{小说作品列表}"><i class="material-icons">book</i>จัดการนิยาย</a></li>
-    <li><a href="{文章投稿列表}"><i class="material-icons">note_add</i>จัดการบทความ</a></li>
+    <li><a href="{作家首页}"><i class="far fa-home"></i>หนักหลัก</a></li>
+    <li><a href="{小说作品列表}"><i class="far fa-edit"></i>จัดการนิยาย</a></li>
+    <li><a href="{文章投稿列表}"><i class="far fa-edit"></i>จัดการบทความ</a></li>
   </ul>
   <ul id="nav_user_logout" class="sidenav nv_nav_right">
-    <li><a href="{登录}" title="เข้าสู่ระบบ">เข้าสู่ระบบ</a></li>
-    <li><a href="#reg" class="modal-trigger" title="ลงทะเบียน">ลงทะเบียน</a></li>
-    <li><a href="{找回密码}"><i class="material-icons">exit_to_app</i>กู้คืนรหัสผ่าน</a></li>
+    <li><a href="{登录}" title="เข้าสู่ระบบ"><i class="far fa-sign-in"></i>เข้าสู่ระบบ</a></li>
+    <li><a href="#reg" class="modal-trigger" title="ลงทะเบียน"><i class="far fa-user-plus"></i>ลงทะเบียน</a></li>
+    <li><a href="{找回密码}" title="กู้คืนรหัสผ่าน"><i class="far fa-lock"></i>กู้คืนรหัสผ่าน</a></li>
   </ul>
   <!-- Modal Structure -->
   <div id="reg" class="modal modal-fixed-footer">
