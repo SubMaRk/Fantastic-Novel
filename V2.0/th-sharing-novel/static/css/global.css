@@ -111,6 +111,7 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  margin: 0 5px;
 }
 .slider .indicators .indicator-item.active {
   background-color: #ffffff;
@@ -211,7 +212,7 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 .tile {
   max-width: 260px;
   max-height: 350px;
-  width: 40vh;
+  width: 40vw;
   height: 52vw;
   margin: 10px;
   background-color: rgba(0, 0, 0, 0.85);
@@ -389,7 +390,12 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   -o-transition: 0.5s all;
   -ms-transition: 0.5s all;
 }
-
+.nv_tag_item a.nv_tag_color_0 {
+  background: #9C27B0;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px;
+}
 .nv_tag_item a.nv_tag_color_1 {
   background: #FFC001;
   padding-left: 5px;
@@ -560,20 +566,22 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   height: 100%;
 }
 .nv_info_status {
+  font-size: 1rem;
+  top: -38px;
+  line-height: 20px;
+  word-break: break-all;
+  text-overflow: ellipsis;
   background-color: #a00;
   overflow: hidden;
   white-space: nowrap;
-  position: absolute;
-  top: 438px;
+  position: relative;
   -webkit-box-shadow: 0 0 10px #888;
   -moz-box-shadow: 0 0 10px #888;
   box-shadow: 0 0 10px #888;
-  z-index: 1;font-size: 14px;
-  border: 1px solid #faa;
+  z-index: 1;
   color: #fff;
   display: block;
-  margin: 1px 0;
-  padding: 5px 15px;
+  padding: 5px 5px;
   text-align: center;
   text-decoration: none;
   text-shadow: 0 0 5px #444;
@@ -612,6 +620,18 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 #nv_info_tag {
   margin-top: -25px;
 }
+#nv_tag_info_type {
+  width: auto!important;
+}
+.visited {
+  background-color: black!important;
+  color: white!important;
+}
+.first_tag {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px;
+}
 #nv_tag_info {
   width: 18%!important;
 }
@@ -628,7 +648,7 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   display: inline-block;
 }
 #nv_sumary h5 {
-  line-height: unset!important;
+  margin-top: auto;
 }
 .nv_sumary p {
   text-indent: 30px;
@@ -767,4 +787,80 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 .nv_menu_info p {
   font-size: 1.4rem;
   line-height: 0;
+}
+/* CATEGORY PAGE */
+.nv_book_cover {
+  margin-top: 20px;
+}
+.nv_book_cover img {
+  width: 100%;
+}
+.nv_book_cover span {
+  font-size: 1rem;
+  top: -38px;
+  line-height: 20px;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  background-color: #a00;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  -webkit-box-shadow: 0 0 10px #888;
+  -moz-box-shadow: 0 0 10px #888;
+  box-shadow: 0 0 10px #888;
+  z-index: 1;
+  color: #fff;
+  display: block;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 5px #444;
+}
+.nv_book_info p {
+  font-size: 1.4rem;
+  line-height: 5px;
+}
+.nv_book_info h5 a {
+  font-size: 1.8rem;
+}
+#nv_type_des {
+  line-height: 20px!important;
+}
+.nv_book_info a {
+  color: black;
+  font-size: 1.4rem;
+}
+.nv_pagination {
+  margin-top: 10px;
+}
+.pagination li {
+  background-color: white!important;
+}
+.pagination li a {
+  font-size: 1.43rem;
+}
+/* RANKING PAGE */
+.nv_top_w {
+  margin-left: auto;
+  left: auto;
+  right: auto;
+  float: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 1px;
+}
+.nv_top_n {
+  width:40%;
+}
+.nv_name_1 {
+  width: 25%;
+}
+.nv_name {
+  width: 58%;
+}
+.nv_author {
+  width: 25%;
+}
+.nv_name,.nv_author,.nv_view_count,#nv_daily_ranking,#nv_weekly_ranking,#nv_monthly_ranking,#nv_category_ranking {
+  font-size: 1.4rem;
 }
