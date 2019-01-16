@@ -7,54 +7,55 @@
 <section id="nv_type">
   <div class="container" id="nv_global_w">
     <div class="row">
-      <div class="col s12 m4 l4 left" id="nv_category">
+      <div class="col s12 l3 left" id="nv_category">
         <!-- Select Category -->
-        <div class="nv_text_block z-depth-3">
+        <div class="nv_text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
           <h5>หมวดหมู่</h5>
         </div>
-        <div class="nv_tag_item" id="nv_info_tag" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
-          <a id="nv_tag_info" href="{全部小说}" class="{cur:tid=0}visited{/cur} nv_tag_color_{i}" title="นิยายทั้งหมด">ทั้งหมด</a>
-          {小说分类:}<a id="nv_tag_info" href="{surl}" class="{cur}visited{/cur} nv_tag_color_{i}" title="{小说分类名字}">{小说分类名字}</a>{/小说分类}
+        <div class="nv_tag_item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+          <a id="nv_tag_info_type" href="{全部小说}" class="{cur:tid=0}visited{/cur} first_tag nv_tag_color_0" title="นิยายทั้งหมด">ทั้งหมด</a>
+          {小说分类:}<a id="nv_tag_info_type" href="{surl}" class="{cur}visited{/cur} nv_tag_color_{i}" title="{小说分类名字}">{小说分类名字}</a>{/小说分类}
         </div>
         {检索分类:分类模块=小说;分类类型=条件;排序=分类顺序}
-        <div class="nv_text_block z-depth-3">
+        <div class="nv_text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
           <h5>{检索分类名字}</h5>
         </div>
-        <div class="nv_tag_item" id="nv_info_tag" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+        <div class="nv_tag_item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
           {检索条件:分类={检索分类id};数量=100;排序=条件顺序}
-          <a id="nv_tag_info" href="{url}" class="{cur}visited{/cur} nv_tag_color_{i}" title="{检索条件名字}">{检索条件名字}</a>{/检索条件}
+          <a id="nv_tag_info_type" href="{url}" class="{cur}visited{/cur} nv_tag_color_{i}" title="{检索条件名字}">{检索条件名字}</a>{/检索条件}
         </div>
         {/检索分类}
       </div>
-      <div class="col s12 m8 l8" id="nv_list">
-        <div class="nv_text_block">
-          <h5>มีนิยายทั้งหมด </h5>
+      <div class="col s12 l9" id="nv_list">
+        <div class="nv_text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+          <h5>มีนิยายทั้งหมด <span>{总数据}</span> เรื่อง</h5>
         </div>
         <div class="nv_book_list">
           <ul>
             {小说列表:数量=20}
-            <li class="nv_books">
-              <a class="nv_book_cover left" title="{小说名字}" href="{url}" target="_self">
-                <img class="lazy" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
+            <li class="nv_books col s12 m12 l6 z-depth-1" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+              <a class="nv_book_cover col s5 m5 l5" title="{小说名字}" href="{url}" target="_self">
+                <img class="lazy z-depth-3" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
                 <span>{小说最新章节名字}</span>
               </a>
-              <div class="nv_book_info">
+              <div class="nv_book_info col s7 m7 l7">
                 <h5><a href="{url}" target="_self" title="{小说名字}">{小说名字}</a></h5>
                 <p>ผู้แต่ง : {小说作者}</p>
-                <p>หมวดหมู่ : <a href="{turl}" target="_self">{小说分类名字}</a> <span>เข้าชม : {小说总点击} ครั้ง</span></p>
-                <p>{小说简介:100}</p>
-                <a href="{rurl}" title="เริ่มอ่าน" class="waves-effect waves-light btn" target="_self"><i class="fas fa-book"></i> อ่านเรื่องนี้</a>
+                <p>หมวดหมู่ : <a href="{turl}" target="_self">{小说分类名字}</a></p>
+                <p>เข้าชม : {小说总点击} ครั้ง</p>
+                <p id="nv_type_des">{小说简介:50}...</p>
+                <a href="{rurl}" title="เริ่มอ่าน" class="waves-effect waves-light btn white" target="_self"><i class="fas fa-book"></i> อ่านเรื่องนี้</a>
               </div>
             </li>
             {/小说列表}
           </ul>
         </div>
-        <div class="nv_pagination">
+        <div class="nv_pagination col s12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
           <ul class="pagination center">
             <li class="waves-effect waves-light btn"><a href="{第一页}" target="_self">หน้าแรก</a></li>
             <li class="waves-effect waves-light btn"><a href="{上一页}" target="_self">ก่อนหน้า</a></li>
-            {跳页:}{选中页}<li class="waves-effect"><a href="{url}" class="active" target="_self">{i}</a></li>{/选中页}
-            <li class="waves-effect"><a href="{url}" target="_self">{i}</a></li>{/跳页}
+            {跳页:}{选中页}<li class="waves-effect z-depth-3"><a href="{url}" class="visited" target="_self">{i}</a></li>{/选中页}
+            <li class="waves-effect z-depth-3"><a href="{url}" target="_self">{i}</a></li>{/跳页}
             <li class="waves-effect waves-light btn"><a href="{下一页}" target="_self">ถัดไป</a></li>
             <li class="waves-effect waves-light btn"><a href="{最后页}" target="_self">ท้ายสุด</a></li>
           </ul>
