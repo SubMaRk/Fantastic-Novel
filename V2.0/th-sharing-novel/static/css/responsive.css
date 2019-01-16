@@ -24,6 +24,9 @@
 @media only screen and (max-width: 993px){
   #nv_pc_login {display: none!important;}
   #nv_pc_logout {display: none!important;}
+  nav .brand-logo {
+    margin-left: unset!important;
+  }
 }
 @media only screen and (min-width: 993px){
   #nv_m_login {display: none!important;}
