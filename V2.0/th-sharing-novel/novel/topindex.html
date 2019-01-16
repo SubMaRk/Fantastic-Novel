@@ -14,54 +14,54 @@
           <div class="nv_text_block z-depth-3">
             <h5>อันดับประจำวัน</h5>
           </div>
-          <p><span class="nv_name">ชื่อเรื่อง</span><span class="nv_author">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
-          {小说:排序=日点击;数量=10}
+          <p><span class="nv_name nv_top_w">ชื่อเรื่อง</span><span class="nv_author nv_top_w">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
           <ul id="nv_daily_ranking">
+            {小说:排序=日点击;数量=10}
             <li>
               <div class="{i:1,2,3}nv_order_color{/i} {i:>3}nv_order_gray{/i}">{i}</div>
-              <a href="{url}" title="{小说名字}" class="nv_ranking_n">{小说名字} {i:1}<i class="fal fa-fire-alt fas-red"></i>{/i} {i:2}<i class="fal fa-fire-alt fas-pink"></i>{/i} {i:3}<i class="fal fa-fire-alt fas-orange"></i>{/i} {i:4}<i class="fal fa-fire-alt fas-yellow"></i>{/i}
-                {i:5}<i class="fal fa-fire-alt fas-green"></i>{/i} {i:>5}<i class="fal fa-fire-alt fas-dark"></i>{/i}</a>
-              <span>{小说作者}</span>
+              <a href="{url}" title="{小说名字}" class="nv_top_n nv_top_w">{小说名字} </a>
+              {i:1}<i class="fal fa-fire-alt fas-red left"></i>{/i}{i:2}<i class="fal fa-fire-alt fas-pink left"></i>{/i}{i:3}<i class="fal fa-fire-alt fas-orange left"></i>{/i}{i:4}<i class="fal fa-fire-alt fas-yellow left"></i>{/i}{i:5}<i class="fal fa-fire-alt fas-green left"></i>{/i}{i:>5}<i class="fal fa-fire-alt fas-dark left"></i>{/i}
+              <span class="nv_name_1 nv_top_w">{小说作者}</span>
               <span>{小说总点击} ครั้ง</span>
             </li>
+            {/小说}
           </ul>
-          {/小说}
         </div>
         <!-- Weekly Rankiing -->
         <div class="col s12 m4 l4" id="nv_ranking_weekly">
           <div class="nv_text_block z-depth-3">
             <h5>อันดับประจำสัปดาห์</h5>
           </div>
-          <p><span class="nv_name">ชื่อเรื่อง</span><span class="nv_author">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
-          {小说:排序=周点击;数量=10}
+          <p><span class="nv_name nv_top_w">ชื่อเรื่อง</span><span class="nv_author nv_top_w">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
           <ul id="nv_weekly_ranking">
+            {小说:排序=周点击;数量=10}
             <li>
               <div class="{i:1,2,3}nv_order_color{/i} {i:>3}nv_order_gray{/i}">{i}</div>
-              <a href="{url}" title="{小说名字}" class="nv_ranking_n">{小说名字} {i:1}<i class="fal fa-fire-alt fas-red"></i>{/i} {i:2}<i class="fal fa-fire-alt fas-pink"></i>{/i} {i:3}<i class="fal fa-fire-alt fas-orange"></i>{/i} {i:4}<i class="fal fa-fire-alt fas-yellow"></i>{/i}
-                {i:5}<i class="fal fa-fire-alt fas-green"></i>{/i} {i:>5}<i class="fal fa-fire-alt fas-dark"></i>{/i}</a>
-              <span>{小说作者}</span>
+              <a href="{url}" title="{小说名字}" class="nv_top_n nv_top_w">{小说名字}</a>
+              {i:1}<i class="fal fa-fire-alt fas-red left"></i>{/i}{i:2}<i class="fal fa-fire-alt fas-pink left"></i>{/i}{i:3}<i class="fal fa-fire-alt fas-orange left"></i>{/i}{i:4}<i class="fal fa-fire-alt fas-yellow left"></i>{/i}{i:5}<i class="fal fa-fire-alt fas-green left"></i>{/i}{i:>5}<i class="fal fa-fire-alt fas-dark left"></i>{/i}
+              <span class="nv_name_1 nv_top_w">{小说作者}</span>
               <span>{小说总点击} ครั้ง</span>
             </li>
+            {/小说}
           </ul>
-          {/小说}
         </div>
         <!-- Monthly Ranking -->
         <div class="col s12 m4 l4" id="nv_ranking_monthly">
           <div class="nv_text_block z-depth-3">
             <h5>อันดับประจำเดือน</h5>
           </div>
-          <p><span class="nv_name">ชื่อเรื่อง</span><span class="nv_author">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
-          {小说:排序=月点击;数量=10}
+          <p><span class="nv_name nv_top_w">ชื่อเรื่อง</span><span class="nv_author nv_top_w">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
           <ul id="nv_monthly_ranking">
+            {小说:排序=月点击;数量=10}
             <li>
               <div class="{i:1,2,3}nv_order_color{/i} {i:>3}nv_order_gray{/i}">{i}</div>
-              <a href="{url}" title="{小说名字}" class="nv_ranking_n">{小说名字} {i:1}<i class="fal fa-fire-alt fas-red"></i>{/i} {i:2}<i class="fal fa-fire-alt fas-pink"></i>{/i} {i:3}<i class="fal fa-fire-alt fas-orange"></i>{/i} {i:4}<i class="fal fa-fire-alt fas-yellow"></i>{/i}
-                {i:5}<i class="fal fa-fire-alt fas-green"></i>{/i} {i:>5}<i class="fal fa-fire-alt fas-dark"></i>{/i}</a>
-              <span>{小说作者}</span>
+              <a href="{url}" title="{小说名字}" class="nv_top_n nv_top_w">{小说名字}</a>
+              {i:1}<i class="fal fa-fire-alt fas-red left"></i>{/i}{i:2}<i class="fal fa-fire-alt fas-pink left"></i>{/i}{i:3}<i class="fal fa-fire-alt fas-orange left"></i>{/i}{i:4}<i class="fal fa-fire-alt fas-yellow left"></i>{/i}{i:5}<i class="fal fa-fire-alt fas-green left"></i>{/i}{i:>5}<i class="fal fa-fire-alt fas-dark left"></i>{/i}
+              <span class="nv_name_1 nv_top_w">{小说作者}</span>
               <span>{小说总点击} ครั้ง</span>
             </li>
+            {/小说}
           </ul>
-          {/小说}
         </div>
       </div>
       <div class="col s12" id="nv_ranking_list">
@@ -69,74 +69,193 @@
           <div class="nv_text_block z-depth-3">
             <h5>อันดับที่ชื่นชอบ</h5>
           </div>
-          <p><span class="nv_name">ชื่อเรื่อง</span><span class="nv_author">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
-          {小说:排序=日点击;数量=10}
+          <p><span class="nv_name nv_top_w">ชื่อเรื่อง</span><span class="nv_author nv_top_w">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
           <ul id="nv_daily_ranking">
+            {小说:排序=日点击;数量=10}
             <li>
               <div class="{i:1,2,3}nv_order_color{/i} {i:>3}nv_order_gray{/i}">{i}</div>
-              <a href="{url}" title="{小说名字}" class="nv_ranking_n">{小说名字} {i:1}<i class="fal fa-fire-alt fas-red"></i>{/i} {i:2}<i class="fal fa-fire-alt fas-pink"></i>{/i} {i:3}<i class="fal fa-fire-alt fas-orange"></i>{/i} {i:4}<i class="fal fa-fire-alt fas-yellow"></i>{/i}
-                {i:5}<i class="fal fa-fire-alt fas-green"></i>{/i} {i:>5}<i class="fal fa-fire-alt fas-dark"></i>{/i}</a>
-              <span>{小说作者}</span>
+              <a href="{url}" title="{小说名字}" class="nv_top_n nv_top_w">{小说名字}</a>
+              {i:1}<i class="fal fa-fire-alt fas-red left"></i>{/i}{i:2}<i class="fal fa-fire-alt fas-pink left"></i>{/i}{i:3}<i class="fal fa-fire-alt fas-orange left"></i>{/i}{i:4}<i class="fal fa-fire-alt fas-yellow left"></i>{/i}{i:5}<i class="fal fa-fire-alt fas-green left"></i>{/i}{i:>5}<i class="fal fa-fire-alt fas-dark left"></i>{/i}
+              <span class='nv_name_1 nv_top_w'>{小说作者}</span>
               <span>{小说总点击} ครั้ง</span>
             </li>
+            {/小说}
           </ul>
-          {/小说}
         </div>
         <!-- Weekly Rankiing -->
         <div class="col s12 m4 l4" id="nv_ranking_weekly">
           <div class="nv_text_block z-depth-3">
             <h5>อันดับแนะนำ</h5>
           </div>
-          <p><span class="nv_name">ชื่อเรื่อง</span><span class="nv_author">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
-          {小说:排序=周点击;数量=10}
+          <p><span class="nv_name nv_top_w">ชื่อเรื่อง</span><span class="nv_author nv_top_w">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
           <ul id="nv_weekly_ranking">
+            {小说:排序=周点击;数量=10}
             <li>
               <div class="{i:1,2,3}nv_order_color{/i} {i:>3}nv_order_gray{/i}">{i}</div>
-              <a href="{url}" title="{小说名字}" class="nv_ranking_n">{小说名字} {i:1}<i class="fal fa-fire-alt fas-red"></i>{/i} {i:2}<i class="fal fa-fire-alt fas-pink"></i>{/i} {i:3}<i class="fal fa-fire-alt fas-orange"></i>{/i} {i:4}<i class="fal fa-fire-alt fas-yellow"></i>{/i}
-                {i:5}<i class="fal fa-fire-alt fas-green"></i>{/i} {i:>5}<i class="fal fa-fire-alt fas-dark"></i>{/i}</a>
-              <span>{小说作者}</span>
+              <a href="{url}" title="{小说名字}" class="nv_top_n nv_top_w">{小说名字}</a>
+              {i:1}<i class="fal fa-fire-alt fas-red left"></i>{/i}{i:2}<i class="fal fa-fire-alt fas-pink left"></i>{/i}{i:3}<i class="fal fa-fire-alt fas-orange left"></i>{/i}{i:4}<i class="fal fa-fire-alt fas-yellow left"></i>{/i}{i:5}<i class="fal fa-fire-alt fas-green left"></i>{/i}{i:>5}<i class="fal fa-fire-alt fas-dark left"></i>{/i}
+              <span class='nv_name_1 nv_top_w'>{小说作者}</span>
               <span>{小说总点击} ครั้ง</span>
             </li>
+            {/小说}
           </ul>
-          {/小说}
         </div>
         <!-- Monthly Ranking -->
         <div class="col s12 m4 l4" id="nv_ranking_monthly">
           <div class="nv_text_block z-depth-3">
             <h5>อันดับความคิดเห็น</h5>
           </div>
-          <p><span class="nv_name">ชื่อเรื่อง</span><span class="nv_author">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
-          {小说:排序=月点击;数量=10}
+          <p><span class="nv_name nv_top_w">ชื่อเรื่อง</span><span class="nv_author nv_top_w">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
           <ul id="nv_monthly_ranking">
+            {小说:排序=月点击;数量=10}
             <li>
               <div class="{i:1,2,3}nv_order_color{/i} {i:>3}nv_order_gray{/i}">{i}</div>
-              <a href="{url}" title="{小说名字}" class="nv_ranking_n">{小说名字} {i:1}<i class="fal fa-fire-alt fas-red"></i>{/i} {i:2}<i class="fal fa-fire-alt fas-pink"></i>{/i} {i:3}<i class="fal fa-fire-alt fas-orange"></i>{/i} {i:4}<i class="fal fa-fire-alt fas-yellow"></i>{/i}
-                {i:5}<i class="fal fa-fire-alt fas-green"></i>{/i} {i:>5}<i class="fal fa-fire-alt fas-dark"></i>{/i}</a>
-              <span>{小说作者}</span>
+              <a href="{url}" title="{小说名字}" class="nv_top_n nv_top_w">{小说名字}</a>
+              {i:1}<i class="fal fa-fire-alt fas-red left"></i>{/i}{i:2}<i class="fal fa-fire-alt fas-pink left"></i>{/i}{i:3}<i class="fal fa-fire-alt fas-orange left"></i>{/i}{i:4}<i class="fal fa-fire-alt fas-yellow left"></i>{/i}{i:5}<i class="fal fa-fire-alt fas-green left"></i>{/i}{i:>5}<i class="fal fa-fire-alt fas-dark left"></i>{/i}
+              <span class="nv_name_1 nv_top_w">{小说作者}</span>
               <span>{小说总点击} ครั้ง</span>
             </li>
+            {/小说}
           </ul>
-          {/小说}
         </div>
       </div>
       <!-- Novel Category Ranking -->
-      <div class="col s12" id="nv_ranking_list">
-        {小说:分类:;数量=10;排序=总点击}
-        <div class="col s12 m4 l4" id="nv_ranking_daily">
+      <div class="col s12" id="nv_ranking_category">
+        <div class="col s12 m4 l4" id="nv_ranking_category">
           <div class="nv_text_block z-depth-3">
-            <h5>{小说分类名字}</h5>
+            <h5>แฟนตาซี</h5>
           </div>
-          <p><span class="nv_name">ชื่อเรื่อง</span><span class="nv_author">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
-          <ul id="nv_daily_ranking">
+          <p><span class="nv_name nv_top_w">ชื่อเรื่อง</span><span class="nv_author nv_top_w">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
+          <ul id="nv_category_ranking">
+            {小说:分类=1;数量=10;排序=总点击}
             <li>
               <div class="{i:1,2,3}nv_order_color{/i} {i:>3}nv_order_gray{/i}">{i}</div>
-              <a href="{url}" title="{小说名字}" class="nv_ranking_n">{小说名字} {i:1}<i class="fal fa-fire-alt fas-red"></i>{/i} {i:2}<i class="fal fa-fire-alt fas-pink"></i>{/i} {i:3}<i class="fal fa-fire-alt fas-orange"></i>{/i} {i:4}<i class="fal fa-fire-alt fas-yellow"></i>{/i}
-                {i:5}<i class="fal fa-fire-alt fas-green"></i>{/i} {i:>5}<i class="fal fa-fire-alt fas-dark"></i>{/i}</a>
-              <span>{小说作者}</span>
+              <a href="{url}" title="{小说名字}" class="nv_top_n nv_top_w">{小说名字}</a>
+              {i:1}<i class="fal fa-fire-alt fas-red left"></i>{/i}{i:2}<i class="fal fa-fire-alt fas-pink left"></i>{/i}{i:3}<i class="fal fa-fire-alt fas-orange left"></i>{/i}{i:4}<i class="fal fa-fire-alt fas-yellow left"></i>{/i}{i:5}<i class="fal fa-fire-alt fas-green left"></i>{/i}{i:>5}<i class="fal fa-fire-alt fas-dark left"></i>{/i}
+              <span class="nv_name_1 nv_top_w">{小说作者}</span>
               <span>{小说总点击} ครั้ง</span>
             </li>
+            {/小说}
           </ul>
-          {/小说}
+        </div>
+        <div class="col s12 m4 l4" id="nv_ranking_category">
+          <div class="nv_text_block z-depth-3">
+            <h5>ศิลปะการต่อสู้</h5>
+          </div>
+          <p><span class="nv_name nv_top_w">ชื่อเรื่อง</span><span class="nv_author nv_top_w">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
+          <ul id="nv_category_ranking">
+            {小说:分类=2;数量=10;排序=总点击}
+            <li>
+              <div class="{i:1,2,3}nv_order_color{/i} {i:>3}nv_order_gray{/i}">{i}</div>
+              <a href="{url}" title="{小说名字}" class="nv_top_n nv_top_w">{小说名字}</a>
+              {i:1}<i class="fal fa-fire-alt fas-red left"></i>{/i}{i:2}<i class="fal fa-fire-alt fas-pink left"></i>{/i}{i:3}<i class="fal fa-fire-alt fas-orange left"></i>{/i}{i:4}<i class="fal fa-fire-alt fas-yellow left"></i>{/i}{i:5}<i class="fal fa-fire-alt fas-green left"></i>{/i}{i:>5}<i class="fal fa-fire-alt fas-dark left"></i>{/i}
+              <span class="nv_name_1 nv_top_w">{小说作者}</span>
+              <span>{小说总点击} ครั้ง</span>
+            </li>
+            {/小说}
+          </ul>
+        </div>
+        <div class="col s12 m4 l4" id="nv_ranking_category">
+          <div class="nv_text_block z-depth-3">
+            <h5>โรแมนติก</h5>
+          </div>
+          <p><span class="nv_name nv_top_w">ชื่อเรื่อง</span><span class="nv_author nv_top_w">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
+          <ul id="nv_category_ranking">
+            {小说:分类=3;数量=10;排序=总点击}
+            <li>
+              <div class="{i:1,2,3}nv_order_color{/i} {i:>3}nv_order_gray{/i}">{i}</div>
+              <a href="{url}" title="{小说名字}" class="nv_top_n nv_top_w">{小说名字}</a>
+              {i:1}<i class="fal fa-fire-alt fas-red left"></i>{/i}{i:2}<i class="fal fa-fire-alt fas-pink left"></i>{/i}{i:3}<i class="fal fa-fire-alt fas-orange left"></i>{/i}{i:4}<i class="fal fa-fire-alt fas-yellow left"></i>{/i}{i:5}<i class="fal fa-fire-alt fas-green left"></i>{/i}{i:>5}<i class="fal fa-fire-alt fas-dark left"></i>{/i}
+              <span class="nv_name_1 nv_top_w">{小说作者}</span>
+              <span>{小说总点击} ครั้ง</span>
+            </li>
+            {/小说}
+          </ul>
+        </div>
+        <div class="col s12 m4 l4" id="nv_ranking_category">
+          <div class="nv_text_block z-depth-3">
+            <h5>ประวัติศาสตร์</h5>
+          </div>
+          <p><span class="nv_name nv_top_w">ชื่อเรื่อง</span><span class="nv_author nv_top_w">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
+          <ul id="nv_category_ranking">
+            {小说:分类=4;数量=10;排序=总点击}
+            <li>
+              <div class="{i:1,2,3}nv_order_color{/i} {i:>3}nv_order_gray{/i}">{i}</div>
+              <a href="{url}" title="{小说名字}" class="nv_top_n nv_top_w">{小说名字}</a>
+              {i:1}<i class="fal fa-fire-alt fas-red left"></i>{/i}{i:2}<i class="fal fa-fire-alt fas-pink left"></i>{/i}{i:3}<i class="fal fa-fire-alt fas-orange left"></i>{/i}{i:4}<i class="fal fa-fire-alt fas-yellow left"></i>{/i}{i:5}<i class="fal fa-fire-alt fas-green left"></i>{/i}{i:>5}<i class="fal fa-fire-alt fas-dark left"></i>{/i}
+              <span class="nv_name_1 nv_top_w">{小说作者}</span>
+              <span>{小说总点击} ครั้ง</span>
+            </li>
+            {/小说}
+          </ul>
+        </div>
+        <div class="col s12 m4 l4" id="nv_ranking_category">
+          <div class="nv_text_block z-depth-3">
+            <h5>เรื่องลึกลับ</h5>
+          </div>
+          <p><span class="nv_name nv_top_w">ชื่อเรื่อง</span><span class="nv_author nv_top_w">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
+          <ul id="nv_category_ranking">
+            {小说:分类=5;数量=10;排序=总点击}
+            <li>
+              <div class="{i:1,2,3}nv_order_color{/i} {i:>3}nv_order_gray{/i}">{i}</div>
+              <a href="{url}" title="{小说名字}" class="nv_top_n nv_top_w">{小说名字}</a>
+              {i:1}<i class="fal fa-fire-alt fas-red left"></i>{/i}{i:2}<i class="fal fa-fire-alt fas-pink left"></i>{/i}{i:3}<i class="fal fa-fire-alt fas-orange left"></i>{/i}{i:4}<i class="fal fa-fire-alt fas-yellow left"></i>{/i}{i:5}<i class="fal fa-fire-alt fas-green left"></i>{/i}{i:>5}<i class="fal fa-fire-alt fas-dark left"></i>{/i}
+              <span class="nv_name_1 nv_top_w">{小说作者}</span>
+              <span>{小说总点击} ครั้ง</span>
+            </li>
+            {/小说}
+          </ul>
+        </div>
+        <div class="col s12 m4 l4" id="nv_ranking_category">
+          <div class="nv_text_block z-depth-3">
+            <h5>เกมออนไลน์</h5>
+          </div>
+          <p><span class="nv_name nv_top_w">ชื่อเรื่อง</span><span class="nv_author nv_top_w">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
+          <ul id="nv_category_ranking">
+            {小说:分类=6;数量=10;排序=总点击}
+            <li>
+              <div class="{i:1,2,3}nv_order_color{/i} {i:>3}nv_order_gray{/i}">{i}</div>
+              <a href="{url}" title="{小说名字}" class="nv_top_n nv_top_w">{小说名字}</a>
+              {i:1}<i class="fal fa-fire-alt fas-red left"></i>{/i}{i:2}<i class="fal fa-fire-alt fas-pink left"></i>{/i}{i:3}<i class="fal fa-fire-alt fas-orange left"></i>{/i}{i:4}<i class="fal fa-fire-alt fas-yellow left"></i>{/i}{i:5}<i class="fal fa-fire-alt fas-green left"></i>{/i}{i:>5}<i class="fal fa-fire-alt fas-dark left"></i>{/i}
+              <span class="nv_name_1 nv_top_w">{小说作者}</span>
+              <span>{小说总点击} ครั้ง</span>
+            </li>
+            {/小说}
+          </ul>
+        </div>
+        <div class="col s12 m4 l4" id="nv_ranking_category">
+          <div class="nv_text_block z-depth-3">
+            <h5>ไซไฟ</h5>
+          </div>
+          <p><span class="nv_name nv_top_w">ชื่อเรื่อง</span><span class="nv_author nv_top_w">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
+          <ul id="nv_category_ranking">
+            {小说:分类=7;数量=10;排序=总点击}
+            <li>
+              <div class="{i:1,2,3}nv_order_color{/i} {i:>3}nv_order_gray{/i}">{i}</div>
+              <a href="{url}" title="{小说名字}" class="nv_top_n nv_top_w">{小说名字}</a>
+              {i:1}<i class="fal fa-fire-alt fas-red left"></i>{/i}{i:2}<i class="fal fa-fire-alt fas-pink left"></i>{/i}{i:3}<i class="fal fa-fire-alt fas-orange left"></i>{/i}{i:4}<i class="fal fa-fire-alt fas-yellow left"></i>{/i}{i:5}<i class="fal fa-fire-alt fas-green left"></i>{/i}{i:>5}<i class="fal fa-fire-alt fas-dark left"></i>{/i}
+              <span class="nv_name_1 nv_top_w">{小说作者}</span>
+              <span>{小说总点击} ครั้ง</span>
+            </li>
+            {/小说}
+          </ul>
+        </div>
+        <div class="col s12 m4 l4" id="nv_ranking_category">
+          <div class="nv_text_block z-depth-3">
+            <h5>สยองขวัญ</h5>
+          </div>
+          <p><span class="nv_name nv_top_w">ชื่อเรื่อง</span><span class="nv_author nv_top_w">ผู้แต่ง</span><span class="nv_view_count">เข้าชม</span></p>
+          <ul id="nv_category_ranking">
+            {小说:分类=8;数量=10;排序=总点击}
+            <li>
+              <div class="{i:1,2,3}nv_order_color{/i} {i:>3}nv_order_gray{/i}">{i}</div>
+              <a href="{url}" title="{小说名字}" class="nv_top_n nv_top_w">{小说名字}</a>
+              {i:1}<i class="fal fa-fire-alt fas-red left"></i>{/i}{i:2}<i class="fal fa-fire-alt fas-pink left"></i>{/i}{i:3}<i class="fal fa-fire-alt fas-orange left"></i>{/i}{i:4}<i class="fal fa-fire-alt fas-yellow left"></i>{/i}{i:5}<i class="fal fa-fire-alt fas-green left"></i>{/i}{i:>5}<i class="fal fa-fire-alt fas-dark left"></i>{/i}
+              <span class="nv_name_1 nv_top_w">{小说作者}</span>
+              <span>{小说总点击} ครั้ง</span>
+            </li>
+            {/小说}
+          </ul>
         </div>
       </div>
     </div>
