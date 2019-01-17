@@ -22,8 +22,10 @@
             <div class="nv_info_title">
               <p><strong>{名字} </strong><span>(ID : {id}) <a href="javascript:easyDialog.open({container : 'messsage',});" title="รายงาน"><i class="fas fa-exclamation-triangle fas-yellow"></i></a></span></p>
             </div>
-            <div>
-              <p>ให้คะแนน : {评分模版} คะแนน : <strong> {评分} </strong> ( {评分人数} คนที่ให้ ) </p>
+            <div class="nv_top_w">
+              <div class="nv_rate_score"><span class="left">ให้คะแนน : </span>
+                <div id="nv_star" onmouseover="rate(this,event)"></div><span>คะแนน : <strong> {评分} </strong> ( {评分人数} คนที่ให้ )</span>
+              </div>
             </div>
             <p>เข้าชมวันนี้ : {日点击} ครั้ง | สัปดาห์นี้ : {周点击} ครั้ง | เดือนนี้ : {月点击} ครั้ง | ทั้งหมด : {总点击} ครั้ง</p>
             <p>ผู้แต่ง : <strong><a href="{header:novel/fb_link.html}" target="_blank" title="{header:novel/fb_name.html}">{作者}</a></strong><span> | </span>แปลอังกฤษ : <strong>{header:novel/source_eng.html}</strong><span>| ต้นฉบับ : <strong>{header:novel/raw_link.html}</strong></span></p>
@@ -42,16 +44,16 @@
           </div>
         </div>
         <!-- Novel Sumary -->
-        <div class="nv_sumary">
+        <div class="nv_sumary  col s12">
           <div class="nv_text_block z-depth-3" id="nv_sumary" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
             <h5>เนื้อเรื่องย่อ</h5>
           </div>
           <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">{简介}</p>
         </div>
         <!-- Table of Content -->
-        <div class="nv_info_table_content">
+        <div class="nv_info_table_content  col s12">
           <div class="nv_text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
-            <h5>สารบัญเรื่อง <span><a href="{目录链接}" target="_self">{名字}</a></span></h5>
+            <h5>สารบัญเรื่อง <span><a class="hvr-underline-from-left" href="{目录链接}" target="_self">{名字}</a></span></h5>
           </div>
           {小说分卷列表:}
           <div class="nv_list">
@@ -63,7 +65,7 @@
                 </div>
                 <div class="collapsible-body" id="nv_list_chapter" data-aos-duration="500" data-aos-delay="500">
                   <ul>
-                    {小说章节列表:分卷id={小说分卷id}}<li data-aos="fade-left" data-aos-duration="500" data-aos-delay="500"><a href="{url}" title="{小说章节名字}">{小说章节名字:40}</a></li>{/小说章节列表}
+                    {小说章节列表:分卷id={小说分卷id}}<li data-aos="fade-left" data-aos-duration="500" data-aos-delay="500"><a class="hvr-underline-from-left" href="{url}" title="{小说章节名字}">{小说章节名字:40}</a></li>{/小说章节列表}
                   </ul>
                 </div>
               </li>
@@ -72,7 +74,7 @@
           {/小说分卷列表}
         </div>
         <!-- Additional writing work -->
-        <div class="nv_additional_writing">
+        <div class="nv_additional_writing col s12">
           <div class="nv_text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
             <h5>ผลงานเพิ่มเติมของ <strong>{作者}</strong></h5>
           </div>
@@ -80,15 +82,12 @@
             <ul class="nv_writing_list">
               {同作者小说:数量=5}
               {无数据}<div class="no_more_work" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">ยังไม่มีผลงานเพิ่มเติม</div>{/无数据}
-              <li data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
-                <a href="{url}" target="_self" class="nv_book_list">
-                  <div class="nv_book_list_cover">
-                    <img src="{封面}" alt="{名字}">
-                  </div>
-                  <div class="nv_name">{名字}</div>
-                  <span class="author"><i class="fas fa-user-edit"></i> {作者}</span>
-                  <span class="tag"><i class="fas fa-tag"></i> {分类名字}</span>
-                  <button href="{url}" title="เริ่มอ่าน {名字}" class="waves-effect waves-light btn white"><i class="fas fa-book"></i>อ่านเรื่องนี้</button>
+              <li class="nv_book_list col s3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+                <a class="nv_book_list_cover nv_top_w hvr-grow-shadow" href="{url}" target="_self">
+                  <img src="{封面}" alt="{名字}">
+                  <span class="nv_name_i">{名字}</span>
+                  <span class="nv_author_i"><i class="fas fa-user-edit"></i> {作者}</span>
+                  <span class="nv_tag_i"><i class="fas fa-tag"></i> {分类名字}</span>
                 </a>
               </li>
               {/同作者小说}
@@ -96,7 +95,7 @@
           </div>
         </div>
         <!-- Comment -->
-        <div class="nv_comment">
+        <div class="nv_comment col s12">
           <div class="nv_text_block z-depth-3" data-aos="fade-left" data-aos-duration="500" data-aos-delay="500">
             <h5>แสดงความคิดเห็น <i class="fas fa-comments"></i></h5><span class="right">ทั้งหมด : <em>{评论量}</em> ความคิดเห็น</span>
           </div>
@@ -129,8 +128,8 @@
             <h5>ข้อมูลผู้เขียน</h5>
           </div>
           <div class="nv_author_info" data-aos="fade-left" data-aos-duration="500" data-aos-delay="500">
-            <img src="{作者头像}" alt="{作者}">
-            <dl class="nv_author_detail">
+            <img class="col s5" src="{作者头像}" alt="{作者}">
+            <dl class="nv_author_detail nv_top_w">
               <dt>{作者}</dt>
               <dd>ระดับ : {作者等级}</dd>
               <dd>เช็คชื่อ : {是否签约}</dd>
@@ -160,10 +159,15 @@
           <div class="nv_rec_list">
             <ul>
               {同分类小说:数量=10}
-              <li data-aos="fade-left" data-aos-duration="500" data-aos-delay="500">
-                <img src="{小说封面}" alt="{小说名字}">
-                <a href="{url}" target="_self" title="{小说名字}">{小说名字}</a>
-                <p>{小说简介:100}...</p>
+              <li class="nv_info_rec" data-aos="fade-left" data-aos-duration="500" data-aos-delay="500">
+                <a title="{小说名字}" class="hvr-grow-shadow" href="{url}" target="_self">
+                  <img class="lazy nv_book_cover col s5 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
+                  <div class="nv_book_info col s7 m7 l7">
+                    <h5>{小说名字}</h5>
+                    <p>ผู้แต่ง : {小说作者}</p>
+                    <p id="nv_type_des">{小说简介:50}...</p>
+                  </div>
+                </a>
               </li>
               {/同分类小说}
             </ul>
@@ -173,5 +177,77 @@
     </div>
   </div>
 </section>
+<script>
+  $(function() {
+    var starHtml = starImg = '';
+    for (var i = 1; i <= 5; i++) {
+      starImg = 'star_off.gif';
+      if (i <= {平均分整数}) {
+        starImg = 'star_on.gif';
+      }
+      starHtml += '<img src="/files/images/' + starImg + '" title="' + i + ' คะแนน" />';
+    }
+    $("#nv_star").html(starHtml);
+  });
+
+  function rate(obj, oEvent) {
+    var imgSrc = '/files/images/star_off.gif';
+    var imgSrc_2 = '/files/images/star_on.gif';
+
+    if (obj.rateFlag) return;
+    var e = oEvent || window.event;
+    var target = e.target || e.srcElement;
+    var imgArray = obj.getElementsByTagName("img");
+    for (var i = 0; i < imgArray.length; i++) {
+      imgArray[i]._num = i;
+      imgArray[i].onclick = function() {
+        if (obj.rateFlag)
+          return;
+        obj.rateFlag = true;
+
+        //评分操作
+        $.ajax({
+          type: "POST",
+          url: "/wmcms/action/index.php?action=score.score&ajax=yes",
+          data: {
+            'module': '{评分模块}',
+            'cid': '{评分id}',
+            'score': this._num + 1
+          },
+          dataType: "json",
+          success: function(data) {
+            Swal({
+              type: 'success',
+              title: 'ให้คะแนนแล้ว',
+              showConfirmButton: false,
+              timer: 1500
+            });
+          },
+          error: function(e) //服务器响应失败处理函数
+          {
+            console.log(e);
+            alert(e);
+          },
+          async: true,
+        });
+
+      };
+    }
+
+    if (target.tagName == "IMG") {
+      for (var j = 0; j < imgArray.length; j++) {
+        if (j <= target._num) {
+          imgArray[j].src = imgSrc_2;
+        } else {
+          imgArray[j].src = imgSrc;
+        }
+      }
+    } else {
+      for (var k = 0; k < imgArray.length; k++) {
+        imgArray[k].src = imgSrc;
+      }
+    }
+  }
+</script>
 <!-- Load Footer -->
 {footer:footer.global.html}

@@ -589,6 +589,13 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   margin-left: 5px;
   float: left;
 }
+.nv_info_title {
+  width: 100%;
+  margin: auto;
+  left: auto;
+  right: auto;
+  float: left;
+}
 .nv_info_title p {
   line-height: 0px;
 }
@@ -615,10 +622,11 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 }
 #nv_info_detail p {
   font-size: 1.4rem;
-  line-height: 10px;
+  line-height: 0px;
+  float: left;
 }
-#nv_info_tag {
-  margin-top: -25px;
+#nv_info_tag p {
+  margin-right: 10px;
 }
 #nv_tag_info_type {
   width: auto!important;
@@ -633,7 +641,7 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   margin-right: 3px;
 }
 #nv_tag_info {
-  width: 18%!important;
+  width: auto!important;
 }
 .nv_info_btn {
   margin-top: 10px;
@@ -664,14 +672,41 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   text-overflow: ellipsis;
   word-break: break-all;
 }
+.nv_info_rec img {
+
+}
+.nv_book_list {
+
+}
+.nv_book_list_cover {
+  text-align: center;
+}
+.nv_book_list_cover img {
+  width: 100%;
+  margin-top: 15px;
+}
+.nv_name_i {float: left;width: 100%;font-size: 1.4rem;}
+.nv_author_i {float: left;width: 50%;font-size: 1.2rem;}
+.nv_tag_i {width: 50%;font-size: 1.2rem;}
+.nv_rate_score {
+  font-size: 1.4rem;
+  float: left;
+}
+#nv_star {
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 /* SIDEBAR INFO */
 .nv_author_info img {
-  width: 30%;
+  width: 35%;
+  float:left;
 }
 .nv_author_detail {
   font-size: 1.4rem;
-  margin-left: 60px;
   line-height: normal;
+  float: unset!important;
 }
 .nv_author_notice {
 
@@ -682,6 +717,13 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 .nv_author_notice p {
   font-size: 1.4rem;
   text-indent: 10px;
+}
+.nv_author_detail dt {
+  margin-left: 10px;
+}
+.nv_author_detail dd {
+  margin-left: 10px;
+  margin-inline-start: unset!important;
 }
 
 /* FRIND LINK */
@@ -858,9 +900,9 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 .nv_name {
   width: 58%;
 }
-.nv_author {
+.nv_author_1 {
   width: 25%;
 }
-.nv_name,.nv_author,.nv_view_count,#nv_daily_ranking,#nv_weekly_ranking,#nv_monthly_ranking,#nv_category_ranking {
+.nv_name,.nv_author_1,.nv_view_count,#nv_daily_ranking,#nv_weekly_ranking,#nv_monthly_ranking,#nv_category_ranking {
   font-size: 1.4rem;
 }
