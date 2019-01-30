@@ -63,9 +63,9 @@
                 <div class="collapsible-header" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
                   <i class="fas fa-book"></i><span> {小说分卷名字}</span>
                 </div>
-                <div class="collapsible-body" id="nv_list_chapter" data-aos-duration="500" data-aos-delay="500">
+                <div class="collapsible-body" data-aos-duration="500" data-aos-delay="500">
                   <ul>
-                    {小说章节列表:分卷id={小说分卷id}}<li data-aos="fade-left" data-aos-duration="500" data-aos-delay="500"><a class="hvr-underline-from-left" href="{url}" title="{小说章节名字}">{小说章节名字:40}</a></li>{/小说章节列表}
+                    {小说章节列表:分卷id={小说分卷id}}<a class="hvr-underline-from-left nv_list_chapter" data-aos="fade-left" data-aos-duration="500" data-aos-delay="500" href="{url}" title="{小说章节名字}">{小说章节名字:40}</a>{/小说章节列表}
                   </ul>
                 </div>
               </li>
@@ -80,12 +80,12 @@
           </div>
           <div class="nv_additional_writing_list">
             <ul class="nv_writing_list">
-              {同作者小说:数量=5}
+              {同作者小说:数量=4}
               {无数据}<div class="no_more_work" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">ยังไม่มีผลงานเพิ่มเติม</div>{/无数据}
               <li class="nv_book_list col s3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
                 <a class="nv_book_list_cover nv_top_w hvr-grow-shadow" href="{url}" target="_self">
-                  <img src="{封面}" alt="{名字}">
-                  <span class="nv_name_i">{名字}</span>
+                  <img src="{小说封面}" alt="{小说名字}">
+                  <span class="nv_name_i">{小说名字}</span>
                   <span class="nv_author_i"><i class="fas fa-user-edit"></i> {作者}</span>
                   <span class="nv_tag_i"><i class="fas fa-tag"></i> {分类名字}</span>
                 </a>
@@ -100,6 +100,8 @@
             <h5>แสดงความคิดเห็น <i class="fas fa-comments"></i></h5><span class="right">ทั้งหมด : <em>{评论量}</em> ความคิดเห็น</span>
           </div>
           <div class="nv_comment_main">
+            <div id="wmcms_replay">{js评论}</div>
+            <!--
             <ul class="nv_comment_show">
               {评论:数量=10;排序=最新}
               <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
@@ -117,7 +119,7 @@
             </ul>
             <div class="nv_comment_more">
               <a class="waves-effect waves-light btn white" href="{评论列表}">ดูความคิดเห็นเพิ่มเติม</a>
-            </div>
+            </div>-->
           </div>
         </div>
       </div>
@@ -158,7 +160,7 @@
           </div>
           <div class="nv_rec_list">
             <ul>
-              {同分类小说:数量=10}
+              {同分类小说:数量=5}
               <li class="nv_info_rec" data-aos="fade-left" data-aos-duration="500" data-aos-delay="500">
                 <a title="{小说名字}" class="hvr-grow-shadow" href="{url}" target="_self">
                   <img class="lazy nv_book_cover col s5 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">

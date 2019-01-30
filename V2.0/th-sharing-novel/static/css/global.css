@@ -585,7 +585,8 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   text-align: center;
   text-decoration: none;
   text-shadow: 0 0 5px #444;
-}#nv_info_detail {
+}
+#nv_info_detail {
   margin-left: 5px;
   float: left;
 }
@@ -625,6 +626,7 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   line-height: 0px;
   float: left;
 }
+
 #nv_info_tag p {
   margin-right: 10px;
 }
@@ -665,12 +667,21 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 .collapsible-header span {
   font-size: 1.6rem;
 }
-#nv_list_chapter ul li {
+.nv_list_chapter {
   font-size: 1.4rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-all;
+  display: inline-table;
+  width: 49%;
+  line-height: 35px;
+}
+#word_break {
+  word-break: break-all;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .nv_info_rec img {
 
@@ -725,6 +736,9 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   margin-left: 10px;
   margin-inline-start: unset!important;
 }
+.nv_info_rec {
+  height: 15vw;
+}
 
 /* FRIND LINK */
 .nv_link {
@@ -754,7 +768,12 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   line-height: unset;
 }
 #nv_read_w {
-  width:60%!important;
+  width:60%;
+}
+.nv_ct {
+  width: 60%;
+  margin-left: 15.5%!important;
+  font-size: 1.4rem;
 }
 .nv_chapter_info {
   padding: 5px;
@@ -765,7 +784,7 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 }
 .nv_chapter_info p {
   font-size: 1.8rem;
-  line-height: 10px;
+  margin: auto;
 }
 .content {
   font-family: Arial;
@@ -789,6 +808,29 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 .nv_control a {
   font-size: 1.4rem;
 }
+#modal-chapter-list {
+  top: unset!important;
+  height: 100%!important;
+}
+#nv_chapter_list {
+  font-size: 1.4rem;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow-y: auto!important;
+  max-height: 100%;
+}
+#modal-chapter-list a {
+  word-break: break-all;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.modal-header {
+  text-align: center;
+}
+#modal-chapter-list .modal-content {
+  overflow-y: unset!important;
+}
+.collection a.collection-item
 @media print {
   html {
     display: hide;
@@ -822,14 +864,19 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   padding: 10px;
 }
 /* MENU PAGE */
-.nv_menu_info {
-  padding-top: 5px;
-  padding-bottom: 5px;
+.nv_menu_info img {
+  width: 100%;
+  margin-top: 10px;
 }
 .nv_menu_info p {
   font-size: 1.4rem;
-  line-height: 0;
+  margin: auto;
 }
+#nv_menu {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 /* CATEGORY PAGE */
 .nv_book_cover {
   margin-top: 20px;
@@ -881,6 +928,10 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 .pagination li a {
   font-size: 1.43rem;
 }
+.nv_books {
+  height: 20vw;
+}
+
 /* RANKING PAGE */
 .nv_top_w {
   margin-left: auto;

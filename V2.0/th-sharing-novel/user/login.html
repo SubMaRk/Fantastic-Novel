@@ -3,33 +3,38 @@
   <main>
     <center>
       <div class="nv_img_f">
-        <a href="#"><i class="material-icons">account_circle</i></a>
+        <a href="#"><img class="circle" id="user_icon" src="{用户头像}" /></a>
         <h5>โปรดเข้าสู่ระบบ</h5>
       </div>
       <div class="container" id="nv_user_w">
         <div class="row z-depth-3">
-          <form class="col s12 nv_form" action="{登录提交地址}" method="post">
+          <form class="col s12 nv_form" id="nv_form" name="nv_form">
           {表单锁}
             <div class="row">
               <div class="input-field col s12">
-                <i class="material-icons prefix">account_circle</i>
+                <i class="fas fa-user-circle prefix"></i>
                 <input id="user_name" type="text" class="viladate" name="name" />
                 <label for="user_name">ชื่อผู้ใช้</label>
               </div>
               <div class="input-field col s12">
-                <i class="material-icons prefix">lock</i>
+                <i class="fas fa-lock prefix"></i>
                 <input id="user_password_1" type="password" class="validate" name="psw" />
                 <label for="user_password_1">รหัสผ่าน</label>
               </div>
-              <div class="input-field col s12">
-                <i class="material-icons prefix">fingerprint</i> {登录验证码开启}
-                <input id="code" type="text" name="code" style="width:70%" />{登录验证码}{/登录验证码开启}
+              {登录验证码开启}
+              <div class="input-field col s10">
+                <i class="fas fa-fingerprint prefix"></i>
+                <input id="code" type="text" name="code" />
                 <label for="code">โค้ดยืนยัน</label>
               </div>
+              <div class="col s2">
+                <span>{登录验证码}</span>
+              </div>
+              {/登录验证码开启}
               <div class="input-field col s12 center">
                 <input type="hidden" name="time" value="2592000" />
                 <input type="hidden" name="remember" value="1" />
-                <button class="waves-effect waves-light btn" value="true" type="submit" name="submit">เข้าสู่ระบบ</button>
+                <button class="waves-effect waves-light btn" id="login" value="true" type="submit" name="submit">เข้าสู่ระบบ</button>
                 <p class="message">
                   ยังไม่มีบัญชีใช่ไหม? <a href="{注册}">ลงทะเบียน</a> กับเรา!<br /> หรือ <a href="{找回密码}">ลืมรหัสผ่าน?</a>
                 </p>
@@ -41,4 +46,90 @@
     </center>
   </main>
 </section>
-{header:footer.global.html}
+<section id="footer">
+  <div class="page-footer white">
+    <div class="container" id="nv_global_w">
+      <div class="col s12 center">
+        <a href="https://www.copyscape.com/" target="_blank"><img src="{templates}/static/image/copyscape.png" width="130" height="46" border="0" alt="Protected by Copyscape" title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page." /></a>
+        <span style="padding-right:10px;"></span>
+        <a href="https://ifastnet.com/portal/aff.php?aff=25156" target="_blank"><img src="{templates}/static/image/ifastnet.png" height="46" alt="Hosted on IFastNet" title="Ifastnet.com is a Premium Hosting Provider, VPS hosting and dedicated servers. Over 5,000,000 websites trust us for their hosting needs." /></a>
+      </div>
+    </div>
+    <div class="nv_ft_bottom">
+      <div class="footer-copyright black col s12">
+        <div style="margin:auto;">
+          <span>
+            &copy 2017-2019 <a href="{首页}"> {网站名} </a> All Rights Reserved.
+          </span>
+          <span>
+            Designed by <a href="https://www.facebook.com/NumSubMaRk" target="_blank"> SubMaRk </a>Powered by <a href="http://www.weimengcms.com" target="_blank"> WeiMengCMS </a>V4.240.485 (Up to date)
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  $(function() {
+    $("#login").click(function() {
+      var name=$("#nv_form [name=name]").val();
+      var psw=$("#nv_form [name=psw]").val();
+      {登录验证码开启}var vcode=$("#nv_form [name=code]").val();{/登录验证码开启}
+      if(name.length>16 || name.length<3) {
+        Swal({
+          type: 'error',
+          title: 'ชื่อผู้ใช้ไม่ถูกต้อง!',
+          showConfirmButton: false,
+          timer: 1500
+        });
+        return false;
+      }else if(psw.length>16 || psw.length<8) {
+        Swal({
+          type: 'error',
+          title: 'รหัสผ่านไม่ถูกต้อง!',
+          showConfirmButton: false,
+          timer: 1500
+        });
+        return false;
+      {登录验证码开启}}else if(vcode == '' || vcode.length>4) {
+        Swal({
+          type: 'error',
+          title: 'รหัสยืนยันไม่ถูกต้อง!',
+          showConfirmButton: false,
+          timer: 1500
+        });
+        return false;
+      {/登录验证码开启}} else {
+        $.ajax({
+          type: "POST",
+          url:"{登录提交地址}&ajax=yes",
+          data:$("#nv_form").serializeArray(),
+          dataType:"json",
+          success:function(data) {
+            if (data.code != 200) {
+              Swal({
+                type: 'error',
+                title: 'ข้อมูลบัญชีผู้ใช้ไม่ถูกต้อง!',
+                showConfirmButton: false,
+                timer: 1500
+              });
+              setTimeout(function(){window.location.reload();},1500);
+            } else {
+              Swal({
+                type: 'success',
+                title: 'เข้าสู่ระบบแล้ว!',
+                showConfirmButton: false,
+                timer: 1500
+              });
+              setTimeout(function(){window.location='/';},1500);
+            }
+          },
+          async:true,
+        });
+        return false;
+      }
+    })
+  });
+</script>
+</body>
+</html>

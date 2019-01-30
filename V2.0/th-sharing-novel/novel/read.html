@@ -8,8 +8,19 @@
   <div class="navbar-fixed" id="nv_nav_read">
     <nav class="white nv_nav" data-aos="fade-down" data-aos-duration="500">
       <a href="{首页}" target="_self" class="waves-effect white waves-light btn left"><i class="fa fa-home"></i></a>
+      <a class="btn nv_ct waves-effect white waves-light modal-trigger" href="#modal-chapter-list">{章节名字}<i class="fas fa-angle-down right"></i></a>
       <a href="#modal-settings" class="waves-effect white waves-light btn modal-trigger right"><i class="fa fa-cog"></i></a>
     </nav>
+  </div>
+  <div class="modal modal-fixed-footer" id="modal-chapter-list">
+    <div class="modal-content">
+      <div clas="modal-header">
+        <h5>เลือกบทที่จะอ่าน</h5>
+      </div>
+      <div class="collection" id="nv_chapter_list">
+        {小说分卷列表:}{小说章节列表:分卷id={小说分卷id}}<a class="collection-item {cur}active selected{/cur}" href="{url}" title="{小说章节名字}">{cur}<i class="far fa-arrow-right"></i> {/cur}{小说章节名字:40}</a>{/小说章节列表}{/小说分卷列表}
+      </div>
+    </div>
   </div>
   <div class="modal" id="modal-settings">
     <div class="modal-content center">
@@ -50,9 +61,9 @@
       <div class="col s12">
         <div class="nv_chapter_info center z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
           <h3>{章节名字}</h3>
-          <p>เรื่อง : <span><a class="hvr-underline-from-left" href="{内容链接}" target="_self">{名字}</a> ({拼音})</span></p>
-          <p>ผู้แต่ง : <span>{作者}</span> <span>|</span> หมวดหมู่ : <span><a class="hvr-underline-from-left" href="{分类链接}" target="_self">{类型}</a></span> <span>|</span> สถานะ : <span>{进程}</span></p>
-          <p>Facebook Page : <a class="hvr-underline-from-left" href="{header:novel/fb_link.html}" target="_blank" title="{header:novel/fb_name.html}">{header:novel/fb_name.html}</a></p>
+          <p>เรื่อง : <span><a href="{内容链接}" target="_self">{名字}</a> ({拼音})</span></p>
+          <p>ผู้แต่ง : <span>{作者}</span> <span>|</span> หมวดหมู่ : <span><a href="{分类链接}" target="_self">{类型}</a></span> <span>|</span> สถานะ : <span>{进程}</span></p>
+          <p>Facebook Page : <a href="{header:novel/fb_link.html}" target="_blank" title="{header:novel/fb_name.html}">{header:novel/fb_name.html}</a></p>
         </div>
         <div class="nv_read z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
           {已订阅}<div class="content noselect">{章节内容}</div>{/已订阅}
@@ -77,7 +88,7 @@
     </div>
     <div class="nv_ft_bottom">
       <div class="footer-copyright black col s12">
-        <div style="margin:auto;">
+        <div id="nv_footer">
           <span>
             &copy 2017-2019 <a href="{首页}"> {网站名} </a> All Rights Reserved.
           </span>
@@ -92,6 +103,7 @@
 <!-- Javascript for Read Page -->
 <script>
   $(document).ready(function() {
+    $(".dropdown-trigger").dropdown();
     $('.modal').modal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
       //opacity: .5, // Opacity of modal background

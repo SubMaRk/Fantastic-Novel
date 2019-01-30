@@ -10,19 +10,4 @@
       js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-    $(document).ready(function() {
-      $.get("{url:ajax;user.getinfo}", function(data) {
-        if (data.code == 200) {
-          document.getElementById('nv_m_login').style.display = 'block';
-          document.getElementById('nv_pc_login').style.display = 'block';
-          document.getElementById('nv_m_logout').style.display = 'none';
-          document.getElementById('nv_pc_logout').style.display = 'none';
-        } else if (data.code == 300) {
-          document.getElementById('nv_m_logout').style.display = 'block';
-          document.getElementById('nv_pc_logout').style.display = 'block';
-          document.getElementById('nv_m_login').style.display = 'none';
-          document.getElementById('nv_pc_login').style.display = 'none';
-        }
-      }, "json")
-    });
   </script>
