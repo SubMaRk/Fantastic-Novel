@@ -1,11 +1,11 @@
-##TH-SHARING Template
+## TH-SHARING Template
 
     Author  : SubMaRk
     Version : 1
     Time    : 2018-12-24
     URL     : https://th-sharing.com
 
-##Libraries used
+## Libraries used
 ### CSS
     materialize.css
 ### JS
