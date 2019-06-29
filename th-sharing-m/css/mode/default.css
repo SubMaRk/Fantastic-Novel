@@ -1,0 +1,13 @@
+/* Default Mode 
+	Created by SubMaRk
+	Date : September 23, 2017
+*/
+body{background-color: #fff!important;color:black!important;-webkit-transition: .1s ease-out;transition: .1s ease-out;}
+nav{background-color: #fff!important;-webkit-transition: .1s ease-out;transition: .1s ease-out;}
+.ch-info{background-color:#fff!important;border: 1px solid #000000;-webkit-box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);-webkit-transition: .1s ease-out;transition: .1s ease-out;}
+.reader{background-color:#fff!important;border: 1px solid #000000;-webkit-box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);-webkit-transition: .1s ease-out;transition: .1s ease-out;}
+.before-footer{background-color:#fff!important;border: 1px solid #000000;-webkit-box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);-webkit-transition: .1s ease-out;transition: .1s ease-out;}
+.page-footer{background-color:#202020!important;-webkit-transition: .1s ease-out;transition: .1s ease-out;}
+.btn{background-color:#bbb!important;color:black!important;-webkit-transition: .1s ease-out;transition: .1s ease-out;}
+.modal{box-shadow: 0 0 15px #000000!important;background:#fff!important;border-bottom: 2px solid rgba(0,0,0,.7)!important;}
+.modal-content{color:black!important;}

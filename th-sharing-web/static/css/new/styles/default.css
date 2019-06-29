@@ -1,0 +1,16 @@
+/* Css for TH-SHARING.COM
+/* Created by SubMaRK 2018-02-27
+/* Last updated 2018-02-27
+*/
+
+/* Nav Color */
+nav  {color:#000!important;background-color:#fff!important;}
+nav a, nav ul a {color:#000!important;}
+nav a:hover, nav ul a:hover {color:#999!important;}
+nav .brand-logo {color: rgb(33, 190, 241);}
+nav .button-collapse i {color:#000!important;}
+
+/* Icons Color */
+.material-icons {color: rgba(0, 0, 0, 0.54);}
+
+/* Footer Color */

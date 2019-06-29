@@ -1,0 +1,401 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type='text/javascript'>
+        if (window.location.protocol == "http:") {
+            var restOfUrl = window.location.href.substr(5);
+            window.location = "https:" + restOfUrl;
+        }
+
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-100115995-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<meta name="Keywords" content="{key}" />
+<meta name="Description" content="{desc}" />
+<meta property="og:title" content="{title}" />
+<meta property="og:description" content="{desc}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{当前url}" />
+<meta property="og:image" content="https://novel.th-sharing.com{封面}" />
+<meta property="fb:admins" content="NumSubMaRk" />
+<link rel="stylesheet" type="text/css" href="{templates}/static/css/materialize.min.css"/>
+<link rel="stylesheet" type="text/css" href="{templates}/static/images/font-awesome/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="{templates}/static/css/anticopy.min.css"/>
+<script src="/files/js/common.js"></script>
+<script src="https://copypoison.com/cp.js" async></script>
+<script src="{templates}/static/js/pageguard.min.js"></script>
+<!-- Read Mode Styles -->
+<script type="text/javascript">
+function fetchSwitch(){
+var csswitch,i,x,y,cookie_arr=document.cookie.split(";");
+for (i=0;i<cookie_arr.length;i++)
+{
+  x=cookie_arr[i].substr(0,cookie_arr[i].indexOf("="));
+  y=cookie_arr[i].substr(cookie_arr[i].indexOf("=")+1);
+  x=x.replace(/^\s+|\s+$/g,"");
+  if (x=="jswitch")
+    {
+    csswitch = unescape(y);
+    }
+  }
+
+if (csswitch!=undefined){
+return csswitch;
+} else {
+return "default";
+}
+}
+
+function switchQuery(mySheet){
+var exdate=new Date();
+exdate.setDate(exdate.getDate() + 365);
+var c_value=escape(mySheet) + ((365==null) ? "" : "; expires="+exdate.toUTCString());
+document.cookie="jswitch" + "=" + c_value + ";domain=novel.th-sharing.com;path=/"; 
+document.location.reload(true);
+}
+</script>
+<script type="text/javascript">
+document.write('<link type="text/css" rel="stylesheet" href="{templates}/static/css/mode/' + fetchSwitch() + '.css" />');
+</script>
+<script type="text/javascript">window.onerror=function(){return true;}</script>
+<script src="{templates}/static/js/scrolls.js"></script>
+<style>
+/* Added by SubMaRk */
+.nav-wrapper i {line-height:unset;}
+.title-text {width:100%!important;}
+.ch-info {text-align:center;border: 1px solid #e2cfab;display:block;padding:20px 15px 15px 20px;-webkit-box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2)}
+.ch-title {font-size:2.5rem; text-align:center; padding-bottom:10px; font-weight:bold;max-width:100%;}
+.ch-story-related {padding-top:5px; font-weight:bold;font-size:1.3rem;}
+.ch-public {font-weight:bold;font-size:1.3rem;}
+.type_process {font-weight:bold;font-size:1.3rem;}
+.follow_translator {font-weight:bold;font-size:1.3rem;padding-bottom:10px;}
+#footer {bottom:0px;left:0px;right:0px;}
+.reader{border: 1px solid #e2cfab;display:block;padding: 20px 20px 20px 20px;-webkit-box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2)}
+.before-footer{border: 1px solid #e2cfab;display:block;-webkit-box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2)}
+@media print {nav {display: none;} .reader {display: none;} .ch-info {display: none;} .before-footer {display: none;} .page-footer {display: none;}}
+.content{margin: 15px 20px;white-space:pre-wrap;font-family:Arial,Helvetica Neue,Helvetica,sans-serif;}
+.noselect { -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.modal-overlay {z-index:900!important;}
+.container{margin:0 auto;width:60%}
+@media only screen and (max-width: 600px){.container{width:95%}}
+@media only screen and (min-width: 601px){.container{width:75%}}
+@media only screen and (min-width: 993px){.container{width:65%}}
+@media only screen and (max-width: 768px){.margin-left{margin-left:8rem !important}.ch-title{font-size:2.3rem;}.ch-story-related{font-size:1.2rem;}.ch-public{font-size:1.2rem;}.type_process{font-size:1.2rem;}.follow_translator{font-size:1.2rem;}.content{font-size:16px;margin:5px 5px!important;}#nav-web{display:none!important;}#nav-m{display:block!important}}
+@media only screen and (min-width:768px){.margin-left{margin-left:10rem !important}.content{font-size:17px;}#nav-m{display:none!important}#nav-web{display:block!important;}}
+@media only screen and (min-width:900px){.margin-left{margin-left:13rem !important}.content{font-size:18px;}}
+@media only screen and (min-width: 1024px){.margin-left{margin-left:23rem !important}.ch-title{font-size:2.6rem;}.ch-story-related{font-size:1.35rem;}.ch-public{font-size:1.35rem;}.type_process{font-size:1.35rem;}.follow_translator{font-size:1.35rem;}.content{font-size:20px;}}
+@media only screen and (min-width: 1224px){.margin-left{margin-left:24rem !important}.content{font-size:22px;}}
+@media only screen and (min-width: 1400px){.margin-left{margin-left:36rem !important}.ch-title{font-size:3.2rem;}.ch-story-related{font-size:1.6rem;}.ch-public{font-size:1.6rem;}.type_process{font-size:1.6rem;}.follow_translator{font-size:1.6rem;}.content{font-size:24;}}
+@media screen and (min-width: 1600px){.margin-left{margin-left:40rem !important}.content{font-size:26px;}}
+@media only screen and (min-width: 1824px){.margin-left{margin-left:50rem !important}.ch-title{font-size:3.6rem;}.ch-story-related{font-size:1.8rem;}.ch-public{font-size:1.8rem;}.type_process{font-size:1.8rem;}.follow_translator{font-size:1.8rem;}.content{font-size:30px;}}
+@media screen and (min-width: 2400px){.margin-left{margin-left:100rem !important}.ch-title{font-size:4.2rem;}.ch-story-related{font-size:2.3rem;}.ch-public{font-size:2.3rem;}.type_process{font-size:2.3rem;}.follow_translator{font-size:2.3rem;}.content{font-size:36px;}}
+</style>
+</head>
+
+<body>
+<div id="top"></div>
+<div id="fb-root"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v3.0';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<section id="nav">
+	<div class="row">
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper" id="nav-m">
+					<div id="home-m" style="margin-left:5px; margin-top:8px;">
+						<a href="{首页}" class="waves-effect waves-light btn left"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+						<a href="{内容链接}" class="waves-effect waves-light btn left"><i class="fa fa-info"></i></a>
+						<a href="#modal2" class="waves-effect waves-light btn modal-trigger right" style="margin-right:5px;"><i class="fa fa-cog fa-2x" aria-hidden="true"></i></a>
+						<div id="modal2" class="modal modal-fixed-footer" style="height:50%!important;width: 80%!important;top: 20%!important;">
+							<div class="modal-content" style="text-align:center;">
+								<h4>ตั้งค่า</h4>
+								<!--
+								<div class="" id="selectFont">
+									<h6>เลือกแบบอักษร</h6>
+									<a href="#" class="waves-effect waves-light btn">เลือกแบบอักษร</a>
+								</div>
+								-->
+								<div id="sizeFont">
+									<h6>ตั้งค่าอักษร</h6>
+									<a href="javascript:;" data-cmd="resetFont" data-type="0" onclick="chagefont(this)" class="waves-effect btn"><i class="fa fa-minus-square fa-2x" aria-hidden="true"></i></a>
+									<a href="javascript:;" data-cmd="resetFont" data-type="2" onclick="chagefont(this)" class="waves-effect btn">คืนค่า</a>
+									<a href="javascript:;" data-cmd="resetFont" data-type="1" onclick="chagefont(this)" class="waves-effect btn"><i class="fa fa-plus-square fa-2x" aria-hidden="true"></i></a>
+								</div>
+								<div class="" id="readMode">
+									<h6>โหมดการอ่าน</h6>
+									<a href="#" onclick='switchQuery("default")' class="waves-effect waves-light btn"><i class="fa fa-sun-o fa-2x" aria-hidden="true"></i></a>
+									<a href="#" onclick='switchQuery("dark")' class="waves-effect waves-light btn"><i class="fa fa-moon-o fa-2x" aria-hidden="true"></i></a>
+									<a href="#" onclick='switchQuery("eyescare")' class="waves-effect waves-light btn"><i class="fa fa-eye fa-2x" aria-hidden="true"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="nav-wrapper" id="nav-web">
+					<div class="left" id="home-web" style="margin-left:5px;">
+						<a href="{首页}" class="waves-effect waves-light btn">หน้าหลัก</a>
+						<a href="{内容链接}" class="waves-effect waves-light btn">{名字}</a>
+					</div>
+					<div class="right" id="chapter-web">
+						<a href="#modal1" class="waves-effect waves-light btn margin-left modal-trigger" style="margin-right:5px;">ตั้งค่า</a>
+					  <!-- Modal Structure -->
+						<div id="modal1" class="modal modal-fixed-footer" style="height:50%!important;width: 45%!important;top: 20%!important;">
+							<div class="modal-content" style="text-align:center;">
+								<h4>ตั้งค่า</h4>
+								<!--
+								<div class="" id="selectFont">
+									<h6>เลือกแบบอักษร</h6>
+									<a href="#" class="waves-effect waves-light btn">เลือกแบบอักษร</a>
+								</div>
+								-->
+								<div class="" id="sizeFont">
+									<h6>ตั้งค่าอักษร</h6>
+									<a href="javascript:;" data-cmd="resetFont" data-type="0" onclick="chagefont(this)" class="waves-effect btn">ลดขนาด</a>
+									<a href="javascript:;" data-cmd="resetFont" data-type="2" onclick="chagefont(this)" class="waves-effect btn">คืนค่า</a>
+									<a href="javascript:;" data-cmd="resetFont" data-type="1" onclick="chagefont(this)" class="waves-effect btn">เพิ่มขนาด</a>
+								</div>
+								<div class="" id="readMode">
+									<h6>โหมดการอ่าน</h6>
+									<a href="#" onclick='switchQuery("default")' class="waves-effect waves-light btn">กลางวัน</a>
+									<a href="#" onclick='switchQuery("dark")' class="waves-effect waves-light btn">กลางคืน</a>
+									<a href="#" onclick='switchQuery("eyescare")' class="waves-effect waves-light btn">ถนอมสายตา</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+</section>
+<section id="title">
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<div class="ch-info">
+					<div class="ch-title">{章节名字}</div>
+					<div class="ch-story-related">เรื่อง : <span><a href="{内容链接}">{名字}</a> ({拼音})</span></div>
+					<div class="type_process">ผู้แปล : <span>{作者}</span>  <span>|</span>  หมวดหมู่ : <span><a href="{分类链接}">{类型}</a></span>  <span>|</span>  สถานะ : <span>{进程}</span></div>
+					<div class="follow_translator">ติดตามผู้แปลได้ที่ Facebook Page : 
+						<a href="{header:novel/fb_link.html}" title="{header:novel/fb_name.html}">{header:novel/fb_name.html}</a>
+					</div>
+					<div class="addthis_inline_share_toolbox"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="content">
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<div class="reader" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+					{已订阅}<div class="content noselect">{章节内容}</div>{/已订阅}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="control">
+	<div class="container">
+		<div class="row">
+			<div class=" col s12">
+				<div class="center">
+					<a href="{上一章}" class="waves-effect waves-light btn">บทที่แล้ว</a>
+					<a href="{目录链接}" class="waves-effect waves-light btn">สารบัญ</a>
+					<a href="{下一章}" class="waves-effect waves-light btn">บทถัดไป</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--Before Footer -->
+
+<section class="comments">
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<div class="before-footer">
+					<div class="fb-comments" style="z-index:1000;" data-href="{章节url}" data-width="auto" data-numposts="10" data-order-by="reverse_time"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="shade-split"></div>
+<!-- footer -->
+<section id="footer">
+	<footer class="page-footer">
+		<div class="footer-sitemap" style="padding-top:15px;text-align:center;height:auto;">
+			<div class="margin-bf">
+				<a href="{网站地图:html}" target="_blank" title="Sitemap HTML">Sitemap HTML</a> | 
+                <a href="{网站地图:xml}" target="_blank" title="Sitemap XML">Sitemap XML</a> | 
+                <a href="{网站地图:rss}" target="_blank" title="RSS">RSS</a>
+			</div>
+			<div class="margin-bf">
+				<a href="">การใช้งาน</a> | 
+				<a href="">คำถามที่พบบ่อย</a> | 
+				<a href="">เงื่อนไขการใช้งาน</a> | 
+				<a href="">นโยบายความเป็นส่วนตัว</a> | 
+				<a href="">รายงานการละเมิด</a> | 
+				<a href="">ติดต่อเรา</a> | 
+				<a href="">เกี่ยวกับ</a>
+			</div>
+			<div class="margin-bf">
+				&copy 2017-2018 <a href="{首页}"> {网站名} </a> All Rights Reserved.
+			</div>
+			<div class="margin-bf">
+				Designed by <a href="https://www.facebook.com/NumSubMaRk" target="_blank"> SubMaRk </a>Powered by <a href="http://www.weimengcms.com" target="_blank"> WeiMengCMS </a>V 4.112.245 (Up to date)
+			</div>
+			<div class="margin-bf">
+				<a href="https://www.facebook.com/thsharing" target="_blank">Facebook</a> | <a href="https://plus.google.com/100517194163532882204" target="_blank">Google +</a> | <a href="https://www.youtube.com/channel/UCHS1dPmjKevA9n2UecE7dUw" target="_blank">Youtube</a>
+			</div>
+			<div class="margin-bfl" style="padding-bottom:15px;">
+				<a href="https://www.copyscape.com/" target="_blank"><img src="{templates}/static/images/copyscape.png" width="130" height="46" border="0" alt="Protected by Copyscape" title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page." /></a>   
+				<a href="https://ifastnet.com/portal/aff.php?aff=25156" target="_blank"><img src="{templates}/static/images/ifastnet.png" height="46" alt="Hosted on IFastNet" title="Ifastnet.com is a Premium Hosting Provider, VPS hosting and dedicated servers. Over 5,000,000 websites trust us for their hosting needs." /></a>
+			</div>
+		</div>
+	</footer>
+</section>
+<script>
+	scroller.init();
+</script>
+
+<script>
+var nowfontsize = localStorage.getItem('fontsize');
+$('.content').css('font-size',nowfontsize+'px')
+if(nowfontsize != null || nowfontsize != 'NaN'){
+	$('.content').css('font-size',nowfontsize)
+}
+var chagefont = function(data){
+	var type = $(data).attr('data-type');
+	var nowfontsize = localStorage.getItem('fontsize');
+	if(nowfontsize == null || nowfontsize == 'NaN'){
+
+		localStorage.setItem('fontsize',20);
+		 nowfontsize = localStorage.getItem('fontsize');
+	}
+	switch (type){
+		case '0':
+				$('.content').css('font-size',nowfontsize*1-1)
+			//localStorage.fontsize = nowfontsize*1-2;
+			localStorage.setItem('fontsize',nowfontsize*1-1);
+			break;
+		case '1':
+			$('.content').css('font-size',nowfontsize*1+1)
+			localStorage.setItem('fontsize',nowfontsize*1+1);
+			break;
+		case '2':
+			$('.content').css('font-size',20)
+			localStorage.setItem('fontsize',20);
+			break;
+		default:
+			$('.content').css('font-size',nowfontsize*1+1)
+			localStorage.setItem('fontsize',nowfontsize*1+1);
+	}
+
+}
+</script>
+	<script>
+		(function () {
+			function ready(func) {
+				if (document.addEventListener) {
+					document.addEventListener('DOMContentLoaded', function () {
+						document.removeEventListener('DOMContentLoaded', arguments.callee, false);
+						func();
+					}, false);
+				} else if (document.attachEvent) {
+					document.attachEvent('onreadystatechange', function () {
+						if (document.readyState == 'complete') {
+							document.detachEvent('onreadystatechange', arguments.callee);
+							func();
+						}
+					});
+				}
+			}
+			var detectDevTools_key = 0;
+			ready(function () {
+				detect_key = PageGuard.detectDevTools(function () {
+					window.document.body.innerHTML = 'No copying or analyzing.';
+					// console.clear(); // Sometimes it may makes this page crash
+				});
+			});
+/*
+			var HTML;
+
+			var detectSuspect_key = PageGuard.detectSuspectActions(function () {
+				HTML = document.body.innerHTML;
+				document.body.innerHTML = 'ให้เมาส์อยู่ในหน้าเว็บขณะอ่านด้วยครับ!';
+			}, function () {
+				document.body.innerHTML = HTML;
+			});
+*/
+			PageGuard.disableFunctions();
+
+			var anticopy_key = PageGuard.antiCopy();
+/*			setTimeout(function () {
+				PageGuard.allowCopy(anticopy_key);
+				PageGuard.stopDetecting(detectDevTools_key);
+				PageGuard.stopDetectingSuspectActions(detectSuspect_key);
+				alert('You can copy now');
+			}, 20000);
+*/
+		})();
+		document.addEventListener('copy', function (evt) {
+		 console.log(evt.clipboardData.setData(''));
+		});
+		//Add Previous / Next / Table of Chapter keys
+		document.onkeydown = gopage;
+		var prevpage = "{上一章}";
+		var nextpage = "{下一章}";
+		var gototable = "{目录链接}";
+		function gopage(){
+			var event = event ? event : window.event;
+			if (event.keyCode == 37) location = prevpage;
+			if (event.keyCode == 39) location = nextpage;
+			if (event.keyCode == 13) location = gototable;
+			};
+	</script>
+<script type='text/javascript'>
+$(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+ $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      //opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '15%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+        alert("Ready");
+        console.log(modal, trigger);
+      },
+      complete: function() { alert('Closed'); } // Callback for Modal close
+    }
+  );
+</script>
+<script src="{templates}/static/js/materialize.min.js"></script>
+</body>
+</html>

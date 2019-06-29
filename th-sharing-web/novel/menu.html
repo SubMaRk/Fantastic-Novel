@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type='text/javascript'>
+        if (window.location.protocol == "http:") {
+            var restOfUrl = window.location.href.substr(5);
+            window.location = "https:" + restOfUrl;
+        }
+
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-100115995-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<meta name="Keywords" content="{key}" />
+<meta name="Description" content="{desc}" />
+<meta property="og:title" content="{title}" />
+<meta property="og:description" content="{desc}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{当前url}" />
+<meta property="og:image" content="https://novel.th-sharing.com{封面}" />
+<meta property="fb:admins" content="NumSubMaRk" />
+<link rel="stylesheet" type="text/css" href="{templates}/static/css/materialize.min.css"/>
+<link rel="stylesheet" type="text/css" href="{templates}/static/images/font-awesome/font-awesome.min.css"/>
+<script src="/files/js/common.js"></script>
+<script src="{templates}/static/js/materialize.min.js"></script>
+<script src="{templates}/static/js/scrolls.js"></script>
+<style>
+	/* Added by SubMaRk */
+	nav a, nav ul a {color:#000!important;}
+	nav a:hover, nav ul a:hover {color:#999!important;}
+	nav {height:45px!important;line-height:45px!important;color:#000!important;background-color:#fff!important;}
+	#footer {bottom:0px;left:0px;right:0px;}
+	#loginbox {margin-right:30px;}
+	#content-table {padding-top:30px;}
+	#button-table {padding: 15px 15px 0px 15px;}
+	#volume-name {font-size:1.5rem;padding:15px 0px 15px 15px;font-weight:bold;display:block;}
+	#chapter-table {padding: 0px 15px 0px 15px;display: block;}
+	.chapter-list {padding-top:8px;font-size:1.25rem;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+	.box-shadow {display: block;height: 40px;font-size: 1.1rem;border-top-color: rgba(255,255,255,.12);box-shadow: 0px 0px 1px 0px #000;padding-top: 10px;}
+	.table-text {font-size:1.6rem;font-weight:bold;height:25px;}
+	.pace .pace-progress{background:#fa9144;}.pace .pace-activity{border-top-color:#fa9144;border-left-color:#fa9144;}
+	@media only screen and (max-width: 600px) {#button-table{text-align:center;}#volume-name{text-align:center;}}
+	.page-footer{background-color:#202020;}
+	.chapter-list a {color:#1979bf!important;}
+	.chapter-list a:hover {color:#41afff!important;}
+	.chapter-list a:visited {color:#003861!important;}
+</style>
+</head>
+
+<body>
+<div id="top"></div>
+<section id="nav">
+	<div id="header">
+		<nav>
+			<div class="nav-wrapper">
+			<a href="{首页}" class="brand-logo" title="{网站名}"><h5 class="text_logo">TH-SHARING</h5></a>
+			<a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
+			<ul class="left hide-on-med-and-down margin_ul-nav">
+				<li><a href="{首页}">หน้าหลัก</a></li>
+				<li><a href="{全部小说}">เรื่องทั้งหมด</a></li>
+				<li><a href="#" class="dropdown-button" data-activates="type-dropdown">หมวดหมู่</a></li>
+					<ul id="type-dropdown" class="dropdown-content">
+						{小说分类:数量=15;排序=分类排序}
+							<li><a class="dropmenu" href="{url}" title="{小说分类名字}">{小说分类名字}</a></li>
+						{/小说分类}
+					</ul>
+				<li><a href="{小说排行首页}">อันดับ</a></li>
+				<li><a href="https://manhua.th-sharing.com">โซนการ์ตูน</a></li>
+				<li><a href="https://anime.th-sharing.com">โซนอนิเมะ</a></li>
+				<li><a href="#" class="dropdown-button" data-activates="about-dropdown">เกี่ยวกับ</a></li>
+					<ul id="about-dropdown" class="dropdown-content">
+							<li><a class="dropmenu" href="#" title="สนับสนุน">สนุนสนุนผู้แปล</a></li>
+							<li><a class="dropmenu" href="#" title="การใช้งาน">การใช้งาน</a></li>
+							<li><a class="dropmenu" href="#" title="คำถามที่พบบ่อย">คำถามที่พบบ่อย</a></li>
+							<li><a class="dropmenu" href="#" title="รายงานการละเมิด">รายงานการละเมิด</a></li>
+							<li><a class="dropmenu" href="#" title="ติดต่อเรา">ติดต่อเรา</a></li>
+							<li><a class="dropmenu" href="#" title="ช่วยเหลือเว็บไซต์">ช่วยเหลือเว็บไซต์</a></li>
+							<li><a class="dropmenu" href="#" title="เกี่ยวกับ">เกี่ยวกับ</a></li>
+					</ul>
+				<li id="userhome"></li>
+			  </ul>
+			  <div class="right hide-on-med-and-down" id="loginbox">
+			<script>
+				$.get("{url:ajax;user.getinfo}",function(data){
+					if(data.code == 200){
+						$("#userhome").html('<a href="{用户中心}" title="ศูนย์ผู้ใช้"><span>ศูนย์ผู้ใช้</span></a>');
+						$("#loginbox").html('<a class="right" href="{退出登录}">ออกจากระบบ</a>');
+					}else if( data.code == 300){
+						$("#loginbox").html('<a class="right" href="javascript:easydialog_url(\'user.login\',\'เข้าสู่ระบบ\',\'\',320,420)">เข้าสู่ระบบ</a>');
+					}
+				},"json");
+				</script>
+				</div>
+			  <ul class="side-nav" id="slide-out">
+				<li><a class="subheader">{网站名}</a></li>
+				<li><div class="divider"></div></li>
+				<li><a href="{首页}">หน้าหลัก</a></li>
+				<li><a href="{全部小说}">เรื่องทั้งหมด</a></li>
+				<li>
+					<ul class="collapsible collapsible-accordion">
+						<li>
+							<a class="collapsible-header" style="padding: 0px 0px 0px 30px;">หมวดหมู่<i class="fa fa-angle-right right" aria-hidden="true"></i></a>
+							<div class="collapsible-body">
+								<ul>
+								{小说分类:数量=15;排序=分类排序}
+									<li><a class="dropmenu" href="{url}" title="{小说分类名字}">{小说分类名字}</a></li>
+								{/小说分类}
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li><a href="{小说排行首页}">อันดับ</a></li>
+				<li><a href="https://manhua.th-sharing.com">โซนการ์ตูน</a></li>
+				<li><a href="https://anime.th-sharing.com">โซนอนิเมะ</a></li>
+				<li>
+					<ul class="collapsible collapsible-accordion">
+						<li>
+							<a class="collapsible-header" style="padding: 0px 0px 0px 30px;">เกี่ยวกับ<i class="fa fa-angle-right right" aria-hidden="true"></i></a>
+							<div class="collapsible-body">
+								<ul>
+									<li><a class="dropmenu" href="#" title="สนับสนุน">สนุนสนุนผู้แปล</a></li>
+									<li><a class="dropmenu" href="#" title="การใช้งาน">การใช้งาน</a></li>
+									<li><a class="dropmenu" href="#" title="คำถามที่พบบ่อย">คำถามที่พบบ่อย</a></li>
+									<li><a class="dropmenu" href="#" title="รายงานการละเมิด">รายงานการละเมิด</a></li>
+									<li><a class="dropmenu" href="#" title="ติดต่อเรา">ติดต่อเรา</a></li>
+									<li><a class="dropmenu" href="#" title="ช่วยเหลือเว็บไซต์">ช่วยเหลือเว็บไซต์</a></li>
+									<li><a class="dropmenu" href="#" title="เกี่ยวกับ">เกี่ยวกับ</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</li>
+			  </ul>
+			</div>
+			<script>
+			$('.button-collapse').sideNav({
+			  menuWidth: 300,
+			  edge: 'left',
+			  closeOnClick: true,
+			  draggable: true, 
+			}
+		  );
+		  $(".dropdown-button").dropdown();
+		  $('.collapsible').collapsible();
+			</script>
+		</nav>
+	</div>
+</section>
+
+<section id="content-table">
+	<div class="container">
+		<div class="row" style="border-top-color: rgba(255,255,255,.12);border-radius: 3px;box-shadow: 0px 0px 4px 0px #000;padding-bottom:15px;">
+			<div class="col s12" id="button-table">
+				<a href="{首页}" class="waves-effect waves-light btn" title="กลับไปหน้าหน้าหลักเว็บไซต์"><i class="fa fa-home" style="margin-right:8px; aria-hidden="true"></i>หน้าหลัก</a>
+				<a href="{内容链接}" class="waves-effect waves-light btn" title="กลับไปหน้าข้อมูลเรื่อง {名字}"><i class="fa fa-arrow-left" style="margin-right:8px;" aria-hidden="true"></i>ข้อมูลนิยาย</a>
+				<div class="table-text"><p>สารบัญเรื่อง {名字}</p></div>
+			</div>{小说分卷列表:}
+			<div id="table">
+				<div class="col s12" id="volume-name">
+					<div class="volume">{小说分卷名字}</div>
+				</div>
+				<div id="chapter-table">
+				{小说章节列表:分卷id={小说分卷id}}
+					<div class="col s12 m6 l4 box-shadow">
+						<div class="chapter-list">
+							<a href="{url}" title="{小说章节名字}">{小说章节名字:40}</a>
+						</div>
+					</div>
+				{/小说章节列表}
+				</div>
+			</div>
+			{/小说分卷列表}
+		</div>
+	</div>
+</section>
+<section id="footer">
+	<footer class="page-footer">
+		<div style="padding-top:15px;text-align:center;height:auto;">
+			<div style="margin-bottom:5px;">
+				&copy 2017 <a href="{首页}"> {网站名} </a> All Rights Reserved.
+			</div>
+			<div style="margin-bottom:5px;">
+				Designed by <a href="https://www.facebook.com/NumSubMaRk" target="_blank"> SubMaRk </a>Powered by <a href="http://www.weimengcms.com" target="_blank"> WeiMengCMS </a>V 4.112.245 (Up to date)
+			</div>
+			<div style="padding-bottom:15px;">
+				<a href="https://www.facebook.com/thsharing" target="_blank">Facebook</a> | <a href="https://plus.google.com/100517194163532882204" target="_blank">Google +</a> | <a href="https://www.youtube.com/channel/UCHS1dPmjKevA9n2UecE7dUw" target="_blank">Youtube</a>
+			</div>
+		</div>
+	</footer>
+</section>
+
+<script>
+	scroller.init();
+</script>
+
+<!-- BEGIN: Powered by Supercounters.com -->
+<center><script type="text/javascript" src="//widget.supercounters.com/ssl/tab.js"></script><script type="text/javascript">var sc_tab_var = sc_tab_var || [];sc_tab(1430755,"left","upper")</script><br><noscript><a href="https://www.supercounters.com/">Tumblr Online Counter</a></noscript>
+</center>
+<!-- END: Powered by Supercounters.com -->
+</body>
+</html>
