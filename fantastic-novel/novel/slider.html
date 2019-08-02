@@ -1,0 +1,30 @@
+<section id="slider">
+    <div class="slider">
+        <ul class="slides">
+            {小说:数量=5;排序=总点击}
+            <li>
+                <div class="row">
+                    <div class="slide-item" id="slide-{i}">
+                        <div class="col s12">
+                            <div class="col s8 left z-depth-3" id="slide-info">
+                                <div class="slider-content">
+                                    <p class="text-sub">{小说作者}</p>
+                                    <h3>{小说名字}</h3>
+                                    <p class="text-sum">{小说简介:200}...</p>
+                                    <p class="text-normal"><span class="trn">เข้าชมทั้งหมด</span> : {小说总点击} <span class="trn">ครั้ง</span></p>
+                                    <a href="{url}" class="waves-effect btn waves-light"><i class="fas fa-book"></i><span class="trn">อ่านเรื่องนี้</span></a>
+                                </div>
+                            </div>
+                            <div class="col s4 right z-depth-3" id="slide-picture">
+                                <div class="slider-img center">
+                                    <img class="lazy z-depth-3" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            {/小说}
+        </ul>
+    </div>
+</section>

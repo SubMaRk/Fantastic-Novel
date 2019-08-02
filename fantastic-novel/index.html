@@ -9,30 +9,195 @@
 <!-- IMPORT SLIDER -->
 {header:novel/slider.html}
 <!-- MAIN SECTION -->
-<section>
-    <div class="container">
+<section id="index">
+    <div class="container" id="global-w">
         <div class="row">
             <div class="col s9">
-                <!-- NEW NOVEL-->
-                <div class="nv_rec">
+                <!-- RECOMMEND NOVEL-->
+                <div class="nv-rec col s12">
                     <div class="textblock z-depth-3">
-                        <h5></h5>
+                        <h5><span class="trn">นิยายแนะนำ</span><i class="fal fa-award"></i></h5>
                     </div>
-
+                    <!-- Novel Card -->{小说:排序=最新入库;数量=4}
+                    <div class="card col s12">
+                        <button class="card-save" type="button"><i class="fa fa-bookmark"></i></button>
+                        <figure class="card-img">
+                            <img class="lazy" src="{templates}/static/image/book.svg" data-src="{小说封面}" title="{小说名字}"
+                                alt="{小说名字}">
+                        </figure>
+                        <div class="card-body">
+                            <figure class="card-profile">
+                                <img src="{小说作者头像}" alt="{小说作者昵称}" title="{小说作者昵称}">
+                            </figure>
+							<p class="card-author"><i class="fa fa-edit"></i> {小说作者}</p>
+							<span class="card-box"><h3 class="card-title">{小说名字}</h3></span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="{url}" class="waves-light waves-effect btn"><i class="fas fa-book"></i><span
+                                    class="trn">อ่านเรื่องนี้</span></a>
+                        </div>
+                    </div>
+                    {/小说}
                 </div>
-                <div class="divider"></div>
+                <!-- NEW NOVEL -->
+                <div class="nv-new col s12">
+                    <div class="textblock z-depth-3">
+                        <h5><span class="trn">นิยายมาใหม่</span><i class="fal fa-satellite-dish"></i></h5>
+                    </div>
+                    <!-- Novel Card -->{小说:排序=最新入库;数量=4}
+                    <div class="card col s12">
+                        <button class="card-save" type="button"><i class="fa fa-bookmark"></i></button>
+                        <figure class="card-img">
+                            <img class="lazy" src="{templates}/static/image/book.svg" data-src="{小说封面}" title="{小说名字}"
+                                alt="{小说名字}">
+                        </figure>
+                        <div class="card-header">
+                            <figure class="card-profile">
+                                <img src="{小说作者头像}" alt="{小说作者昵称}" title="{小说作者昵称}">
+                            </figure>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">{小说名字}</h3>
+                            <p class="card-author"><i class="fa fa-edit"></i> {小说作者}</p>
+                            <p class="card-text"></p>
+                            <p class="card-text"></p>
+                            <p class="card-text">{小说简介:60}...</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="{url}" class="waves-light waves-effect btn"><i class="fas fa-book"></i><span
+                                    class="trn">อ่านเรื่องนี้</span></a>
+                        </div>
+                    </div>
+                    {/小说}
+                </div>
                 <!-- UPDATE NOVEL -->
-                <div class="nv_iup">
+                <div class="nv-up col s12">
                     <div class="textblock z-depth-3">
-                        <h5></h5>
+                        <h5><span class="trn">อัพเดทล่าสุด</span><i class="fal fa-satellite-dish"></i></h5>
                     </div>
-    
+                    <!-- Novel Card --> {小说:排序=最新更新;数量=4}
+                    <div class="card col s12">
+                        <button class="card-save" type="button"><i class="fa fa-bookmark"></i></button>
+                        <figure class="card-img">
+                            <img class="lazy" src="{templates}/static/image/book.svg" data-src="{小说封面}" title="{小说名字}"
+                                alt="{小说名字}">
+                        </figure>
+                        <div class="card-header">
+                            <figure class="card-profile">
+                                <img src="{小说作者头像}" alt="{小说作者昵称}" title="{小说作者昵称}">
+                            </figure>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">{小说名字}</h3>
+                            <p class="card-author"><i class="fa fa-edit"></i> {小说作者}</p>
+                            <p class="card-text"></p>
+                            <p class="card-text"></p>
+                            <p class="card-text">{小说简介:60}...</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="{url}" class="waves-light waves-effect btn"><i class="fas fa-book"></i><span
+                                    class="trn">อ่านเรื่องนี้</span></a>
+                        </div>
+                    </div>
+                    {/小说}
                 </div>
-                <!-- UPDATE LIST-->
-                
+            </div>
+            <!-- SIDEBAR -->
+            <div class="col s3">
+                <!-- USER PROFILE -->
+                <div class="data-user">
+                    <div class="textblock z-depth-3">
+                        <h5><span class="trn">ข้อมูลผู้ใช้</span></h5>
+                    </div>
+                </div>
+                <!-- RANKING TABS-->
+                <div class="data-ranking">
+                    <div class="textblock z-depth-3">
+                        <h5><span class="trn">อันดับนิยาย</span><i class="fal fa-broadcast-tower"></i></h5>
+                    </div>
+                    <ul class="tabs" id="tabs-swipe">
+                        <li class="tab col s3"><a href="#swipe-1" class="trn">วัน</a></li>
+                        <li class="tab col s5"><a href="#swipe-2" class="trn">สัปดาห์</a></li>
+                        <li class="tab col s4"><a href="#swipe-3" class="trn">เดือน</a></li>
+                    </ul>
+                    <!-- DAILY RANKKING -->
+                    <div class="col s12" id="swipe-1">
+                        {小说:排序=日点击;数量=10}<ul id="ranking-daily">
+                            <li>
+                                <div class="{i:1,2,3}order-color{/i} {i>3}order-gray{/i}">{i}</div>
+                                <a href="{url}" title="{小说名字}" class="ranking">{小说名字} {i:1}<i class="fal fa-fire-alt fas-red"></i>{/i} {i:2}<i class="fal fa-fire-alt fas-pink"></i>{/i} {i:3}<i class="fal fa-fire-alt fas-orange"></i>{/i} {i:4}<i class="fal fa-fire-alt fas-yellow"></i>{/i} {i:5}<i class="fal fa-fire-alt fas-green"></i>{/i} {i:>5}<i class="fal fa-fire-alt fas-dark"></i>{/i}</a>
+                            </li>
+                        </ul>{/小说}
+                    </div>
+                    <!-- WEEKLY RANKKING -->
+                    <div class="col s12" id="swipe-2">
+                        {小说:排序=周点击;数量=10}<ul id="ranking-weekly">
+                            <li>
+                                <div class="{i:1,2,3}order-color{/i} {i>3}order-gray{/i}">{i}</div>
+                                <a href="{url}" title="{小说名字}" class="ranking">{小说名字} {i:1}<i class="fal fa-fire-alt fas-red"></i>{/i} {i:2}<i class="fal fa-fire-alt fas-pink"></i>{/i} {i:3}<i class="fal fa-fire-alt fas-orange"></i>{/i} {i:4}<i class="fal fa-fire-alt fas-yellow"></i>{/i} {i:5}<i class="fal fa-fire-alt fas-green"></i>{/i} {i:>5}<i class="fal fa-fire-alt fas-dark"></i>{/i}</a>
+                            </li>
+                        </ul>{/小说}
+                    </div>
+                    <!-- MONTHLY RANKKING -->
+                    <div class="col s12" id="swipe-3">
+                        {小说:排序=月点击;数量=10}<ul id="ranking-monthly">
+                            <li>
+                                <div class="{i:1,2,3}order-color{/i} {i>3}order-gray{/i}">{i}</div>
+                                <a href="{url}" title="{小说名字}" class="ranking">{小说名字} {i:1}<i class="fal fa-fire-alt fas-red"></i>{/i} {i:2}<i class="fal fa-fire-alt fas-pink"></i>{/i} {i:3}<i class="fal fa-fire-alt fas-orange"></i>{/i} {i:4}<i class="fal fa-fire-alt fas-yellow"></i>{/i} {i:5}<i class="fal fa-fire-alt fas-green"></i>{/i} {i:>5}<i class="fal fa-fire-alt fas-dark"></i>{/i}</a>
+                            </li>
+                        </ul>{/小说}
+                    </div>
+                </div>
+                <!-- TAGS LIST -->
+                <div class="data-tag">
+                    <div class="textblock z-depth-3">
+                        <h5><span class="trn">หมวดหมู่นิยาย</span><i class="fas fa-th-large"></i></h5>
+                    </div>
+                    <ul>
+                        <div id="item-tag">
+                            {小说分类:}<a href="{surl}" class="tag-color-{i}" title="{小说分类名字}">{小说分类名字}</a>{/小说分类}
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <!-- LAST UPDATE LIST -->
+            <div class="col s12">
+                <div class="lastup">
+                    <table class="highlight bordered">
+                        <tbody>
+                            <tr>
+                                <td id="tname" class="trn">หมวดหมู่</td>
+                                <td id="tchn" class="trn">เรื่อง</td>
+                                <td id="tct" class="trn">ชื่อบท</td>
+                                <td id="ttsl" class="trn">ผู้แปล</td>
+                                <td id="tt" class="trn">เวลาอัพเดท</td>
+                            </tr>
+                            {小说:排序=最新更新;数量=15}<tr>
+                                <td id="tname"><a href="{turl}" id="text" title="{小说分类名字}">【{小说分类名字}】</a></td>
+                                <td id="tchn"><a href="{url}" id="name-tw" title="{小说名字}">{小说名字}</a></td>
+                                <td id="tct"><a href="{小说最新章节url}" title="{小说最新章节名字}">{小说最新章节名字:50}</a></td>
+                                <td id="ttsl">{小说作者}</td>
+                                <td id="tt">{小说更新时间:r-y-n s:f:m}</td>
+                            </tr>{/小说}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+</section>
+<!-- FRIEND LINK-->
+<section id="friendlink">
+    <div class="container" id="global-w">
+        <div class="col s12">
+            <div class="textblock z-depth-3">
+                <h5><span class="trn">ลิ้งก์เพื่อนบ้าน</span><i class="far fa-chart-network"></i></h5>
+            </div>
+            <!-- Link -->
+            <div class="f-link">
+                {友链:}<a href="{url}"title="{友链名字}">{友链名字}</a>{/友链}
             </div>
         </div>
     </div>
 </section>
-<!-- FRIEND LINK-->
 <!-- IMPORT GLOBAL FOOTER -->
+{footer:global.footer.html}

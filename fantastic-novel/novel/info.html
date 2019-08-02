@@ -1,0 +1,239 @@
+<!-- IMPORT HEADER -->
+{header:header/index.html}
+<!-- IMPORT GLOBAL BODY -->
+{header:global.body.html}
+<!-- IMPORT NAVIGATION -->
+{header:novel/nav.html}
+<section id="info">
+    <div class="container" id="global-w">
+        <div class="row">
+            <!-- BOOK INFO -->
+            <div class="col s12 m9 l9">
+                <!-- MAIN INFO LEFT -->
+                <div class="col s12 nv-main">
+                    <div class="textblock z-depth-3">
+                        <h5><span class="trn">ข้อมูลนิยาย</span> <i class="fas fa-book"></i></h5>
+                    </div>
+                    <!-- COVER -->
+                    <div class="col s12 m4 l4 center book-cover">
+                        <img src="{templates}/static/image/book.svg" data-src="{封面}" alt="{名字}" title="{名字}" class="lazy z-depth-3">
+                        <span id="book-status">{进程}</span>
+                    </div>
+                    <!-- DETAIL -->
+                    <div class="col s12 m8 l8 nv-detail">
+                        <h4>{名字}</h4><span id="id"> (ID : {id}) </span>
+                        <!-- SCORE -->
+                        <div class="nv-score">
+                            <p class="trn">ให้คะแนน</p><span> : </span><div class="nv-star" onmouseover="rate(this,event)"></div><p class="trn">คะแนน</p><span> : <strong> {评分} </strong></span>( {评分人数} <p>คนที่ให้</p>)
+                        </div>
+                        <p><span calss="trn">ผู้แต่ง</span> : <strong><a href="{header:novel/fb-link.html}" title="{header:novel/fb-name.html}">{作者}</a></strong> | <span class="trn">แปลอังกฤษ</span> : <strong>{header:novel/eng.html}</strong> | <span class="trn">ต้นฉบับ</span> : <strong>{header:novel/raw_link.html}</strong></p>
+                        <p><span class="trn">อัพเดทล่าสุด</span> : {小说章节列表:排序=章节倒序;数量=1}{小说章节创建时间}{/小说章节列表}</p>
+                        <!-- TAGS ITEM -->
+                        <div class="tags">
+                            <p><i class="fas fa-tags"></i><span class="trn">ป้ายกำกับ</span></p>{标签:10}<li><a id="tag-item" class="tag-color-{i}" title="{小说分类名字}">{标签标题}</a></li>{/标签}
+                        </div>
+                        <!-- BUTTON -->
+                        <div class="nv-btn">
+                            <li><a href="{立即阅读}" title="เริ่มอ่าน {名字}" class="btn waves-effect"><i class="fas fa-book"></i><span class="trn">อ่านเรื่องนี้</span></a></li>
+                            {未收藏}<li><a href="javascript:void(0);" data-url="{加入收藏}" title="ชอบ" class="btn waves-effect"><i class="far fa-heart fas-pink"></i><span class="trn">ชอบ</span></a></li>{/未收藏}
+                            {已收藏}<li><a href="javascript:easydialog_alert('คุณได้เพิ่มเรื่องนี้เข้ารายการที่ชอบแล้ว','','no');" title="เพิ่มเข้ารายการที่ชอบไปแล้ว" class="btn waves-effect"><i class="fas fa-heart fas-pink"></i><span class="trn">ชอบแล้ว</span></a></li>{/已收藏}
+                            {未书架}<li><a href="javascript:void(0);" data-url="{加入书架}" title="เพิ่มเข้าชั้น" class="btn waves-effect"><i class="far fa-books"></i><span class="trn">เพิ่มเข้าชั้น</span></a></li>{/未书架}
+                            {已书架}<li><a href="javascript:easydialog_alert('คุณได้เพิ่มเข้าชั้นหนังสือไปแล้ว','','no');" title="เพิ่มเข้าชั้นหนังสือไปแล้ว" class="btn waves-effect"><i class="fas fa-books"></i><span class="trn">เพิ่มเข้าชั้นแล้ว</span></a></li>{/已书架}
+                        </div>
+                    </div>
+                    <!-- VIEW COUNTER -->
+                    <div class="col s12">
+                        <div class="textblock z-depth-3">
+                            <h5><span class="trn">ยอดการเข้าดู</span></h5>
+                        </div>
+                    </div>
+                    <!-- SUMMARY -->
+                    <div class="col s12">
+                        <div class="textblock z-depth-3">
+                            <h5><span class="trn">เนื้อเรื่องย่อ</span></h5>
+                        </div>
+                        <div class="summary">
+                            <p>{简介}</p>
+                        </div>
+                    </div>
+                    <!-- TABLE OF CONTENT -->
+                    <div class="col s12">
+                        <div class="textblock z-depth-3">
+                            <h5><span class="trn">สารบัญเรื่อง</span><span> <strong><a class="trn" href="{目录链接}">{名字}</a></strong></h5>
+                        </div>
+                        <!-- COLLAPS -->
+                        {小说分卷列表:}<div class="nv-collaps">
+                            {无数据}<p class="trn">เรื่องนี้ยังไม่มีบทใด ๆ</p>{/无数据}
+                            <ul class="collapsible {i:1}hide{/i}">
+                                <li class="{i:2}active{/i}">
+                                    <div class="collapsible-header">
+                                        <i class="fas fa-book"></i><span>{小说分卷名字}</span>
+                                    </div>
+                                    <div class="collapsible-body">
+                                        <ul>
+                                            {小说章节列表:分卷id={小说分卷id}}<a class="nv-clist" href="{url}" title="{小说章节名字}">{小说章节名字:40}</a>{/小说章节列表}
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>{/小说分卷列表}
+                    </div>
+                    <!-- BOOK RELATED -->
+                    <div class="col s12">
+                        <div class="textblock z-depth-3">
+                            <h5><span class="trn">ผลงานเพิ่มเติม</span></h5>
+                        </div>
+                        <div class="nv-related">
+                            <ul class="nv-rlist">
+                                {同作者小说:数量=4}{无数据}<p class="trn">ยังไม่มีผลงานเพิ่มเติม</p>{/无数据}
+                                <li class="col s12 m3 l4 rlist">
+                                    <a href="{url}" class="rlist-cover">
+                                        <img src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
+                                        <p class="i-title">{小说名字}</p>
+                                        <p class="i-author"><i class="fas fa-user-edit"></i> {作者}</p>
+                                        <p class="i-tag"><i class="fas fa-tag"></i> {分类名字}</p>
+                                    </a>
+                                </li>{/同作者小说}
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- COMMENT -->
+                    <div class="col s12">
+                        <div class="textblock z-depth-3">
+                            <h5><span class="trn">แสดงความคิดเห็น</span> <i class="fas fa-comments"></i></h5>
+                        </div>
+                        <div class="comment-main">
+                            <div id="wmcms_replay">{js评论}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MAIN INFO RIGHT -->
+            <div class="col s12 m3 l3" id="nv-sidebar">
+                <!-- AUTHOR INFO-->
+                <div class="col s12">
+                    <div class="textblock z-depth-3">
+                        <h5><span class="trn">ข้อมูลผู้เขียน</span></h5>
+                    </div>
+                    <div class="at-info">
+                        <div class="col s5">
+                            <img src="{作者头像}" alt="{作者}">
+                        </div>
+                        <dl class="col s7">
+                            <dt>{作者}</dt>
+                            <dd><span class="trn">ระดับ</span> : {作者等级}</dd>
+                            <dd><span class="trn">เช็คชื่อ</span> : {是否签约}</dd>
+                            <dd><span class="trn">ชั้นหนังสือ</span> : {是否上架}</dd>
+                        </dl>
+                    </div>
+                    <div class="at-notice">
+                        <h5><span class="trn">ประกาศจากผู้เขียน</span></h5>
+                        <p>{作者公告}</p>
+                    </div>
+                </div>
+                <!-- FB FANPAGE-->
+                <div class="col s1">
+                    <div class="textblock z-depth-3">
+                        <h5><span class="trn">เฟซบุ๊คแฟนเพจ</span></h5>
+                    </div>
+                    <div class="fb-page" data-aos="fade-left" data-aos-duration="500" data-aos-delay="500" data-href="{header:novel/fb-link.html}" data-tabs="timeline, messages" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="{header:novel/fb_link.html}" class="fb-xfbml-parse-ignore"><a href="{header:novel/fb-link.html}">{header:novel/fb-name.html}</a></blockquote>
+                    </div>
+                </div>
+                <!-- RECOMMENDATION -->
+                <div class="col s12">
+                    <div class="textblock z-depth-3">
+                        <h5><span class="trn">นิยายแนะนำ</span> <i class="fal fa-award"></i></h5>
+                    </div>
+                    <div class="nv-rec">
+                        <ul>
+                            {同分类小说:数量=5}<li class="reclist">
+                                <a title="{小说名字}" href="{url}">
+                                    <img class="lazy rec-cover col s5 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
+                                    <div class="nv_book_info col s7 m7 l7">
+                                        <h5>{小说名字}</h5>
+                                        <p><span class="trn">ผู้แต่ง</span> : {小说作者}</p>
+                                        <p id="rec-des">{小说简介:50}...</p>
+                                    </div>
+                                </a>
+                            </li>{/同分类小说}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- NOVEL INFO SCRIPT -->
+<script>
+    $(function() {
+      var starHtml = starImg = '';
+      for (var i = 1; i <= 5; i++) {
+        starImg = 'star_off.gif';
+        if (i <= {平均分整数}) {
+          starImg = 'star_on.gif';
+        }
+        starHtml += '<img src="/files/images/' + starImg + '" title="' + i + ' คะแนน" />';
+      }
+      $("#nv_star").html(starHtml);
+    });
+      
+    function rate(obj, oEvent) {
+      var imgSrc = '/files/images/star_off.gif';
+      var imgSrc_2 = '/files/images/star_on.gif';
+      
+      if (obj.rateFlag) return;
+      var e = oEvent || window.event;
+      var target = e.target || e.srcElement;
+      var imgArray = obj.getElementsByTagName("img");
+      for (var i = 0; i < imgArray.length; i++) {
+        imgArray[i]._num = i;
+        imgArray[i].onclick = function() {
+          if (obj.rateFlag)
+            return;
+          obj.rateFlag = true;
+          //评分操作
+          $.ajax({
+            type: "POST",
+            url: "/wmcms/action/index.php?action=score.score&ajax=yes",
+            data: {
+              'module': '{评分模块}',
+              'cid': '{评分id}',
+              'score': this._num + 1
+            },
+            dataType: "json",
+            success: function(data) {
+              Swal({
+                type: 'success',
+                title: 'ให้คะแนนแล้ว',
+                showConfirmButton: false,
+                timer: 1500
+              });
+            },
+            error: function(e) //服务器响应失败处理函数
+            {
+              console.log(e);
+              alert(e);
+            },
+            async: true,
+          });
+        };
+      }
+      
+      if (target.tagName == "IMG") {
+        for (var j = 0; j < imgArray.length; j++) {
+          if (j <= target._num) {
+            imgArray[j].src = imgSrc_2;
+          } else {
+            imgArray[j].src = imgSrc;
+          }
+        }
+      } else {
+        for (var k = 0; k < imgArray.length; k++) {
+          imgArray[k].src = imgSrc;
+        }
+      }
+    }
+      </script>
+<!-- IMPORT GLOBAL FOOTER -->
+{footer:global.footer.html}
