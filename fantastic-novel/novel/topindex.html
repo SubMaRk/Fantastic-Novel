@@ -1,0 +1,210 @@
+<!-- IMPORT HEADER -->
+{header:header/index.html}
+<!-- IMPORT GLOBAL BODY -->
+{header:global.body.html}
+<!-- IMPORT NAVIGATION -->
+{header:novel/nav.html}
+<!-- Load Slide -->
+{header:novel/slider.html}
+
+<section id="topindex">
+    <div class="container" id="global-w">
+        <div class="row">
+            <div class="col s12">
+                <div class="col s12 m6 l4">
+                    <!-- DAILY RANKING -->
+                    <div class="textblock z-depth-3">
+                        <h5><span class="trn">อันดับประจำวัน</span></h5>
+                    </div>
+                    <ul class="nv-rank">
+                        {小说:排序=日点击;数量=5}<li class="top-info">
+                            <a title="{小说名字}" href="{url}">
+                                <img class="lazy" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
+                                <div class="book-info">
+                                    <h5>
+                                        <div class="{i:1,2,3}order-color{/i}{i:>3}order-gray{/i}">
+                                            {i}
+                                        </div>
+                                        <span class="trn">{小说名字}</span>
+                                        <i class="fal fa-fire-alt fas-{i:1}red{/i}{i:2}pink{/i}{i:3}orange{/i}{i:4}yellow{/i}{i:5}green{/i}"></i>
+                                    </h5>
+                                    <p><i class="fas fa-edit"></i>{小说作者} <span>|</span> <i class="fas fa-thumbs-up"></i>{小说总点击} <span class="trn">คน</span></p>
+                                    <p><i class="fas fa-eye"></i>{小说总收藏} <span class="trn">ครั้ง</span></p>
+                                    <p>{小说最新章节名字:50}</p>
+                                    <p>{小说更新时间}</p>
+                                    <p>{小说简介:60}</p>
+                                </div>
+                            </a>
+                        </li>{/小说}
+                    </ul>
+                </div>
+                <div class="col s12 m6 l4">
+                    <!-- WEEKLY RANKING -->
+                    <div class="textblock z-depth-3">
+                        <h5><span class="trn">อันดับประจำสัปดาห์</span></h5>
+                    </div>
+                    <ul class="nv-rank">
+                        {小说:排序=周点击;数量=5}<li class="top-info">
+                            <a title="{小说名字}" href="{url}">
+                                <img class="lazy" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
+                                <div class="book-info">
+                                    <h5>
+                                        <div class="{i:1,2,3}order-color{/i}{i:>3}order-gray{/i}">
+                                            {i}
+                                        </div>
+                                        <span class="trn">{小说名字}</span>
+                                            <i class="fal fa-fire-alt fas-{i:1}red{/i}{i:2}pink{/i}{i:3}orange{/i}{i:4}yellow{/i}{i:5}green{/i}"></i>
+                                    </h5>
+                                    <p><i class="fas fa-edit"></i>{小说作者} <span>|</span> <i class="fas fa-thumbs-up"></i>{小说总点击} <span class="trn">คน</span></p>
+                                    <p><i class="fas fa-eye"></i>{小说总收藏} <span class="trn">ครั้ง</span></p>
+                                    <p>{小说最新章节名字:50}</p>
+                                    <p>{小说更新时间}</p>
+                                    <p>{小说简介:60}</p>
+                                </div>
+                            </a>
+                        </li>{/小说}
+                    </ul>
+                </div>
+                <div class="col s12 m6 l4">
+                    <!-- MOUTHLY RANKING -->
+                    <div class="textblock z-depth-3">
+                        <h5><span class="trn">อันดับประจำเดือน</span></h5>
+                    </div>
+                    <ul class="nv-rank">
+                        {小说:排序=月点击;数量=5}<li class="top-info">
+                            <a title="{小说名字}" href="{url}">
+                                <img class="lazy" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
+                                <div class="book-info">
+                                    <h5>
+                                        <div class="{i:1,2,3}order-color{/i}{i:>3}order-gray{/i}">
+                                            {i}
+                                        </div>
+                                        <span class="trn">{小说名字}</span>
+                                            <i class="fal fa-fire-alt fas-{i:1}red{/i}{i:2}pink{/i}{i:3}orange{/i}{i:4}yellow{/i}{i:5}green{/i}"></i>
+                                    </h5>
+                                    <p><i class="fas fa-edit"></i>{小说作者} <span>|</span> <i class="fas fa-thumbs-up"></i>{小说总点击} <span class="trn">คน</span></p>
+                                    <p><i class="fas fa-eye"></i>{小说总收藏} <span class="trn">ครั้ง</span></p>
+                                    <p>{小说最新章节名字:50}</p>
+                                    <p>{小说更新时间}</p>
+                                    <p>{小说简介:60}</p>
+                                </div>
+                            </a>
+                        </li>{/小说}
+                    </ul>
+                </div>
+                <div class="col s12 m6 l4">
+                    <!-- VIEW RANKING -->
+                    <div class="textblock z-depth-3">
+                        <h5><span class="trn">อันดับเข้าชม</span></h5>
+                    </div>
+                    <ul class="nv-rank">
+                        {小说:排序=总点击;数量=5}<li class="top-info">
+                            <a title="{小说名字}" href="{url}">
+                                <img class="lazy" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
+                                <div class="book-info">
+                                    <h5>
+                                        <div class="{i:1,2,3}order-color{/i}{i:>3}order-gray{/i}">
+                                            {i}
+                                        </div>
+                                        <span class="trn">{小说名字}</span>
+                                            <i class="fal fa-fire-alt fas-{i:1}red{/i}{i:2}pink{/i}{i:3}orange{/i}{i:4}yellow{/i}{i:5}green{/i}"></i>
+                                    </h5>
+                                    <p><i class="fas fa-edit"></i>{小说作者} <span>|</span> <i class="fas fa-thumbs-up"></i>{小说总点击} <span class="trn">คน</span></p>
+                                    <p><i class="fas fa-eye"></i>{小说总收藏} <span class="trn">ครั้ง</span></p>
+                                    <p>{小说最新章节名字:50}</p>
+                                    <p>{小说更新时间}</p>
+                                    <p>{小说简介:60}</p>
+                                </div>
+                            </a>
+                        </li>{/小说}
+                    </ul>
+                </div>
+                <div class="col s12 m6 l4">
+                    <!-- LIKE RANKING -->
+                    <div class="textblock z-depth-3">
+                        <h5><span class="trn">อันดับที่ชื่นชอบ</span></h5>
+                    </div>
+                    <ul class="nv-rank">
+                        {小说:排序=总收藏;数量=5}<li class="top-info">
+                            <a title="{小说名字}" href="{url}">
+                                <img class="lazy" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
+                                <div class="book-info">
+                                    <h5>
+                                        <div class="{i:1,2,3}order-color{/i}{i:>3}order-gray{/i}">
+                                            {i}
+                                        </div>
+                                        <span class="trn">{小说名字}</span>
+                                            <i class="fal fa-fire-alt fas-{i:1}red{/i}{i:2}pink{/i}{i:3}orange{/i}{i:4}yellow{/i}{i:5}green{/i}"></i>
+                                    </h5>
+                                    <p><i class="fas fa-edit"></i>{小说作者} <span>|</span> <i class="fas fa-thumbs-up"></i>{小说总点击} <span class="trn">คน</span></p>
+                                    <p><i class="fas fa-eye"></i>{小说总收藏} <span class="trn">ครั้ง</span></p>
+                                    <p>{小说最新章节名字:50}</p>
+                                    <p>{小说更新时间}</p>
+                                    <p>{小说简介:60}</p>
+                                </div>
+                            </a>
+                        </li>{/小说}
+                    </ul>
+                </div>
+                <div class="col s12 m6 l4">
+                    <!-- BOOKSHELF RANKING -->
+                    <div class="textblock z-depth-3">
+                        <h5><span class="trn">อันดับเก็บเข้าชั้น</span></h5>
+                    </div>
+                    <ul class="nv-rank">
+                        {小说:排序=总收藏;数量=5}<li class="top-info">
+                            <a title="{小说名字}" href="{url}">
+                                <img class="lazy" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
+                                <div class="book-info">
+                                    <h5>
+                                        <div class="{i:1,2,3}order-color{/i}{i:>3}order-gray{/i}">
+                                            {i}
+                                        </div>
+                                        <span class="trn">{小说名字}</span>
+                                        <i class="fal fa-fire-alt fas-{i:1}red{/i}{i:2}pink{/i}{i:3}orange{/i}{i:4}yellow{/i}{i:5}green{/i}"></i>
+                                    </h5>
+                                    <p><i class="fas fa-edit"></i>{小说作者} <span>|</span> <i class="fas fa-thumbs-up"></i>{小说总点击} <span class="trn">คน</span></p>
+                                    <p><i class="fas fa-eye"></i>{小说总收藏} <span class="trn">ครั้ง</span></p>
+                                    <p>{小说最新章节名字:50}</p>
+                                    <p>{小说更新时间}</p>
+                                    <p>{小说简介:60}</p>
+                                </div>
+                            </a>
+                        </li>{/小说}
+                    </ul>
+                </div>
+                <!-- CATEGORY RANKING LOOP -->
+                {小说分类:数量=15;排序=分类排序}<div class="col s12 m6 l4">
+                    <!-- {小说分类名字} RANKING -->
+                    <div class="textblock z-depth-3">
+                        <h5><span class="trn">{小说分类名字}</span></h5>
+                    </div>
+                    <ul class="nv-rank">
+                        {小说:分类={i};数量=5;排序=总点击}<li class="top-info">
+                            <a title="{小说名字}" href="{url}">
+                                <img class="lazy" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
+                                <div class="book-info">
+                                    <h5>
+                                        <div class="{i:1,2,3}order-color{/i}{i:>3}order-gray{/i}">
+                                            {i}
+                                        </div>
+                                        <span class="trn">{小说名字}</span>
+                                        <i class="fal fa-fire-alt fas-{i:1}red{/i}{i:2}pink{/i}{i:3}orange{/i}{i:4}yellow{/i}{i:5}green{/i}"></i>
+                                    </h5>
+                                    <p><i class="fas fa-edit"></i>{小说作者} <span>|</span> <i class="fas fa-thumbs-up"></i>{小说总点击} <span class="trn">คน</span></p>
+                                    <p><i class="fas fa-eye"></i>{小说总收藏} <span class="trn">ครั้ง</span></p>
+                                    <p>{小说最新章节名字:50}</p>
+                                    <p>{小说更新时间}</p>
+                                    <p>{小说简介:60}</p>
+                                </div>
+                            </a>
+                        </li>{/小说}
+                    </ul>
+                </div>{/小说分类}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- IMPORT GLOBAL FOOTER -->
+{footer:global.footer.html}
