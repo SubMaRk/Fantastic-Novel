@@ -9,12 +9,23 @@
     URL     :   https://naynum.engineer
     Demo    :   https://novel.nay-noi.com
 
-## Libraries used
+## JS Libraries used
     jquery.js
     materialize.js
-    materialize.css
     yall.js
+    aos.js
+    scrolls.js
+    anime.js
+    sweetalert2.js
+
+## CSS Libraries used
+    materialize.css
     flag-icon.css
+    aos.css
+    fontawesome.css
+    sweetalert2.css
+    hover.css
+    animate.css
 
 ## Fonts
     BoonJot
@@ -27,10 +38,10 @@
     TH Charmonman
     TH Dan Vi Vek
 
-##รายการดำเนินการ
-    > ภาพรวมเทมเพลต
-    - [ ] ปรับปรุงส่วนของ header ให้แยกออกจากกัน
-    - [ ] เพิ่มฟังก์ชั่นปรับเปลี่ยนภาษา
+#รายการดำเนินการ
+##ภาพรวมเทมเพลต
+    - [x] ปรับปรุงส่วนของ header ให้แยกออกจากกัน
+    - [x] เพิ่มฟังก์ชั่นปรับเปลี่ยนภาษา
     - [ ] เพิ่มฟังก์ขั่นเปลี่ยนขนาดอักษรให้ครอบคลุม
     - [ ] เพิ่มความหลากหลายของสีในเทมเพลต
     - [ ] เพิ่มฟังก์ชั่นการปรับเปลี่ยนอักษรที่ใช้บนเว็บให้หลากหลาย
@@ -44,7 +55,7 @@
     - [ ] ลดขนาด CSS, JS และ HTML เพื่อลดเวลาในการโหลดหน้าเว็บ
     - [ ] เพิ่มการรองรับ WebApp
 
-    > สำหรับโมดูล
+##สำหรับโมดูล
     - [ ] เพิ่มเทมเพลตให้รองรับโมดูล about
     - [ ] เพิ่มเทมเพลตให้รองรับโมดูล article
     - [ ] เพิ่มเทมเพลตให้รองรับโมดูล author
