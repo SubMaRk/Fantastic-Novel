@@ -1,0 +1,92 @@
+{header:header/index.html}
+<link type="text/css" rel="stylesheet" href="{templates}/css/ggxx.css">
+<!--公共头部 开始-->
+<div class="header">
+    <div class="headWrap">
+        <h1>
+            <a href="/">
+                <img src="{logo}" alt="{网站名}" title="{网站名}"/>
+            </a>
+        </h1>
+        <ul class="nav">
+                    <li class="on">
+                <a href="{首页}" target="_self" title="首页">首页</a>
+            </li>
+                    <li>
+                <a href="/module/novel/type.php?tid=0" target="_self" title="书库">书库</a>
+            </li>
+                    <li>
+                <a href="{小说排行首页}" target="_self" title="排行">排行</a>
+            </li>
+                    <li>
+                <a href="{小说男生版}" target="_self" title="男频">男频</a>
+            </li>
+                    <li>
+                <a href="{小说女生版}" target="_self" title="女频">女频</a>
+            </li>
+                    <li>
+                <a href="{作者中心}" target="_self" title="作家中心">作家中心</a>
+            </li>
+                </ul>
+        <div class="headWrap_r">
+            <form class="search long" method="GET" action="{搜索提交地址}">
+                <div class="search_sel">
+				    <input type="hidden" name="type" value="1">
+				    <input type="hidden" name="module" value="novel">
+                    <input type="text" name="key" value="" placeholder="请输入小说名字">
+                </div>
+                <button class="search_btn" type="submit"><s></s></button>
+            </form>
+       {未登录}<div class="login">
+                 <div class="login_after" style="display: block;">
+                    <span class="yh">
+                        <img src="http://www.totembook.net/files/images/nohead.gif" alt="{网站名}">
+                        <a href="{登录}">登录网站</a>
+                    </span>
+                    <ul class="xiala">
+                        <li><s class="grzx"></s><a href="{qq登录}">QQ登录</a></li>
+                    </ul>
+                </div>{/未登录}
+       {已登录}<div class="login">
+                 <div class="login_after" style="display: block;">
+                    <span class="yh">
+                        <img src="{用户头像}" alt="{用户昵称}">
+                        <a href="{用户中心}">{用户昵称}</a>
+                    </span>
+                    <ul class="xiala">
+                        <li><s class="sj"></s><a href="{我的书架}">我的书架</a></li>
+                        <li><s class="grzx"></s><a href="{用户中心}">个人中心</a></li>
+                        <li><s class="tc"></s><a href="{退出登录}">退出</a></li>
+                    </ul>
+                </div>{/已登录}
+            </div>
+        </div>
+    </div>
+</div>
+<!--公共头部 结束-->
+<link type="text/css" rel="stylesheet" href="/static/css/ggxx.css">
+
+<style type="text/css">
+    .ggxx s{display: initial;}
+    .ggxx em, .ggxx h1, .ggxx h2, .ggxx h3, .ggxx h4, .ggxx i, .ggxx b{font-style: initial; font-weight: initial;}
+    .ggxx em, .ggxx span, .ggxx i{display: initial;}
+</style>
+<!--内容 开始-->
+<div class="content ggxx">
+    <div class="left">
+        <h2>{标题}</h2>
+        <div class="lcon">{内容}</div>
+    </div>
+    <ul class="right">
+            <li class="on"><a href="{当前url}" title="{标题}">{标题}</a></li>
+            <li><a href="javascript:alert('尚未上线')" title="作者福利说明">作者福利说明</a></li>
+            <li><a href="javascript:alert('尚未上线')" title="作者专区说明">作者专区说明</a></li>
+            <li><a href="javascript:alert('尚未上线')" title="作者投稿说明">作者投稿说明</a></li>
+        </ul>
+</div>
+<!--内容 开始-->{footer:footer.global.html}
+
+<span class="gotop" id="btn_back_top" title="返回顶部"><img src="{templates}/picture/gotop.png" alt="返回顶部"></span>
+
+</body>
+</html>

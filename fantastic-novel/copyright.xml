@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<config>
-    <name>Fantastic Novel</name>
-    <author>SubMaRk</author>
-    <ver>V3.0</ver>
-    <time>2019-06-14</time>
-    <url>https://naynum.engineer</url>
-    <appid>12</appid>
-</config>
+<?xml version="1.0" encoding="utf-8"?> 
+<config> 
+	<name>Fantastic Novel</name> 
+	<author>SubMaRk</author> 
+	<ver>V3.0</ver> 
+	<time>2019-10-23</time>
+	<url>https://nay-noi.com</url>
+	<appid>1</appid>
+</config> 

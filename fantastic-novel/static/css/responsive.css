@@ -1,18 +1,186 @@
-/**
- * Language files for Fantastic Novel Template
- * FIle name : responsive.css
- * Developer : SubMaRk
- * Website   : https://naynum.engineer
- * Date      : July 3, 2019
- * Update    : July 3, 2019
- */
-
-#global-w {
-    width:90%
+/* Css for TH-SHARING.COM
+/* Created by SubMaRK 2018-03-22
+/* Last updated 2018-03-22
+*/
+@media only screen and (max-width: 320px) {
+  .ct {
+    width: 60%;
+    margin-left: 1% !important;
+  }
+}
+@media only screen and (max-width: 380px) {
+  #ttsl {display: none;}
+}
+@media only screen and (max-width: 480px) {
+  .ct {
+    margin-left: 5% !important;
+    width: 63%;
+  }
 }
 
-/**
- * Title    : Card animation
- * Author   : LamChang
- * URL      : https://codepen.io/lamchang/pen/PQGQyR
-*/
+@media only screen and (min-width: 568px) {
+  .ct {
+    margin-left: 5% !important;
+    width: 68%;
+  }
+  #gb_w {width:100%}
+}
+
+@media only screen and (max-width: 568px) {
+  .content {
+    margin: 10px 10px;
+    padding: 15px 5px 15px 5px;
+  }
+
+  #footer {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  .tag_item a, .text_f, #read_w, #global_w, .table table {
+    width: 100%;
+  }
+
+  .modal {
+    width: 90%;
+    overflow-y: auto;
+  }
+
+  #slider, #des {
+    display: none !important;
+  }
+
+  .link, .text_f, .link, .text_block, .new, .rec, .lastup, .fb_content, .ranking, .tag_item {
+    text-align: center !important;
+  }
+
+  nav .brand-logo {
+    margin-left: unset;
+    left: 48%;
+  }
+  .info_rec {
+    height: auto;
+  }
+  #gb_w, .list_chapter {width:100%}
+  .footer-1 img {margin-left: unset!important;}
+}
+
+@media only screen and (min-width: 768px) {
+  #gb_w {width:98%}
+}
+
+@media only screen and (max-width: 768px) {
+  nav .brand-logo {
+    margin-left: unset;
+  }
+  #read_w {
+    width: 90%;
+  }
+  .modal {
+    overflow-y: auto !important;
+  }
+  #tchn, .slider {
+    display: none;
+  }
+  #tct {
+    width: 80%;
+  }
+  #ttsl {
+    width: 20%;
+  }
+}
+
+@media only screen and (min-width: 993px) {}
+
+@media only screen and (max-width: 993px) {
+  .table table {
+    width: 100%;
+  }
+  #tname, #tt, .data-user, #sidebar .tag_item {
+    display: none;
+  }
+  #ttsl {
+    width: 20%;
+  }
+  .switch {
+    margin-top: 10px;
+  }
+  .switch i {
+    font-size: 1.6rem;
+  }
+  .switch label .lever {
+    vertical-align: inherit;
+  }
+  .field-container {
+    width: 90%;
+    margin-left: 3.5%;
+  }
+  #filter {
+    display: block;
+  }
+  #category {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .books {
+    height: unset;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  #reg_w {
+    width: 80%;
+  }
+  #up-btn img, .scroll-top-button {
+    pading: 10px 5px !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  #reg_w {
+    width: 40%;
+  }
+  #slider {
+    width: 95%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 993px) {
+  #gb_w {width:95%;}
+  .slider {width:90%;}
+  #tchn, #tct {width: 40%;}
+  
+}
+
+@media (min-width: 994px) and (max-width: 1280px) {
+  .slider {width:85%;}
+  #tchn, #tct {width: 40%;}
+  
+}
+
+@media (min-width: 1281px) and (max-width: 1366px) {
+  #reg_w {
+    width: 30%;
+  }
+
+  #read_w {
+    width: 60%;
+  }
+
+  .ct {
+    margin-left: 15.5% !important;
+  }
+}
+
+@media (min-width: 1367px) and (max-width: 1440px) {}
+
+@media (min-width: 1441px) and (max-width: 1600px) {}
+
+@media (min-width: 1601px) and (max-width: 1920px) {}
+
+@media (min-width: 1921px) and (max-width: 2560px) {}
+
+@media (min-width: 2561px) and (max-width: 3840px) {}
+
+@media only screen and (min-width: 3840px) {}

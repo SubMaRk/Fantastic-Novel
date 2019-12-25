@@ -1,0 +1,161 @@
+{header:header/user.reg.html}
+<section id="nv_reg">
+  <main>
+    <center>
+      <div class="nv_img_f">
+        <a href="#"><img class="circle" id="user_icon" src="{用户头像}" /></a>
+        <h5>กรอกข้อมูลลงทะเบียน</h5>
+      </div>
+      <div class="container" id="nv_reg_w">
+        <div class="row z-depth-3">
+          <form class="col s12 nv_form" id="nv_form" name="nv_form">
+          {表单锁}
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="fas fa-user-circle prefix"></i>
+                <input id="user_name" type="text" class="viladate" name="name" />
+                <label for="user_name">ชื่อผู้ใช้</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="fas fa-lock prefix"></i>
+                <input id="user_password_1" type="password" class="validate" name="psw" />
+                <label for="user_password_1">รหัสผ่าน</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="fas fa-lock prefix"></i>
+                <input id="user_password_2" type="password" class="validate" name="repsw" />
+                <label for="user_password_2">ยืนยันรหัสผ่าน</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="fas fa-envelope prefix"></i>
+                <input id="user_mail" type="email" class="validate" name="email" />
+                <label for="user_mail">อีเมล์</label>
+              </div>
+              {登录验证码开启}
+              <div class="input-field col s10">
+                <i class="fas fa-fingerprint prefix"></i>
+                <input id="code" type="text" name="code" />
+                <label for="code">โค้ดยืนยัน</label>
+              </div>
+              <div class="col s2">
+                <span>{登录验证码}</span>
+              </div>
+              {/登录验证码开启}
+              <div class="input-field col s12 center">
+                <button class="waves-effect waves-light btn" value="true" id="reg" type="submit" name="submit">ลงทะเบียน</button>
+                <p class="message">
+                  มีบัญชีอยู่แล้วใช่ไหม? <a href="{登录}">เข้าสู่ระบบ</a> เลย!<br /> หรือ <a href="{找回密码}">ลืมรหัสผ่าน?</a>
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </center>
+  </main>
+</section>
+<section id="footer">
+  <div class="page-footer white">
+    <div class="container" id="nv_global_w">
+      <div class="col s12 center">
+        <a href="https://www.copyscape.com/" target="_blank"><img src="{templates}/static/image/copyscape.png" width="130" height="46" border="0" alt="Protected by Copyscape" title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page." /></a>
+        <span style="padding-right:10px;"></span>
+        <a href="https://ifastnet.com/portal/aff.php?aff=25156" target="_blank"><img src="{templates}/static/image/ifastnet.png" height="46" alt="Hosted on IFastNet" title="Ifastnet.com is a Premium Hosting Provider, VPS hosting and dedicated servers. Over 5,000,000 websites trust us for their hosting needs." /></a>
+      </div>
+    </div>
+    <div class="nv_ft_bottom">
+      <div class="footer-copyright black col s12">
+        <div style="margin:auto;">
+          <span>
+            &copy 2017-2019 <a href="{首页}"> {网站名} </a> All Rights Reserved.
+          </span>
+          <span>
+            Designed by <a href="https://www.facebook.com/NumSubMaRk" target="_blank"> SubMaRk </a>Powered by <a href="http://www.weimengcms.com" target="_blank"> WeiMengCMS </a>V4.240.485 (Up to date)
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  $(function() {
+    $("#reg").click(function() {
+      var name=$("#nv_form [name=name]").val();
+      var psw=$("#nv_form [name=psw]").val();
+      var repsw=$("#nv_form [name=repsw]").val();
+      var email=$("#nv_form [name=email]").val();
+      {登录验证码开启}var vcode=$("#nv_form [name=code]").val();{/登录验证码开启}
+      if(name.length>16 || name.length<3) {
+        Swal({
+          type: 'error',
+          title: 'ชื่อผู้ใช้ไม่ถูกต้อง!',
+          showConfirmButton: false,
+          timer: 1500
+        });
+        return false;
+      }else if(psw.length>16 || psw.length<8) {
+        Swal({
+          type: 'error',
+          title: 'รูปแบบรหัสผ่านไม่ถูกต้อง!',
+          showConfirmButton: false,
+          timer: 1500
+        });
+        return false;
+      }else if(psw != repsw) {
+        Swal({
+          type: 'error',
+          title: 'รหัสผ่านไม่ตรงกัน!',
+          showConfirmButton: false,
+          timer: 1500
+        });
+        return false;
+      }else if(email == '' || email.length<6) {
+        Swal({
+          type: 'error',
+          title: 'รูปแบบอีเมล์ไม่ถูกต้อง!',
+          showConfirmButton: false,
+          timer: 1500
+        });
+        return false;
+      {登录验证码开启}}else if(vcode == '' || vcode.length>4) {
+        Swal({
+          type: 'error',
+          title: 'รหัสยืนยันไม่ถูกต้อง!',
+          showConfirmButton: false,
+          timer: 1500
+        });
+        return false;
+      {/登录验证码开启}} else {
+        $.ajax({
+          type: "POST",
+          url:"{注册提交地址}&ajax=yes",
+          data:$("#nv_form").serializeArray(),
+          dataType:"json",
+          success:function(data) {
+            if (data.code != 200) {
+              Swal({
+                type: 'error',
+                title: 'ลงทะเบียนไม่สำเร็จ โปรดลองใหม่อีกครั้ง!',
+                showConfirmButton: false,
+                timer: 1500
+              });
+              setTimeout(function(){window.location.reload();},1500);
+            } else {
+              Swal({
+                type: 'success',
+                title: 'ลงทะเบียนสำเร็จ!',
+                showConfirmButton: false,
+                timer: 1500
+              });
+              setTimeout(function(){window.location='/';},1500);
+            }
+          },
+          async:true,
+        });
+        return false;
+      }
+    })
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- Load Header -->
+{header:header/novel.menu.html}
+<!-- Load Global Body -->
+{header:novel/global.body.html}
+<!-- Load Global Nav -->
+{header:novel/nav.html}
+<!-- Table of Content -->
+<section id="toc">
+  <div class="container" id="global_w">
+    <div class="row">
+      <div class="col s12 m4 l3">
+        <div class="info_table_content center">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <h5 id="word_break"><span>{名字}</span></h5>
+          </div>
+          <div class="menu_info z-depth-3">
+            <div data-aos="fade-right" id="menu" data-aos-duration="500" data-aos-delay="500">
+              <img class="lazy z-depth-3" src="{templates}/static/image/book.svg" data-src="{封面}" alt="{名字}" />
+              <label class="info_status">{进程}</label>
+              <p>ผู้แต่ง : <span>{作者}</span></p>
+              <p>หมวดหมู่ : <span><a class="hvr-underline-from-left" href="{分类链接}" target="_self">{类型}</a></span></p>
+              <p>สถานะ : <span>{进程}</span></p>
+              <p>แปลอังกฤษ : <strong>{header:novel/source_eng.html}</strong></p>
+              <p>ต้นฉบับ : <strong>{header:novel/raw_link.html}</strong></p>
+              <p>อัพเดทล่าสุด : <span>{小说章节列表:排序=章节倒序;数量=1}{小说章节创建时间}{/小说章节列表}</span></p>
+              <p>Facebook Page : <a class="hvr-underline-from-left" href="{header:novel/fb_link.html}" target="_blank" title="{header:novel/fb_name.html}">{header:novel/fb_name.html}</a></p>
+              <div class="tag_item" id="info_tag">
+              {标签:10}<a data-aos="fade-left" id="tag_info" href="javascript:void(0);" class="tag_color_{i}" title="{小说分类名字}">{标签标题}</a>{/标签}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m8 l9>
+        {小说分卷列表:}
+        <div class="list">
+          {无数据}<p data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">เรื่องนี้ยังไม่มีบทใด ๆ</p>{/无数据}
+          <ul class="{i:1}hide{/i} collapsible">
+            <li class=" active">
+              <div class="collapsible-header" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+                <i class="fas fa-book"></i><span> {小说分卷名字}</span>
+              </div>
+              <div class="collapsible-body" data-aos-duration="500" data-aos-delay="500">
+                <ul>
+                  {小说章节列表:分卷id={小说分卷id}}<a class="hvr-underline-from-left list_chapter" data-aos="fade-left" data-aos-duration="500" data-aos-delay="500" href="{url}" title="{小说章节名字}">{小说章节名字:40}</a>{/小说章节列表}
+                </ul>
+              </div>
+            </li>
+          </ul>
+          {/小说分卷列表}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{footer:footer.global.html}
