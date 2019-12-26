@@ -32,4 +32,7 @@
   <link rel="stylesheet" href="{templates}/static/css/flag-icon.min.css">
   <link rel="stylesheet" href="{templates}/static/css/aos.css">
   <link rel="stylesheet" href="{templates}/static/css/hover.min.css">
+  <script src="{templates}/static/js/jquery-3.4.1.min.js"></script>
+  <!-- TOGGLE DARK / LIGHT -->
+  <script>window.addEventListener("DOMContentLoaded",function(){var e=localStorage.getItem("mode");"false"==e?($(document.head).append('<link id="mode" rel="stylesheet" href="/templates/fantastic-novel/static/css/light.css">'),$("#toggle,#switch").prop("checked",!1)):"true"==e?($(document.head).append('<link id="mode" rel="stylesheet" href="/templates/fantastic-novel/static/css/dark.css">'),$("#toggle,#switch").prop("checked",!0)):($(document.head).append('<link id="mode" rel="stylesheet" href="/templates/fantastic-novel/static/css/light.css">'),$("#toggle,#switch").prop("checked",!1),localStorage.setItem("mode","false"))});</script>
 </head>
