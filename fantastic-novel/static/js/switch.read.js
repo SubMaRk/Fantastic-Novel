@@ -77,7 +77,7 @@ var changefontweight = function (t) {
             $(".content").css("font-weight", "normal"), localStorage.setItem("fontweight", "normal")
     }
 };
-//Change Read Mode
+/*
 var swapStyleSheet = function (e) {
         document.getElementById("readMode").setAttribute("href", e), storebackground(e)
     },
@@ -88,3 +88,4 @@ var swapStyleSheet = function (e) {
         document.getElementById("readMode").setAttribute("href", localStorage.getItem("sheetKey"))
     };
 window.onload = loadbackground();
+*/
