@@ -550,7 +550,13 @@ input[type=text]:not(.browser-default) {
 }
 
 /* LOGIN */
-
+#user_name, #user_password_1, .user_password_2, #code {
+  width: 90%;
+  padding: unset;
+}
+.message {
+  font-size: 1.4rem;
+}
 
 /* MAIN CONTENT */
 .text_block {
@@ -1122,18 +1128,17 @@ tbody #tt {
   line-height: normal;
   float: unset !important;
 }
-
-.author_notice {}
-
-.author_notice h5 {
-  text-decoration: underline;
-}
-
 .author_notice p {
   font-size: 1.4rem;
   text-indent: 10px;
 }
-
+.book_info h5, .book_tinfo h5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
 .author_detail dt {
   margin-left: 10px;
 }
@@ -1205,11 +1210,17 @@ tbody #tt {
 }
 
 .ct {
-  width: 60%;
-  margin-left: 15.5% !important;
   font-size: 1.4rem;
+  width: calc(100% - 135px);
 }
-
+#ct_list {padding: 0!important;right: 0;}
+#ctp_list {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
 .chapter_info {
   padding: 5px;
 }
@@ -1241,7 +1252,6 @@ tbody #tt {
   -ms-user-select: none;
   user-select: none;
 }
-
 .control {
   line-height: 50px;
 }
@@ -1261,6 +1271,7 @@ tbody #tt {
   text-overflow: ellipsis;
   overflow-y: auto !important;
   max-height: 100%;
+  border: unset;
 }
 
 #modal-chapter-list a {
@@ -1293,7 +1304,7 @@ tbody #tt {
 .selectFont h5,
 .fontSize h5,
 .readMode h5 {
-  width: 40%;
+  width: 100%;
   margin: auto;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -1374,13 +1385,19 @@ tbody #tt {
   text-decoration: none;
   text-shadow: 0 0 5px #444;
 }
-
-.book_info p {
+.book_info, {
+  text-align: left;
+  margin-top: 10px;
+}
+.book_tinfo {
+  text-align: left;
+}
+.book_info p, .book_tinfo p {
   font-size: 1.4rem;
   line-height: 5px;
 }
 
-.book_info h5 a {
+.book_info h5 a, .book_tinfo h5 a {
   font-size: 1.8rem;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1400,7 +1417,7 @@ tbody #tt {
 #filter {
   display: none;
 }
-.book_info a {
+.book_info a, .book_tinfo a {
   color: black;
   font-size: 1.4rem;
 }
@@ -1521,7 +1538,7 @@ tbody #tt {
 }
 
 .card_cover img {
-  height: 230px;
+  height: 250px;
   width: 100%
 }
 
