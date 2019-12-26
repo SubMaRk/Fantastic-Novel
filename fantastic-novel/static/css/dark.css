@@ -1,4 +1,4 @@
-::-webkit-scrollbar {background-color: #000!important;}
+::-webkit-scrollbar, .divider, .input-field button, #dark, .selectFont a, .fontSize a, .selectFont h5, .fontSize h5, .readMode h5 {background-color: #000!important;}
 body,
 .dropdown-content a,
 .slider,
@@ -7,7 +7,6 @@ body,
 .slider .slides {
     background-color: #181818 !important
 }
-
 a,
 h1,
 h2,
@@ -35,14 +34,21 @@ nav span,
 nav a,
 nav ul a,
 .collapsible-header i,
-.sidenav li>a>i {
+.sidenav li>a>i,
+.switch i,
+.input-field i,
+#read {
     color: #ddd !important
 }
-
-#slide_info {
+#ct_list {
+    background-color: transparent!important;
+}
+#slide_info, .modal.modal-fixed-footer .modal-content, #chapter_list a {
     background-color: #202020 !important
 }
-
+#chapter_list a {
+    border-bottom: 1px solid #000;
+}
 .slider .indicators .indicator-item, .collapsible, .collapsible-body {
     border: unset !important
 }
@@ -52,14 +58,14 @@ nav ul a,
     box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
 }
 
-.page-footer,.text_block,nav,.btn,.footer-b,.sidenav,.sidenav li>a, .pagination li {
+.page-footer,.text_block,nav,.btn,.footer-b,.sidenav,.sidenav li>a, .pagination li, #openlogin, #openreg, .modal-footer, .modal {
     background-color: #101010 !important
 }
 .switch label input[type=checkbox]:checked+.lever {
     background-color: #606060;
 }
 
-.switch label input[type=checkbox]:checked+.lever:after {
+.switch label input[type=checkbox]:checked+.lever:after, #chapter_list .collection .collection-item.active {
     background-color: #303030!important;
 }
 
@@ -68,7 +74,7 @@ nav ul a,
     background-color: #bbb !important;
 }
 
-.slider .indicators .indicator-item.active {
+.slider .indicators .indicator-item.active, {
     background-color: #fff !important;
 }
 .collapsible-header {
