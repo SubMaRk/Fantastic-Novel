@@ -2,55 +2,61 @@
 {header:header/novel.read.html}
 <!-- Load Main Global Body -->
 {header:novel/global.body.html}
-<link id="readMode" rel="stylesheet" href="{templates}/static/css/mode/default.css">
 <!-- Nav -->
 <section id="nav">
   <div class="navbar-fixed" id="nav_read">
-    <nav class="white nav" data-aos="fade-down" data-aos-duration="500">
-      <a href="{首页}" target="_self" class="waves-effect white waves-light btn left"><i class="fa fa-home"></i></a>
-      <a class="btn ct waves-effect white waves-light modal-trigger" href="#modal-chapter-list">{章节名字}<i class="fas fa-angle-down right"></i></a>
-      <a href="#modal-settings" class="waves-effect white waves-light btn modal-trigger right"><i class="fa fa-cog"></i></a>
+    <nav class="nav" data-aos="fade-down" data-aos-duration="500">
+      <a href="{首页}" target="_self" class="waves-effect waves-light btn left" id="dark"><i class="fa fa-home"></i></a>
+      <a class="btn ct waves-effect waves-light modal-trigger" id="dark" href="#modal-chapter-list">{章节名字}<i class="fas fa-angle-down right"></i></a>
+      <a href="#modal-settings" class="waves-effect waves-light btn modal-trigger right" id="dark"><i class="fa fa-cog"></i></a>
     </nav>
   </div>
   <div class="modal modal-fixed-footer" id="modal-chapter-list">
-    <div class="modal-content">
       <div clas="modal-header">
-        <h5>เลือกบทที่จะอ่าน</h5>
+        <h5 class="center trn">เลือกบทที่จะอ่าน</h5>
       </div>
-      <div class="collection" id="chapter_list">
-        {小说分卷列表:}{小说章节列表:分卷id={小说分卷id}}<a class="collection-item {cur}active selected{/cur}" href="{url}" title="{小说章节名字}">{cur}<i class="far fa-arrow-right"></i> {/cur}{小说章节名字:40}</a>{/小说章节列表}{/小说分卷列表}
+      <div class="modal-content" id="ct_list">
+        <div class="collection" id="chapter_list">
+          {小说分卷列表:}{小说章节列表:分卷id={小说分卷id}}<a class="collection-item {cur}active selected{/cur}" href="{url}" title="{小说章节名字}">{cur}<i class="far fa-arrow-right"></i> {/cur}{小说章节名字}</a>{/小说章节列表}{/小说分卷列表}
+        </div>
       </div>
-    </div>
   </div>
   <div class="modal" id="modal-settings">
     <div class="modal-content center">
-      <h5>ตั้งค่า</h5>
+      <h5 class="trn">ตั้งค่า</h5>
       <div class="selectFont">
-        <h5 class="z-depth-3"><i class="fas fa-font"></i> เลือกแบบอักษร</h5>
-        <a href="javascript:;" data-cmd="resetFont" data-type="0" onclick="changefont(this)" class="waves-effect white btn">Arial</a>
-        <a href="javascript:;" data-cmd="resetFont" data-type="1" onclick="changefont(this)" class="waves-effect white btn">BoonJot</a>
-        <a href="javascript:;" data-cmd="resetFont" data-type="2" onclick="changefont(this)" class="waves-effect white btn">FC Lamoon</a>
-        <a href="javascript:;" data-cmd="resetFont" data-type="3" onclick="changefont(this)" class="waves-effect white btn">JS ToomTam</a>
-        <a href="javascript:;" data-cmd="resetFont" data-type="4" onclick="changefont(this)" class="waves-effect white btn">Layiji Mahaniyom</a>
-        <a href="javascript:;" data-cmd="resetFont" data-type="5" onclick="changefont(this)" class="waves-effect white btn">TF Arluck</a>
-        <a href="javascript:;" data-cmd="resetFont" data-type="6" onclick="changefont(this)" class="waves-effect white btn">TF NopScript</a>
-        <a href="javascript:;" data-cmd="resetFont" data-type="7" onclick="changefont(this)" class="waves-effect white btn">TH Charmonman</a>
-        <a href="javascript:;" data-cmd="resetFont" data-type="8" onclick="changefont(this)" class="waves-effect white btn">TH Dan Vi Vek</a>
+        <h5 class="z-depth-3"><i class="fas fa-font"></i> <span class="trn">เลือกแบบอักษร</span></h5>
+        <a href="javascript:;" data-cmd="resetFont" data-type="0" onclick="changefont(this)" class="waves-effect btn">Arial</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="1" onclick="changefont(this)" class="waves-effect btn">BoonJot</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="2" onclick="changefont(this)" class="waves-effect btn">FC Lamoon</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="3" onclick="changefont(this)" class="waves-effect btn">JS ToomTam</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="4" onclick="changefont(this)" class="waves-effect btn">Layiji Mahaniyom</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="5" onclick="changefont(this)" class="waves-effect btn">TF Arluck</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="6" onclick="changefont(this)" class="waves-effect btn">TF NopScript</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="7" onclick="changefont(this)" class="waves-effect btn">TH Charmonman</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="8" onclick="changefont(this)" class="waves-effect btn">TH Dan Vi Vek</a>
       </div>
       <div class="fontSize">
-        <h5 class="z-depth-3"><i class="fas fa-text-width"></i> ปรับขนาดอักษร</h5>
-        <a href="javascript:;" data-cmd="resetFont" data-type="0" onclick="changefontsize(this)" class="waves-effect white btn"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
-        <a href="javascript:;" data-cmd="resetFont" data-type="2" onclick="changefontsize(this)" class="waves-effect white btn">คืนค่า</a>
-        <a href="javascript:;" data-cmd="resetFont" data-type="1" onclick="changefontsize(this)" class="waves-effect white btn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+        <h5 class="z-depth-3"><i class="fas fa-text-width"></i> <span class="trn">ปรับขนาดอักษร</span></h5>
+        <a href="javascript:;" data-cmd="resetFont" data-type="0" onclick="changefontsize(this)" class="waves-effect btn"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="2" onclick="changefontsize(this)" class="waves-effect btn trn">คืนค่า</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="1" onclick="changefontsize(this)" class="waves-effect btn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
         <br />
-        <a href="javascript:;" data-cmd="resetFont" data-type="0" onclick="changefontweight(this)" class="waves-effect white btn">ปกติ</a>
-        <a href="javascript:;" data-cmd="resetFont" data-type="1" onclick="changefontweight(this)" class="waves-effect white btn">ตัวหนา</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="0" onclick="changefontweight(this)" class="waves-effect btn trn">ปกติ</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="1" onclick="changefontweight(this)" class="waves-effect btn trn">ตัวหนา</a>
       </div>
       <div class="readMode">
-        <h5 class="z-depth-3"><i class="fas fa-adjust"></i> เลือกโหมดอ่าน</h5>
-        <a href="javascript:;" onclick="swapStyleSheet('{templates}/static/css/mode/default.css')" class="waves-effect white waves-light btn"><i class="fas fa-sun"></i> กลางวัน</a>
-        <a href="javascript:;" onclick="swapStyleSheet('{templates}/static/css/mode/dark.css')" class="waves-effect white waves-light btn"><i class="fas fa-moon"></i> กลางคืน</a>
-        <a href="javascript:;" onclick="swapStyleSheet('{templates}/static/css/mode/eyescare.css')" class="waves-effect white waves-light btn"><i class="fas fa-eye"></i> ถนอมสายตา</a>
+        <h5 class="z-depth-3"><i class="fas fa-adjust"></i> <span class="trn">เลือกโหมดอ่าน</span></h5>
+        <center>
+          <div class="switch">
+            <i class="far fa-sun"></i>
+            <label>
+            <input type="checkbox" id="switch">
+            <span class="lever"></span>
+            </label>
+            <i class="far fa-moon"></i>
+          </div>
+        </center>
       </div>
     </div>
   </div>
@@ -61,25 +67,25 @@
       <div class="col s12">
         <div class="chapter_info center z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
           <h3>{章节名字}</h3>
-          <p>เรื่อง : <span><a href="{内容链接}" target="_self">{名字}</a> ({拼音})</span></p>
-          <p>ผู้แต่ง : <span>{作者}</span> <span>|</span> หมวดหมู่ : <span><a href="{分类链接}" target="_self">{类型}</a></span> <span>|</span> สถานะ : <span>{进程}</span></p>
+          <p><span class="trn">ชื่อเรื่อง</span> : <span><a href="{内容链接}" target="_self">{名字}</a> ({拼音})</span></p>
+          <p><span class="trn">ผู้แต่ง</span> : <span>{作者}</span> <span>|</span> <span class="trn">สถานะ</span> : <span>{进程}</span></p>
           <p>Facebook Page : <a href="{header:novel/fb_link.html}" target="_blank" title="{header:novel/fb_name.html}">{header:novel/fb_name.html}</a></p>
         </div>
         <div class="read z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
           {已订阅}<div class="content noselect">{章节内容}</div>{/已订阅}
         </div>
         <div class="control center z-depth-3">
-          <a href="{上一章}" target="_self" class="waves-effect white  waves-light btn"><i class="fas fa-angle-left"></i> บทที่แล้ว</a>
-          <a href="{目录链接}" target="_self" class="waves-effect white  waves-light btn"><i class="fas fa-bars"></i> สารบัญ</a>
-          <a href="{下一章}" target="_self" class="waves-effect white  waves-light btn">บทถัดไป <i class="fas fa-angle-right"></i></a>
+          <a href="{上一章}" target="_self" class="waves-effect waves-light btn"><i class="fas fa-angle-left"></i> <span class="trn">บทที่แล้ว</span></a>
+          <a href="{目录链接}" target="_self" class="waves-effect waves-light btn"><i class="fas fa-bars"></i> <span class="trn">สารบัญ</span></a>
+          <a href="{下一章}" target="_self" class="waves-effect waves-light btn"><span class="trn">บทถัดไป</span> <i class="fas fa-angle-right"></i></a>
         </div>
       </div>
     </div>
   </div>
 </section>
 <section id="footer">
-  <div class="page-footer white">
-    <div class="container" id="gb_w">
+  <div class="page-footer">
+    <div class="container" id="gb_f">
       <div class="col s12 center">
         <a href="https://www.copyscape.com/" target="_blank"><img src="{templates}/static/image/copyscape.png" width="130" height="46" border="0" alt="Protected by Copyscape" title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page." /></a>
         <span style="padding-right:10px;"></span>
@@ -90,10 +96,10 @@
       <div class="footer-copyright center black col s12">
         <div style="margin:auto;">
           <span>
-            &copy 2017-2019 <a href="{首页}" target="_self"> {网站名} </a> All Rights Reserved.
+            &copy 2017-2020 <a href="{首页}" target="_self"> {网站名} </a> All Rights Reserved.
           </span>
           <span>
-            Designed by <a href="https://www.facebook.com/NumSubMaRk" target="_blank"> SubMaRk </a>Powered by <a href="http://www.weimengcms.com" target="_blank"> WeiMengCMS </a>V4.295.668 (Up to date)
+            Designed by <a href="https://www.facebook.com/NumSubMaRk" target="_blank"> SubMaRk </a> <span>|</span> Font from <a href="https://thaifaces.com/specimen/fc-lamoon/" target="_blank"> FC Lamoon </a> <span>|</span> Powered by <a href="http://www.weimengcms.com" target="_blank"> WeiMengCMS </a>V4.295.668 (Up to date)
           </span>
         </div>
       </div>
@@ -101,7 +107,6 @@
   </div>
 </section>
 <!-- Javascript for Read Page -->
-<script src="{templates}/static/js/jquery-3.4.1.min.js"></script>
 <script src="{templates}/static/js/materialize.min.js"></script>
 <script src="{templates}/static/js/global.js"></script>
 <script src="{templates}/static/js/lang/dict.js"></script>
@@ -111,6 +116,11 @@
 <script src="{templates}/static/js/switch.read.js"></script>
 <script>
   $(document).ready(function() {
+    /* Toggle Dark & Light */
+    var dark = "/templates/fantastic-novel/static/css/dark.css";
+    var light = "/templates/fantastic-novel/static/css/light.css";
+    $("#toggle,#switch").change(function(){$(this).is(":checked")?($('link[id="mode"]').attr("href",dark),localStorage.setItem("mode","true")):($('link[id="mode"]').attr("href",light),localStorage.setItem("mode","false"))});
+    /* Customize Materialize JS */
     $(".dropdown-trigger").dropdown();
     $('.modal').modal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
@@ -143,7 +153,5 @@
     if (event.keyCode == 13) location = gototable;
   };
 </script>
-
 </body>
-
 </html>
