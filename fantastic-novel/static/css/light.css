@@ -5,7 +5,8 @@ nav li,
 nav li a,
 nav span,
 nav a,
-nav ul a {
+nav ul a,
+#modal-chapter-list a {
     color: #000 !important
 }
 .btn, .btn-large, .btn-small {
