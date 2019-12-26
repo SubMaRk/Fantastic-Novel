@@ -35,6 +35,16 @@
                         {/搜索结果}
                     </div>
                 </div>
+                <div class="pagination col s12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                  <ul class="pagination center">
+                    <li class="waves-effect waves-light btn"><a href="{第一页}" target="_self">หน้าแรก</a></li>
+                    <li class="waves-effect waves-light btn"><a href="{上一页}" target="_self">ก่อนหน้า</a></li>
+                    {跳页:2}{选中页}<li class="waves-effect z-depth-3"><a href="javascript:void(0);" class="visited" target="_self">{i}</a></li>{/选中页}
+                    <li class="waves-effect z-depth-3"><a href="{url}" target="_self">{i}</a></li>{/跳页}
+                    <li class="waves-effect waves-light btn"><a href="{下一页}" target="_self">ถัดไป</a></li>
+                    <li class="waves-effect waves-light btn"><a href="{最后页}" target="_self">ท้ายสุด</a></li>
+                  </ul>
+                </div>
             </div>
         </div>
     </div>
