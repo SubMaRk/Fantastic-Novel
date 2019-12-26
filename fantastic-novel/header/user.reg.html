@@ -1,13 +1,8 @@
 <!DOCTYPE html>
-<html lang="th" dir="ltr" id="index">
-
+<html lang="th" dir="ltr" id="reg">
 <head>
-  <script type='text/javascript'>
-    if (window.location.protocol == "http:") {
-      var restOfUrl = window.location.href.substr(5);
-      window.location = "https:" + restOfUrl;
-    }
-  </script>
+  <!-- REDIRECT TO HTTPS -->
+  <script>if(window.location.protocol=="http:"){var w=window.location.href.substr(5);window.location="https:"+w}</script>
   <!-- MAIN TAGS  -->
   <title>ลงทะเบียน</title>
   <meta name="keywords" content="{key}">
@@ -24,26 +19,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Language" content="utf-8">
-  <!-- CSS & SCRIPT JS  -->
-  <script src="{templates}/static/main.js"></script>
-  <!-- ICONFOR ALL DEVICES -->
-  <link rel="apple-touch-icon" sizes="57x57" href="{templates}/static/image/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="{templates}/static/image/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="{templates}/static/image/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="{templates}/static/image/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="{templates}/static/image/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="{templates}/static/image/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="{templates}/static/image/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="{templates}/static/image/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="{templates}/static/image/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="{templates}/static/image/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="{templates}/static/image/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="{templates}/static/image/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="{templates}/static/image/favicon-16x16.png">
-  <link rel="manifest" href="{templates}/static/image/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffc40d">
-  <meta name="msapplication-TileImage" content="{templates}/static/image/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="mask-icon" href="{templates}/static/image/safari-pinned-tab.svg" color="#5bbad5">
+  <meta http-equiv="Content-Language" content="">
+  <!-- CSS -->
+  <link rel="stylesheet" href="{templates}/static/webfonts/font.css">
+  <link rel="stylesheet" href="{templates}/static/css/materialize.min.css">
+  <link rel="stylesheet" href="{templates}/static/css/global.css">
+  <link rel="stylesheet" href="{templates}/static/css/responsive.css">
+  <link rel="stylesheet" href="{templates}/static/css/color.css">
+  <link rel="stylesheet" href="{templates}/static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="{templates}/static/css/flag-icon.min.css">
+  <link rel="stylesheet" href="{templates}/static/css/aos.css">
+  <link rel="stylesheet" href="{templates}/static/css/hover.min.css">
+  <script src="{templates}/static/js/jquery-3.4.1.min.js"></script>
+  <!-- TOGGLE DARK / LIGHT -->
+  <script>window.addEventListener("DOMContentLoaded",function(){var e=localStorage.getItem("mode");"false"==e?($(document.head).append('<link id="mode" rel="stylesheet" href="/templates/fantastic-novel/static/css/light.css">'),$("#toggle,#switch").prop("checked",!1)):"true"==e?($(document.head).append('<link id="mode" rel="stylesheet" href="/templates/fantastic-novel/static/css/dark.css">'),$("#toggle,#switch").prop("checked",!0)):($(document.head).append('<link id="mode" rel="stylesheet" href="/templates/fantastic-novel/static/css/light.css">'),$("#toggle,#switch").prop("checked",!1),localStorage.setItem("mode","false"))});</script>
 </head>
