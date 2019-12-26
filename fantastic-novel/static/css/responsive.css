@@ -3,26 +3,14 @@
 /* Last updated 2018-03-22
 */
 @media only screen and (max-width: 320px) {
-  .ct {
-    width: 60%;
-    margin-left: 1% !important;
-  }
 }
 @media only screen and (max-width: 380px) {
   #ttsl {display: none;}
 }
 @media only screen and (max-width: 480px) {
-  .ct {
-    margin-left: 5% !important;
-    width: 63%;
-  }
 }
 
 @media only screen and (min-width: 568px) {
-  .ct {
-    margin-left: 5% !important;
-    width: 68%;
-  }
   #gb_w {width:100%}
 }
 
@@ -31,7 +19,11 @@
     margin: 10px 10px;
     padding: 15px 5px 15px 5px;
   }
-
+  #info_img {
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
   #footer {
     margin: auto;
     text-align: center;
@@ -73,9 +65,6 @@
 @media only screen and (max-width: 768px) {
   nav .brand-logo {
     margin-left: unset;
-  }
-  #read_w {
-    width: 90%;
   }
   .modal {
     overflow-y: auto !important;
@@ -122,10 +111,47 @@
   #category {
     display: none;
   }
+  #info_detail p {
+    text-align: center;
+    float: unset;
+    margin-top: 15px;
+  }
+  .info_btn {
+    text-align: center;
+    float: unset!important;
+  }
+  #info_detail {
+    margin-top: 10px;
+  }
+  #nav-profile {
+    width: 30%;
+    margin: 10px;
+  }
+  .nav_detail {
+    position: absolute;
+    margin-left: 40%;
+    top: 0;
+    font-size: 1.4rem;
+    line-height: normal;
+    float: unset !important;
+  }
+  }
+  #info_title, #info_btn {
+    float: unset;
+    text-align: center;
+  }
 }
 @media only screen and (max-width: 1280px) {
   .books {
     height: unset;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .books {
+    height: unset;
+  }
+  #read_w {
+    width: 60%;
   }
 }
 @media (min-width: 321px) and (max-width: 480px) {
@@ -136,7 +162,16 @@
     pading: 10px 5px !important;
   }
 }
-
+@media (min-width: 569px) and (max-width: 993px) {
+  #info_img {
+    margin-left: 33%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  #read_w {
+    width: 90%;
+  }
+}
 @media (min-width: 481px) and (max-width: 768px) {
   #reg_w {
     width: 40%;
@@ -150,26 +185,21 @@
   #gb_w {width:95%;}
   .slider {width:90%;}
   #tchn, #tct {width: 40%;}
-  
 }
 
 @media (min-width: 994px) and (max-width: 1280px) {
   .slider {width:85%;}
   #tchn, #tct {width: 40%;}
-  
+  #read_w {
+    width: 70%;
+  }
 }
-
 @media (min-width: 1281px) and (max-width: 1366px) {
   #reg_w {
     width: 30%;
   }
-
   #read_w {
     width: 60%;
-  }
-
-  .ct {
-    margin-left: 15.5% !important;
   }
 }
 
