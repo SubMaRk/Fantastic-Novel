@@ -8,9 +8,9 @@
  */
 $(function() {
     var dict = {
+        /* Nav - tKeys */
         "นายน้อย": {
             en: "NAY-NOI",
-            zh: ""
         },
         "หน้าหลัก": {
             en: "Home"
@@ -18,8 +18,38 @@ $(function() {
         "เรื่องทั้งหมด": {
             en: "All"
         },
+        "นิยายทั้งหมด": {
+            en: "All Novels"
+        },
         "หมวดหมู่": {
             en: "Categories"
+        },
+        "แฟนตาซี": {
+            en: "Fantasy"
+        },
+        "ศิลปะการต่อสู้": {
+            en: "Martial Arts"
+        },
+        "โรแมนติก": {
+            en: "Romantic"
+        },
+        "ประวัติศาสตร์": {
+            en: "Historical"
+        },
+        "เรื่องลึกลับ": {
+            en: "Mystery"
+        },
+        "เกมออนไลน์": {
+            en: "Game Online"
+        },
+        "ไซไฟ": {
+            en: "Sci-Fi"
+        },
+        "สยองขวัญ": {
+            en: "Horror"
+        },
+        "ผจญภัย": {
+            en: "Adventure"
         },
         "อันดับ": {
             en: "Ranking"
@@ -27,7 +57,7 @@ $(function() {
         "เกี่ยวกับ": {
             en: "About"
         },
-        "สนับสนุนผู้แปล": {
+        "สนุนสนุนผู้แปล": {
             en: "Support Translators"
         },
         "การใช้งาน": {
@@ -52,7 +82,13 @@ $(function() {
             en: "Donate Website"
         },
         "ลงนิยาย": {
-            en: "Create Novel"
+            en: "Write Novel"
+        },
+        "ภาษาไทย": {
+            en: "Thai"
+        },
+        "ภาษาอังกฤษ": {
+            en: "English"
         },
         "ศูนย์ผู้ใช้": {
             en: "User Center"
@@ -96,33 +132,79 @@ $(function() {
         "กู้คืนรหัสผ่าน": {
             en: "Password Recovery"
         },
-        "ไทย": {
-            en: "Thai"
+        "ระดับ": {
+            en: "Level"
         },
-        "อังกฤษ": {
-            en: "English"
+        "ประสบการณ์": {
+            en: "Exp"
         },
-        "จีน": {
-            en: "Chinese"
+        "ตั้งค่า": {
+            en: "Settings"
         },
-        "ข้อมูลทั่วไป": {
-            en: "General"
+        "ข้อตกลงการใช้งาน": {
+            en: "Terms of use"
         },
-        "แผนผังเว็บไซต์": {
-            en: "Sitemap"
+        "ยกเลิก": {
+            en: "Cancle"
         },
-        "เว็บในเครือข่าย": {
-            en: "Our Services"
+        "ยอมรับ": {
+            en: "Accept"
         },
-        /* Index Page */
+        /* Login & Resister - tKey */
+        "ชื่อผู้ใช้": {
+            en: "Username"
+        },"อีเมล์": {
+            en: "E-mail"
+        },
+        "รหัสผ่าน": {
+            en: "Password"
+        },
+        "ยืนยันรหัสผ่าน": {
+            en: "Repeat Password"
+        },
+        "โค้ดยืนยัน": {
+            en: "Code"
+        },
+        "มีบัญชีอยู่แล้วใช่ไหม": {
+            en: "Have an account"
+        },
+        "เลย": {
+            en: "Now"
+        },
+        "หรือ": {
+            en: "or"
+        },
+        "ลืมรหัสผ่าน": {
+            en: "Forget password"
+        },
+        "กับเรา": {
+            en: "with us"
+        },
+        "ยังไม่มีบัญชีใช่ไหม": {
+            en: "Haven't an account"
+        },
+        "เข้าสู่ระบบด้วย": {
+            en: "Login woth"
+        },
+        /* Slider - tKeys */
+        "เข้าชมทั้งหมด": {
+            en: "Total"
+        },
+        "ครั้ง": {
+            en: " "
+        },
+        "อ่านเรื่องนี้": {
+            en: "Read"
+        },
+        /* Index - tKeys */
         "นิยายแนะนำ": {
-            en: "Recomended Novel"
+            en: "Recommended Novel"
         },
         "นิยายมาใหม่": {
-            en: "New Novel"
+            en: "New Arrived"
         },
-        "อัพเดทล่าสุด": {
-            en: "Lastest Update"
+        "อัปเดทล่าสุด": {
+            en: "Latest Update"
         },
         "ข้อมูลผู้ใช้": {
             en: "User Infomation"
@@ -130,28 +212,164 @@ $(function() {
         "อันดับนิยาย": {
             en: "Novel Ranking"
         },
+        "โปรดเข้าสู่ระบบ": {
+            en: "Please login first"
+        },
+        "ติดตามเราบนเฟซบุ๊ก": {
+            en: "Follow on Facebook"
+        },
+        /* Info - tKeys */
+        "ข้อมูลนิยาย": {
+            en: "Information"
+        },
+        "ให้คะแนน": {
+            en: "Rate this"
+        },
+        "คะแนน": {
+            en: "Score"
+        },
+        "ทั้งหมด": {
+            en: "All"
+        },
+        "เข้าชมวันนี้": {
+            en: "Today"
+        },
+        "สัปดาห์นี้": {
+            en: "This Week"
+        },
+        "เดือนนี้": {
+            en: "This Month"
+        },
+        "ผู้แต่ง": {
+            en: "Author"
+        },
+        "แปลอังกฤษ": {
+            en: "English"
+        },
+        "ต้นฉบับ": {
+            en: "Raw"
+        },
+        "ชอบ": {
+            en: "Like"
+        },
+        "ชอบแล้ว": {
+            en: "Linked"
+        },
+        "เพิ่มเข้าชั้น": {
+            en: "Add to bookshelf"
+        },
+        "เพิ่มเข้าชั้นแล้ว": {
+            en: "Added to bookshelf"
+        },
+        "เนื้อเรื่องย่อ": {
+            en: "Synopsis"
+        },
+        "สารบัญเรื่อง": {
+            en: "Table of contents for"
+        },
+        "เรื่องนี้ยังไม่มีบทใด ๆ": {
+            en: "This novel does not have any chapters."
+        },
+        "ผลงานเพิ่มเติมของ": {
+            en: "Additional works of"
+        },
+        "ยังไม่มีผลงานเพิ่มเติม": {
+            en: "No additional work yet."
+        },
+        "แสดงความคิดเห็น": {
+            en: "Leave a Comment"
+        },
+        "ข้อมูลผู้เขียน": {
+            en: "Author info"
+        },
+        "ประกาศ": {
+            en: "Notice"
+        },
+        "ติดตามผู้แต่งบนเฟซบุ๊ก": {
+            en: "Follow on Facebook"
+        },
+        /* Type - tKeys */
+        "เข้าชม": {
+            en: "Views"
+        },
+        "หน้าแรก": {
+            en: "First"
+        },
+        "ก่อนหน้า": {
+            en: "Previous"
+        },
+        "ถัดไป": {
+            en: "Next"
+        },
+        "ท้ายสุด": {
+            en: "Last"
+        },
+        "กระบวนการ": {
+            en: "Process"
+        },
+        "จำนวนคำ": {
+            en: "Word count"
+        },
+        "บท": {
+            en: "Chapter"
+        },
+        "ลิขสิทธิ์": {
+            en: "Copyright"
+        },
+        "ราคา": {
+            en: "Price"
+        },
+        "อักษร": {
+            en: "Charactor"
+        },
+        "เรื่อง": {
+			en: "Stories"
+		},
+        "มีนิยายทั้งหมด": {
+            en: "A total"
+        },
+        /* Read - tKeys */
+        "สถานะ": {
+            en: "Status"
+        },
+        "ปรับขนาดอักษร": {
+            en: "Adjust font size"
+        },
+        "เลือกโหมดอ่าน": {
+            en: "Switch Mode"
+        },
+        "คืนค่า": {
+            en: "Reset"
+        },
+        "ปกติ": {
+            en: "Normal"
+        },
+        "ตัวหนา": {
+            en: "Bold"
+        },
+        /* Footer - tKeys */
+        "ข้อมูลทั่วไป": {
+            en: "About us"
+        },
+        "แผนผังเว็บไซต์": {
+            en: "Sitemap"
+        },
+        "เว็บในเครือ": {
+            en: "Affiliated websites"
+        },
         "วัน": {
-            en: "Day"
+            en: "Daily"
         },
         "สัปดาห์": {
-            en: ""
+            en: "Weekly"
         },
         "เดือน": {
-            en: ""
-        },
-        "อ่านเรื่องนี้": {
-            en: ""
-        },
-        "เข้าชมทั้งหมด": {
-            en: "Total"
-        },
-        "ครั้ง": {
-            en: "View"
+            en: "Monthly"
         },
         "หมวดหมู่นิยาย": {
             en: "Novel Categories"
         },
-        "เรื่อง": {
+        "ชื่อเรื่อง": {
             en: "Title"
         },
         "ชื่อบท": {
