@@ -1,5 +1,9 @@
 <!-- Load Header -->
 {header:header/novel.ranking.html}
+<!-- Load Functions Script -->
+{header:header/script.html}
+<!-- Load WepApp Config -->
+{header:header/webapp/config.html}
 <!-- Load Global body -->
 {header:novel/global.body.html}
 <!-- Load Global Nav -->
@@ -18,7 +22,7 @@
           </div>
           <ul id="daily_ranking">
             {小说:排序=日点击;数量=5}
-            <li class="info_rec" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <li class="info_rec" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
               <a title="{小说名字}" class="hvr-grow-shadow" href="{url}" target="_self">
                 <img class="lazy book_cover col s5 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
                 <div class="book_info col s7 m7 l7">
@@ -26,7 +30,7 @@
                     <div class="{i:1,2,3}order_color{/i} {i:>3}order_gray{/i}">{i}</div> <span>{小说名字}</span>
                   </h5>
                   <p>ผู้แต่ง : {小说作者}</p>
-                  <p>เข้าชม <span class="count">{小说总点击}</span> ครั้ง</p>
+                  <p>เข้าชม <span class="label_rate">{小说总点击}</span> ครั้ง</p>
                   <p>ชอบทั้งหมด : {小说总收藏} คน</p>
                 </div>
               </a>
@@ -41,7 +45,7 @@
           </div>
           <ul id="weekly_ranking">
             {小说:排序=周点击;数量=5}
-            <li class="info_rec" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <li class="info_rec" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
               <a title="{小说名字}" class="hvr-grow-shadow" href="{url}" target="_self">
                 <img class="lazy book_cover col s5 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
                 <div class="book_info col s7 m7 l7">
@@ -49,7 +53,7 @@
                     <div class="{i:1,2,3}order_color{/i} {i:>3}order_gray{/i}">{i}</div> <span>{小说名字}</span>
                   </h5>
                   <p>ผู้แต่ง : {小说作者}</p>
-                  <p>เข้าชม <span class="count">{小说总点击}</span> ครั้ง</p>
+                  <p>เข้าชม <span class="label_rate">{小说总点击}</span> ครั้ง</p>
                   <p>ชอบทั้งหมด : {小说总收藏} คน</p>
                 </div>
               </a>
@@ -64,7 +68,7 @@
           </div>
           <ul id="monthly_ranking">
             {小说:排序=月点击;数量=5}
-            <li class="info_rec" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <li class="info_rec" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
               <a title="{小说名字}" class="hvr-grow-shadow" href="{url}" target="_self">
                 <img class="lazy book_cover col s5 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
                 <div class="book_info col s7 m7 l7">
@@ -72,7 +76,7 @@
                     <div class="{i:1,2,3}order_color{/i} {i:>3}order_gray{/i}">{i}</div> <span>{小说名字}</span>
                   </h5>
                   <p>ผู้แต่ง : {小说作者}</p>
-                  <p>เข้าชม <span class="count">{小说总点击}</span> ครั้ง</p>
+                  <p>เข้าชม <span class="label_rate">{小说总点击}</span> ครั้ง</p>
                   <p>ชอบทั้งหมด : {小说总收藏} คน</p>
                 </div>
               </a>
@@ -88,7 +92,7 @@
           </div>
           <ul id="daily_ranking">
             {小说:数量=5;排序=总收藏}
-            <li class="info_rec" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <li class="info_rec" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
               <a title="{小说名字}" class="hvr-grow-shadow" href="{url}" target="_self">
                 <img class="lazy book_cover col s5 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
                 <div class="book_info col s7 m7 l7">
@@ -96,7 +100,7 @@
                     <div class="{i:1,2,3}order_color{/i} {i:>3}order_gray{/i}">{i}</div> <span>{小说名字}</span>
                   </h5>
                   <p>ผู้แต่ง : {小说作者}</p>
-                  <p>เข้าชม <span class="count">{小说总点击}</span> ครั้ง</p>
+                  <p>เข้าชม <span class="label_rate">{小说总点击}</span> ครั้ง</p>
                   <p>ชอบทั้งหมด : {小说总收藏} คน</p>
                 </div>
               </a>
@@ -111,7 +115,7 @@
           </div>
           <ul id="weekly_ranking">
             {小说:数量=5;排序=总推荐}
-            <li class="info_rec" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <li class="info_rec" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
               <a title="{小说名字}" class="hvr-grow-shadow" href="{url}" target="_self">
                 <img class="lazy book_cover col s5 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
                 <div class="book_info col s7 m7 l7">
@@ -119,7 +123,7 @@
                     <div class="{i:1,2,3}order_color{/i} {i:>3}order_gray{/i}">{i}</div> <span>{小说名字}</span>
                   </h5>
                   <p>ผู้แต่ง : {小说作者}</p>
-                  <p>เข้าชม <span class="count">{小说总点击}</span> ครั้ง</p>
+                  <p>เข้าชม <span class="label_rate">{小说总点击}</span> ครั้ง</p>
                   <p>แนะนำทั้งหมด : {小说总推荐} ครั้ง</p>
                 </div>
               </a>
@@ -134,7 +138,7 @@
           </div>
           <ul id="monthly_ranking">
             {小说:数量=5;排序=评论}
-            <li class="info_rec" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <li class="info_rec" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
               <a title="{小说名字}" class="hvr-grow-shadow" href="{url}" target="_self">
                 <img class="lazy book_cover col s5 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
                 <div class="book_info col s7 m7 l7">
@@ -142,7 +146,7 @@
                     <div class="{i:1,2,3}order_color{/i} {i:>3}order_gray{/i}">{i}</div> <span>{小说名字}</span>
                   </h5>
                   <p>ผู้แต่ง : {小说作者}</p>
-                  <p>เข้าชม <span class="count">{小说总点击}</span> ครั้ง</p>
+                  <p>เข้าชม <span class="label_rate">{小说总点击}</span> ครั้ง</p>
                   <p>ความคิดเห็น : {小说评论量} ความคิดเห็น</p>
                 </div>
               </a>
@@ -159,7 +163,7 @@
           </div>
           <ul id="category_ranking">
             {小说:分类=1;数量=5;排序=总点击}
-            <li class="info_rec" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <li class="info_rec" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
               <a title="{小说名字}" class="hvr-grow-shadow" href="{url}" target="_self">
                 <img class="lazy book_cover col s5 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
                 <div class="book_info col s7 m7 l7">
@@ -167,7 +171,7 @@
                     <div class="{i:1,2,3}order_color{/i} {i:>3}order_gray{/i}">{i}</div> <span>{小说名字}</span>
                   </h5>
                   <p>ผู้แต่ง : {小说作者}</p>
-                  <p>เข้าชม <span class="count">{小说总点击}</span> ครั้ง</p>
+                  <p>เข้าชม <span class="label_rate">{小说总点击}</span> ครั้ง</p>
                   <p>ชอบทั้งหมด : {小说总收藏} คน</p>
                 </div>
               </a>
@@ -181,7 +185,7 @@
           </div>
           <ul id="category_ranking">
             {小说:分类=2;数量=5;排序=总点击}
-            <li class="info_rec" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <li class="info_rec" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
               <a title="{小说名字}" class="hvr-grow-shadow" href="{url}" target="_self">
                 <img class="lazy book_cover col s5 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
                 <div class="book_info col s7 m7 l7">
@@ -189,7 +193,7 @@
                     <div class="{i:1,2,3}order_color{/i} {i:>3}order_gray{/i}">{i}</div> <span>{小说名字}</span>
                   </h5>
                   <p>ผู้แต่ง : {小说作者}</p>
-                  <p>เข้าชม <span class="count">{小说总点击}</span> ครั้ง</p>
+                  <p>เข้าชม <span class="label_rate">{小说总点击}</span> ครั้ง</p>
                   <p>ชอบทั้งหมด : {小说总收藏} คน</p>
                 </div>
               </a>
@@ -203,7 +207,7 @@
           </div>
           <ul id="category_ranking">
             {小说:分类=3;数量=5;排序=总点击}
-            <li class="info_rec" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <li class="info_rec" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
               <a title="{小说名字}" class="hvr-grow-shadow" href="{url}" target="_self">
                 <img class="lazy book_cover col s5 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
                 <div class="book_info col s7 m7 l7">
@@ -211,7 +215,7 @@
                     <div class="{i:1,2,3}order_color{/i} {i:>3}order_gray{/i}">{i}</div> <span>{小说名字}</span>
                   </h5>
                   <p>ผู้แต่ง : {小说作者}</p>
-                  <p>เข้าชม <span class="count">{小说总点击}</span> ครั้ง</p>
+                  <p>เข้าชม <span class="label_rate">{小说总点击}</span> ครั้ง</p>
                   <p>ชอบทั้งหมด : {小说总收藏} คน</p>
                 </div>
               </a>
@@ -225,7 +229,7 @@
           </div>
           <ul id="category_ranking">
             {小说:分类=4;数量=5;排序=总点击}
-            <li class="info_rec" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <li class="info_rec" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
               <a title="{小说名字}" class="hvr-grow-shadow" href="{url}" target="_self">
                 <img class="lazy book_cover col s5 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
                 <div class="book_info col s7 m7 l7">
@@ -233,7 +237,7 @@
                     <div class="{i:1,2,3}order_color{/i} {i:>3}order_gray{/i}">{i}</div> <span>{小说名字}</span>
                   </h5>
                   <p>ผู้แต่ง : {小说作者}</p>
-                  <p>เข้าชม <span class="count">{小说总点击}</span> ครั้ง</p>
+                  <p>เข้าชม <span class="label_rate">{小说总点击}</span> ครั้ง</p>
                   <p>ชอบทั้งหมด : {小说总收藏} คน</p>
                 </div>
               </a>
@@ -247,7 +251,7 @@
           </div>
           <ul id="category_ranking">
             {小说:分类=5;数量=5;排序=总点击}
-            <li class="info_rec" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <li class="info_rec" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
               <a title="{小说名字}" class="hvr-grow-shadow" href="{url}" target="_self">
                 <img class="lazy book_cover col s5 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
                 <div class="book_info col s7 m7 l7">
@@ -255,7 +259,7 @@
                     <div class="{i:1,2,3}order_color{/i} {i:>3}order_gray{/i}">{i}</div> <span>{小说名字}</span>
                   </h5>
                   <p>ผู้แต่ง : {小说作者}</p>
-                  <p>เข้าชม <span class="count">{小说总点击}</span> ครั้ง</p>
+                  <p>เข้าชม <span class="label_rate">{小说总点击}</span> ครั้ง</p>
                   <p>ชอบทั้งหมด : {小说总收藏} คน</p>
                 </div>
               </a>
@@ -269,7 +273,7 @@
           </div>
           <ul id="category_ranking">
             {小说:分类=6;数量=5;排序=总点击}
-            <li class="info_rec" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <li class="info_rec" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
               <a title="{小说名字}" class="hvr-grow-shadow" href="{url}" target="_self">
                 <img class="lazy book_cover col s5 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
                 <div class="book_info col s7 m7 l7">
@@ -277,7 +281,7 @@
                     <div class="{i:1,2,3}order_color{/i} {i:>3}order_gray{/i}">{i}</div> <span>{小说名字}</span>
                   </h5>
                   <p>ผู้แต่ง : {小说作者}</p>
-                  <p>เข้าชม <span class="count">{小说总点击}</span> ครั้ง</p>
+                  <p>เข้าชม <span class="label_rate">{小说总点击}</span> ครั้ง</p>
                   <p>ชอบทั้งหมด : {小说总收藏} คน</p>
                 </div>
               </a>
@@ -291,7 +295,7 @@
           </div>
           <ul id="category_ranking">
             {小说:分类=7;数量=5;排序=总点击}
-            <li class="info_rec" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <li class="info_rec" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
               <a title="{小说名字}" class="hvr-grow-shadow" href="{url}" target="_self">
                 <img class="lazy book_cover col s5 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
                 <div class="book_info col s7 m7 l7">
@@ -299,7 +303,7 @@
                     <div class="{i:1,2,3}order_color{/i} {i:>3}order_gray{/i}">{i}</div> <span>{小说名字}</span>
                   </h5>
                   <p>ผู้แต่ง : {小说作者}</p>
-                  <p>เข้าชม <span class="count">{小说总点击}</span> ครั้ง</p>
+                  <p>เข้าชม <span class="label_rate">{小说总点击}</span> ครั้ง</p>
                   <p>ชอบทั้งหมด : {小说总收藏} คน</p>
                 </div>
               </a>
@@ -313,7 +317,7 @@
           </div>
           <ul id="category_ranking">
             {小说:分类=8;数量=5;排序=总点击}
-            <li class="info_rec" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <li class="info_rec" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
               <a title="{小说名字}" class="hvr-grow-shadow" href="{url}" target="_self">
                 <img class="lazy book_cover col s5 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
                 <div class="book_info col s7 m7 l7">
@@ -321,7 +325,7 @@
                     <div class="{i:1,2,3}order_color{/i} {i:>3}order_gray{/i}">{i}</div> <span>{小说名字}</span>
                   </h5>
                   <p>ผู้แต่ง : {小说作者}</p>
-                  <p>เข้าชม <span class="count">{小说总点击}</span> ครั้ง</p>
+                  <p>เข้าชม <span class="label_rate">{小说总点击}</span> ครั้ง</p>
                   <p>ชอบทั้งหมด : {小说总收藏} คน</p>
                 </div>
               </a>

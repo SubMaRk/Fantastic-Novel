@@ -76,7 +76,7 @@
             &copy 2017-2020 <a href="{首页}" target="_self"> {网站名} </a> All Rights Reserved.
           </span>
           <span>
-            Designed by <a href="https://www.facebook.com/NumSubMaRk" target="_blank"> SubMaRk </a> <span>|</span> Font from <a href="https://thaifaces.com/specimen/fc-lamoon/" target="_blank"> FC Lamoon </a> <span>|</span> Powered by <a href="http://www.weimengcms.com" target="_blank"> WeiMengCMS </a>V4.295.668 (Up to date)
+            Designed by <a href="https://www.facebook.com/NumSubMaRk" target="_blank"> SubMaRk </a> <span>|</span> Font from <a href="https://thaifaces.com/specimen/fc-lamoon/" target="_blank"> FC Lamoon </a> <span>|</span> Powered by <a href="http://www.weimengcms.com" target="_blank"> WeiMengCMS </a>V4.346.855 (Up to date)
           </span>
         </div>
       </div>
@@ -88,19 +88,34 @@
 <script src="{templates}/static/js/lang/dict.js"></script>
 <script src="{templates}/static/js/yall.min.js"></script>
 <script src="{templates}/static/js/scrolls.js"></script>
-<script src="{templates}/static/js/aos.js"></script>
 <script src="{templates}/static/js/sweetalert2.all.min.js"></script>
 <script src="{templates}/static/js/anime.min.js"></script>
 <script>
   $(document).ready(function() {
     /* Convert Number */
-    $(".label_rate").text(function(){var t=$(this).html();if(t<1e3)$(this).html(t);else{var e=numeral(t).format("0.00a");$(this).html(e)}}),$(".v-count").text(function(){var t=$(this).html();if(t<1e3)$(this).html(t)();else{var e=numeral(t).format("0,0");$(this).html(e)}});
+    $(".label_rate").each(function(){var t=$(this).text();if(t<1e3)$(this).html(t);else{var a=numeral(t).format("0.00a");$(this).html(a)}});
     /* Toggle Dark & Light */
     var dark = "/templates/fantastic-novel/static/css/dark.css";
     var light = "/templates/fantastic-novel/static/css/light.css";
     $("#toggle,#switch").change(function(){$(this).is(":checked")?($('link[id="mode"]').attr("href",dark),localStorage.setItem("mode","true")):($('link[id="mode"]').attr("href",light),localStorage.setItem("mode","false"))});
+    /* Toggle Animated Website */
+    $("#turn,#swap").change(function(){$(this).is(":checked")?(localStorage.setItem("animated","true"),location.reload()):(localStorage.setItem("animated","false"),location.reload())});
     /* Customize Materialize JS */
     $('.modal').modal();
+    $('#settings').modal({
+      dismissible: true,
+      inDuration: 300,
+      outDuration: 200,
+      startingTop: '4%',
+      endingTop: '15%',
+      ready: function(modal, trigger) {
+        alert("Ready");
+        console.log(modal, trigger);
+      },
+      complete: function() {
+        alert('Closed');
+      } // Callback for Modal close
+    });
     $(".dropdown-trigger").dropdown({
       hover:true,
     });
@@ -124,152 +139,8 @@
       observeChanges: true
     });
   });
-  AOS.init({
-	once: true
-  });
+  //AOS.init({once: true});
   scroller.init();
 </script>
-<script>
-    $(function() {
-      $("#login").click(function() {
-        var name=$("#loginform [name=name]").val();
-        var psw=$("#loginform [name=psw]").val();
-        {登录验证码开启}var vcode=$("#loginform [name=code]").val();{/登录验证码开启}
-        if(name.length>16 || name.length<3) {
-          Swal({
-            type: 'error',
-            title: 'ชื่อผู้ใช้ไม่ถูกต้อง!',
-            showConfirmButton: false,
-            timer: 1500
-          });
-          return false;
-        }else if(psw.length>16 || psw.length<8) {
-          Swal({
-            type: 'error',
-            title: 'รหัสผ่านไม่ถูกต้อง!',
-            showConfirmButton: false,
-            timer: 1500
-          });
-          return false;
-        {登录验证码开启}}else if(vcode == '' || vcode.length>4) {
-          Swal({
-            type: 'error',
-            title: 'รหัสยืนยันไม่ถูกต้อง!',
-            showConfirmButton: false,
-            timer: 1500
-          });
-          return false;
-        {/登录验证码开启}} else {
-          $.ajax({
-            type: "POST",
-            url:"{登录提交地址}&ajax=yes",
-            data:$("#loginform").serializeArray(),
-            dataType:"json",
-            success:function(data) {
-              if (data.code != 200) {
-                Swal({
-                  type: 'error',
-                  title: 'ข้อมูลบัญชีผู้ใช้ไม่ถูกต้อง!',
-                  showConfirmButton: false,
-                  timer: 1500
-                });
-                setTimeout(function(){window.location.reload();},1500);
-              } else {
-                Swal({
-                  type: 'success',
-                  title: 'เข้าสู่ระบบแล้ว!',
-                  showConfirmButton: false,
-                  timer: 1500
-                });
-                setTimeout(function(){window.location='/';},1500);
-              }
-            },
-            async:true,
-          });
-          return false;
-        }
-      })
-    });
-  </script>
-  <script>
-      $(function() {
-        $("#reg").click(function() {
-          var name=$("#regform [name=name]").val();
-          var psw=$("#regform [name=psw]").val();
-          var repsw=$("#regform [name=repsw]").val();
-          var email=$("#regform [name=email]").val();
-          {登录验证码开启}var vcode=$("#regform [name=code]").val();{/登录验证码开启}
-          if(name.length>16 || name.length<3) {
-            Swal({
-              type: 'error',
-              title: 'ชื่อผู้ใช้ไม่ถูกต้อง!',
-              showConfirmButton: false,
-              timer: 1500
-            });
-            return false;
-          }else if(psw.length>16 || psw.length<8) {
-            Swal({
-              type: 'error',
-              title: 'รูปแบบรหัสผ่านไม่ถูกต้อง!',
-              showConfirmButton: false,
-              timer: 1500
-            });
-            return false;
-          }else if(psw != repsw) {
-            Swal({
-              type: 'error',
-              title: 'รหัสผ่านไม่ตรงกัน!',
-              showConfirmButton: false,
-              timer: 1500
-            });
-            return false;
-          }else if(email == '' || email.length<6) {
-            Swal({
-              type: 'error',
-              title: 'รูปแบบอีเมล์ไม่ถูกต้อง!',
-              showConfirmButton: false,
-              timer: 1500
-            });
-            return false;
-          {登录验证码开启}}else if(vcode == '' || vcode.length>4) {
-            Swal({
-              type: 'error',
-              title: 'รหัสยืนยันไม่ถูกต้อง!',
-              showConfirmButton: false,
-              timer: 1500
-            });
-            return false;
-          {/登录验证码开启}} else {
-            $.ajax({
-              type: "POST",
-              url:"{注册提交地址}&ajax=yes",
-              data:$("#regform").serializeArray(),
-              dataType:"json",
-              success:function(data) {
-                if (data.code != 200) {
-                  Swal({
-                    type: 'error',
-                    title: 'ลงทะเบียนไม่สำเร็จ โปรดลองใหม่อีกครั้ง!',
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
-                  setTimeout(function(){window.location.reload();},1500);
-                } else {
-                  Swal({
-                    type: 'success',
-                    title: 'ลงทะเบียนสำเร็จ!',
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
-                  setTimeout(function(){window.location='/';},1500);
-                }
-              },
-              async:true,
-            });
-            return false;
-          }
-        })
-      });
-    </script>
 </body>
 </html>

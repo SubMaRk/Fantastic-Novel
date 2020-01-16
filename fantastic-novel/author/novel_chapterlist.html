@@ -34,7 +34,7 @@ $(document).ready(function(){
             <span class="act"><a href="{小说章节列表}">จัดการบท</a></span>
         </div>
     </div>
-
+    
     <div class="managerWrap cf">
         <div class="mLeftList fl">
 			<div class="leftListWrap">
@@ -71,7 +71,7 @@ $(document).ready(function(){
 	                        	<div class="sectionBtnBox cf">
 		                            <div class="titleBtn fr">
 		                                <a id="delete" class="button white" href="javascript:">ลบ</a>
-		                                <a id="tongji" class="button white font" href="javascript:">จำนวนคำ</a>
+		                                <a id="tongji" class="button white font" href="javascript:">จำนวนคำ (<span>0</span> ตัวอักษร)</a>
 	                        			<a class="button save" id="save" data-type="update"><span class="icon"></span>จัดเก็บ</a>
 		                            </div>
 		                            <em class="c999">เผยแพร่เมื่อ : </em>
@@ -88,7 +88,7 @@ $(document).ready(function(){
 		                            </div>
 		                        </div>
 							</div>
-
+					
 							<div class="zwText">
                                 <input id="title" name="title" type="text" autocomplete="off">
                                 <textarea name="content" id="content" autocomplete="off"></textarea>
@@ -104,17 +104,29 @@ $(document).ready(function(){
 <script>
 $(document).ready(function(){
 	$('body').on('mouseenter', "#volumelist li", function() {
-		$(this).css('background','#D0E9FF');
+		$(this).css('background','#D0E9FF');  
 	});
 	$('body').on('mouseleave', "#volumelist li", function() {
 		if( $(this).hasClass("cur") == false){
-			$(this).css('background','#F7F6F6');
+			$(this).css('background','#F7F6F6');  
 		}
 	});
   	//字数统计
 	$('body').on('click', "#tongji", function() {
-		var str = $("[name=content]").val();
-		easydialog_alert('มีทั้งหมด'+wordsNumber(str)+'ตัวอักษร!','','','');
+		$.ajax({
+			type:"POST",
+			url:"{url:ajax;novel.getnumber&ajax=yes}",
+			data:{content:$("[name=content]").val()},
+			dataType:"json",
+			success:function(data){
+				easydialog_alert('ตอนนี้มี '+data.data.number+' ตัวอักษร!','','','');
+			},
+			async:true,
+		});
+	});
+	//实时检查字数
+	$('body').on('keyup', "#content", function() {
+		$("#tongji span").html(wordsNumber($("[name=content]").val()));
 	});
 
     //点击分卷
@@ -130,7 +142,7 @@ $(document).ready(function(){
 
 			//如果已经加载了类容就不进行再次加载
 			if( html == '' ){
-				easydialog_loading('กำลังโหลด โปดรอ...');
+				easydialog_loading('กำลังโหลด โปรดรอ...');
 				$.ajax({
 					type:"POST",
 					url:"{url:ajax;novel.getchapterlist&order=chapter_order&order_type=desc}",
@@ -155,8 +167,8 @@ $(document).ready(function(){
 			$(this).parents().find("div").removeClass("act");
 			$("#volumelist .chapterBox").css('display',"none");
 		}
-    })
-
+    })  
+    
     //点击章节
     $('body').on('click', "#volumelist li", function() {
 		$("#volumelist li").css('background','#EFECEC');
@@ -177,6 +189,7 @@ $(document).ready(function(){
 					$("#title").val(data.data.chapter_name);
 					$("#content").val(data.data.content);
 					$("#vid").find("option[value='"+data.data.chapter_vid+"']").attr("selected","selected");
+					$("#tongji span").html(wordsNumber($("[name=content]").val()));
 				}else if(data.code==201){
 					easydialog_alert('ไม่มีบทนี้อยู่!','','','');
 					setTimeout(function(){window.parent.location = '';},1000);
@@ -206,13 +219,13 @@ $(document).ready(function(){
 	 		});
 	 	}
 	});
-
-
+	
+	
   	//保存章节信息
   	$("#save").click(function(){
 	  	var title = $("#title").val();
 	  	var content = $("#content").val();
-
+	  	
 	  	if( title == '' || content == '' ){
 	  		easydialog_alert('ขออภัย! รายการทั้งหมดต้องไม่ว่าง','','','');
 	  	}else{

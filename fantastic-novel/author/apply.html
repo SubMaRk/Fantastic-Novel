@@ -16,14 +16,14 @@
 					<em>นามปากกา</em>
 					<input class="midInput" id="nickname" name="nickname" type="text">
 					<cite data-node="ok" class="icon ok" style="display:none;"></cite>
-					<p data-node="tip" class="tip">ต้องมีอย่างน้อย 3-16 ตัวอัษาร<span style="color:red">หลังลงทะเบียนจะไม่สามารถเปลี่ยนแปลงได้</span></p>
+					<p data-node="tip" class="tip">ต้องมีอย่างน้อย 3-16 ตัวอักษร! <span style="color:red">หลังลงทะเบียนจะไม่สามารถเปลี่ยนแปลงได้</span></p>
 				</li>
 			</ul>
 			<p class="confirm">
 				<a class="button" href="javascript:step(1,2);">ต่อไป</a>
 			</p>
 		</div>
-
+		
 		<!-- 注册表单 -->
 		<div class="applyForm infoListWrap" style="display:none;" id="step2">
 			<ul>
@@ -31,8 +31,14 @@
 					<em>ชื่อจริง</em>
 					<input class="midInput" id="realname" name="realname" type="text">
 					<cite data-node="ok" class="icon ok" style="display:none;"></cite>
-					<p data-node="tip" class="tip">ต้องมีอย่างน้อย 3-30 ตัวอักษร</p>
+					<p data-node="tip" class="tip">ต้องมีอย่างน้อย 3-30 ตัวอักษร!</p>
 				</li><!--
+				<li>
+					<em>身份证号码</em>
+					<input class="midInput" id="cardid" name="cardid" type="text">
+					<cite data-node="ok" class="icon ok" style="display:none;"></cite>
+					<p data-node="tip" class="tip">请输入您的真实身份证号码！</p>
+				</li>
 				<li>
 					<em>联系地址</em>
 					<input class="midInput" id="address" name="address" type="text">
@@ -62,7 +68,7 @@
 			<h4>
 				<span class="icon ok"></span>ลงทะเบียนสำเร็จ!
 			</h4>
-			<p id="status0" style="display:none">โปรดรอให้ผู้ดูแลระบบตรวจสอบข้อมูลก่อน！</p>
+			<p id="status0" style="display:none">โปรดรอให้ผู้ดูแลระบบตรวจสอบข้อมูลก่อน!</p>
 			<p id="status1" style="display:none">ยินดีด้วย! ทำการลงทะเบียนเรียบร้อยแล้ว คุณสามารถทำสิ่งเหล่านี้ได้เลย</p>
 			<center id="set" style="display:none">
 				<a class="button" href="{创建小说}">เขียนนิยาย</a>
@@ -71,7 +77,7 @@
 		</div>
 	</div>
 </div>
-
+		
 <script>
 var isSub = true;
 var nickNameStatus = false;
@@ -101,7 +107,7 @@ function step(now,next){
 	if(now == 1 && next == 2){
 		var nickname = $("#nickname").val();
 		if( nickname == '' ){
-			easydialog_alert('ต้องกรอกนามปากกาก่อน！','','','');
+			easydialog_alert('ต้องกรอกนามปากกาก่อน!','','','');
 		}else if( nickname.length < 2 || nickname.length > 17 || !isString(nickname) ){
 			easydialog_alert('ต้องมีอย่างน้อย 3-16 ตัวอักษร!','','','');
 		}else{
@@ -135,6 +141,10 @@ function sub(){
 			isSub = false;
 			$("#submitBtn").css("background","#B0B9C1");
 			$("#submitBtn").html("กำลังโหลด...");
+			$("#form").hide();
+			$("#successBox").show();
+			$("#status1").show();
+			$("#set").show();
 			$.ajax({
 				type:"POST",
 				url:"{表单提交地址}&ajax=yes",
@@ -155,6 +165,8 @@ function sub(){
 							$("#set").show();
 						}
 					}else{
+						$("#form").hide();
+						$("#successBox").show();
 						$("#submitBtn").css("background","#4EA8FF");
 						$("#submitBtn").html("ส่งข้อมูล");
 						easydialog_alert(data.msg,'','','');
@@ -162,7 +174,7 @@ function sub(){
 					isSub = true;
 				},
 				async:true,
-			});
+			}); 
 		}
 	}
 }
@@ -192,7 +204,7 @@ $(document).ready(function(){
 					}
 				},
 				async:true,
-			});
+			}); 
 		}
 	});
 	$("#realname").blur(function(){

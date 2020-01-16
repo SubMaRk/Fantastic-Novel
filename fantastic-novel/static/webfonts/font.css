@@ -37,18 +37,17 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'layiji_mahaniyom';
-  src: url('layijimahaniyomv1041.eot');
-  src: url('layijimahaniyomv1041.eot?#iefix') format('embedded-opentype'),
-    url('layijimahaniyomv1041.woff2') format('woff2'),
-    url('layijimahaniyomv1041.woff') format('woff'),
-    url('layijimahaniyomv1041.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+   src: url('LayijiMaHaNiYomV161.eot');
+   src: url('LayijiMaHaNiYomV161.eot?#iefix') format('embedded-opentype'),
+        url('LayijiMaHaNiYomV161.woff2') format('woff2'),
+        url('LayijiMaHaNiYomV161.woff') format('woff'),
+        url('LayijiMaHaNiYomV161.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
 
+}
 @font-face {
   font-family: 'tf_arluck';
   src: url('tf_arluck.eot');

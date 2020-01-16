@@ -1,5 +1,9 @@
 <!-- Load Header -->
 {header:header/index.html}
+<!-- Load Functions Script -->
+{header:header/script.html}
+<!-- Load WepApp Config -->
+{header:header/webapp/config.html}
 <!-- Load Global body -->
 {header:novel/global.body.html}
 <!-- Load Global Nav -->
@@ -42,7 +46,7 @@
             <h5><span class="trn">นิยายมาใหม่</span> <i class="fal fa-satellite-dish"></i></h5>
           </div>
           {小说:排序=最新入库;数量=8}
-          <div class="col col s6 m4 l3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <div class="col s6 m4 l3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
               <div class="card_cover">
                 <div class="card_book">
                   <a href="{url}" target="_self" title="{小说名字}"><i class="fas fa-book"></i></a>
@@ -88,7 +92,7 @@
         <div class="table">
           <table class="highlight bordered">
             <thead>
-              <tr data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+              <tr id="aos-1" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                 <td id="tname" class="trn">หมวดหมู่</td>
                 <td id="tchn" class="trn">ชื่อเรื่อง</td>
                 <td id="tct" class="trn">ชื่อบท</td>
@@ -98,7 +102,7 @@
             </thead>
             <tbody>
             {小说:排序=最新更新;数量=15}
-              <tr data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="300">
+              <tr data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
                 <td id="tname"><a href="{turl}" target="_self" class="hvr-underline-from-left" id="text" title="{小说分类名字}">【<span class="trn">{小说分类名字}</span>】</a></td>
                 <td id="tchn"><a href="{url}" target="_self" class="hvr-underline-from-left" id="name-tw" title="{小说名字}">{小说名字}</a></td>
                 <td id="tct"><a href="{小说最新章节url}" target="_self" class="hvr-underline-from-left" title="{小说最新章节名字}">{小说最新章节名字}</a></td>
@@ -114,14 +118,14 @@
       <div class="col s12 l3" id="sidebar">
         <!-- USER PROFILE -->
         <div class="col s12 m6 l12 data-user">
-          <div class="text_block z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="300">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
             <h5><span class="trn">ข้อมูลผู้ใช้</span></h5>
           </div>
           {未登录}<div class="nv_img_f" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
             <center><a href="javascript:void(0);"><img class="circle" id="user_icon" src="{用户头像}" /></a>
             <h5 class="trn">โปรดเข้าสู่ระบบ</h5></center>
           </div>{/未登录}
-          {已登录}<div class="u_info" data-aos="fade-left" data-aos-duration="500" data-aos-delay="500">
+          {已登录}<div class="u_info" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
               <div><img class="circle" src="{用户头像}" id="profile" alt="{作者}"></div>
               <div class="user_detail">
                 <p>{用户昵称}</p>
@@ -132,10 +136,10 @@
         </div>
         <!-- Novel Facebook Page -->
         <div class="col s12 m6 l12 fb_content">
-          <div class="text_block z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="300">
-            <h5><span class="trn">ติดตามเราบนเฟซบุ๊ก</span> <i class="fab fa-facebook"></i></h5>
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5><span class="trn">ติดตามเราบนเฟซบุ๊ก</span> <i class="fab fa-facebook-f"></i></h5>
           </div>
-          <div data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="300" class="fb-page"
+          <div data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500" class="fb-page"
             data-href="https://www.facebook.com/thsharing/" data-tabs="timeline, messages" data-small-header="false"
             data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
             <blockquote cite="https://www.facebook.com/thsharing/" class="fb-xfbml-parse-ignore"><a
@@ -145,7 +149,7 @@
         </div>
         <!-- Novel Popular Ranking Tabs -->
         <div class="col s12 m6 l12 ranking">
-          <div class="text_block z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="300">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
             <h5><span class="trn">อันดับนิยาย</span> <i class="fal fa-broadcast-tower"></i></h5>
           </div>
           <ul class="tabs" id="tabs_swipe" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
@@ -154,7 +158,7 @@
             <li class="tab col s4"><a href="#swipe-3" class="trn">เดือน</a></li>
           </ul>
           <!-- Daily Ranking -->
-          <div class="col s12" id="swipe-1" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="300">
+          <div class="col s12" id="swipe-1" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
             {小说:排序=日点击;数量=10}
             <ul id="daily_ranking">
               <li>
@@ -195,10 +199,10 @@
         </div>
         <!-- Novel Tags List -->
         <div class="col s12 m6 l12 tag_item">
-          <div class="text_block z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="300">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
             <h5><span class="trn">หมวดหมู่นิยาย</span> <i class="fas fa-th-large"></i></h5>
           </div>
-          <ul data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="300">
+          <ul data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
             <div id="tag">
               {小说分类:}<a href="{surl}" target="_self" class="tag_color_{i} trn" title="{小说分类名字}">{小说分类名字}</a>{/小说分类}
             </div>

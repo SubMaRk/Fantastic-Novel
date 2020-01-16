@@ -27,7 +27,7 @@ $(document).ready(function(){
             <span><a href="{小说章节列表}">จัดการบท</a></span>
         </div>
     </div>
-
+    
     <div class="managerWrap cf">
         <div class="mRightContent fl" style="width: 1040px;">
             <div class="midWrap editWrap">
@@ -40,7 +40,7 @@ $(document).ready(function(){
 	                            	{cur:did>0}
 	                                <a id="delete" class="button white" href="{删除草稿}">ลบ</a>
 	                                {/cur}
-	                                <a id="tongji" class="button white font" href="javascript:">นับ</a>
+	                                <a id="tongji" class="button white font" href="javascript:">จำนวนคำ (<span>0</span> ตัวอักษร)</a>
 	                                <a id="save" class="button white" href="javascript:">จัดเก็บ</a>
 	                                <a id="sub" class="button green" href="javascript:"><span class="icon "></span>เผยแพร่</a>
 	                            </div>
@@ -48,7 +48,7 @@ $(document).ready(function(){
 	                            <div class="select-wrap mid">
 		                            <select id="vid" name="vid" class="select">
 		                            	<option value="">โปรดเลือกเล่ม</option>
-		                            	{小说分卷列表:}<option value="{小说分卷id}" {eq:{分卷id}:{小说分卷id}}style="display:none;"{/eq}>{小说分卷名字}</option>{/小说分卷列表}
+		                            	{小说分卷列表:}<option value="{小说分卷id}">{小说分卷名字}</option>{/小说分卷列表}
 		                            </select>
 	                            </div>
 
@@ -74,8 +74,20 @@ $(document).ready(function(){
 <script>
 //字数统计
 $("#tongji").click(function(){
-	var str = $("[name=content]").val();
-	easydialog_alert('ปัจจุบันมี'+wordsNumber(str)+'ตัวอักษร!','','','');
+	$.ajax({
+		type:"POST",
+		url:"{url:ajax;novel.getnumber&ajax=yes}",
+		data:{content:$("[name=content]").val()},
+		dataType:"json",
+		success:function(data){
+			easydialog_alert('ตอนนี้มี '+data.data.number+' ตัวอักษร!','','','');
+		},
+		async:true,
+	});
+});
+//实时检查字数
+$("#content").keyup(function(){
+	$("#tongji span").html(wordsNumber($("[name=content]").val()));
 });
 //保存草稿
 $("#save").click(function(){
@@ -83,7 +95,7 @@ $("#save").click(function(){
 	var pay = $("#pay").val();
 	var title = $("#title").val();
 	var content = $("#content").val();
-
+	
 	if( !isPositiveNum(pay) ){
 		easydialog_alert('ขออภัย! รูปแบบบทไม่ถูกต้อง','','','');
 	}else if( !isPositiveNum(vid) ){
@@ -115,18 +127,18 @@ $("#sub").click(function(){
 	var did = $("#did").val();
 	var contentid = $("#contentid").val();
 	var module = $("#module").val();
-
+	
 	if( !isPositiveNum(pay)){
 		easydialog_alert('ขออภัย! รูปแบบเล่มไม่ถูกต้อง','','','');
 	}else if( !isPositiveNum(vid) ){
 		easydialog_alert('ขออภัย! โปรดเพิ่มเล่มก่อน','','','');
 		setTimeout(function(){window.parent.location = '{小说新建分卷}';},1000);
 	}else if( !isPositiveNum(did) || !isPositiveNum(contentid) ){
-		easydialog_alert('ขออภัย! ไอดีแบบร่างและไอดีเล่มไม่ถูกต้อ','','','');
+		easydialog_alert('ขออภัย! ไอดีแบบร่างและไอดีเล่มไม่ถูกต้อง','','','');
 	}else if( module == '' ){
 		easydialog_alert('ขออภัย! โมดูลเผยแพร่ผิดพลาด','','','');
 	}else if( title == '' || content == '' ){
-		easydialog_alert('ขออภัย! รายการทั้งหมดต้องไม่ว่า','','','');
+		easydialog_alert('ขออภัย! รายการทั้งหมดต้องไม่ว่าง','','','');
 	}else{
 		$.ajax({
 			type:"POST",

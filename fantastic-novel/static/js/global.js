@@ -7,8 +7,29 @@
  * Update    : July 2, 2019
  */
 
+/* TOGGLE ANIMATE */
+window.addEventListener('DOMContentLoaded', function() {
+    var status = localStorage.getItem("animated");
+    var animatedjs = document.createElement("script");
+    animatedjs.src = "{templates}/static/js/aos.js";
+    var aosen = document.createElement("script");
+    aosen.text = "AOS.init({once: true});";
+    var aosdi = document.createElement("script");
+    aosdi.text = "AOS.init({disable: true});";
+    if (status == 'true') {
+        $(document.head).append(animatedjs);
+        $(document.head).append(aosen);
+        $("#turn,#swap").prop("checked", true);
+    } else {
+        $("#turn,#swap").prop("checked", false);
+        $(document.head).append(animatedjs);
+        $(document.head).append(aosdi);
+        localStorage.setItem("animated","false");
+    }
+  });
+
 /* DARK & LIGHT - Toggle */
-window.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('DOMContentLoaded', function () {
     var mode = localStorage.getItem("mode");
     if (mode == 'false') {
         $(document.head).append('<link id="mode" rel="stylesheet" href="/templates/fantastic-novel/static/css/light.css">');
@@ -27,13 +48,20 @@ window.onload = function () {
     var e = localStorage.getItem("mode"),
         t = "/templates/fantastic-novel/static/css/dark.css",
         a = "/templates/fantastic-novel/static/css/light.css";
-    "false" == e ? ($('link[id="mode"]').attr("href", a), $("#toggle").prop("checked", !1)) : "true" == e ? ($('link[id="mode"]').attr("href", t), $("#toggle").prop("checked", !0)) : ($("#toggle").prop("checked", !1), localStorage.setItem("mode", "false")), 
-    $("#toggle").change(function () {
-        $(this).is(":checked") ? ($('link[id="mode"]').attr("href", t), localStorage.setItem("mode", "true")) : ($('link[id="mode"]').attr("href", a), localStorage.setItem("mode", "false"))
-    })
+    "false" == e ? ($('link[id="mode"]').attr("href", a), $("#toggle").prop("checked", !1)) : "true" == e ? ($('link[id="mode"]').attr("href", t), $("#toggle").prop("checked", !0)) : ($("#toggle").prop("checked", !1), localStorage.setItem("mode", "false")),
+        $("#toggle").change(function () {
+            $(this).is(":checked") ? ($('link[id="mode"]').attr("href", t), localStorage.setItem("mode", "true")) : ($('link[id="mode"]').attr("href", a), localStorage.setItem("mode", "false"))
+        })
 };
 
-$(".count").text(function(){var t=$(this).html();if(t<1e3)$(this).html(t)();else{var e=numeral(t).format("0,0");$(this).html(e)}});
+$(".count").text(function () {
+    var t = $(this).html();
+    if (t < 1e3) $(this).html(t)();
+    else {
+        var e = numeral(t).format("0,0");
+        $(this).html(e)
+    }
+});
 
 $(document).ready(function () {
     // Search Box
@@ -48,6 +76,113 @@ $(document).ready(function () {
         }
     });
 });
+
+/**************/
+/* Swap Font Family and Change Font Size
+/* Created by SubMaRk (Yutthaphon Inchaiya)
+/* Create Time : January 15, 2020
+/**************/
+!(function () {
+    var head = $("html");
+    var font = head.css("font-family");
+    var cfont = localStorage.getItem("globalfont");
+    if (cfont == null || cfont == 'NaN') {
+        localStorage.setItem("globalfont", font);
+    }
+    var swapFont = function (data) {
+        var type = $(data).attr('data-type');
+        var alltag = $("*");
+        var tag = $("html");
+        var itag = $("i");
+        switch (type) {
+            case '0':
+                alltag.each(function () {
+                    var a = $(this).css("font-family");
+                    var b = itag.css("font-family");
+                    if (a == b) {
+                        $(this).css("font-family", "Font Awesome 5 Pro");
+                    } else {
+                        $(this).css("font-family", "Arial");
+                    }
+                });
+                tag.css("font-size", "12px");
+                localStorage.setItem("globalfont", "Arial");
+                localStorage.setItem("globalsize", "12px");
+                break;
+            case '1':
+                alltag.each(function () {
+                    var a = $(this).css("font-family");
+                    var b = itag.css("font-family");
+                    if (a == b) {
+                        $(this).css("font-family", "Font Awesome 5 Pro");
+                    } else {
+                        $(this).css("font-family", "boonjot");
+                    }
+                });
+                tag.css("font-size", "12px");
+                localStorage.setItem("globalfont", "boonjot");
+                localStorage.setItem("globalsize", "12px");
+                break;
+            case '2':
+                alltag.each(function () {
+                    var a = $(this).css("font-family");
+                    var b = itag.css("font-family");
+                    if (a == b) {
+                        $(this).css("font-family", "Font Awesome 5 Pro");
+                    } else {
+                        $(this).css("font-family", "layiji_mahaniyom");
+                    }
+                });
+                tag.css("font-size", "15px");
+                localStorage.setItem("globalfont", "layiji_mahaniyom");
+                localStorage.setItem("globalsize", "15px");
+                break;
+            default:
+                alltag.each(function () {
+                    var a = $(this).css("font-family");
+                    var b = itag.css("font-family");
+                    if (a == b) {
+                        $(this).css("font-family", "Font Awesome 5 Pro");
+                    } else {
+                        $(this).css("font-family", "fc_lamoon");
+                    }
+                });
+                tag.css("font-size", "15px");
+                localStorage.setItem("globalfont", "fc_lamoon");
+                localStorage.setItem("globalsize", "15px;")
+        }
+    };
+    var csize = localStorage.getItem("globalsize");
+    var size = head.css("font-size");
+    if (csize == null || csize == 'NaN') {
+        localStorage.setItem("globalsize", size);
+    }
+    var swapSize = function (data) {
+        var type = $(data).attr('data-type');
+        var tag = $("html");
+        switch (type) {
+            case '0':
+                tag.css("font-size", "12px");
+                localStorage.setItem("globalsize", "12px");
+                break;
+            case '1':
+                tag.css("font-size", "13px");
+                localStorage.setItem("globalsize", "13px");
+                break;
+            case '2':
+                tag.css("font-size", "14px");
+                localStorage.setItem("globalsize", "14px");
+                break;
+            case '3':
+                tag.css("font-size", "16px");
+                localStorage.setItem("globalsize", "16px");
+                break;
+            default:
+                tag.css("font-size", "15px");
+                localStorage.setItem("globalsize", "15px");
+        }
+    };
+})
 
 /**
  * @file jquery.translate.js

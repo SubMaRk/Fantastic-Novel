@@ -5,6 +5,9 @@
 /***************************
 
 /* GLOBAL */
+.fab {
+  font-family: "Font Awesome 5 Brands"!important;
+}
 html,
 body,
 div,

@@ -24,7 +24,7 @@ $(document).ready(function(){
             <span class="act"><a>草稿箱</a></span>
         </div>
     </div>
-
+    
     <div class="managerWrap cf">
         <div class="mLeftList fl" style="width: 100%;">
 			<div id="draftListWrap" class="leftListWrap">
@@ -56,11 +56,11 @@ $(document).ready(function(){
 <script>
 $(document).ready(function(){
 	$("#draftlist li").hover(function(){
-		$(this).css('background','#E1F2FF');
-    },function(){
+		$(this).css('background','#E1F2FF');  
+    },function(){  
 		$(this).css('background','#FFFFFF');
     })
-
+	
 	//删除
 	$("#delete").click(function(){
 		var did = $("#did").val();

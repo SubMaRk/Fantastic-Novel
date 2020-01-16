@@ -28,7 +28,7 @@ $(document).ready(function(){
             <span><a href="{小说章节列表}">จัดการบท</a></span>
         </div>
     </div>
-
+    
     <div class="managerWrap cf">
         <div class="mLeftList fl">
 			<div class="leftListWrap">
@@ -72,7 +72,7 @@ $(document).ready(function(){
 		                            <em class="c999">แก้ไขข้อมูลเล่ม</em>
 		                        </div>
 							</div>
-
+					
 							<div class="volumeForm">
 			                    <ul>
 			                        <li>
@@ -89,7 +89,7 @@ $(document).ready(function(){
 			                        </li>
 			                    </ul>
 			                </div>
-
+	                
 	                    </div>
 	 				</form>
 	            </div>
@@ -101,11 +101,11 @@ $(document).ready(function(){
 <script>
 $(document).ready(function(){
 	$("#volumelist li").hover(function(){
-		$(this).css('background','#E1F2FF');
-    },function(){
+		$(this).css('background','#E1F2FF');  
+    },function(){  
 		$(this).css('background','#FFFFFF');
     })
-
+    
     //点击分卷
 	$("#volumelist li").click(function(){
 		$("#content").css("display","block");
@@ -129,14 +129,14 @@ $(document).ready(function(){
 			},
 			async:true,
 		});
-    })
-
+    })  
+    
 
   //保存分卷信息
   $("#save").click(function(){
   	var name = $("#name").val();
   	var desc = $("#desc").val();
-
+  	
   	if( name == '' ){
   		easydialog_alert('ขออภัย! ชื่อเล่มต้องไม่ว่าง','','','');
   	}else if( name == '' ){

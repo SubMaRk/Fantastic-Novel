@@ -53,22 +53,7 @@
             </form>
           </li>
           <li>
-            <div class="switch">
-              <label>
-              <input type="checkbox" id="toggle">
-              <span class="lever"></span>
-              </label>
-            </div>
-          </li>
-          <li>
-            <a href="javascript:void(0);" class="dropdown-trigger hvr-underline-from-left" data-target="drop_lang"><i
-                class="fas fa-globe-asia"></i></a>
-            <ul id="drop_lang" class="dropdown-content">
-              <li><a data-value="th" class="lang hvr-underline-from-left" id="th"><span
-                    class="flag-icon flag-icon-th"></span> <span class="trn">ภาษาไทย</span></a></li>
-              <li><a data-value="en" class="lang hvr-underline-from-left" id="en"><span
-                    class="flag-icon flag-icon-um"></span> <span class="trn">ภาษาอังกฤษ</span></a></li>
-            </ul>
+            <a href="#settings" class="waves-effect waves-light btn modal-trigger" id="dark"><i class="fa fa-cog"></i></a>
           </li>
           <li class="right">
             {已登录}<a href="javascript:void(0);" class="dropdown-trigger hvr-underline-from-left" id="pc_login"
@@ -100,7 +85,7 @@
             {未登录}<a href="javascript:void(0);" class="dropdown-trigger hvr-underline-from-left" id="pc_logout"
               data-target="drop_logout"><img class="circle" id="user_icon" src="{用户头像}" /></a>
             <ul id="drop_logout" class="dropdown-content">
-              <li><a href="#openlogin" class="hvr-underline-from-left modal-trigger" title="เข้าสู่ระบบ"><i
+              <li><a href="{登录}" target="_self" class="hvr-underline-from-left modal-trigger" title="เข้าสู่ระบบ"><i
                     class="far fa-sign-in"></i><span class="trn">เข้าสู่ระบบ</span></a></li>
               <li><a href="#terms" class="modal-trigger hvr-underline-from-left" title="ลงทะเบียน"><i
                     class="far fa-user-plus"></i><span class="trn">ลงทะเบียน</span></a></li>
@@ -180,6 +165,14 @@
         </label>
         <i class="far fa-moon"></i>
       </div>
+      <div class="switch">
+        <i class="fas fa-stop"></i>
+        <label>
+        <input type="checkbox" id="swap">
+        <span class="lever"></span>
+        </label>
+        <i class="fas fa-play"></i>
+      </div>
       <li id="langs">
         <a data-value="th" class="lang" id="th"><span class="flag-icon flag-icon-th"></span></a>
         <a data-value="en" class="lang" id="en"><span class="flag-icon flag-icon-um"></span></a>
@@ -230,6 +223,14 @@
         </label>
         <i class="far fa-moon"></i>
       </div>
+      <div class="switch">
+        <i class="fas fa-stop"></i>
+        <label>
+        <input type="checkbox" id="swap">
+        <span class="lever"></span>
+        </label>
+        <i class="fas fa-play"></i>
+      </div>
       <li id="langs">
         <a data-value="th" class="lang" id="th"><span class="flag-icon flag-icon-th"></span></a>
         <a data-value="en" class="lang" id="en"><span class="flag-icon flag-icon-um"></span></a>
@@ -243,23 +244,23 @@
       <h5 class="center trn">ข้อตกลงการใช้งาน</h5>
     </div>
     <div class="modal-content">
-      <p class="agreement indent">เมื่อผู้ใช้ลงทะเบียนบนเว็บไซต์ TH-SHARING และแพลตฟอร์มออนไลน์นี้ (ซึ่งเรียกว่า
+      <p class="agreement indent">เมื่อผู้ใช้ลงทะเบียนบนเว็บไซต์ NAY-NOI และแพลตฟอร์มออนไลน์นี้ (ซึ่งเรียกว่า
         "เว็บไซต์") ผู้ที่ประสงค์จะลงทะเบียนเป็นสมาชิกจำเป็นต้องอ่านรายละเอียดและข้อตกลงต่อไปนี้อย่างรอบคอบ
         เมื่อลงทะเบียนเป็นสมาชิกบนเว็บไซต์ การเผยแพร่ผลงาน/ความคิดเห็น/ข้อความ/บทความ/ข้อมูลต่าง ๆ
         บนเว็บไซต์ของเราควรเป็นไปตามกฎในการใช้งาน ดำเนินการ และเผยแพร่ข้อมูลที่เกี่ยวข้องบนเว็บไซต์
-        หากคุณไม่ยอมรับข้อตกลงทั้งหมดของเรา คุณจะไม่ได้รับอนุญาตให้ลงทะเบียนเป็นสมาชิกบนเว็บไซต์ TH-SHARING ของเรา
-        สมาชิกที่จะลงทะเบียนบนเว็บไซต์ TH-SHARING
+        หากคุณไม่ยอมรับข้อตกลงทั้งหมดของเรา คุณจะไม่ได้รับอนุญาตให้ลงทะเบียนเป็นสมาชิกบนเว็บไซต์ NAY-NOI ของเรา
+        สมาชิกที่จะลงทะเบียนบนเว็บไซต์ NAY-NOI
         ของเราถือว่าได้อ่านและยอมรับข้อตกลงนี้ทั้งหมดแล้ว<br /><br /><strong>ข้อตกลงส่วนที่ 1
-          การลงทะเบียนเป็นสมาชิก</strong><br /><br />1. หลังจากลงทะเบียนเป็นสมาชิกบนเว็บไซต์ TH-SHARING ของเรา
+          การลงทะเบียนเป็นสมาชิก</strong><br /><br />1. หลังจากลงทะเบียนเป็นสมาชิกบนเว็บไซต์ NAY-NOI ของเรา
         คุณจำเป็นต้องเก็บรักษาชื่อผู้ใช้และรหัสผ่านของคุณ รวมทั้งรับผิดชอบต่อการดำเนินการและพฤติกรรมทั้งหมดในบัญชีของคุณ
-        ทาง TH-SHARING ขอแนะนำให้คุณเก็บรักษาชื่อผู้ใช้และรหัสผ่านไว้อย่างมิดชิด
+        ทาง NAY-NOI ขอแนะนำให้คุณเก็บรักษาชื่อผู้ใช้และรหัสผ่านไว้อย่างมิดชิด
         เมื่อเสร็จสิ้นการดำเนินการใด ๆ ควรออกจากระบบทันทีเพื่อความปลอดภัยของบัญชีของคุณ เนื่องจากหากดูแลรักษาได้ไม่ดีพอ
         จะส่งผลร้ายต่อบัญชีของคุณ ซึ่งอาจจะเกิดการโจรกรรมหรือขโมยบัญชีและข้อมูลของคุณไปได้
         ซึ่งในกรณีนี้ทางเราไม่ขอรับผิดชอบใด ๆ ทั้งสิ้น<br /><br />2.
-        ทาง TH-SHARING ขอแนะนำให้คุณใช้อักขระอย่างน้อยสามรูปแบบในการตั้งรหัสผ่าน อาทิ ตัวพิมพ์ใหญ่ ตัวพิมพ์เล็ก ตัวเลข
+        ทาง NAY-NOI ขอแนะนำให้คุณใช้อักขระอย่างน้อยสามรูปแบบในการตั้งรหัสผ่าน อาทิ ตัวพิมพ์ใหญ่ ตัวพิมพ์เล็ก ตัวเลข
         และตัวอักษรพิเศษ หากคุณถูกแฮกหรือถูกขโมยบัญชีไป นั่นเป็นเพราะรหัสผ่านที่คุณตั้งไว้ง่ายจนเกินไป
         โปรดติดต่อผู้ดูแลระบบเพื่อดำเนินการแก้ไข<br /><br />3. การลงทะเบียนเป็นสมาชิกบนเว็บไซต์
-        TH-SHARING ของเรา
+        NAY-NOI ของเรา
         นั่นหมายความว่าคุณเห็นด้วยที่จะมอบสิทธิ์ในการเผยแพร่และโปรโมทงานของคุณบนเว็บไซต์และแพลตฟอร์มออนไลน์ที่เกี่ยวข้องภายใต้อำนาจการจัดการของเว็บไซต์ของเรา<br /><br />4.
         ชื่อผู้ใช้ การแนะนำตัว และข้อมูลอื่น ๆ จะต้องไม่ละเมิดกฎหมายของประเทศ
         รวมถึงจรรยาบรรณทางสังคมและข้อตกลงของเว็บไซต์
@@ -282,126 +283,83 @@
         ๆ<br /><br />หากพบเห็นสมาชิกละเมิดข้อตกลงข้างต้น
         ทางเว็บไซต์ขอสงวนสิทธิ์ในการนำบัญชีและเนื้อหาที่เกี่ยวข้องทั้งหมดของคุณออกจากระบบของเราโดยไม่แจ้งให้ทราบล่วงหน้า
         <br /><br /><strong>ข้อตกลงส่วนที่ 3 ขีดจำกัดความรับผิดชอบ</strong><br /><br />1.
-        หากมีผู้ไม่ประสงค์ดีส่งบทความ/ผลงาน/ความคิดเห็น/กระทู้ เข้ามาในระบบเว็บไซต์ TH-SHARING และทางระบบรับมันเข้ามา
+        หากมีผู้ไม่ประสงค์ดีส่งบทความ/ผลงาน/ความคิดเห็น/กระทู้ เข้ามาในระบบเว็บไซต์ NAY-NOI และทางระบบรับมันเข้ามา
         ทางเว็บไซต์ขอปฎิเสธความรับผิดชอบใด ๆ ที่เกิดความเสียหายจากบทความ/เนื้อหา/ความคิดเห็น/กระทู้นั้น ๆ
         และทางเราให้สัญญาว่าจะนำบทความ/ผลงาน/ความคิดเห็น/กระทู้ที่เกิดปัญหานั้น
-        ๆ ออกจากระบบในทันทีที่ทราบโดยไม่แจ้งให้ทราบล่วงหน้า<br /><br />2. ในกรณีที่ผู้ใช้บนเว็บไซต์ TH-SHARING
-        ละเมิดผลงาน ทำซ้ำโดยไม่ได้รับอนุญาตลงในเว็บไซต์ TH-SHARING ทางเว็บไซต์ขอปฎิเสธความรับผิดชอบใด ๆ
+        ๆ ออกจากระบบในทันทีที่ทราบโดยไม่แจ้งให้ทราบล่วงหน้า<br /><br />2. ในกรณีที่ผู้ใช้บนเว็บไซต์ NAY-NOI
+        ละเมิดผลงาน ทำซ้ำโดยไม่ได้รับอนุญาตลงในเว็บไซต์ NAY-NOI ทางเว็บไซต์ขอปฎิเสธความรับผิดชอบใด ๆ
         ที่เกิดความเสียหายจากการกระทำนั้น ๆ และทางเราให้สัญญาว่าจะนำผลงานนั้น
         ๆ ออกจากระบบในทันทีที่ทราบโดยไม่แจ้งให้ทราบล่วงหน้า<br /><br />3. ข้อมูลจำพวกรีวิวหนังสือหรือวรรณกรรมต่าง ๆ
-        หากละเมิดข้อตกลงใด ๆ คุณสามารถแจ้งผู้ดูแลระบบเว็บไซต์ TH-SHARING เพื่อนำมันออกจากระบบได้<br /><br />4. เว็บไซต์
-        TH-SHARING ขอสงวนสิทธิ์ในการจำกัดความเสียหายที่เกิดจากพฤติกรรม
-        การดำเนินการ และกิจกรรมทั้งหมดบนเว็บไซต์ที่เกิดจากสมาชิกและตัวระบบ<br /><br />5. เว็บไซต์ TH-SHARING
+        หากละเมิดข้อตกลงใด ๆ คุณสามารถแจ้งผู้ดูแลระบบเว็บไซต์ NAY-NOI เพื่อนำมันออกจากระบบได้<br /><br />4. เว็บไซต์
+        NAY-NOI ขอสงวนสิทธิ์ในการจำกัดความเสียหายที่เกิดจากพฤติกรรม
+        การดำเนินการ และกิจกรรมทั้งหมดบนเว็บไซต์ที่เกิดจากสมาชิกและตัวระบบ<br /><br />5. เว็บไซต์ NAY-NOI
         ไม่สามารถรับประกันความปลอดภัยในผลงานต้นฉบับของคุณได้ โปรดรักษาผลงานของคุณด้วยตัวของคุณเอง<br /><br />6. เว็บไซต์
-        TH-SHARING
+        NAY-NOI
         ขอสงวนสิทธิ์ที่จะนำผลงานของคุณไปใช้ในการประชาสัมพันธ์โดยไม่แจ้งให้ทราบล่วงหน้า<br /><br />หากพบปัญหาใด
-        ๆ สามารถแจ้งผู้ดูแลระบบได้ที่<br />E-mail : admin@th-sharing.com<br />Facebook : thsharing</p><br /><br />
+        ๆ สามารถแจ้งผู้ดูแลระบบได้ที่<br />E-mail : admin@nay-noi.com<br />Facebook : naynoith</p><br /><br />
     </div>
     <div class="modal-footer">
       <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat trn">ยกเลิก</a>
-      <a href="#openreg" class="modal-close waves-effect waves-green btn-flat modal-trigger trn">ยอมรับ</a>
+      <a href="{注册}" target="_self" class="modal-close waves-effect waves-green btn-flat modal-trigger trn">ยอมรับ</a>
     </div>
   </div>
-  <!-- Register Modal Structure -->
-  <div id="openreg" class="modal">
-    <div class="modal-header">
-      <h5 class="center trn">ลงทะเบียน</h5>
-    </div>
-    <div class="modal-content">
-      <div class="container" id="gb_f">
-        <form class="col s12 nv_form" id="regform" name="regform">
-          {表单锁}
-          <div class="row">
-            <div class="input-field col s6">
-              <i class="fas fa-user-circle prefix"></i>
-              <input id="user_name" type="text" class="viladate" name="name" />
-              <label for="user_name"><span class="trn">ชื่อผู้ใช้</span></label>
-            </div>
-            <div class="input-field col s6">
-              <i class="fas fa-envelope prefix"></i>
-              <input id="user_mail" type="email" class="validate" name="email" />
-              <label for="user_mail"><span class="trn">อีเมล์</span></label>
-            </div>
-            <div class="input-field col s6">
-              <i class="fas fa-lock prefix"></i>
-              <input id="user_password_1" type="password" class="validate" autocomplete="new-password" name="psw" />
-              <label for="user_password_1"><span class="trn">รหัสผ่าน</span></label>
-            </div>
-            <div class="input-field col s6">
-              <i class="fas fa-lock prefix"></i>
-              <input id="user_password_2" type="password" class="validate" autocomplete="new-password" name="repsw" />
-              <label for="user_password_2"><span class="trn">ยืนยันรหัสผ่าน</span></label>
-            </div>
-            {登录验证码开启}
-            <div class="input-field col s8">
-              <i class="fas fa-fingerprint prefix"></i>
-              <input id="code" type="text" name="code" />
-              <label for="code"><span class="trn">โค้ดยืนยัน</span></label>
-            </div>
-            <div class="col s4">
-              <center>{登录验证码}</center>
-            </div>
-            {/登录验证码开启}
-            <div class="input-field col s12 center">
-              <button class="waves-effect waves-light btn trn" value="true" id="reg" type="submit"
-                name="submit">ลงทะเบียน</button>
-              <p class="message">
-                <span class="trn">มีบัญชีอยู่แล้วใช่ไหม</span>? <a href="#openlogin" class="modal-trigger modal-close trn">เข้าสู่ระบบ</a>
-                <span class="trn">เลย</span>!<br /> <span class="trn">หรือ</span> <a href="{找回密码}" target="_self"><span class="trn">ลืมรหัสผ่าน</span>?</a>
-              </p>
-            </div>
-          </div>
-        </form>
+  <!-- WEBSITE SETTINGS -->
+  <div class="modal" id="settings">
+    <div class="modal-content center">
+      <h5 class="trn">ตั้งค่า</h5>
+      <div class="selectFont">
+        <h5 class="z-depth-3"><i class="fas fa-font"></i> <span class="trn">เลือกแบบอักษร</span></h5>
+        <a href="javascript:;" data-cmd="resetFont" data-type="0" onclick="swapFont(this)" class="waves-effect btn">Arial</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="1" onclick="swapFont(this)" class="waves-effect btn">BoonJot</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="default" onclick="swapFont(this)" class="waves-effect btn">FC Lamoon</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="2" onclick="swapFont(this)" class="waves-effect btn">Layiji Mahaniyom</a>
       </div>
-    </div>
-  </div>
-  <!-- Login Modal Structure -->
-  <div id="openlogin" class="modal">
-    <div class="modal-header">
-      <h5 class="center trn">เข้าสู่ระบบ</h5>
-    </div>
-    <div class="modal-content">
-      <div class="container" id="gb_f">
+      <div class="fontSize">
+        <h5 class="z-depth-3"><i class="fas fa-text-width"></i> <span class="trn">ปรับขนาดอักษร</span></h5>
+        <a href="javascript:;" data-cmd="resetFont" data-type="0" onclick="swapSize(this)" class="waves-effect btn">12px</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="1" onclick="swapSize(this)" class="waves-effect btn">13px</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="2" onclick="swapSize(this)" class="waves-effect btn">14px</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="default" onclick="swapSize(this)" class="waves-effect btn">15px</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="3" onclick="swapSize(this)" class="waves-effect btn">16px</a>
+      </div>
+      <div class="readMode">
+        <h5 class="z-depth-3"><i class="fas fa-desktop"></i> <span class="trn">การแสดงผล</span></h5>
         <div class="row">
-          <div class="col s6">
-            <form class="col s12 nv_form" id="loginform" name="loginform">
-              {表单锁}
-              <div class="input-field col s12">
-                <i class="fas fa-user-circle prefix"></i>
-                <input id="user_name" type="text" class="viladate" autocomplete="username" name="name" />
-                <label for="user_name"><span class="trn">ชื่อผู้ใช้</span></label>
-              </div>
-              <div class="input-field col s12">
-                <i class="fas fa-lock prefix"></i>
-                <input id="user_password_1" type="password" class="validate" autocomplete="current-password"
-                  name="psw" />
-                <label for="user_password_1"><span class="trn">รหัสผ่าน</span></label>
-              </div>
-              {登录验证码开启}
-              <div class="input-field col s8">
-                <i class="fas fa-fingerprint prefix"></i>
-                <input id="code" type="text" name="code" />
-                <label for="code"><span class="trn">โค้ดยืนยัน</span></label>
-              </div>
-              <div class="col s4">
-                <center>{登录验证码}</center>
-              </div>
-              <div class="input-field col s12 center">
-                <input type="hidden" name="time" value="2592000" />
-                <input type="hidden" name="remember" value="1" />
-                <button class="waves-effect waves-light btn trn" id="login" value="true" type="submit"
-                  name="submit">เข้าสู่ระบบ</button>
-                <p class="message">
-                  <span class="trn">ยังไม่มีบัญชีใช่ไหม</span>? <a href="#openreg" class="modal-close modal-trigger trn">ลงทะเบียน</a> <span class="trn">กับเรา</span>!<br />
-                  <span class="trn">หรือ</span> <a href="{找回密码}" target="_self"><span class="trn">ลืมรหัสผ่าน</span>?</a>
-                </p>
-              </div>
-              {/登录验证码开启}
-            </form>
-          </div>
-          <div class="col s6">
-            <div class="col s12">
-              <center><h5 class="trn">เข้าสู่ระบบด้วย</h5></center>
+          <div class="col s12">
+            <div class="col s12 m4">
+              <center>
+                <h5 class="z-depth-3"><i class="fas fa-adjust"></i> <span class="trn">โหมดแสดงผล</span></h5>
+                <div class="switch">
+                  <i class="far fa-sun"></i>
+                  <label>
+                  <input type="checkbox" id="toggle">
+                  <span class="lever"></span>
+                  </label>
+                  <i class="far fa-moon"></i>
+                </div>
+              </center>
+            </div>
+            <div class="col s12 m4">
+              <center>
+                <h5 class="z-depth-3"><i class="fas fa-code"></i> <span class="trn">การเคลื่อนไหว</span></h5>
+                <div class="switch">
+                  <i class="fas fa-stop"></i>
+                  <label>
+                  <input type="checkbox" id="turn">
+                  <span class="lever"></span>
+                  </label>
+                  <i class="fas fa-play"></i>
+                </div>
+              </center>
+            </div>
+            <div class="col s12 m4">
+              <center>
+                <h5 class="z-depth-3"><i class="fad fa-globe-asia"></i> <span class="trn">ภาษา</span></h5>
+                <li id="langs">
+                  <a data-value="th" class="lang" id="th"><span class="flag-icon flag-icon-th"></span></a>
+                  <a data-value="en" class="lang" id="en"><span class="flag-icon flag-icon-um"></span></a>
+                </li>
+              </center>
             </div>
           </div>
         </div>

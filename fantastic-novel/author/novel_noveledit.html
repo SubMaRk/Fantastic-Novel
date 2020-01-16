@@ -28,7 +28,7 @@ $(document).ready(function(){
             <span><a href="{小说草稿箱列表}">แบบร่าง</a></span>
             <span><a href="{小说分卷列表}">จัดการเล่ม</a></span>
             <span><a href="{小说章节列表}">จัดการบท</a></span>
-            {/cur}
+            {/cur}      
         </div>
     </div>
     <div class="workStateWrap cf">
@@ -42,7 +42,7 @@ $(document).ready(function(){
 					<input type="file" id="hide_button" class="hide_button" name="hide_button"/>
                </div>
             </div>
-
+            
             <div class="workSetList fl">
                 <ul>
                 	<li><em>ISBN : </em><b>{id}</b></li>
@@ -89,7 +89,7 @@ $(document).ready(function(){
                     <li><em>ยอดทั้งหมด : </em><b>{顶}</b><cite>ยอดต่อบททั้งหมด : </cite>{踩}</li>
                     <li><em>เรื่องย่อ : </em>
                         <textarea id="intro" name="intro">{简介}</textarea>
-                        <p data-node="tip" class="f12 c999">ต้องมี 5-1000 อักษร สามารถแก้ไขได้</p>
+                        <p data-node="tip" class="f12 c999">ต้องมี 5-1,000 อักษร สามารถแก้ไขได้</p>
                     </li>
                 </ul>
 
@@ -103,7 +103,7 @@ $(document).ready(function(){
 {header:author/inc_footer.html}
 <script type="text/javascript" src="/files/js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="/files/js/ajaxfileupload.js"></script>
-<script type="text/javascript" src="{templates}/author/static/field.js"></script>
+<script type="text/javascript" src="{templates}/static/js/author/field.js"></script>
 <script>
 $("#sub").click(function(){
 	var name = $("#name").val();
@@ -113,7 +113,7 @@ $("#sub").click(function(){
 		easydialog_alert('ขออภัย! ชื่อนิยายต้องไม่ว่าง','','','');
 	}else if( !isPositiveNum(tid) ){
 		easydialog_alert('ขออภัย! โปรดเลือกหมู่หมวดก่อน','','','');
-	}else if( intro.length < 0 || intro.length > 2000  ){
+	}else if( intro.length < 5 || intro.length > 1000  ){
 		easydialog_alert('ขออภัย! คำอธิบายต้องมี 5-1000 อักษรเท่านั้น','','','');
 	}else{
 		$.ajax({
@@ -157,13 +157,13 @@ $('#hide_button').live('change',function(){
 				//还原按钮
 				$('#hide_button').clone().val('');
 				$('#upload_button').val('อัปโหลดปกใหม่');
-
-				easydialog_alert(data.msg , 'เคล็ดลับ' , null, '');
+				
+				easydialog_alert(data.msg , 'หน้าต่าง' , null, '');
         	}
         },
         error: function(e) {
         	easydialog_alert(e);
-        }
+        } 
      })
 });
 

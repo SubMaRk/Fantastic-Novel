@@ -3,11 +3,11 @@
  "short_name": "Read Novel",
  "lang": "th-TH",
  "start_url": "/",
- "scope": "/module/",
+ "scope": "/",
  "display": "standalone",
  "icons": [
   {
-   "src": "\/android-icon-36x36.png",
+"src": "\/{templates}/static/images/android-icon-36x36.png",
    "sizes": "36x36",
    "type": "image\/png",
    "density": "0.75"

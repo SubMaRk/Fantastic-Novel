@@ -29,7 +29,7 @@ $(document).ready(function(){
             <span><a href="{小说章节列表}">จัดการบท</a></span>
         </div>
     </div>
-
+    
     <div class="managerWrap cf">
         <div class="mRightContent fl" style="width: 1040px;">
             <div class="midWrap editWrap">
@@ -47,9 +47,9 @@ $(document).ready(function(){
 	                            <em class="c999">แก้ไขข้อมูล</em>
 	                        </div>
 						</div>
-
-
-
+                        
+				
+				
 						<div class="volumeForm">
 		                    <ul>
 		                        <li>
@@ -66,7 +66,7 @@ $(document).ready(function(){
 		                        </li>
 		                    </ul>
 		                </div>
-
+                
                     </div>
  				</form>
             </div>
@@ -79,11 +79,11 @@ $(document).ready(function(){
 $("#save").click(function(){
 	var name = $("#name").val();
 	var desc = $("#desc").val();
-
+	
 	if( name == '' ){
 		easydialog_alert('ขออภัย! ชื่อเล่มต้องไม่ว่าง','','','');
 	}else if( name == '' ){
-		easydialog_alert('ขออภัย! ลำดับเล่มต้องเป็นตัวเลขเท่านั้น'','','','');
+		easydialog_alert('ขออภัย! ลำดับเล่มต้องเป็นตัวเลขเท่านั้น','','','');
 	}else{
 		$.ajax({
 			type:"POST",
