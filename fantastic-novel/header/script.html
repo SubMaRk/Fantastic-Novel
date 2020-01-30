@@ -5,3 +5,11 @@
   <script>window.addEventListener("DOMContentLoaded",function(){var e=localStorage.getItem("mode");"false"==e?($(document.head).append('<link id="mode" rel="stylesheet" href="/templates/fantastic-novel/static/css/light.css">'),$("#toggle,#switch").prop("checked",!1)):"true"==e?($(document.head).append('<link id="mode" rel="stylesheet" href="/templates/fantastic-novel/static/css/dark.css">'),$("#toggle,#switch").prop("checked",!0)):($(document.head).append('<link id="mode" rel="stylesheet" href="/templates/fantastic-novel/static/css/light.css">'),$("#toggle,#switch").prop("checked",!1),localStorage.setItem("mode","false"))});</script>
   <!-- CHANGE FONT FAMILY AND FONT SIZE -->
   <script>window.addEventListener("DOMContentLoaded",function(){var t=$("*"),o=$("html"),s=$("i"),a=localStorage.getItem("globalfont"),n=localStorage.getItem("globalsize");t.each(function(){var t=$(this).css("font-family"),o=s.css("font-family");t==o?$(this).css("font-family",o):$(this).css("font-family",a)}),o.css("font-size",n)});</script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147520547-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-147520547-3');
+  </script>
