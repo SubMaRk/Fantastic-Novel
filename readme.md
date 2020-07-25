@@ -1,4 +1,4 @@
-# Themeplate for WeimengCMS
+# Template for WeimengCMS
     Rename to Fantastic Novel
 
 ## Infomation
@@ -7,7 +7,7 @@
     Version :   3.0
     Date    :   2019-06-14
     URL     :   https://naynum.engineer
-    Demo    :   https://novel.nay-noi.com
+    Demo    :   https://nv.nay-noi.com
 
 ## JS Libraries used
     jquery.js
