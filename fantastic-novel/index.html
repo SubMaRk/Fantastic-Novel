@@ -1,0 +1,211 @@
+<!-- Load Header -->
+{header:header/index.html}
+<!-- Load Functions Script -->
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+<link rel="stylesheet" href="{templates}/static/css/novel.slider.css">
+<!-- Load Global body -->
+{header:global.body.html}
+<!-- Load Global Nav -->
+{header:novel/nav.html}
+<!-- Load Slide -->
+{header:novel/slider.html}
+<!-- Load Search Box -->
+{header:novel/searchbar.html}
+<section id="index">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12 l9" id="content">
+        <!-- Novel Recommend -->
+        <div class="rec col s12">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5><span class="trn">นิยายแนะนำ</span> <i class="fa fal-award"></i></h5>
+          </div>
+          {小说:排序=最新入库;数量=8}
+          <div class="col s6 m4 l3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+              <div class="card_cover">
+                <div class="card_book">
+                  <a href="{url}" target="_self" title="{小说名字}"><i class="fa fas-book fa-cover"></i></a>
+                </div>
+                <figure>
+                  <img class="lazy center" src="{templates}/static/image/book.svg" data-src="{小说封面}" title="{小说名字}"
+                    alt="{小说名字}" />
+                </figure>
+                <div class="label label_rate">{小说总点击}</div>
+                <div class="card_content">
+                  <h3 class="card_title">{小说名字}</h3>
+                  <div class="card_info">{小说作者} | <span class="trn">{小说分类名字}</span></div>
+                </div>
+              </div>
+          </div>
+          {/小说}
+        </div>
+        <!-- Novel New Series -->
+        <div class="new col s12">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5><span class="trn">นิยายมาใหม่</span> <i class="fa fal-satellite-dish"></i></h5>
+          </div>
+          {小说:排序=最新入库;数量=8}
+          <div class="col s6 m4 l3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+              <div class="card_cover">
+                <div class="card_book">
+                  <a href="{url}" target="_self" title="{小说名字}"><i class="fa fas-book fa-cover"></i></a>
+                </div>
+                <figure>
+                  <img class="lazy center" src="{templates}/static/image/book.svg" data-src="{小说封面}" title="{小说名字}"
+                    alt="{小说名字}" />
+                </figure>
+                <div class="label label_rate">{小说总点击}</div>
+                <div class="card_content">
+                  <h3 class="card_title">{小说名字}</h3>
+                  <div class="card_info">{小说作者} | <span class="trn">{小说分类名字}</span></div>
+                </div>
+              </div>
+          </div>
+          {/小说}
+        </div>
+        <!-- Novel last update -->
+        <div class="lastup col s12">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5><span class="trn">อัปเดทล่าสุด</span> <i class="fa fal-clock"></i></h5>
+          </div>
+          {小说:排序=最新更新;数量=8}
+          <div class="col s6 m4 l3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+              <div class="card_cover">
+                <div class="card_book">
+                  <a href="{url}" target="_self" title="{小说名字}"><i class="fa fas-book fa-cover"></i></a>
+                </div>
+                <figure>
+                  <img class="lazy center" src="{templates}/static/image/book.svg" data-src="{小说封面}" title="{小说名字}"
+                    alt="{小说名字}" />
+                </figure>
+                <div class="label label_rate">{小说总点击}</div>
+                <div class="card_content">
+                  <h3 class="card_title">{小说名字}</h3>
+                  <div class="card_info">{小说作者} | <span class="trn">{小说分类名字}</span></div>
+                </div>
+              </div>
+          </div>
+          {/小说}
+        </div>
+        <!-- Novel Last Update table -->
+        <div class="table">
+          <table class="highlight bordered">
+            <thead>
+              <tr id="aos-1" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                <td id="tname" class="trn">หมวดหมู่</td>
+                <td id="tchn" class="trn">ชื่อเรื่อง</td>
+                <td id="tct" class="trn">ชื่อบท</td>
+                <td id="ttsl" class="trn">ผู้แปล</td>
+                <td id="tt" class="trn">เวลาอัปเดท</td>
+              </tr>
+            </thead>
+            <tbody>
+            {小说:排序=最新更新;数量=15}
+              <tr data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+                <td id="tname"><a href="{turl}" target="_self" class="hvr-underline-from-left" id="text" title="{小说分类名字}">【<span class="trn">{小说分类名字}</span>】</a></td>
+                <td id="tchn"><a href="{url}" target="_self" class="hvr-underline-from-left" id="name-tw" title="{小说名字}">{小说名字}</a></td>
+                <td id="tct"><a href="{小说最新章节url}" target="_self" class="hvr-underline-from-left" title="{小说最新章节名字}">{小说最新章节名字}</a></td>
+                <td id="ttsl">{小说作者}</td>
+                <td id="tt">{小说更新时间:r-y-n s:f:m}</td>
+              </tr>
+              {/小说}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Novel Sidebar -->
+      <div class="col s12 l3" id="sidebar">
+        <!-- USER PROFILE -->
+        <div class="col s12 m6 l12 data-user">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5><span class="trn">ข้อมูลผู้ใช้</span> <i class="fa fal-clipboard-user"></i></h5>
+          </div>
+          {未登录}<div class="nv_img_f" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+            <center><a href="javascript:void(0);"><img class="circle" id="user_icon" src="{用户头像}" /></a>
+            <h5 class="trn">โปรดเข้าสู่ระบบ</h5></center>
+          </div>{/未登录}
+          {已登录}<div class="u_info" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+              <div><img class="circle" src="{用户头像}" id="profile" alt="{作者}"></div>
+              <div class="user_detail">
+                <p>{用户昵称}</p>
+                <p><span class="trn">ระดับ</span> : {用户等级}</p>
+                <p><span class="trn">ประสบการณ์</span> : {用户经验} / {下级经验}</p>
+              </div>
+            </div>{/已登录}
+        </div>
+        <!-- Novel Facebook Page -->
+        <div class="col s12 m6 l12 fb_content">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5><span class="trn">ติดตามเราบนเฟซบุ๊ก</span> <i class="fa fab-facebook-square"></i></h5>
+          </div>
+          <div data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500" class="fb-page"
+            data-href="https://www.facebook.com/naynoith/" data-tabs="timeline, messages" data-small-header="false"
+            data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/naynoith/" class="fb-xfbml-parse-ignore"><a
+                href="https://www.facebook.com/naynoith/" target="_blank">นายน้อย :: Nay-Noi.com</a>
+            </blockquote>
+          </div>
+        </div>
+        <!-- Novel Popular Ranking Tabs -->
+        <div class="col s12 m6 l12 ranking">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5><span class="trn">อันดับนิยาย</span> <i class="fa fal-tower-broadcast"></i></h5>
+          </div>
+          <ul class="tabs" id="tabs_swipe" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <li class="tab col s4"><a href="#swipe-1" class="trn">วัน</a></li>
+            <li class="tab col s4"><a href="#swipe-2" class="trn">สัปดาห์</a></li>
+            <li class="tab col s4"><a href="#swipe-3" class="trn">เดือน</a></li>
+          </ul>
+          <!-- Daily Ranking -->
+          <div class="col s12" id="swipe-1" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+            {小说:排序=日点击;数量=10}
+            <ul id="daily_ranking">
+              <li>
+                <div class="{i:1,2,3}order_color{/i} {i:>3}order_gray{/i}">{i}</div>
+                <a class="hvr-underline-from-left" href="{url}" target="_self" title="{小说名字}" class="ranking_n">{小说名字}</a> <i class="fa fal-fire fa-{i:1}red{/i}{i:2}pink{/i}{i:3}orange{/i}{i:4}yellow{/i}{i:5}green{/i}{i:>5}dark{/i}"></i>
+              </li>
+            </ul>
+            {/小说}
+          </div>
+          <!-- Weekly Ranking -->
+          <div class="col s12" id="swipe-2">
+            {小说:排序=周点击;数量=10}
+            <ul id="weekly_ranking">
+              <li>
+                <div class="{i:1,2,3}order_color{/i} {i:>3}order_gray{/i}">{i}</div>
+                <a class="hvr-underline-from-left" href="{url}" target="_self" title="{小说名字}" class="ranking_n">{小说名字}</a> <i class="fa fal-fire fa-{i:1}red{/i}{i:2}pink{/i}{i:3}orange{/i}{i:4}yellow{/i}{i:5}green{/i}{i:>5}dark{/i}"></i>
+              </li>
+            </ul>
+            {/小说}
+          </div>
+          <!-- Monthly Ranking -->
+          <div class="col s12" id="swipe-3">
+            {小说:排序=月点击;数量=10}
+            <ul id="monthly_ranking">
+              <li>
+                <div class="{i:1,2,3}order_color{/i} {i:>3}order_gray{/i}">{i}</div>
+                <a class="hvr-underline-from-left" href="{url}" target="_self" title="{小说名字}" class="ranking_n">{小说名字}</a> <i class="fa fal-fire fa-{i:1}red{/i}{i:2}pink{/i}{i:3}orange{/i}{i:4}yellow{/i}{i:5}green{/i}{i:>5}dark{/i}"></i>
+              </li>
+            </ul>
+            {/小说}
+          </div>
+        </div>
+        <!-- Novel Tags List -->
+        <div class="col s12 m6 l12 tag_item">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5><span class="trn">หมวดหมู่นิยาย</span> <i class="fa fas-table-cells-large"></i></h5>
+          </div>
+          <ul data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+            <div id="tag">
+              {小说分类:}<a href="{surl}" target="_self" class="tag_color_{i} trn" title="{小说分类名字}">{小说分类名字}</a>{/小说分类}
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Load Footer -->
+{footer:footer.global.html}

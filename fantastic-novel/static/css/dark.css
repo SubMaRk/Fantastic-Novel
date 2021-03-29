@@ -1,0 +1,141 @@
+::-webkit-scrollbar,
+.divider,
+.input-field button,
+#dark,
+.selectFont a,
+.fontSize a,
+.selectFont h5,
+.fontSize h5,
+.readMode h5 {
+    background-color: #000 !important;
+}
+
+body,
+.dropdown-content a,
+.slider,
+#gb_w,
+.tabs,
+.slider .slides {
+    background-color: #181818 !important
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+span,
+p,
+#slide_pic,
+.slider .slides,
+.slider .indicators .indicator-item,
+.card_title,
+tbody a.tr,
+td,
+dd,
+dt,
+.page-footer h5,
+.page-footer a,
+.page-footer p,
+nav li,
+nav li a,
+nav span,
+.fal.fa-fire-alt.fas-dark,
+.slider-content a,
+.slider-content i,
+nav a,
+nav ul a,
+.collapsible-header i,
+.no_more_work,
+.sidenav li>a>i,
+.switch i,
+.input-field i,
+#read,
+input:not([type]),
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default),
+input[type=email]:not(.browser-default),
+input[type=url]:not(.browser-default),
+input[type=time]:not(.browser-default),
+input[type=date]:not(.browser-default),
+input[type=datetime]:not(.browser-default),
+input[type=datetime-local]:not(.browser-default),
+input[type=tel]:not(.browser-default),
+input[type=number]:not(.browser-default),
+input[type=search]:not(.browser-default),
+textarea.materialize-textarea {
+    color: #ddd !important;
+}
+
+#slide_info,
+.modal.modal-fixed-footer .modal-content,
+.dropdown-content {
+    background-color: #202020 !important
+}
+
+.slider .indicators .indicator-item,
+.collapsible,
+.collapsible-body {
+    border: unset !important
+}
+
+.fa {
+    filter: invert(.8);
+}
+
+.tabs {
+    webkit-box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+
+.page-footer,
+.text_block,
+nav,
+.btn,
+.footer-b,
+.sidenav,
+.sidenav li>a,
+.pagination li,
+#openlogin,
+#openreg,
+.modal-footer,
+.modal,
+.select-dropdown.dropdown-content li.selected {
+    background-color: #101010 !important
+}
+
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: #606060;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after,
+#chapter_list .collection .collection-item.active {
+    background-color: #303030 !important;
+}
+
+#slide_pic,
+.slider .indicators .indicator-item {
+    background-color: #bbb !important;
+}
+
+.slider .indicators .indicator-item.active,
+    {
+    background-color: #fff !important;
+}
+
+.collapsible-header {
+    background-color: transparent !important;
+    border-bottom: 1px solid #060606 !important;
+}
+
+/* Apply to Iframe */
+._21qg #u_0_3 {
+    background-color: #181818 !important;
+}
+
+._4v3l .uiGrid ._51mz ._5f0n,
+._57j2 ._3o6i ._h7n ._2ph-,
+._1_lk ._5jmm {
+    background-color: #202020 !important;
+}

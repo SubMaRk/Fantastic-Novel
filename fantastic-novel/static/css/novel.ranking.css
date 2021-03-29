@@ -1,0 +1,80 @@
+/* RANKING PAGE */
+.top_w {
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    float: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 1px;
+  }
+  
+  .top_n {
+    width: 40%;
+  }
+  
+  .name_1 {
+    width: 25%;
+  }
+  
+  .name {
+    width: 58%;
+  }
+  
+  .author_1 {
+    width: 25%;
+  }
+
+
+
+#daily_ranking li i,
+#weekly_ranking li i,
+#monthly_ranking li i {
+  position: absolute;
+}
+
+#daily_ranking li,
+#weekly_ranking li,
+#monthly_ranking li {
+  width: auto;
+  margin-bottom: 8px;
+  overflow: hidden;
+  zoom: 1;
+}
+
+#daily_ranking a,
+#weekly_ranking a,
+#monthly_ranking a {
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  max-width: 80%;
+  margin-right: 5px;
+}
+  
+  .name,
+  .author_1,
+  .view_count,
+  #daily_ranking,
+  #weekly_ranking,
+  #monthly_ranking,
+  #category_ranking {
+    font-size: 1.4rem;
+  }
+  
+  .txtcode {
+    font-size: 1.8rem;
+    top: 25px;
+    position: relative;
+  }
+  
+  .book_info h5, .book_tinfo h5 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+

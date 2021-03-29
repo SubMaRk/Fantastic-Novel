@@ -1,0 +1,18 @@
+body, .container,nav {
+    background-color: #fff;
+}
+nav li,
+nav li a,
+nav span,
+nav a,
+nav ul a,
+#modal-chapter-list a {
+    color: #000 !important
+}
+.btn, .btn-large, .btn-small {
+    background-color: #fff !important;
+    color: #000!important;
+}
+.page-footer {
+    background-color: transparent!important;
+}

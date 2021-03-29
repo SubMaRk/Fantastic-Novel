@@ -1,0 +1,247 @@
+<!-- Load Header -->
+{header:header/novel.info.html}
+<!-- Load Functions Script -->
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/novel.info.css">
+<!-- Load Global body -->
+{header:global.body.html}
+<!-- Load Global Nav -->
+{header:novel/nav.html}
+<section id="info">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <!-- Novel Info -->
+      <div class="col s12 l9" id="content">
+        <!-- Main Info -->
+        <div class="info_main col s12">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5><span class="trn">ข้อมูลเรื่องนี้</span> <i class="fa fas-book"></i></h5>
+          </div>
+          <div class="col s12 l3 center" id="info_img" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+            <img class="lazy z-depth-3" src="{封面}" alt="{名字}">
+            <label class="info_status"><span class="trn"></span>{进程}</label>
+          </div>
+          <div class="col s12 l9" id="info_detail" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+            <div class="info_title">
+              <p><strong>{名字}</strong> <span>(ID : {id}) <a href="javascript:easyDialog.open({container : 'messsage',});" title="รายงาน"><i class="fa fas-triangle-exclamation fa-yellow"></i></a></span></p>
+            </div>
+            <div class="top_w">
+              <div class="rate_score"><span class="left"><span class="trn">ให้คะแนน</span> : </span>
+                <div id="star" onmouseover="rate(this,event)"></div><span><span class="trn">คะแนน</span> : <strong> {评分} </strong> ( {评分人数} <span class="trn">คนที่ให้</span> )</span>
+              </div>
+            </div>
+            <span class="text-info"><span class="trn">เข้าชมวันนี้</span> : <span class="view">{日点击}</span> <span class="trn">ครั้ง</span> | <span class="trn">สัปดาห์นี้</span> : <span class="view">{周点击}</span> <span class="trn">ครั้ง</span> | <span class="trn">เดือนนี้</span> : <span class="view">{月点击}</span> <span class="trn">ครั้ง</span> | <span class="trn">ทั้งหมด</span> : <span class="view">{总点击}</span> <span class="trn">ครั้ง</span></span>
+            <span class="text-info"><span class="trn">ผู้แต่ง</span> : <strong><a href="{header:novel/fb_link.html}" target="_blank" title="{header:novel/fb_name.html}">{作者}</a></strong><span> | </span><span class="trn">แปลอังกฤษ</span> : <strong>{header:novel/source_eng.html}</strong><span>| <span class="trn">ต้นฉบับ</span> : <strong>{header:novel/raw_link.html}</strong></span></span>
+            <span class="text-info"><span class="trn">อัปเดทล่าสุด</span> : <span>{小说章节列表:排序=章节倒序;数量=1}{小说章节创建时间:r-y-n s:f:m}{/小说章节列表}</span></span>
+            <div class="tag_item" id="info_tag" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+              <span class="icon-tag"><i class="fa fas-tags"></i></span>
+              {标签:10}<a id="tag_info" href="javascript:void(0);" class="tag_color_{i}" title="{小说分类名字}">{标签标题}</a>{/标签}
+            </div>
+            <div class="info_btn left" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+              <a href="{立即阅读}" title="เข้าชม {名字}" class="waves-effect waves-light btn white"><i class="fa far-eye"></i> <span class="trn">ดูเรื่องนี้</span></a>
+              {未收藏}<a class="waves-effect waves-light btn white" data-url="{加入收藏}" title="เพิ่ม" href="javascript:void(0);"><i class="fa far-heart fa-pink"></i> <span class="trn">ชอบ</span></a>{/未收藏}
+              {已收藏}<a class="waves-effect waves-light btn white" title="เพิ่มเข้ารายการที่ชอบไปแล้ว" href="javascript:easydialog_alert('คุณได้เพิ่มเรื่องนี้เข้ารายการที่ชอบแล้ว','','no');"><i class="fa fas-heart fa-pink"></i> <span class="trn">ชอบแล้ว</span></a>{/已收藏}
+              {未书架}<a class="waves-effect waves-light btn white" data-url="{加入书架}" title="เพิ่มเข้าชั้น" href="javascript:void(0);"><i class="fa far-books"></i> <span class="trn">เพิ่มเข้าชั้น</span></a>{/未书架}
+              {已书架}<a class="waves-effect waves-light btn white" title="เพิ่มเข้าชั้นหนังสือไปแล้ว" href="javascript:easydialog_alert('คุณได้เพิ่มเข้าชั้นหนังสือไปแล้ว','','no');"><i class="fa fas-books"></i> <span class="trn">เพิ่มเข้าชั้นแล้ว</span></a>{/已书架}
+            </div>
+          </div>
+        </div>
+        <!-- Novel Sumary -->
+        <div class="sumary  col s12">
+          <div class="text_block z-depth-3" id="sumary" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5 class="trn">เนื้อเรื่องย่อ</h5>
+          </div>
+          <p data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">{简介}</p>
+        </div>
+        <!-- Table of Content -->
+        <div class="info_table_content col s12">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5><span class="trn">สารบัญเรื่อง</span> <span><a class="hvr-underline-from-left" href="{目录链接}" target="_self">{名字}</a></span></h5>
+          </div>
+          {小说分卷列表:}
+          <div class="list" id="list-{i}">
+            {无数据}<p data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500"><span class="no_more_work center trn">เรื่องนี้ยังไม่มีบทใด ๆ</span></p>{/无数据}
+            <ul class="collapsible active" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+              <li>
+                <div class="collapsible-header z-depth-3">
+                  <i class="fa fas-book fa-2x"></i><span> {小说分卷名字}</span>
+                </div>
+                <div class="collapsible-body">
+                  <ul>
+                    {小说章节列表:分卷id={小说分卷id}}<a class="hvr-underline-from-left list_chapter" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500" href="{url}" title="{小说章节名字}">{小说章节名字}</a>{/小说章节列表}
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          {/小说分卷列表}
+        </div>
+        <!-- Additional writing work -->
+        <div class="additional_writing col s12">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5><span class="trn">ผลงานเพิ่มเติมของ</span> <strong>{作者}</strong></h5>
+          </div>
+          {同作者小说:数量=4}
+          {无数据}<div class="no_more_work center trn" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">ยังไม่มีผลงานเพิ่มเติม</div>{/无数据}
+          <div class="col s6 m4 l3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+            <div class="card_cover">
+              <div class="card_book">
+                <a href="{url}" target="_self" title="{小说名字}"><i class="fa fas-book fa-cover"></i></a>
+              </div>
+              <figure>
+                <img class="lazy center" src="{templates}/static/image/book.svg" data-src="{小说封面}" title="{小说名字}"
+                  alt="{小说名字}" />
+              </figure>
+              <div class="card_content">
+                <h3 class="card_title">{小说名字}</h3>
+                <div class="card_info">{作者} | <span class="trn">{分类名字}</span></div>
+              </div>
+            </div>
+          </div>{/同作者小说}
+        </div>
+        <!-- Comment -->
+        <div class="comment col s12">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5><span class="trn">แสดงความคิดเห็น</span> <i class="fa fas-comments"></i></h5>
+          </div>
+          <div class="comment_main" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+            <div id="wmcms_replay">{js评论}</div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 l3" id="sidebar">
+        <!-- Author Info -->
+        <div class="col s12 m6 l12 author">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5 class="trn">ข้อมูลผู้เขียน <i class="fa fal-user-pen"></i></h5>
+          </div>
+          <div class="author_info" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+            <img class="col s5" src="{作者头像}" alt="{作者}">
+            <dl class="author_detail top_w">
+              <dt>{作者}</dt>
+              <dd><span class="trn">ระดับ</span> : {作者等级}</dd>
+              <dd><span class="trn">เช็คชื่อ</span> : {是否签约}</dd>
+              <dd><span class="trn">ชั้นหนังสือ</span> : {是否上架}</dd>
+            </dl>
+          </div>
+        </div>
+        <!-- Author Notice -->
+        <div class="col s12 m6 l12 author_notice">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5 class="trn">ประกาศ <i class="fa fal-megaphone"></i></h5>
+          </div>
+          <div class="notice">
+            <p data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">{作者公告}</p>
+          </div>
+        </div>
+        <!-- Author FB Fanpage -->
+        <div class="col s12 m6 l12 author_fb_page">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5><span class="trn">ติดตามผู้แต่งบนเฟซบุ๊ก</span> <i class="fa fab-facebook-square"></i></h5>
+          </div>
+          <div class="fb-page" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500" data-href="{header:novel/fb_link.html}" data-tabs="timeline, messages" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+            data-show-facepile="true">
+            <blockquote cite="{header:novel/fb_link.html}" class="fb-xfbml-parse-ignore"><a href="{header:novel/fb_link.html}">{header:novel/fb_name.html}</a></blockquote>
+          </div>
+        </div>
+        <!-- Novel Recommend -->
+        <div class="col s12 rec">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5><span class="trn">เรื่องแนะนำ</span> <i class="fa fal-award"></i></h5>
+          </div>
+          <div class="rec_list">
+            <ul>
+              {同分类小说:数量=5}
+              <li class="info_rec col s12 m6 l12" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+                <a title="{小说名字}" class="hvr-grow-shadow" href="{url}" target="_self">
+                  <img class="lazy book_cover margin-0 col s4 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
+                  <div class="book_info col s8 m7 l7">
+                    <h5 id="rec-title">{小说名字}</h5>
+                    <p class="rec-author"><i class="fa fas-feather-pointed"></i> {小说作者}</p>
+                    <p id="type_des">{小说简介}</p>
+                  </div>
+                </a>
+              </li>
+              {/同分类小说}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  $(function() {
+    var starHtml = starImg = '';
+    for (var i = 1; i <= 5; i++) {
+      starImg = 'star_off.gif';
+      if (i <= {平均分整数}) {
+        starImg = 'star_on.gif';
+      }
+      starHtml += '<img src="/files/images/' + starImg + '" title="' + i + ' คะแนน" />';
+    }
+    $("#star").html(starHtml);
+  });
+
+  function rate(obj, oEvent) {
+    var imgSrc = '/files/images/star_off.gif';
+    var imgSrc_2 = '/files/images/star_on.gif';
+
+    if (obj.rateFlag) return;
+    var e = oEvent || window.event;
+    var target = e.target || e.srcElement;
+    var imgArray = obj.getElementsByTagName("img");
+    for (var i = 0; i < imgArray.length; i++) {
+      imgArray[i]._num = i;
+      imgArray[i].onclick = function() {
+        if (obj.rateFlag)
+          return;
+        obj.rateFlag = true;
+
+        //评分操作
+        $.ajax({
+          type: "POST",
+          url: "/wmcms/action/index.php?action=score.score&ajax=yes",
+          data: {
+            'module': '{评分模块}',
+            'cid': '{评分id}',
+            'score': this._num + 1
+          },
+          dataType: "json",
+          success: function(data) {
+            Swal({
+              type: 'success',
+              title: 'ให้คะแนนแล้ว',
+              showConfirmButton: false,
+              timer: 1500
+            });
+          },
+          error: function(e) //服务器响应失败处理函数
+          {
+            console.log(e);
+            alert(e);
+          },
+          async: true,
+        });
+
+      };
+    }
+
+    if (target.tagName == "IMG") {
+      for (var j = 0; j < imgArray.length; j++) {
+        if (j <= target._num) {
+          imgArray[j].src = imgSrc_2;
+        } else {
+          imgArray[j].src = imgSrc;
+        }
+      }
+    } else {
+      for (var k = 0; k < imgArray.length; k++) {
+        imgArray[k].src = imgSrc;
+      }
+    }
+  }
+</script>
+<!-- Load Footer -->
+{footer:footer.global.html}

@@ -1,0 +1,238 @@
+<!-- Load Header -->
+{header:header/novel.read.html}
+<!-- Load Functions Script -->
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/novel.read.css">
+<!-- Load Main Global Body -->
+{header:global.body.html}
+<!-- Nav -->
+<section id="nav">
+  <div class="navbar-fixed" id="nav_read">
+    <nav class="nav" data-aos="fade-down" data-aos-duration="500">
+      <a href="{首页}" target="_self" class="waves-effect waves-light btn left" id="dark"><i class="fa far-home"></i></a>
+      <div class="input-field ct">
+        <select onchange="location = this.value;">
+          {小说分卷列表:}{小说章节列表:分卷id={小说分卷id}}<option value="{url}" {cur}selected{/cur}>{小说章节名字}</option>{/小说章节列表}{/小说分卷列表}
+        </select>
+      </div>
+      <a href="#modal-settings" class="waves-effect waves-light btn modal-trigger right" id="dark"><i class="fa fas-gear"></i></a>
+    </nav>
+  </div>
+  <div class="modal" id="modal-settings">
+    <div class="modal-content center">
+      <h5 class="trn">ตั้งค่า</h5>
+      <div class="selectFont">
+        <h5 class="z-depth-3"><i class="fa fas-font"></i> <span class="trn">เลือกแบบอักษร</span></h5>
+        <a href="javascript:;" data-cmd="resetFont" data-type="0" onclick="changefont(this)" class="waves-effect btn">Arial</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="1" onclick="changefont(this)" class="waves-effect btn">BoonJot</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="2" onclick="changefont(this)" class="waves-effect btn">FC Lamoon</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="3" onclick="changefont(this)" class="waves-effect btn">JS ToomTam</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="4" onclick="changefont(this)" class="waves-effect btn">Layiji Mahaniyom</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="5" onclick="changefont(this)" class="waves-effect btn">TF Arluck</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="6" onclick="changefont(this)" class="waves-effect btn">TF NopScript</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="7" onclick="changefont(this)" class="waves-effect btn">TH Charmonman</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="8" onclick="changefont(this)" class="waves-effect btn">TH Dan Vi Vek</a>
+      </div>
+      <div class="fontSize">
+        <h5 class="z-depth-3"><i class="fa far-text-width"></i> <span class="trn">ปรับขนาดอักษร</span></h5>
+        <a href="javascript:;" data-cmd="resetFont" data-type="0" onclick="changefontsize(this)" class="waves-effect btn"><i class="fa fas-minus" aria-hidden="true"></i></a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="default" onclick="changefontsize(this)" class="waves-effect btn trn">คืนค่า</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="1" onclick="changefontsize(this)" class="waves-effect btn"><i class="fa fas-plus" aria-hidden="true"></i></a>
+        <br />
+        <a href="javascript:;" data-cmd="resetFont" data-type="0" onclick="changefontweight(this)" class="waves-effect btn trn">ปกติ</a>
+        <a href="javascript:;" data-cmd="resetFont" data-type="1" onclick="changefontweight(this)" class="waves-effect btn trn">ตัวหนา</a>
+      </div>
+      <div class="readMode">
+        <h5 class="z-depth-3"><i class="fa fas-moon-over-sun"></i> <span class="trn">เลือกโหมดอ่าน</span></h5>
+        <center>
+          <div class="switch">
+            <i class="fa far-sun"></i>
+            <label>
+            <input type="checkbox" id="switch">
+            <span class="lever"></span>
+            </label>
+            <i class="fa far-moon"></i>
+          </div>
+        </center>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="main">
+  <div class="container" id="read_w">
+    <div class="row">
+      <div class="col s12">
+        <div class="chapter_info center z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+          <h3>{章节名字}</h3>
+          <p><span class="trn">ชื่อเรื่อง</span> : <span><a href="{内容链接}" target="_self">{名字}</a> ({拼音})</span></p>
+          <p><span class="trn">ผู้แต่ง</span> : <span>{作者}</span> <span>|</span> <span class="trn">สถานะ</span> : <span>{进程}</span></p>
+          <p>Facebook Page : <a href="{header:novel/fb_link.html}" target="_blank" title="{header:novel/fb_name.html}">{header:novel/fb_name.html}</a></p>
+        </div>
+        <div class="read z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+          <div class="content noselect"></div>
+        </div>
+        <div class="video z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+          <ul class="tabs" id="tabs_swipe" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <li class="tab col s3"><a href="#google" class="trn">Google Drive</a></li>
+            <li class="tab col s3"><a href="#fembed" class="trn">Fembed</a></li>
+            <li class="tab col s3"><a href="#okru" class="trn">OK.RU</a></li>
+            <li class="tab col s3"><a href="#youtube" class="trn">Youtube</a></li>
+          </ul>
+          <div id="google" class="col s12"><p style="font-size: 2em; text-align: center;">ไม่มีข้อมูล</p></div>
+          <div id="fembed" class="col s12"><p style="font-size: 2em; text-align: center;">ไม่มีข้อมูล</p></div>
+          <div id="okru" class="col s12"><p style="font-size: 2em; text-align: center;">ไม่มีข้อมูล</p></div>
+          <div id="youtube" class="col s12"><p style="font-size: 2em; text-align: center;">ไม่มีข้อมูล</p></div>
+        </div>
+        <div class="control center z-depth-3">
+          <a href="{上一章}" target="_self" class="waves-effect waves-light btn"><i class="fas fa-angle-left"></i> <span class="trn">บทที่แล้ว</span></a>
+          <a href="{目录链接}" target="_self" class="waves-effect waves-light btn"><i class="fas fa-bars"></i> <span class="trn">สารบัญ</span></a>
+          <a href="{下一章}" target="_self" class="waves-effect waves-light btn"><span class="trn">บทถัดไป</span> <i class="fas fa-angle-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="footer">
+  <div class="page-footer">
+    <div class="container" id="gb_f">
+      <div class="col s12 center">
+        <a href="https://www.copyscape.com/" target="_blank"><img src="{templates}/static/image/copyscape.png" width="130" height="46" border="0" alt="Protected by Copyscape" title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page." /></a>
+        <span style="padding-right:10px;"></span>
+        <a href="https://ifastnet.com/portal/aff.php?aff=25156" target="_blank"><img src="{templates}/static/image/ifastnet.png" height="46" alt="Hosted on IFastNet" title="Ifastnet.com is a Premium Hosting Provider, VPS hosting and dedicated servers. Over 5,000,000 websites trust us for their hosting needs." /></a>
+      </div>
+    </div>
+    <div class="ft_bottom">
+      <div class="footer-copyright center black col s12">
+        <div style="margin:auto;">
+          <span>
+            &copy 2017-2020 <a href="{首页}" target="_self"> {网站名} </a> All Rights Reserved.
+          </span>
+          <span>
+            Designed by <a href="https://www.facebook.com/NumSubMaRk" target="_blank"> SubMaRk </a> <span>|</span> Font from <a href="https://thaifaces.com/specimen/fc-lamoon/" target="_blank"> FC Lamoon </a> <span>|</span> Powered by <a href="http://www.weimengcms.com" target="_blank"> WeiMengCMS </a>V{版本号}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Javascript for Read Page -->
+<script src="{templates}/static/js/materialize.min.js"></script>
+<script src="{templates}/static/js/global.min.js"></script>
+<script src="{templates}/static/js/lang/dict.js"></script>
+<script src="{templates}/static/js/scrolls.js"></script>
+<script src="{templates}/static/js/yall.min.js"></script>
+<script src="{templates}/static/js/pageguard.min.js"></script>
+<script src="{templates}/static/js/sweetalert2.all.min.js"></script>
+<script src="{templates}/static/js/switch.read.js"></script>
+<script>
+  $(document).ready(function() {
+    /* Toggle Dark & Light */
+    var dark = "/templates/fantastic-novel/static/css/dark.css";
+    var light = "/templates/fantastic-novel/static/css/light.css";
+    $("#toggle,#switch").change(function(){$(this).is(":checked")?($('link[id="mode"]').attr("href",dark),localStorage.setItem("mode","true")):($('link[id="mode"]').attr("href",light),localStorage.setItem("mode","false"))});
+    /* Customize Materialize JS */
+    $(".dropdown-trigger").dropdown();
+    $('.modal').modal({
+      dismissible: true,
+      inDuration: 300,
+      outDuration: 200,
+      startingTop: '4%',
+      endingTop: '15%',
+      ready: function(modal, trigger) {
+        alert("Ready");
+        console.log(modal, trigger);
+      },
+      complete: function() {
+        alert('Closed');
+      }
+    });
+    $('select').formSelect();
+    $('.tabs').tabs();
+  });
+  scroller.init();
+  /* PageGuard */
+  (function () {
+		function ready(func) {
+			if (document.addEventListener) {
+				document.addEventListener('DOMContentLoaded', function () {
+					document.removeEventListener('DOMContentLoaded', arguments.callee, false);
+					func();
+				}, false);
+			} else if (document.attachEvent) {
+				document.attachEvent('onreadystatechange', function () {
+					if (document.readyState == 'complete') {
+						document.detachEvent('onreadystatechange', arguments.callee);
+						func();
+					}
+				});
+			}
+		}
+		PageGuard.disableFunctions();
+
+		var anticopy_key = PageGuard.antiCopy();
+	})();
+  //Add Previous / Next / Table of Chapter keys
+  document.onkeydown = gopage;
+  var prevpage = "{上一章}";
+  var nextpage = "{下一章}";
+  var gototable = "{目录链接}";
+
+  function gopage() {
+    var event = event ? event : window.event;
+    if (event.keyCode == 37) location = prevpage;
+    if (event.keyCode == 39) location = nextpage;
+    if (event.keyCode == 13) location = gototable;
+  };
+  document.addEventListener("DOMContentLoaded", function() {
+    yall({
+      observeChanges: true
+    });
+  });
+</script>
+<script>
+  $(document).ready(function(){
+	var html = '';
+  var host = '';
+  let youtube = /youtu\.be|youtube\.com/g;
+  let google = /google\.com/g;
+  let fembed = /fembed\.com/g;
+  let ok = /ok\.ru/g;
+  let prx = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g;
+  var content = `{已订阅}{章节内容}{/已订阅}`;
+  var link = content.split("<br/>");
+  for (var i in link){
+    if (link[0].match(prx)) {
+      html += '<div style="margin-bottom: 15px;"><img class="lazy center" width="100%" src="{templates}/static/image/book.svg" data-src="'+link[i]+'" /></div>';
+      $('.content').html(html);
+      $(".chapter_info,.video").hide();
+    } else if (link[i].match(youtube)) {
+      ytlink = link[i].match(/[a-zA-Z0-9_-]{11}/g);
+      html = '<div class="player"><iframe src="https://www.youtube.com/embed/'+ytlink+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
+      $('#youtube').html(html);
+      $(".chapter_info,.read").hide();
+    } else if (link[i].match(google)) {
+      gglink = link[i].match(/([\w-]){33}|([\w-]){19}/g);
+      html = '<div class="player"><iframe src="https://drive.google.com/file/d/'+gglink+'/preview"></iframe></div>';
+      $('#google').html(html);
+      $(".chapter_info,.read").hide();
+    } else if (link[i].match(fembed)) {
+      femlink = link[i].match(/[a-zA-Z0-9_-]{15}/g);
+      html = '<div class="player"><iframe src="https://www.fembed.com/v/'+femlink+'" frameborder="0" allowfullscreen></iframe></div>';
+      $('#fembed').html(html);
+      $(".chapter_info,.read").hide();
+    } else if (link[i].match(ok)) {
+      oklink = link[i].match(/[0-9_-]{13}/g);
+      html = '<div class="player"><iframe src="//ok.ru/videoembed/'+oklink+'?nochat=1" frameborder="0" allow="autoplay" allowfullscreen></iframe></div>';
+      $('#okru').html(html);
+      $(".chapter_info,.read").hide();
+    } else {
+      html = content.replace(/(\<br[\s]*\/?\>[\s]*)+/g, '<br/><br/>');
+      $('.content').html(html);
+      $(".video").hide();
+    }
+  }
+});
+</script>
+</body>
+</html>

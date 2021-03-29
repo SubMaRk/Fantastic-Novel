@@ -1,0 +1,10 @@
+  <script src="{templates}/static/js/jquery-3.6.0.min.js"></script>
+  <!-- TOGGLE ANIMATED WEBSITE -->
+  <script>window.addEventListener("DOMContentLoaded",function(){var e=localStorage.getItem("animated"),t=document.createElement("script");t.src="{templates}/static/js/aos.js";var a=document.createElement("script");a.text="AOS.init({once: true});";var n=document.createElement("script");n.text="AOS.init({disable: true});","true"==e?($(document.head).append(t),$(document.head).append(a),$("#turn,#swap").prop("checked",!0)):($("#turn,#swap").prop("checked",!1),$(document.head).append(t),$(document.head).append(n),localStorage.setItem("animated","false"))});</script>
+  <!-- TOGGLE DARK / LIGHT -->
+  <script>window.addEventListener("DOMContentLoaded",function(){var e=localStorage.getItem("mode");"false"==e?($(document.head).append('<link id="mode" rel="stylesheet" href="/templates/fantastic-novel/static/css/light.css">'),$("#toggle,#switch").prop("checked",!1)):"true"==e?($(document.head).append('<link id="mode" rel="stylesheet" href="/templates/fantastic-novel/static/css/dark.css">'),$("#toggle,#switch").prop("checked",!0)):($(document.head).append('<link id="mode" rel="stylesheet" href="/templates/fantastic-novel/static/css/light.css">'),$("#toggle,#switch").prop("checked",!1),localStorage.setItem("mode","false"))});</script>
+  <!-- CHANGE FONT FAMILY AND FONT SIZE -->
+  <script>window.addEventListener("DOMContentLoaded",function(){var o=localStorage.getItem("globalfont"),t=localStorage.getItem("globalsize"),e=$("html"),l=$("*");null==o?(localStorage.setItem("globalfont","fc_lamoon"),localStorage.setItem("globalsize","14px"),l.each(function(){$(this).css("font-family","fc_lamoon")}),e.css("font-size","14px")):(l.each(function(){$(this).css("font-family",o)}),e.css("font-size",t))});</script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147520547-3"></script>
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-147520547-3");</script>

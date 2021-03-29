@@ -1,0 +1,430 @@
+/***************************
+/** FILE NAME : global.css
+/** Created by SubMaRk
+/** Date Created : 24/12/2561
+/***************************
+
+/* GLOBAL */
+html,
+body,
+div,
+p,
+h5,
+h4,
+h3,
+h2,
+h1,
+a,
+span,
+pre,
+blockquote,
+form,
+fieldset,
+ul,
+ol,
+dl,
+li,
+dd,
+input {
+  font-family: 'fc_lamoon';
+}
+
+#gb_w {
+  width: 90%
+}
+
+#gb_f {
+  width: 100%;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -.125em;
+}
+
+.icon-right {
+  width: 1em;
+  height: 1em;
+  vertical-align: -.125em;
+  float: right;
+  margin-top: 17%;
+}
+
+.icon-nav {
+  width: 1em;
+  height: 1em;
+  vertical-align: -.125em;
+  margin-right: 5%;
+}
+
+.fa-cover {
+  width: 60%!important;
+  height: 60%!important;
+  margin: 20%!important;
+  vertical-align: -7.125em!important;
+}
+.icon-book-2x {
+  margin-right: 1%;
+  vertical-align: -.125em;
+  width: 2em;
+  height: 2em;
+}
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* MAIN CONTENT */
+.text_block {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.text_f {
+  height: 45px;
+  width: 75%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.text_f h5 {
+  margin-left: 15px;
+  line-height: 55px;
+  font-size: 1.8rem;
+}
+
+.text_block h5 {
+  margin-left: 15px;
+  line-height: 55px;
+  font-size: 1.8rem;
+}
+
+
+/* LOGIN */
+#user_name, #user_password_1, .user_password_2, #code {
+  width: 90%;
+  padding: unset;
+}
+.message {
+  font-size: 1.4rem;
+}
+
+/* TAG */
+.tag_item {
+  display: inline-block;
+}
+
+.tag_item a {
+  width: 48%;
+  display: block;
+  height: 36px;
+  line-height: 40px;
+  float: left;
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 3px;
+  text-align: center;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+
+.tag_item a.tag_color_0 {
+  background: #9C27B0;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px;
+}
+
+.tag_item a.tag_color_1 {
+  background: #FFC001;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px;
+}
+
+.tag_item a.tag_color_2 {
+  background: #73A084;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px
+}
+
+.tag_item a.tag_color_3 {
+  background: #009FE3;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px;
+}
+
+.tag_item a.tag_color_4 {
+  background: #775B93;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px
+}
+
+.tag_item a.tag_color_5 {
+  background: #4F71CB;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px;
+}
+
+.tag_item a.tag_color_6 {
+  background: #FF9933;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px
+}
+
+.tag_item a.tag_color_7 {
+  background: #4F6E7C;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px;
+}
+
+.tag_item a.tag_color_8 {
+  background: #529FBC;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px
+}
+
+.tag_item a.tag_color_9 {
+  background: #8FAED1;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px;
+}
+
+.tag_item a.tag_color_10 {
+  background: #669999;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px
+}
+
+.tag_item a.tag_color_11 {
+  background: #8FAED1;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px;
+}
+
+.tag_item a.tag_color_12 {
+  background: #369C46;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px
+}
+
+.tag_item a.tag_color_13 {
+  background: #565E76;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px;
+}
+
+.tag_item a.tag_color_14 {
+  background: #766456;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px
+}
+
+.tag_item a.tag_color_15 {
+  background: #FE4703;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px;
+}
+
+.tag_item a.tag_color_16 {
+  background: #4F71CB;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 3px
+}
+
+.tag_item a:hover.tag_color_1 {
+  background: #1989da;
+}
+
+.tag_item a:hover.tag_color_2 {
+  background: #546E7A;
+}
+
+.tag_item a:hover.tag_color_3 {
+  background: #369C46;
+}
+
+.tag_item a:hover.tag_color_4 {
+  background: #9C27B0;
+}
+
+.tag_item a:hover.tag_color_5 {
+  background: #CDDC39;
+}
+
+.tag_item a:hover.tag_color_6 {
+  background: #5D4037;
+}
+
+.tag_item a:hover.tag_color_7 {
+  background: #FE4703;
+}
+
+.tag_item a:hover.tag_color_8 {
+  background: #766456;
+}
+
+.tag_item a:hover.tag_color_9 {
+  background: #565E76;
+}
+
+.tag_item a:hover.tag_color_10 {
+  background: #369C46;
+}
+
+.tag_item a:hover.tag_color_11 {
+  background: #1989da;
+}
+
+.tag_item a:hover.tag_color_12 {
+  background: #1989da;
+}
+
+/* FOOTER */
+.page-footer {
+  padding-top: 20px;
+}
+
+.page-footer h5 {
+  font-size: 2.3rem;
+}
+
+.page-footer p {
+  font-size: 1.4rem;
+}
+
+.page-footer ul li a {
+  font-size: 1.4rem;
+}
+
+.footer-copyright span {
+  font-size: 1.2rem;
+}
+
+.ft_bottom {
+  text-align: center;
+}
+
+.footer-1 img {
+  width: 40%;
+  margin-left: 30%;
+}
+
+.footer-1 h5 {
+  text-align: center;
+  line-height: 0;
+}
+
+.footer-1 p {
+  text-align: center;
+}
+
+#logo img {
+  width: 35%;
+}
+
+
+
+  /* FRIEND LINK */
+  .link {
+    margin-top: 20px;
+  }
+
+  /* Icons Color */
+
+
+
+.order_color {
+  color: #fff;
+  background-color: #ff9a6a;
+}
+
+.order_gray {
+  color: #9a9a9a;
+  background-color: #353334;
+}
+/* Settings Modal */
+.selectFont,
+.fontSize,
+.readMode {
+  line-height: 3;
+}
+
+.selectFont h5,
+.fontSize h5,
+.readMode h5 {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.selectFont a,
+.fontSize a,
+.readMode a,
+.control a {
+  font-size: 1.4rem;
+  margin-right: 5px;
+  color: black;
+}
+
+.control a {
+  font-weight: bold;
+}
+
+#modal-settings h5 {
+  text-decoration: underline;
+}
+
+.selectFont h5 i,
+.fontSize h5 i,
+.readMode h5 i,
+.control h5 i {
+  font-size: 1.4rem;
+}
+
+#nav .modal .modal-content {
+  padding: 10px;
+}
+
+.order_color,
+.order_gray {
+  float: left;
+  width: 20px;
+  height: 20px;
+  line-height: 23px;
+  margin: 2px 10px 0 0;
+  text-align: center;
+  border-radius: 2px;
+  font-size: 1.4rem;
+}

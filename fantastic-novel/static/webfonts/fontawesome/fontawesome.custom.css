@@ -1,0 +1,304 @@
+.fa {
+    background-size:contain;
+    background-position:50%;
+    background-repeat:no-repeat;
+    position:relative;
+    display:inline-block;
+    line-height:1em;
+    width: 1em;
+    height: 1em;
+    vertical-align: -.125em;
+}
+.fa-2x {
+    width: 2em;
+    height: 2em;
+}
+.fa-3x {
+    width: 3em;
+    height: 3em;
+}
+.fa-left {
+    float: left;
+    margin-right: 0.3em;
+}
+.fa-right {
+    float: right!important;
+    margin-left: 0.3em;
+}
+.fa-spin {
+    -webkit-animation-name: fa-spin;
+    animation-name: fa-spin;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+.fa-spin-reverse {
+    direction: reverse;
+}
+@-webkit-keyframes fa-spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg); 
+        }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg); 
+        } 
+}
+
+@keyframes fa-spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg); 
+        }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg); 
+        } 
+}
+/*  Custom FontAwesome Icons  */
+/*   Solid FontAwesome Icon   */
+.fas-angle-down {
+    background-image: url(./solid/angle-down.svg);
+}
+.fas-bars {
+    background-image: url(./solid/bars.svg);
+}
+.fas-book {
+    background-image: url(./solid/book.svg);
+}
+.fas-books {
+    background-image: url(./solid/books.svg);
+}
+.fas-code {
+    background-image: url(./solid/code.svg);
+}
+.fas-comments {
+    background-image: url(./solid/comments.svg);
+}
+.fas-earth-asia {
+    background-image: url(./solid/earth-asia.svg);
+}
+.fas-feather-pointed {
+    background-image: url(./solid/feather-pointed.svg);
+}
+.fas-font {
+    background-image: url(./solid/font.svg);
+}
+.fas-gear {
+    background-image: url(./solid/gear.svg);
+}
+.fas-heart {
+    background-image: url(./solid/heart.svg);
+}
+.fas-minus {
+    background-image: url(./solid/minus.svg);
+}
+.fas-moon-over-sun {
+    background-image: url(./solid/moon-over-sun.svg);
+}
+.fas-play {
+    background-image: url(./solid/play.svg);
+}
+.fas-plus {
+    background-image: url(./solid/plus.svg);
+}
+.fas-star {
+    background-image: url(./solid/star.svg);
+}
+.fas-stop {
+    background-image: url(./solid/stop.svg);
+}
+.fas-table-cells-large {
+    background-image: url(./solid/table-cells-large.svg);
+}
+.fas-tags {
+    background-image: url(./solid/tags.svg);
+}
+.fas-triangle-exclamation {
+    background-image: url(./solid/triangle-exclamation.svg);
+}
+.fas- {
+    background-image: url(./solid/);
+}
+
+/*  Regular FontAwesome Icon  */
+.far-angle-right {
+    background-image: url(./regular/angle-right.svg);
+}
+.far-arrow-right {
+    background-image: url(./regular/arrow-right.svg);
+}
+.far-arrow-right-from-bracket {
+    background-image: url(./regular/arrow-right-from-bracket.svg);
+}
+.far-arrow-right-to-bracket {
+    background-image: url(./regular/arrow-right-to-bracket.svg);
+}
+.far-arrow-up-right-from-square {
+    background-image: url(./regular/arrow-up-right-from-square.svg);
+}
+.far-books {
+    background-image: url(./regular/books.svg);
+}
+.far-calendar-check {
+    background-image: url(./regular/calendar-check.svg);
+}
+.far- {
+    background-image: url(./regular/);
+}
+.far- {
+    background-image: url(./regular/);
+}
+.far- {
+    background-image: url(./regular/);
+}
+.far-desktop {
+    background-image: url(./regular/desktop.svg);
+}
+.far-envelope {
+    background-image: url(./regular/envelope.svg);
+}
+.far-eye {
+    background-image: url(./regular/eye.svg);
+}
+.far-heart {
+    background-image: url(./regular/heart.svg);
+}
+.far-home {
+    background-image: url(./regular/home.svg);
+}
+.far- {
+    background-image: url(./regular/);
+}
+.far- {
+    background-image: url(./regular/);
+}
+.far- {
+    background-image: url(./regular/);
+}
+.far-lock {
+    background-image: url(./regular/lock.svg);
+}
+.far-moon {
+    background-image: url(./regular/moon.svg);
+}
+.far-pen-to-square {
+    background-image: url(./regular/pen-to-square.svg);
+}
+.far-sun {
+    background-image: url(./regular/sun.svg);
+}
+.far-text-width {
+    background-image: url(./regular/text-width.svg);
+}
+.far-user-gear {
+    background-image: url(./regular/user-gear.svg);
+}
+.far-user-plus {
+    background-image: url(./regular/user-plus.svg);
+}
+.far-award {
+    background-image: url(./regular/);
+}
+.far-award {
+    background-image: url(./regular/);
+}
+.far-award {
+    background-image: url(./regular/);
+}
+.far-award {
+    background-image: url(./regular/);
+}
+.far-award {
+    background-image: url(./regular/);
+}
+.far-award {
+    background-image: url(./regular/);
+}
+
+/*   Light FontAwesome Icon   */
+.fal-angle-down {
+    background-image: url(./light/angle-down.svg);
+}
+.fal-angle-right {
+    background-image: url(./light/angle-right.svg);
+}
+.fal-award {
+    background-image: url(./light/award.svg);
+}
+ .fal-satellite-dish {
+    background-image: url(./light/satellite-dish.svg);
+}
+.fal-clock {
+    background-image: url(./light/clock.svg);
+}
+.fal-clipboard-user {
+    background-image: url(./light/clipboard-user.svg);
+}
+.fal-tower-broadcast {
+    background-image: url(./light/tower-broadcast.svg);
+}
+.fal-fire {
+    background-image: url(./light/fire.svg);
+}
+.fal-link {
+    background-image: url(./light/link.svg);
+}
+.fal-megaphone {
+    background-image: url(./light/megaphone.svg);
+}
+.fal-user-pen {
+    background-image: url(./light/user-pen.svg);
+}
+.fal-award {
+    background-image: url(./light/award.svg);
+}
+.fal-award {
+    background-image: url(./light/award.svg);
+}
+.fal-award {
+    background-image: url(./light/award.svg);
+}
+.fal-award {
+    background-image: url(./light/award.svg);
+}
+.fal-award {
+    background-image: url(./light/award.svg);
+}
+.fal-award {
+    background-image: url(./light/award.svg);
+}
+.fal-award {
+    background-image: url(./light/award.svg);
+}
+
+/*  Brands FontAwesome Icon   */
+.fab-facebook-square {
+    background-image: url(./brands/facebook-square.svg);
+}
+
+/*  Color for FontAwesome Icon  */
+ .fa-red {
+    filter: invert(16%) sepia(65%) saturate(4266%) hue-rotate(336deg) brightness(92%) contrast(125%)!important;
+}
+.fa-pink {
+    filter: invert(60%) sepia(37%) saturate(3243%) hue-rotate(276deg) brightness(98%) contrast(88%)!important;
+}
+.fa-orange {
+    filter: invert(62%) sepia(69%) saturate(2008%) hue-rotate(342deg) brightness(95%) contrast(94%)!important;
+}
+.fa-yellow {
+    filter: invert(81%) sepia(62%) saturate(512%) hue-rotate(345deg) brightness(102%) contrast(101%)!important;
+}
+.fa-green {
+    filter: invert(76%) sepia(49%) saturate(486%) hue-rotate(46deg) brightness(96%) contrast(91%)!important;
+}
+.fa-dark {
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(125deg) brightness(98%) contrast(104%)!important;
+}
