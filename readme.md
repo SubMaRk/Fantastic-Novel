@@ -4,9 +4,9 @@
 ## Infomation
     Name    :   Fantastic Novel
     Author  :   SubMaRk
-    Version :   3.0
-    Date    :   2019-06-14
-    URL     :   https://naynum.engineer
+    Version :   4.0
+    Date    :   2021-03-29
+    URL     :   https://me.nay-noi.com
     Demo    :   https://nv.nay-noi.com
 
 ## JS Libraries used
@@ -15,7 +15,6 @@
     yall.js
     aos.js
     scrolls.js
-    anime.js
     sweetalert2.js
     PageGuard.js
 
@@ -26,8 +25,6 @@
     fontawesome.css
     sweetalert2.css
     hover.css
-    animate.css
-    anticopy.css
 
 ## Fonts
     BoonJot
@@ -44,6 +41,7 @@
 - [x] ปรับปรุงส่วนของ header ให้แยกออกจากกัน
 - [x] เพิ่มฟังก์ชั่นปรับเปลี่ยนภาษา
 - [x] เพิ่มฟังก์ขั่นเปลี่ยนขนาดอักษรให้ครอบคลุม
+- [x] เพิ่มฟังก์ชั่นให้หน้าอ่านรองรับการใช้งานด้านวีดีโอ รูปภาพ และนิยาย
 - [ ] เพิ่มความหลากหลายของสีในเทมเพลต
 - [x] เพิ่มฟังก์ชั่นการปรับเปลี่ยนอักษรที่ใช้บนเว็บให้หลากหลาย
 - [ ] เพิ่มฟังก์ชั่นการอ่านออกเสียงสำหรับผู้พิการทางสายตา
