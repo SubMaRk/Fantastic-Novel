@@ -95,12 +95,6 @@
 <section id="footer">
   <div class="page-footer">
     <div class="container" id="gb_f">
-      <div class="col s12 center">
-        <a href="https://www.copyscape.com/" target="_blank"><img src="{templates}/static/image/copyscape.png" width="130" height="46" border="0" alt="Protected by Copyscape" title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page." /></a>
-        <span style="padding-right:10px;"></span>
-        <a href="https://ifastnet.com/portal/aff.php?aff=25156" target="_blank"><img src="{templates}/static/image/ifastnet.png" height="46" alt="Hosted on IFastNet" title="Ifastnet.com is a Premium Hosting Provider, VPS hosting and dedicated servers. Over 5,000,000 websites trust us for their hosting needs." /></a>
-      </div>
-    </div>
     <div class="ft_bottom">
       <div class="footer-copyright center black col s12">
         <div style="margin:auto;">
@@ -138,12 +132,8 @@
       outDuration: 200,
       startingTop: '4%',
       endingTop: '15%',
-      ready: function(modal, trigger) {
-        alert("Ready");
-        console.log(modal, trigger);
-      },
       complete: function() {
-        alert('Closed');
+        // no-op
       }
     });
     $('select').formSelect();
