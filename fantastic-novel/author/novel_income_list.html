@@ -1,0 +1,80 @@
+{header:header/page.html}
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+{header:global.body.html}
+{header:novel/nav.html}
+<section id="page">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12 l3">
+        <div class="card z-depth-3">
+          <div class="card-content">
+            <h5 class="center">{作家笔名}</h5>
+            <ul class="collection">
+              <li class="collection-item"><a href="{作家首页}">แดชบอร์ดนักเขียน</a></li>
+              <li class="collection-item"><a href="{小说作品列表}">ผลงานนิยาย</a></li>
+              {文章投稿开启}<li class="collection-item"><a href="{文章投稿列表}">ผลงานบทความ</a></li>{/文章投稿开启}
+              <li class="collection-item active"><a href="{小说收入列表}" class="white-text">รายได้</a></li>
+              <li class="collection-item"><a href="{小说数据统计}">สถิติ</a></li>
+              <li class="collection-item"><a href="{作家基本资料}">ข้อมูลส่วนตัว</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 l9">
+        <div class="text_block z-depth-3" data-aos="fade-up">
+          <h5><i class="fa fa-coins"></i> จัดการรายได้</h5>
+        </div>
+        <div class="card z-depth-3">
+          <div class="card-content">
+            <div class="row" style="margin-bottom:0;">
+              <div class="col s12 m6">
+                <p>ขณะนี้คุณมี <strong>{用户金币2数量}</strong> {金币2名字}</p>
+              </div>
+              <div class="col s12 m6 right-align">
+                <a class="btn waves-effect waves-light" href="{提现申请}">ขอถอนเงิน</a>
+              </div>
+            </div>
+            <ul class="tabs">
+              <li class="tab"><a class="{cur:type=all}active{/cur}" href="{小说收入列表}">รายได้รวม</a></li>
+              <li class="tab"><a class="{cur:type=props}active{/cur}" href="{小说收入列表:props}">ไอเท็ม</a></li>
+              <li class="tab"><a class="{cur:type=reward}active{/cur}" href="{小说收入列表:reward}">ทิป</a></li>
+              <li class="tab"><a class="{cur:type=sub}active{/cur}" href="{小说收入列表:sub}">สมัครรับ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card z-depth-3">
+          <div class="card-content">
+            <table class="striped responsive-table">
+              <thead>
+                <tr>
+                  <th>เวลา</th>
+                  <th>สถานะ</th>
+                  <th>ผลงาน</th>
+                  <th>แหล่งรายได้</th>
+                  <th>ได้รับ{金币2名字}</th>
+                  <th>หมายเหตุ</th>
+                </tr>
+              </thead>
+              <tbody>
+                {收入列表:数量=20;排序=收入时间}
+                <tr>
+                  <td>{收入时间}</td>
+                  <td>{收入状态}</td>
+                  <td>{收入作品}</td>
+                  <td>{收入来源}</td>
+                  <td>{收入金币2}</td>
+                  <td>{收入备注}</td>
+                </tr>
+                {/收入列表}
+                {无数据}<tr><td colspan="6" class="center grey-text">ยังไม่มีข้อมูล</td></tr>{/无数据}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{header:footer.global.html}

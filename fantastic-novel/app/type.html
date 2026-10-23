@@ -1,0 +1,93 @@
+<!-- Load Header -->
+{header:header/page.html}
+<!-- Load Functions Script -->
+{header:header/main.js.html}
+<!-- Load Functions CSS -->
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+<!-- Load Global body -->
+{header:global.body.html}
+<!-- Load Global Nav -->
+{header:novel/nav.html}
+<section id="app_type">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12" id="app_breadcrumb">
+        <div class="app_breadcrumb">
+          <a href="{应用首页}" target="_self">หน้าแรกแอปพลิเคชัน</a>
+          <span>/</span>
+          <a href="{全部应用}" target="_self">แอปทั้งหมด</a>
+          <span>/</span>
+          <span>{分类名字}</span>
+        </div>
+      </div>
+      <div class="col s12 l3 left" id="category">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5 class="trn">หมวดหมู่</h5>
+        </div>
+        <div class="tag_item" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <a href="{全部应用}" class="first_tag tag_color_0" target="_self" title="แอปทั้งหมด"><span class="trn">ทั้งหมด</span></a>
+          {应用分类:数量=30;排序=分类排序}<a href="{url}" class="{cur}visited{/cur} tag_color_{i}" target="_self" title="{应用分类名字}">{应用分类名字}</a>{/应用分类}
+        </div>
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>ภาษา</h5>
+        </div>
+        <div class="tag_item" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          {应用资料:资料类型=l;数量=20}<a href="{url}" class="{cur}visited{/cur} tag_color_{i}" target="_self" title="{应用资料名字}">{应用资料名字}</a>{/应用资料}
+        </div>
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>แพลตฟอร์ม</h5>
+        </div>
+        <div class="tag_item" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          {应用资料:资料类型=p;数量=20}<a href="{url}" class="{cur}visited{/cur} tag_color_{i}" target="_self" title="{应用资料名字}">{应用资料名字}</a>{/应用资料}
+        </div>
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>ค่าบริการ</h5>
+        </div>
+        <div class="tag_item" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          {应用资料:资料类型=c;数量=20}<a href="{url}" class="{cur}visited{/cur} tag_color_{i}" target="_self" title="{应用资料名字}">{应用资料名字}</a>{/应用资料}
+        </div>
+      </div>
+      <div class="col s12 l9" id="list">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>{分类名字} <i class="fa fas-table-cells-large"></i></h5>
+        </div>
+        <p class="app_cate_info" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">{分类简介}</p>
+        <div class="row">
+          {应用列表:数量=10}
+          {无数据}<div class="col s12 no_more_work center">ยังไม่มีแอปในหมวดนี้</div>{/无数据}
+          <div class="col s12 m6 l4" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+            <div class="card z-depth-3">
+              <div class="card-content">
+                <span class="card-title">
+                  <img class="lazy circle responsive-img" src="{templates}/static/image/android-icon-192x192.png" data-src="{应用图标}" alt="{应用名字}">
+                  <a href="{url}" target="_self" title="{应用名字}">{应用名字}</a>
+                </span>
+                <p>{应用简介:100}</p>
+                <p class="bbs_meta">เวอร์ชัน {应用版本} | {应用大小} | {应用平台版本}</p>
+              </div>
+              <div class="card-action">
+                <span><span class="trn">คะแนน</span> {应用评分}</span>
+                <span><i class="fa far-eye"></i> {应用阅读量}</span>
+                <a class="right" href="{url}" target="_self" title="{应用名字}">รายละเอียด <i class="fa far-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          {/应用列表}
+        </div>
+        <div class="pagination col s12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <ul class="pagination center">
+            <li class="waves-effect waves-light btn"><a href="{第一页}" target="_self"><span class="trn">หน้าแรก</span></a></li>
+            <li class="waves-effect waves-light btn"><a href="{上一页}" target="_self"><span class="trn">ก่อนหน้า</span></a></li>
+            {跳页:2}{选中页}<li class="waves-effect z-depth-3"><a href="javascript:void(0);" class="visited" target="_self">{i}</a></li>{/选中页}
+            <li class="waves-effect z-depth-3"><a href="{url}" target="_self">{i}</a></li>{/跳页}
+            <li class="waves-effect waves-light btn"><a href="{下一页}" target="_self"><span class="trn">ถัดไป</span></a></li>
+            <li class="waves-effect waves-light btn"><a href="{最后页}" target="_self"><span class="trn">ท้ายสุด</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Load Global Footer -->
+{footer:footer.global.html}

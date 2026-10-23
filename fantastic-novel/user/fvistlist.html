@@ -1,0 +1,56 @@
+{header:header/page.html}
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+{header:global.body.html}
+{header:novel/nav.html}
+<section id="page">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>ผู้เข้าชม</h5>
+        </div>
+        <div class="col s12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <a class="chip" href="{好友首页}"><i class="fa far-home"></i> กลับไปหน้าผู้ใช้</a>
+          <a class="chip" href="{用户中心}"><i class="fa far-user-gear"></i> <span class="trn">พื้นที่ส่วนตัว</span></a>
+        </div>
+      </div>
+      {访客列表:数量=20}
+      {无数据}
+      <div class="col s12" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+        <div class="card z-depth-3">
+          <div class="card-content center">
+            <p>ยังไม่มีผู้เข้าชม</p>
+          </div>
+        </div>
+      </div>
+      {/无数据}
+      <div class="col s6 m4 l3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+        <div class="card z-depth-3 center">
+          <div class="card-content">
+            <a href="{url}" target="_self" title="{访客昵称}">
+              <img class="circle responsive-img" src="{访客头像}" alt="{访客昵称}" style="width:80px;height:80px;">
+            </a>
+            <p><span class="chip">#{i}</span></p>
+            <a href="{url}" target="_self" title="{访客昵称}">{访客昵称}</a>
+            <p><small>{访问时间:n-y-r}</small></p>
+          </div>
+        </div>
+      </div>
+      {/访客列表}
+      <div class="col s12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+        <p class="center">ทั้งหมด {总数据} รายการ | หน้า {当前页} / {总页数}</p>
+        <ul class="pagination center">
+          <li class="waves-effect waves-light btn"><a href="{第一页}" target="_self">หน้าแรก</a></li>
+          <li class="waves-effect waves-light btn"><a href="{上一页}" target="_self">ก่อนหน้า</a></li>
+          {跳页:2}{选中页}<li class="waves-effect z-depth-3"><a href="{url}" class="visited" target="_self">{i}</a></li>{/选中页}
+          <li class="waves-effect z-depth-3"><a href="{url}" target="_self">{i}</a></li>{/跳页}
+          <li class="waves-effect waves-light btn"><a href="{下一页}" target="_self">ถัดไป</a></li>
+          <li class="waves-effect waves-light btn"><a href="{最后页}" target="_self">ท้ายสุด</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{footer:footer.global.html}

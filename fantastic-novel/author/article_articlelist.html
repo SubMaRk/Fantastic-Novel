@@ -1,0 +1,92 @@
+{header:header/page.html}
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+{header:global.body.html}
+{header:novel/nav.html}
+<section id="page">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12 l3 left" id="author_side">
+        <div class="card z-depth-3 center" data-aos="fade-up">
+          <div class="card-content">
+            <img class="circle z-depth-1" src="{作家头像}" alt="{作家笔名}" style="width:110px;height:110px;object-fit:cover;">
+            <h5 style="margin-top:15px;">{作家笔名}</h5>
+            <p class="grey-text">ID: {作家id}</p>
+          </div>
+        </div>
+        <div class="collection z-depth-3" data-aos="fade-up">
+          <a class="collection-item" href="{作家首页}"><i class="fa far-home"></i> หน้าแรกนักเขียน</a>
+          <a class="collection-item" href="{小说作品列表}"><i class="fa far-pen-to-square"></i> <span class="trn">จัดการนิยาย</span></a>
+          {文章投稿开启}<a class="collection-item active" href="{文章投稿列表}"><i class="fa far-pen-to-square"></i> ส่งบทความ</a>{/文章投稿开启}
+          <a class="collection-item" href="{小说收入列表}"><i class="fa far-books"></i> จัดการรายได้</a>
+          <a class="collection-item" href="{小说数据统计}"><i class="fa fas-star"></i> สถิติข้อมูล</a>
+          <a class="collection-item" href="{作家基本资料}"><i class="fa far-user-gear"></i> <span class="trn">ข้อมูลทั่วไป</span></a>
+          <a class="collection-item" href="{消息列表}"><i class="fa far-envelope"></i> <span class="trn">ข้อความ</span></a>
+          <a class="collection-item" href="{用户中心}"><i class="fa far-home"></i> <span class="trn">ศูนย์ผู้ใช้</span></a>
+          <a class="collection-item" href="{退出登录}"><i class="fa far-arrow-right-from-bracket"></i> <span class="trn">ออกจากระบบ</span></a>
+        </div>
+      </div>
+      <div class="col s12 l9 right" id="author_content">
+        <div class="text_block z-depth-3" data-aos="fade-up">
+          <h5>จัดการผลงานที่ส่ง</h5>
+        </div>
+        <div class="card z-depth-3" data-aos="fade-up">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s12 m8">
+                <p>จำนวนผลงานที่ส่งเข้าทั้งหมดในปัจจุบัน <strong>{总数据}</strong> ฉบับ</p>
+              </div>
+              <div class="col s12 m4 right-align">
+                <a class="btn waves-effect waves-light" href="{文章投稿}"><i class="fa far-pen-to-square"></i> ส่งผลงานเลย</a>
+                <a class="btn-flat waves-effect" href="{文章草稿箱列表}">ฉบับร่าง</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card z-depth-3" data-aos="fade-up">
+          <div class="card-content">
+            <div class="responsive-table">
+              <table class="table striped">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>หัวข้อบทความ</th>
+                    <th class="center">หมวดหมู่บทความ</th>
+                    <th class="center">บรรณาธิการบทความ</th>
+                    <th class="center">สถานะการตรวจสอบ</th>
+                    <th class="center">ยอดคลิก</th>
+                    <th class="center">จำนวนความคิดเห็น</th>
+                    <th class="center">เวลาส่งผลงาน</th>
+                    <th class="center">ดำเนินการ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {文章列表:数量=20;排序=时间}
+                  {无数据}
+                  <tr>
+                    <td colspan="9" class="center">คุณยังไม่เคยส่งผลงาน, <a class="btn waves-effect waves-light" href="{文章投稿}">ส่งผลงานเลย</a></td>
+                  </tr>
+                  {/无数据}
+                  <tr>
+                    <td></td>
+                    <td><a href="{url}" target="_blank">{文章标题}</a></td>
+                    <td class="center">{文章分类名字}</td>
+                    <td class="center">{文章编辑}</td>
+                    <td class="center">{文章状态}</td>
+                    <td class="center">{文章阅读量}</td>
+                    <td class="center">{文章评论量}</td>
+                    <td class="center">{文章发布时间}</td>
+                    <td class="center"><a class="btn-small waves-effect waves-light" href="{eurl}" title="แก้ไข"><i class="fa far-pen-to-square"></i> แก้ไข</a></td>
+                  </tr>
+                  {/文章列表}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{header:footer.global.html}

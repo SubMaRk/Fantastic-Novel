@@ -1,55 +1,71 @@
-{header:user/inc_header.html}
-<div id="ct" class="ct2 wp cl">
-	<div class="mn">
-		<div class="bm">
-			<div class="bm_h">
-				<span class="xi2 y"><a href="{提现申请}" style="color:red">申请提现</a></span>
-				<h1 class="mt">提现申请记录</h1>
-			</div>
-			<div class="bm_c">
-				<div class="tl">
-					<table cellspacing="0" cellpadding="0">
-						<tbody>
-							<tr class="th">
-								<td class="icn">编号</td>
-								<td>订单状态</td>
-								<td>提现金额</td>
-								<td>实际到账（手续费{提现手续费}%）</td>
-								<td>提现时间</td>
-							</tr>
-							{提现列表:数量=5}
-							<tr>
-								{无数据}<td colspan="5"><p class="emp">还没有申请过提现</p></td>{/无数据}
-								<td>{提现id}</td>
-								<td style="color:{处理中}red{/处理中}{已处理}green{/已处理}{已拒绝}#C3C1C1{/已拒绝}">{提现处理状态}</td>
-								<td>{提现申请金额}</td>
-								<td>{提现实际到账}</td>
-								<td>{提现申请时间}</td>
-							</tr>
-							{/提现列表}
-							<tr>
-								<td colspan="5" style="text-align:center">
-									<a href="{第一页}">第一页</a> . <a href="{上一页}">上一页</a>
-									共{当前页}/{总页数}页 
-									<a href="{下一页}">下一页</a> . <a href="{最后页}">最后页</a>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="sd">
-		<div id="pcd" class="bm cl">
-			<div class="bm_c">
-				<div class="hm">
-					<p><a href="{头像设置}" class="avtm"><img src="{用户头像}"></a></p>
-					<h2 class="xs2">{用户昵称}</h2>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-{footer:user/inc_footer.html}
+{header:header/page.html}
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+{header:global.body.html}
+{header:novel/nav.html}
+<section id="page">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12 l3 left" id="user_side">
+        <div class="card z-depth-3 center" data-aos="fade-up">
+          <div class="card-content">
+            <a href="{头像设置}"><img class="circle z-depth-1" src="{用户头像}" alt="{用户昵称}" style="width:110px;height:110px;object-fit:cover;"></a>
+            <h5 style="margin-top:15px;">{用户昵称}</h5>
+            <p class="grey-text">ID: {用户id}</p>
+          </div>
+        </div>
+        <div class="collection z-depth-3" data-aos="fade-up">
+          <a class="collection-item" href="{用户中心}"><i class="far fa-home"></i> <span class="trn">ศูนย์ผู้ใช้</span></a>
+          <a class="collection-item" href="{基本资料}"><i class="far fa-users-cog"></i> <span class="trn">ข้อมูลทั่วไป</span></a>
+          <a class="collection-item active" href="{充值}"><i class="far fa-books"></i> เติมเงิน</a>
+          <a class="collection-item" href="{消息列表}"><i class="far fa-envelope"></i> <span class="trn">ข้อความ</span></a>
+          <a class="collection-item" href="{签到中心}"><i class="far fa-calendar-check"></i> <span class="trn">เช็คชื่อ</span></a>
+          <a class="collection-item" href="{退出登录}"><i class="far fa-sign-out"></i> <span class="trn">ออกจากระบบ</span></a>
+        </div>
+      </div>
+      <div class="col s12 l9 right" id="user_content">
+        <div class="text_block z-depth-3" data-aos="fade-up">
+          <h5>ประวัติการถอนเงิน</h5>
+        </div>
+        <div class="card z-depth-3" data-aos="fade-up">
+          <div class="card-content">
+            <div class="right"><a class="btn waves-effect waves-light" href="{提现申请}">ขอถอนเงิน</a></div>
+            <div style="clear:both;"></div>
+            <table class="striped responsive-table">
+              <thead>
+                <tr>
+                  <th>หมายเลข</th>
+                  <th>สถานะ</th>
+                  <th>จำนวนที่ถอน</th>
+                  <th>ได้รับจริง (ค่าธรรมเนียม {提现手续费}%)</th>
+                  <th>เวลาที่ขอถอน</th>
+                </tr>
+              </thead>
+              <tbody>
+                {提现列表:数量=5}
+                {无数据}<tr><td colspan="5" class="center grey-text">ยังไม่เคยขอถอนเงิน</td></tr>{/无数据}
+                <tr>
+                  <td>{提现id}</td>
+                  <td style="color:{处理中}red{/处理中}{已处理}green{/已处理}{已拒绝}#C3C1C1{/已拒绝}">{提现处理状态}</td>
+                  <td>{提现申请金额}</td>
+                  <td>{提现实际到账}</td>
+                  <td>{提现申请时间}</td>
+                </tr>
+                {/提现列表}
+              </tbody>
+            </table>
+            <div class="center" style="margin:20px 0;">
+              <a class="btn-flat waves-effect" href="{第一页}">หน้าแรก</a>
+              <a class="btn-flat waves-effect" href="{上一页}">ก่อนหน้า</a>
+              <span class="grey-text">ทั้งหมด {当前页}/{总页数} หน้า</span>
+              <a class="btn-flat waves-effect" href="{下一页}">ถัดไป</a>
+              <a class="btn-flat waves-effect" href="{最后页}">ท้ายสุด</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{header:footer.global.html}

@@ -1,82 +1,87 @@
-{header:user/inc_header.html}
-<script>
-$(document).ready(function(){
-	$("#nv").find("li a").eq("0").addClass("nvcur");
-});
-</script>
-<div id="ct" class="wp w cl">
-	<div id="diypage" class="area">
-		<div id="frame1" class="frame cl">
-			<div id="frame1_left" style="width:200px" class="z column">
-				<div id="profile" class="block move-span">
-					<div class="blocktitle title">
-						<span>รูปประจำตัว</span>
-					</div>
-					<div id="profile_content" class="dxb_bc">
-						<div>
-							<div class="hm">
-								<p><img src="{用户头像}" width="150" height="150" /></p>
-								<h2 class="mbn">{用户昵称}</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div id="statistic" class="block move-span">
-					<div class="blocktitle title"><span>สถิติ</span></div>
-					<div id="statistic_content" class="dxb_bc">
-						<div>
-							<p class="mbm xw1">มี <strong class="xi1">{用户人气}</strong> คนเข้าชม</p>
-							<ul class="xl xl2 cl">
-								<li>ระดับ : {用户等级}</li>
-								<li>ประสบการณ์ : {用户经验}</li>
-								<li>{金币1名字} : {用户金币1数量}</li>
-								<li>{金币2名字} : {用户金币2数量}</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div id="frame1_center" style="width:520px" class="z column">
-				<div id="personalinfo" class="block move-span">
-					<div class="blocktitle title"><span>ข้อมูลส่วนตัว</span></div>
-					<div id="personalinfo_content" class="dxb_bc">
-						<ul id="pprl" class="mbm pbm bbda cl">
-							<li><em>เพศ</em>{用户性别}</li>
-							<li><em>อายุ</em>{用户年龄}</li>
-						</ul>
-					</div>
-				</div>
-				<div id="personalinfo" class="block move-span">
-					<div class="blocktitle title">
-						<span>ข่าวล่าสุด</span>
-						<span class="y xw0"><a href="{消息列表}">เพิ่มเติม >></a></span>
-					</div>
-					<div id="personalinfo_content" class="dxb_bc">
-						<ul id="pprl" class="mbm pbm bbda cl">
-							{用户消息列表:数量=5;排序=发信时间}
-							{无数据}<p class="emp">现在还没有消息</p>{/无数据}
-							<li style="border-bottom: 1px dashed #E4E4E4;padding-bottom: 10px;padding-top: 10px;">
-								<em style="width: 130px;">{发信时间}</em><a href="{url}">【{发信用户昵称}】:{消息内容:25}</a>
-							</li>
-							{/用户消息列表}
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div id="frame1_right" style="width:240px" class="z column">
-				<div id="visitor" class="block move-span"><div class="blocktitle title"><span>ผู้เข้าชมล่าสุด</span></div>
-				<div id="visitor_content" class="dxb_bc">
-					<ul class="ml mls cl">
-						{访客列表:数量=6}
-						<li><a href="{url}" class="avt"><img src="{访客头像}" /></a><p><a href="{url}" title="{访客昵称}">{访客昵称}</a></p><span class="xg2"><span title="{访问时间:n-y-r}">{访问时间:n-y-r}</span></span></li>
-						{/访客列表}
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-</div>
-{footer:user/inc_footer.html}
+{header:header/page.html}
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+{header:global.body.html}
+{header:novel/nav.html}
+<section id="page">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12 l3 left" id="user_side">
+        <div class="card z-depth-3 center" data-aos="fade-up">
+          <div class="card-content">
+            <a href="{头像设置}"><img class="circle z-depth-1" src="{用户头像}" alt="{用户昵称}" style="width:110px;height:110px;object-fit:cover;"></a>
+            <h5 style="margin-top:15px;">{用户昵称}</h5>
+            <p class="grey-text">ID: {用户id}</p>
+          </div>
+        </div>
+        <div class="collection z-depth-3" data-aos="fade-up">
+          <a class="collection-item active" href="{用户中心}"><i class="far fa-home"></i> <span class="trn">ศูนย์ผู้ใช้</span></a>
+          <a class="collection-item" href="{基本资料}"><i class="far fa-users-cog"></i> <span class="trn">ข้อมูลทั่วไป</span></a>
+          <a class="collection-item" href="{充值}"><i class="far fa-books"></i> เติมเงิน</a>
+          <a class="collection-item" href="{消息列表}"><i class="far fa-envelope"></i> <span class="trn">ข้อความ</span></a>
+          <a class="collection-item" href="{签到中心}"><i class="far fa-calendar-check"></i> <span class="trn">เช็คชื่อ</span></a>
+          <a class="collection-item" href="{退出登录}"><i class="far fa-sign-out"></i> <span class="trn">ออกจากระบบ</span></a>
+        </div>
+      </div>
+      <div class="col s12 l9 right" id="user_content">
+        <div class="text_block z-depth-3" data-aos="fade-up">
+          <h5><i class="far fa-home"></i> <span class="trn">ศูนย์ผู้ใช้</span></h5>
+        </div>
+        <div class="card z-depth-3" data-aos="fade-up">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s12 m4 center">
+                <img class="circle responsive-img z-depth-1" src="{用户头像}" alt="{用户昵称}" style="width:130px;height:130px;object-fit:cover;">
+              </div>
+              <div class="col s12 m8">
+                <h5>{用户昵称}</h5>
+                <p class="grey-text">มี <strong>{用户人气}</strong> คนเข้าชม</p>
+                <p><span class="trn">ระดับ</span> : {用户等级}</p>
+                <p><span class="trn">ประสบการณ์</span> : {用户经验}</p>
+                <p>{金币1名字} : {用户金币1数量}</p>
+                <p>{金币2名字} : {用户金币2数量}</p>
+                <p>เพศ : {用户性别} | อายุ : {用户年龄}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text_block z-depth-3" data-aos="fade-up">
+          <h5>ข้อความล่าสุด</h5>
+        </div>
+        <div class="card z-depth-3" data-aos="fade-up">
+          <div class="card-content">
+            <div class="right"><a href="{消息列表}">เพิ่มเติม >></a></div>
+            <div style="clear:both;"></div>
+            <ul class="collection">
+              {用户消息列表:数量=5;排序=发信时间}
+              {无数据}<li class="collection-item grey-text">ยังไม่มีข้อความในขณะนี้</li>{/无数据}
+              <li class="collection-item">
+                <span class="grey-text">{发信时间}</span>
+                <a href="{url}">[{发信用户昵称}] {消息内容:25}</a>
+              </li>
+              {/用户消息列表}
+            </ul>
+          </div>
+        </div>
+        <div class="text_block z-depth-3" data-aos="fade-up">
+          <h5>ผู้เข้าชมล่าสุด</h5>
+        </div>
+        <div class="card z-depth-3" data-aos="fade-up">
+          <div class="card-content">
+            <div class="row center">
+              {访客列表:数量=6}
+              <div class="col s4 m2">
+                <a href="{url}"><img class="circle responsive-img z-depth-1" src="{访客头像}" alt="{访客昵称}" style="width:60px;height:60px;object-fit:cover;"></a>
+                <p class="truncate"><a href="{url}" title="{访客昵称}">{访客昵称}</a></p>
+                <p class="grey-text" style="font-size:11px;">{访问时间:n-y-r}</p>
+              </div>
+              {/访客列表}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{header:footer.global.html}

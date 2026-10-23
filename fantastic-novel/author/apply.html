@@ -1,0 +1,57 @@
+{header:header/page.html}
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+{header:global.body.html}
+{header:novel/nav.html}
+<section id="page">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12">
+        <div class="text_block z-depth-3" data-aos="fade-up">
+          <h5>ลงทะเบียนเป็นนักเขียน / นักแปล</h5>
+        </div>
+      </div>
+      <div class="col s12 m8 offset-m2">
+        <div class="card z-depth-3" data-aos="fade-up">
+          <div class="card-content">
+            <h5 class="center">ข้อมูลการลงทะเบียน</h5>
+            <p class="grey-text center">กรอกข้อมูลให้ครบถ้วนก่อนส่งใบสมัคร ระบบจะทำการตรวจสอบข้อมูลของคุณ</p>
+            <form name="Form" id="form" method="post" action="{表单提交地址}">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="nickname" name="nickname" type="text" class="validate" required>
+                  <label for="nickname">นามปากกา</label>
+                  <span class="helper-text">ต้องมีอย่างน้อย 3-16 ตัวอักษร หลังลงทะเบียนจะไม่สามารถเปลี่ยนแปลงได้</span>
+                </div>
+                <div class="input-field col s12">
+                  <input id="realname" name="realname" type="text" class="validate" required>
+                  <label for="realname">ชื่อจริง</label>
+                  <span class="helper-text">ต้องมีอย่างน้อย 3-30 ตัวอักษร</span>
+                </div>
+                <div class="col s12">
+                  <p>
+                    <label>
+                      <input id="agreeCheckbox" name="agreement" type="checkbox" value="1" required>
+                      <span>ฉันอ่านและเห็นด้วยกับ <a href="{作家注册协议}" target="_blank">เงื่อนไขการลงทะเบียนเป็นผู้แต่ง / นักแปลของ {网站名}</a></span>
+                    </label>
+                  </p>
+                </div>
+                <div class="col s12 center">
+                  <button class="btn waves-effect waves-light" type="submit">ลงทะเบียน</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="card z-depth-3" data-aos="fade-up">
+          <div class="card-content grey-text">
+            <p><i class="fa far-envelope"></i> หลังส่งใบสมัครแล้ว โปรดรอให้ผู้ดูแลระบบตรวจสอบข้อมูลก่อน</p>
+            <p><i class="fa far-pen-to-square"></i> เมื่อได้รับอนุมัติแล้ว คุณจะสามารถเขียนนิยายและส่งบทความได้ทันที</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{header:footer.global.html}

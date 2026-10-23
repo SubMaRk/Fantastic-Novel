@@ -1,0 +1,137 @@
+<!-- Load Header -->
+{header:header/page.html}
+<!-- Load Functions Script -->
+{header:header/main.js.html}
+<!-- Load Functions CSS -->
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+<!-- Load Global body -->
+{header:global.body.html}
+<!-- Load Global Nav -->
+{header:novel/nav.html}
+<section id="bbs_post">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12" id="bbs_breadcrumb">
+        <div class="bbs_breadcrumb">
+          <a href="{论坛首页}" target="_self">หน้าแรกเว็บบอร์ด</a>
+          <span>/</span>
+          <a href="{帖子列表}" target="_self">{版块名字}</a>
+          <span>/</span>
+          <span>ตั้งกระทู้ใหม่</span>
+        </div>
+      </div>
+      <div class="col s12 l8" id="bbs_post_form">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>ตั้งกระทู้ใหม่ <i class="fa fas-plus"></i></h5>
+        </div>
+        <div class="card z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <form class="col s12" action="{表单提交地址}" method="post">
+            <div class="row">
+              <div class="input-field col s12">
+                <select id="post_tid" name="tid" class="browser-default" required>
+                  {版块分类:数量=50;排序=版块排序}
+                  <option value="{版块分类id}" {cur}selected{/cur}>{版块分类名字}</option>
+                  {/版块分类}
+                </select>
+                <label for="post_tid" class="active">เลือกบอร์ด</label>
+              </div>
+              <div class="input-field col s12">
+                <input id="post_title" name="title" type="text" class="validate" value="{标题}" required>
+                <label for="post_title" class="active"><span class="trn">ชื่อเรื่อง</span></label>
+              </div>
+              <div class="input-field col s12">
+                <textarea id="post_content" name="content" class="materialize-textarea" required>{内容}</textarea>
+                <label for="post_content" class="active">เนื้อหากระทู้</label>
+              </div>
+              <div class="input-field col s12">
+                <input id="post_tags" name="tags" type="text" value="{标签}">
+                <label for="post_tags" class="active">แท็ก (คั่นด้วยเครื่องหมายจุลภาค)</label>
+              </div>
+              <div class="col s12" id="post_options">
+                <p>ตัวเลือกการเข้าถึง</p>
+                <p>
+                  <label>
+                    <input type="checkbox" name="islogin" value="1" {登录选中}>
+                    <span>ต้องเข้าสู่ระบบก่อนอ่าน</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input type="checkbox" name="isreplay" value="1" {回帖选中}>
+                    <span>ต้องตอบกลับก่อนอ่าน</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input type="checkbox" name="isself" value="1" {自己查看选中}>
+                    <span>เฉพาะเจ้าของกระทู้เท่านั้น</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input type="checkbox" name="ispay" value="1" {付费选中}>
+                    <span>ต้องชำระเหรียญก่อนอ่าน</span>
+                  </label>
+                </p>
+              </div>
+              <div class="input-field col s12 m6">
+                <input id="post_price" name="price" type="number" min="0" value="{帖子价格}">
+                <label for="post_price" class="active"><span class="trn">ราคา</span> (เหรียญ)</label>
+              </div>
+              <div class="col s12 m6" id="post_goldtype">
+                <p>
+                  <label>
+                    <input type="radio" name="goldtype" value="1" {金币1选中}>
+                    <span>เหรียญทอง 1</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input type="radio" name="goldtype" value="2" {金币2选中}>
+                    <span>เหรียญทอง 2</span>
+                  </label>
+                </p>
+              </div>
+              {发帖验证码开启}
+              <div class="input-field col s12 m6">
+                <input id="post_code" name="code" type="text" required>
+                <label for="post_code" class="active"><span class="trn">โค้ดยืนยัน</span></label>
+              </div>
+              <div class="col s12 m6">{发帖验证码}</div>
+              {/发帖验证码开启}
+              <input type="hidden" name="bid" value="{帖子id}">
+              {表单锁}
+              <div class="input-field col s12 center">
+                <button class="waves-effect waves-light btn white" type="submit"><i class="fa fas-comments"></i> ส่งกระทู้</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col s12 l4" id="bbs_post_notice">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>ข้อกำหนดในการตั้งกระทู้</h5>
+        </div>
+        <ul class="collection z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <li class="collection-item">หัวข้อกระทู้ต้องมีความยาว 6 ถึง 60 ตัวอักษร</li>
+          <li class="collection-item">เนื้อหากระทู้ต้องมีความยาว 10 ถึง 10000 ตัวอักษร</li>
+          <li class="collection-item">ห้ามตั้งกระทู้ซ้ำกับกระทู้ที่มีอยู่แล้วในบอร์ด</li>
+          <li class="collection-item">ห้ามโพสต์เนื้อหาที่ผิดกฎหมาย ละเมิดลิขสิทธิ์ หรือทำให้ผู้อื่นเสียหาย</li>
+          <li class="collection-item">ผู้ดูแลระบบขอสงวนสิทธิ์ในการลบหรือย้ายกระทู้ที่ไม่เหมาะสม</li>
+        </ul>
+        <div class="card z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <div class="card-content">
+            <span class="card-title">บอร์ดที่กำลังโพสต์</span>
+            <p>{版块名字}</p>
+          </div>
+          <div class="card-action">
+            <a href="{帖子列表}" target="_self">ดูกระทู้ในบอร์ดนี้</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Load Global Footer -->
+{footer:footer.global.html}

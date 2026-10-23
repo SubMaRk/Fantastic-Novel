@@ -1,0 +1,138 @@
+{header:header/page.html}
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+{header:global.body.html}
+{header:novel/nav.html}
+<section id="page">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12 l3 left" id="author_side">
+        <div class="card z-depth-3 center" data-aos="fade-up">
+          <div class="card-content">
+            <img class="circle z-depth-1" src="{作家头像}" alt="{作家笔名}" style="width:110px;height:110px;object-fit:cover;">
+            <h5 style="margin-top:15px;">{作家笔名}</h5>
+            <p class="grey-text">ID: {作家id}</p>
+          </div>
+        </div>
+        <div class="collection z-depth-3" data-aos="fade-up">
+          <a class="collection-item" href="{作家首页}"><i class="fa far-home"></i> หน้าแรกนักเขียน</a>
+          <a class="collection-item" href="{小说作品列表}"><i class="fa far-pen-to-square"></i> <span class="trn">จัดการนิยาย</span></a>
+          {文章投稿开启}<a class="collection-item" href="{文章投稿列表}"><i class="fa far-pen-to-square"></i> ส่งบทความ</a>{/文章投稿开启}
+          <a class="collection-item" href="{小说收入列表}"><i class="fa far-books"></i> จัดการรายได้</a>
+          <a class="collection-item active" href="{小说数据统计}"><i class="fa fas-star"></i> สถิติข้อมูล</a>
+          <a class="collection-item" href="{作家基本资料}"><i class="fa far-user-gear"></i> <span class="trn">ข้อมูลทั่วไป</span></a>
+          <a class="collection-item" href="{消息列表}"><i class="fa far-envelope"></i> <span class="trn">ข้อความ</span></a>
+          <a class="collection-item" href="{用户中心}"><i class="fa far-home"></i> <span class="trn">ศูนย์ผู้ใช้</span></a>
+          <a class="collection-item" href="{退出登录}"><i class="fa far-arrow-right-from-bracket"></i> <span class="trn">ออกจากระบบ</span></a>
+        </div>
+      </div>
+      <div class="col s12 l9 right" id="author_content">
+        <div class="text_block z-depth-3" data-aos="fade-up">
+          <h5>สถิติข้อมูล</h5>
+        </div>
+        <div class="card z-depth-3" data-aos="fade-up">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s12 m6">
+                <label for="novel_select">สลับการแสดงผล</label>
+                <select id="novel_select" name="novel_select" class="browser-default">
+                  {小说列表:排序=最新入库}
+                  <option value="{小说id}">ID: {小说id} - {小说名字}</option>
+                  {/小说列表}
+                </select>
+              </div>
+              <div class="col s12 m6 right-align">
+                <a class="btn-flat waves-effect" href="{小说作品列表}"><span class="trn">จัดการนิยาย</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card z-depth-3" data-aos="fade-up">
+          <div class="card-content">
+            <span class="card-title">ข้อมูลผลงาน</span>
+            <div class="row">
+              <div class="col s12 m6">
+                <p>รหัสหนังสือ : <b>0</b></p>
+                <p>ชื่อผลงาน : <b>0</b></p>
+                <p>หมวดหมู่ผลงาน : <b>0</b></p>
+                <p>วันที่โพสต์ : <b>0</b></p>
+                <p>จำนวนคำในตอน : <b>0</b></p>
+                <p>อัปเดตล่าสุด : <b>0</b></p>
+              </div>
+              <div class="col s12 m6">
+                <p class="card-title" style="font-size:16px;">ยอดติดตาม</p>
+                <p>ยอดติดตามรวม : <b>0</b></p>
+                <p>วันนี้ : <b>0</b></p>
+                <p>เมื่อวาน : <b>0</b></p>
+                <p>เดือนนี้ : <b>0</b></p>
+                <p>สูงสุด : <b>0</b></p>
+                <p>เฉลี่ย : <b>0</b></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card z-depth-3" data-aos="fade-up">
+          <div class="card-content">
+            <span class="card-title">ยอดสนับสนุน</span>
+            <div class="row">
+              <div class="col s12 m6">
+                <p>ยอดสนับสนุนรวม : <b>0</b></p>
+                <p>วันนี้ : <b>0</b></p>
+                <p>เมื่อวาน : <b>0</b></p>
+              </div>
+              <div class="col s12 m6">
+                <p>เดือนนี้ : <b>0</b></p>
+                <p>สูงสุด : <b>0</b></p>
+                <p>เฉลี่ย : <b>0</b></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m6 l3">
+            <div class="card z-depth-3" data-aos="zoom-in-up">
+              <div class="card-content">
+                <span class="card-title">จำนวนคำ</span>
+                <p>รวม : <b>0</b></p>
+                <p>วันนี้ : 0</p>
+                <p>เมื่อวาน : 0</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l3">
+            <div class="card z-depth-3" data-aos="zoom-in-up">
+              <div class="card-content">
+                <span class="card-title">ชั้นหนังสือ</span>
+                <p>รวม : <b>0</b></p>
+                <p>วันนี้ : 0</p>
+                <p>เมื่อวาน : 0</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l3">
+            <div class="card z-depth-3" data-aos="zoom-in-up">
+              <div class="card-content">
+                <span class="card-title">อ่าน</span>
+                <p>รวม : <b>0</b></p>
+                <p>วันนี้ : 0</p>
+                <p>เมื่อวาน : 0</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l3">
+            <div class="card z-depth-3" data-aos="zoom-in-up">
+              <div class="card-content">
+                <span class="card-title">ความคิดเห็น</span>
+                <p>รวม : <b>0</b></p>
+                <p>วันนี้ : 0</p>
+                <p>เมื่อวาน : 0</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{header:footer.global.html}

@@ -1,0 +1,56 @@
+<!-- Load Header -->
+{header:header/page.html}
+<!-- Load Functions Script -->
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+<!-- Load Global body -->
+{header:global.body.html}
+<!-- Load Global Nav -->
+{header:novel/nav.html}
+<section id="about">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12 l9" id="content">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5><span class="trn">เกี่ยวกับ</span> <i class="fa far-eye"></i></h5>
+        </div>
+        <div class="card z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+          <div class="card-content">
+            <span class="card-title">{名字}</span>
+            <p>
+              <i class="fa fas-tags"></i>
+              <span>{关于信息:aid={id};数量=1}<a href="{turl}" target="_self" title="{关于分类名字}">{关于分类名字}</a>{/关于信息}</span>
+              <span> | </span>
+              <i class="fa fal-clock"></i> <span>{时间:n-y-r}</span>
+            </p>
+          </div>
+        </div>
+        <div class="card z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <div class="card-content">
+            {内容}
+          </div>
+        </div>
+      </div>
+      <div class="col s12 l3 left" id="category">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5 class="trn">หมวดหมู่</h5>
+        </div>
+        <div class="tag_item" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          {关于分类:数量=15;排序=分类排序}<a href="{url}" target="_self" class="{cur}visited{/cur} tag_color_{i}" title="{关于分类名字}">{关于分类名字}</a>{/关于分类}
+        </div>
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>เนื้อหาในหมวดหมู่นี้</h5>
+        </div>
+        <div class="collection z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          {关于信息:tid={分类id};数量=8;排序=倒序}
+          <a href="{url}" target="_self" class="collection-item" title="{关于名字}">{关于名字}</a>
+          {无数据}<p class="center">ยังไม่มีเนื้อหาในหมวดหมู่นี้</p>{/无数据}
+          {/关于信息}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Load Global Footer -->
+{header:footer.global.html}

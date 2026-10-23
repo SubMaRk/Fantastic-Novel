@@ -1,0 +1,121 @@
+<!-- Load Header -->
+{header:header/page.html}
+<!-- Load Functions Script -->
+{header:header/main.js.html}
+<!-- Load Functions CSS -->
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+<!-- Load Global body -->
+{header:global.body.html}
+<!-- Load Global Nav -->
+{header:novel/nav.html}
+<section id="bbs_list">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12" id="bbs_breadcrumb">
+        <div class="bbs_breadcrumb">
+          <a href="{论坛首页}" target="_self">หน้าแรกเว็บบอร์ด</a>
+          <span>/</span>
+          <a href="{论坛版块}" target="_self">บอร์ดทั้งหมด</a>
+          <span>/</span>
+          <span>{版块名字}</span>
+        </div>
+      </div>
+      <div class="col s12 l9 left" id="bbs_threads">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>{版块名字} <i class="fa fas-comments"></i></h5>
+        </div>
+        <div class="row bbs_stats" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+          <div class="col s6 m3 center z-depth-1">
+            <strong>{版块总发帖}</strong>
+            <span>กระทู้</span>
+          </div>
+          <div class="col s6 m3 center z-depth-1">
+            <strong>{版块总回帖}</strong>
+            <span>ตอบกลับ</span>
+          </div>
+          <div class="col s6 m3 center z-depth-1">
+            <strong>{版块总浏览}</strong>
+            <span>เข้าชม</span>
+          </div>
+          <div class="col s6 m3 center z-depth-1">
+            <strong>{版块日发帖}</strong>
+            <span>วันนี้</span>
+          </div>
+        </div>
+        <div class="center" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <a href="{发表帖子}" class="waves-effect waves-light btn white" target="_self"><i class="fa fas-plus"></i> <span>ตั้งกระทู้ใหม่</span></a>
+        </div>
+        {置顶帖子:数量=5}
+        <div class="card z-depth-3 bbs_pinned" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <div class="card-content">
+            <p class="bbs_meta"><i class="fa fas-star"></i> ปักหมุด | <span class="trn">ผู้แต่ง</span> : {帖子作者昵称} | {帖子发布时间} | <a href="{turl}" target="_self">{帖子版块名字}</a></p>
+            <a class="title" href="{url}" target="_self" title="{帖子标题}">{帖子标题}</a>
+            <span class="secondary-content"><i class="fa fas-comments"></i> {帖子回帖量} <i class="fa far-eye"></i> {帖子浏览量}</span>
+          </div>
+        </div>
+        {/置顶帖子}
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>กระทู้ทั้งหมด <i class="fa fas-table-cells-large"></i></h5>
+        </div>
+        <ul class="collection z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          {帖子列表:数量=10}
+          {无数据}
+          <li class="collection-item center">ยังไม่มีกระทู้ในบอร์ดนี้</li>
+          {/无数据}
+          <li class="collection-item">
+            {精华}<i class="fa fas-star" title="กระทู้คัดสรร"></i>{/精华}
+            <a class="title" href="{url}" target="_self" title="{帖子标题}">{帖子标题}</a>
+            <span class="secondary-content"><i class="fa fas-comments"></i> {帖子回帖量} <i class="fa far-eye"></i> {帖子浏览量}</span>
+            <p class="bbs_meta">
+              <span class="trn">ผู้แต่ง</span> : {帖子作者昵称}
+              | {帖子发布时间}
+              | ตอบกลับล่าสุด {帖子最后回帖时间} โดย {帖子最后回帖用户昵称}
+            </p>
+          </li>
+          {/帖子列表}
+        </ul>
+        <div class="pagination col s12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <ul class="pagination center">
+            <li class="waves-effect waves-light btn"><a href="{第一页}" target="_self"><span class="trn">หน้าแรก</span></a></li>
+            <li class="waves-effect waves-light btn"><a href="{上一页}" target="_self"><span class="trn">ก่อนหน้า</span></a></li>
+            {跳页:2}{选中页}<li class="waves-effect z-depth-3"><a href="javascript:void(0);" class="visited" target="_self">{i}</a></li>{/选中页}
+            <li class="waves-effect z-depth-3"><a href="{url}" target="_self">{i}</a></li>{/跳页}
+            <li class="waves-effect waves-light btn"><a href="{下一页}" target="_self"><span class="trn">ถัดไป</span></a></li>
+            <li class="waves-effect waves-light btn"><a href="{最后页}" target="_self"><span class="trn">ท้ายสุด</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col s12 l3" id="bbs_sidebar">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5 class="trn">หมวดหมู่</h5>
+        </div>
+        <div class="tag_item" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          {版块分类:数量=30;排序=版块排序}<a href="{url}" class="{cur}visited{/cur} tag_color_{i}" target="_self" title="{版块分类名字}">{版块分类名字}</a>{/版块分类}
+        </div>
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>ผู้ดูแลบอร์ด <i class="fa fal-user-pen"></i></h5>
+        </div>
+        <ul class="collection z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          {版主列表:数量=10}
+          <li class="collection-item">
+            <a href="{版主资料}" target="_self" title="{版主昵称}"><i class="fa fal-user-pen"></i> {版主昵称}</a>
+            <p class="bbs_meta">{版主签名}</p>
+          </li>
+          {/版主列表}
+        </ul>
+        <div class="card z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <div class="card-content">
+            <span class="card-title">ข้อมูลบอร์ด</span>
+            <p>{版块简介}</p>
+          </div>
+          <div class="card-action">
+            <a href="{论坛首页}" target="_self">กลับหน้าแรกเว็บบอร์ด</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Load Global Footer -->
+{footer:footer.global.html}

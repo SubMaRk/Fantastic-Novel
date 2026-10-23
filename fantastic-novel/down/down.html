@@ -1,0 +1,35 @@
+<!-- Load Header -->
+{header:header/page.html}
+<!-- Load Functions Script -->
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+<!-- Load Global body -->
+{header:global.body.html}
+<!-- Load Global Nav -->
+{header:novel/nav.html}
+<section id="down">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>ดาวน์โหลด <i class="fa fas-angle-down"></i></h5>
+        </div>
+        <div class="card z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <div class="card-content center">
+            <span class="card-title">{下载内容}</span>
+            <p>ไฟล์ของคุณพร้อมสำหรับการดาวน์โหลดแล้ว กดปุ่มด้านล่างเพื่อเริ่มดาวน์โหลด</p>
+          </div>
+          <div class="card-action center">
+            <a class="waves-effect waves-light btn white" href="{下载链接}" target="_self"><i class="fa fas-angle-down"></i> ดาวน์โหลดไฟล์</a>
+          </div>
+        </div>
+        <p class="center" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+          <a href="{首页}" target="_self" class="trn">หน้าหลัก</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Load Global Footer -->
+{header:footer.global.html}

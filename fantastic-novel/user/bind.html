@@ -1,0 +1,97 @@
+{header:header/page.html}
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+{header:global.body.html}
+{header:novel/nav.html}
+<section id="page">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>การผูกบัญชี</h5>
+        </div>
+        <div class="col s12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <a class="chip" href="{用户中心}"><i class="fa far-home"></i> <span class="trn">พื้นที่ส่วนตัว</span></a>
+          <a class="chip" href="{基本资料}"><i class="fa far-user-gear"></i> <span class="trn">ข้อมูลทั่วไป</span></a>
+          <a class="chip" href="{头像设置}"><i class="fa far-user-gear"></i> <span class="trn">รูปประจำตัว</span></a>
+          <a class="chip" href="{我的书架}"><i class="fa far-books"></i> <span class="trn">ชั้นหนังสือ</span></a>
+          <a class="chip" href="{消息列表}"><i class="fa far-envelope"></i> <span class="trn">ข้อความ</span></a>
+          <a class="chip" href="{签到中心}"><i class="fa far-calendar-check"></i> <span class="trn">เช็คชื่อ</span></a>
+          <a class="chip" href="{退出登录}"><i class="fa far-arrow-right-from-bracket"></i> <span class="trn">ออกจากระบบ</span></a>
+        </div>
+      </div>
+      <div class="col s12 l6">
+        <div class="card z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <div class="card-content">
+            <span class="card-title">การยืนยันความปลอดภัย</span>
+            <ul class="collection">
+              <li class="collection-item">
+                <strong>อีเมล</strong>
+                {邮箱已验证}<span class="right"><b>{用户邮箱}</b></span>{/邮箱已验证}
+                {邮箱未验证}<a class="right" href="{基本资料}">ผูกทันที</a>{/邮箱未验证}
+              </li>
+              <li class="collection-item">
+                <strong>มือถือ</strong>
+                {手机已验证}<span class="right"><b>{用户手机}</b></span>{/手机已验证}
+                {手机未验证}<a class="right" href="{基本资料}">ผูกทันที</a>{/手机未验证}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 l6">
+        <div class="card z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <div class="card-content">
+            <span class="card-title">วิธีเข้าสู่ระบบอื่น</span>
+            <ul class="collection">
+              {qq登录开启}
+              <li class="collection-item">
+                <strong>QQ</strong>
+                {qq登录已绑定}<a class="right red-text" href="{qq登录取消绑定}">ยกเลิกการผูก</a>{/qq登录已绑定}
+                {qq登录未绑定}<a class="right" href="{qq登录}">ผูกบัญชี QQ</a>{/qq登录未绑定}
+              </li>
+              {/qq登录开启}
+              {微信登录开启}
+              <li class="collection-item">
+                <strong>WeChat</strong>
+                {微信登录已绑定}<a class="right red-text" href="{微信登录取消绑定}">ยกเลิกการผูก</a>{/微信登录已绑定}
+                {微信登录未绑定}<a class="right" href="{微信登录}">ผูกบัญชี WeChat</a>{/微信登录未绑定}
+              </li>
+              {/微信登录开启}
+              {微信公众号登录开启}
+              <li class="collection-item">
+                <strong>บัญชีทางการ WeChat</strong>
+                {微信公众号登录已绑定}<a class="right red-text" href="{微信公众号登录取消绑定}">ยกเลิกการผูก</a>{/微信公众号登录已绑定}
+                {微信公众号登录未绑定}<a class="right" href="{微信公众号登录}">ผูกบัญชีทางการ</a>{/微信公众号登录未绑定}
+              </li>
+              {/微信公众号登录开启}
+              {微博登录开启}
+              <li class="collection-item">
+                <strong>Weibo</strong>
+                {微博登录已绑定}<a class="right red-text" href="{微博登录取消绑定}">ยกเลิกการผูก</a>{/微博登录已绑定}
+                {微博登录未绑定}<a class="right" href="{微博登录}">ผูกบัญชี Weibo</a>{/微博登录未绑定}
+              </li>
+              {/微博登录开启}
+              {百度登录开启}
+              <li class="collection-item">
+                <strong>Baidu</strong>
+                {百度登录已绑定}<a class="right red-text" href="{百度登录取消绑定}">ยกเลิกการผูก</a>{/百度登录已绑定}
+                {百度登录未绑定}<a class="right" href="{百度登录}">ผูกบัญชี Baidu</a>{/百度登录未绑定}
+              </li>
+              {/百度登录开启}
+              {支付宝登录开启}
+              <li class="collection-item">
+                <strong>Alipay</strong>
+                {支付宝登录已绑定}<a class="right red-text" href="{支付宝登录取消绑定}">ยกเลิกการผูก</a>{/支付宝登录已绑定}
+                {支付宝登录未绑定}<a class="right" href="{支付宝登录}">ผูกบัญชี Alipay</a>{/支付宝登录未绑定}
+              </li>
+              {/支付宝登录开启}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{footer:footer.global.html}

@@ -1,84 +1,70 @@
-{header:user/inc_header.html}
-<script>
-$(document).ready(function(){
-	$("#nv").find("li a").eq("1").addClass("nvcur");
-});
-</script>
-<style>
-.space_notice .bm{padding: 0 4px;}
-.space_notice .nts{padding-left: 0px;}
-.space_notice .nts dl{border-bottom: 1px solid #f4f4f4;}
-.space_notice .nts dl:last-child{border-bottom: 2px solid #eee;}
-.space_notice .xlda .m{margin: 3px 15px 0 0;}
-.space_notice .ntc_body{margin: 17px 0 0 0;}
-.space_notice .quote{margin: 4px 0;}
-.space_notice .mbn{margin-bottom: 20px !important;}
-.xlda .m {margin-top: 3px;}
-.xld dt{padding-top: 5px;padding-bottom: 22px;}
-.emp{padding-bottom: 60px;}
-.emp span{background: url({templates}/user/static/home_imghack.png) -58px -37px no-repeat transparent;height: 40px;width: 40px;display: inline-block;position: relative;top: 14px;margin-right: 12px;}
-
-table {width: 100%;}
-table thead {background-color: #f9f9f9;}
-table td,table th {border: 1px solid #ccc;vertical-align: top;padding: 2px 4px;text-align: left;line-height:30px}
-</style>
-
-<div id="ct" class="ct2 wp cl">
-	<div class="mn">
-		<div class="bm">
-			<div class="bm_h">
-				<h1 class="mt" style="margin-right: 20px;float:left;width:50px;height:35px;"><a href="{我的书架}">รายการชั้นหนังสือ</a></h1>
-				<h1 class="mt" style="width:50px;border-bottom: 2px #ff5f19 solid;height: 36px;margin-left: 70px;"><a href="{阅读记录}">อ่านล่าสุด</a></h1>
-			</div>
-			<div class="bm_c">
-				<div class="bm_c u_profile">
-				    <div class="pbm mbm bbda cl" style="position: relative;">
-						<div style="clear: both"></div>
-						<div id="pbbs" class="pf_l">
-						{文章浏览记录:}test{/文章浏览记录}
-						<table>
-							<colgroup><col width="20%"><col width="10%"><col width="10%"><col width="25%"><col width="15%"></colgroup>
-							<thead>
-								<tr>
-									<th>ชื่อ</th>
-									<th>ผู้แปล</th>
-									<th>หมวดหมู่</th>
-									<th>อ่านล่าสุด</th>
-									<th>อ่านเมื่อ</th>
-								</tr>
-							</thead>
-							<tbody>
-								{记录列表:数量=50}
-								{无数据}<tr><td colspan="5" style="text-align:center">ไม่มีข้อมูลใด ๆ</td></tr>{/无数据}
-								<tr>
-									<td><a href="{nurl}" target="_blank">{小说名字}</a></td>
-									<td>{小说作者}</td>
-									<td>{小说分类名字}</td>
-									<td><a href="{url}" target="_blank">{阅读标题}</a></td>
-									<td>{阅读时间}</td>
-								</tr>
-							{/记录列表}
-							</tbody>
-						</table>
-
-						<table>
-						</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="sd">
-		<div id="pcd" class="bm cl">
-			<div class="bm_c">
-				<div class="hm">
-					<p><a href="{头像设置}" class="avtm"><img src="{用户头像}"></a></p>
-					<h2 class="xs2">{用户昵称}</h2>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-{footer:user/inc_footer.html}
+{header:header/page.html}
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+{header:global.body.html}
+{header:novel/nav.html}
+<section id="page">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12 l3 left" id="user_side">
+        <div class="card z-depth-3 center" data-aos="fade-up">
+          <div class="card-content">
+            <a href="{头像设置}"><img class="circle z-depth-1" src="{用户头像}" alt="{用户昵称}" style="width:110px;height:110px;object-fit:cover;"></a>
+            <h5 style="margin-top:15px;">{用户昵称}</h5>
+            <p class="grey-text">ID: {用户id}</p>
+          </div>
+        </div>
+        <div class="collection z-depth-3" data-aos="fade-up">
+          <a class="collection-item active" href="{用户中心}"><i class="far fa-home"></i> <span class="trn">ศูนย์ผู้ใช้</span></a>
+          <a class="collection-item" href="{基本资料}"><i class="far fa-users-cog"></i> <span class="trn">ข้อมูลทั่วไป</span></a>
+          <a class="collection-item" href="{充值}"><i class="far fa-books"></i> เติมเงิน</a>
+          <a class="collection-item" href="{消息列表}"><i class="far fa-envelope"></i> <span class="trn">ข้อความ</span></a>
+          <a class="collection-item" href="{签到中心}"><i class="far fa-calendar-check"></i> <span class="trn">เช็คชื่อ</span></a>
+          <a class="collection-item" href="{退出登录}"><i class="far fa-sign-out"></i> <span class="trn">ออกจากระบบ</span></a>
+        </div>
+      </div>
+      <div class="col s12 l9 right" id="user_content">
+        <div class="text_block z-depth-3" data-aos="fade-up">
+          <h5><i class="far fa-books"></i> ประวัติการอ่าน</h5>
+        </div>
+        <div class="card z-depth-3" data-aos="fade-up">
+          <div class="card-content">
+            <p>
+              <a class="btn-flat waves-effect" href="{我的书架}"><span class="trn">ชั้นหนังสือ</span></a>
+              <a class="btn waves-effect waves-light" href="{阅读记录}">อ่านล่าสุด</a>
+            </p>
+            <div class="row">
+              <div class="col s12">
+                <table class="striped responsive-table">
+                  <thead>
+                    <tr>
+                      <th>ชื่อ</th>
+                      <th>ผู้แปล</th>
+                      <th>หมวดหมู่</th>
+                      <th>อ่านล่าสุด</th>
+                      <th>อ่านเมื่อ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {记录列表:数量=50}
+                    {无数据}<tr><td colspan="5" class="center grey-text">ยังไม่มีข้อมูลในขณะนี้</td></tr>{/无数据}
+                    <tr>
+                      <td><a href="{nurl}" target="_blank">{小说名字}</a></td>
+                      <td>{小说作者}</td>
+                      <td>{小说分类名字}</td>
+                      <td><a href="{url}" target="_blank">{阅读标题}</a></td>
+                      <td>{最后阅读时间}</td>
+                    </tr>
+                    {/记录列表}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{header:footer.global.html}

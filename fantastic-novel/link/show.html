@@ -1,0 +1,67 @@
+<!-- Load Header -->
+{header:header/page.html}
+<!-- Load Functions Script -->
+{header:header/main.js.html}
+<!-- Load Functions CSS -->
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+<!-- Load Global body -->
+{header:global.body.html}
+<!-- Load Global Nav -->
+{header:novel/nav.html}
+<section id="link_show">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12 l9" id="content">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>{名字}</h5>
+        </div>
+        <div class="card z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <div class="card-content">
+            <span class="card-title">{名字}</span>
+            <p>{简介}</p>
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn white" href="{立即访问}" target="_blank" rel="nofollow noopener"><i class="fa far-arrow-up-right-from-square"></i> เยี่ยมชมเว็บไซต์</a>
+            <a class="waves-effect waves-light btn-flat" href="{分类链接}" target="_self"><i class="fa fas-table-cells-large"></i> ดูหมวดหมู่</a>
+          </div>
+        </div>
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>ข้อมูลลิงก์ <i class="fa fas-tags"></i></h5>
+        </div>
+        <ul class="collection z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <li class="collection-item">รหัสลิงก์<span class="right">{id}</span></li>
+          <li class="collection-item">หมวดหมู่<span class="right"><a href="{分类链接}" target="_self">{分类名字}</a></span></li>
+          <li class="collection-item">วันที่เพิ่มลิงก์<span class="right">{加入时间}</span></li>
+          <li class="collection-item">คลิกเข้าเว็บไซต์<span class="right">{总点入}</span></li>
+          <li class="collection-item">คลิกออกจากเว็บไซต์<span class="right">{总点出}</span></li>
+          <li class="collection-item">คะแนนโหวต<span class="right">{顶} / {踩}</span></li>
+          <li class="collection-item">ติดต่อ QQ<span class="right">{qq}</span></li>
+        </ul>
+        <div class="col s12 prev_next" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          {有上一内容}<a class="left hvr-underline-from-left" href="{preurl}" target="_self"><i class="fa far-angle-right fa-left"></i> {上一内容}</a>{/有上一内容}
+          {有下一内容}<a class="right hvr-underline-from-left" href="{nexturl}" target="_self">{下一内容} <i class="fa far-angle-right fa-right"></i></a>{/有下一内容}
+        </div>
+      </div>
+      <div class="col s12 l3" id="sidebar">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5 class="trn">ลิ้งก์เพื่อนบ้าน</h5>
+        </div>
+        <div class="row">
+          {同标签友链:数量=6}
+          <div class="col s12 m6 l12" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+            <div class="card z-depth-3 link_card">
+              <div class="card-content">
+                <span class="card-title"><i class="fa fal-link"></i> <a href="{url}" target="_blank" rel="nofollow noopener" title="{友链名字}">{友链名字}</a></span>
+                <p>{友链简介:40}</p>
+              </div>
+            </div>
+          </div>
+          {/同标签友链}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Load Global Footer -->
+{header:footer.global.html}

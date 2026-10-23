@@ -1,0 +1,88 @@
+<!-- Load Header -->
+{header:header/page.html}
+<!-- Load Functions Script -->
+{header:header/main.js.html}
+<!-- Load Functions CSS -->
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+<!-- Load Global body -->
+{header:global.body.html}
+<!-- Load Global Nav -->
+{header:novel/nav.html}
+<section id="app_search">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12" id="app_breadcrumb">
+        <div class="app_breadcrumb">
+          <a href="{应用首页}" target="_self">หน้าแรกแอปพลิเคชัน</a>
+          <span>/</span>
+          <a href="{全部应用}" target="_self">แอปทั้งหมด</a>
+          <span>/</span>
+          <span>ค้นหาแอป</span>
+        </div>
+      </div>
+      <div class="col s12 l8 left" id="app_search_result">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>ผลการค้นหาแอป : {搜索词} <i class="fa fas-table-cells-large"></i></h5>
+        </div>
+        <div class="row">
+          {搜索结果:数量=10}
+          {无数据}<div class="col s12 no_more_work center">ไม่พบแอปที่ตรงกับคำค้นนี้</div>{/无数据}
+          <div class="col s12 m6" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+            <div class="card z-depth-3">
+              <div class="card-content">
+                <span class="card-title">
+                  <img class="lazy circle responsive-img" src="{templates}/static/image/android-icon-192x192.png" data-src="{应用图标}" alt="{应用名字}">
+                  <a href="{url}" target="_self" title="{应用名字}">{应用名字}</a>
+                </span>
+                <p>{应用简介:100}</p>
+                <p class="app_meta">เวอร์ชัน {应用版本} | {应用大小} | <span class="trn">คะแนน</span> {应用评分}</p>
+              </div>
+              <div class="card-action">
+                <span>{应用分类名字}</span>
+                <a class="right" href="{url}" target="_self" title="{应用名字}">รายละเอียด <i class="fa far-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          {/搜索结果}
+        </div>
+      </div>
+      <div class="col s12 l4" id="app_search_sidebar">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>ค้นหาแอป <i class="fa fas-bars"></i></h5>
+        </div>
+        <div class="card z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <form class="col s12" action="{搜索提交地址}" method="post">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="app_search_key" name="key" type="text" value="{搜索词}" required>
+                <label for="app_search_key" class="active">คำค้น</label>
+              </div>
+              <div class="input-field col s12">
+                <select id="app_search_type" name="type" class="browser-default">
+                  <option value="0">ทั้งหมด</option>
+                  <option value="1">ชื่อแอป</option>
+                  <option value="2">ชื่อผู้พัฒนา</option>
+                  <option value="3">แท็ก</option>
+                </select>
+                <label for="app_search_type" class="active">ขอบเขตการค้นหา</label>
+              </div>
+              <input type="hidden" name="module" value="app">
+              <div class="input-field col s12 center">
+                <button class="waves-effect waves-light btn white" type="submit"><i class="fa fas-bars"></i> ค้นหา</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5 class="trn">หมวดหมู่</h5>
+        </div>
+        <div class="tag_item" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          {应用分类:数量=30;排序=分类排序}<a href="{url}" class="tag_color_{i}" target="_self" title="{应用分类名字}">{应用分类名字}</a>{/应用分类}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Load Global Footer -->
+{footer:footer.global.html}

@@ -2,26 +2,15 @@
   <div class="navbar-fixed">
     <nav data-aos="fade-down" data-aos-duration="500">
       <a href="javascript:void(0);" data-target="nav_main" class="sidenav-trigger left"><i class="fa fas-bars"></i></a>
-      {已登录}<a href="javascript:void(0);" data-target="nav_user_login" id="m_login" class="sidenav-trigger right"><img class="circle"
-          id="user_icon" src="{用户头像}" /></a>{/已登录}
-      {未登录}<a href="javascript:void(0);" data-target="nav_user_logout" id="m_logout" class="sidenav-trigger right"><img class="circle"
-          id="user_icon" src="{用户头像}" /></a>{/未登录}
+      <a href="javascript:void(0);" data-target="nav_user" class="sidenav-trigger right" title="บัญชีของฉัน"><i class="fa far-user fa-2x"></i></a>
       <div class="nav-wrapper">
-        <a href="{首页}" target="_self" title="{网站名}" class="brand-logo hvr-underline-from-left"><span class="trn">นายน้อย</span></a>
+        <a href="{首页}" target="_self" title="{网站名}" class="brand-logo hvr-underline-from-left"><span>{网站名}</span></a>
         <ul id="nav-mobile" class="left hide-on-med-and-down nav_main">
           <li><a class="hvr-underline-from-left trn" href="{首页}" target="_self">หน้าหลัก</a></li>
-          <li><a href="{文章首页}" class="hrv-underline-from-left trn" target="_self">ข่าวสาร</a></li>
-          <li><a href="https://nay-noi.host/module/bbs/" class="hrv-underline-from-left trn" target="_self">เว็บบอร์ด</a></li>
-          <li><a class="hvr-underline-from-left trn" href="{全部小说}" target="_self">เรื่องทั้งหมด</a></li>
-          <!-- Dropdown trigger -->
-          <li><a href="javascript:void(0);" class="dropdown-trigger hvr-underline-from-left" data-target="drop_types"><span
-                class="trn">หมวดหมู่</span><i class="fa fal-angle-down fa-right"></i></a></li>
-          <!-- Dropdown Structure -->
-          <ul class="dropdown-content" id="drop_types">
-            {小说分类:数量=15;排序=分类排序}<li><a class="hvr-underline-from-left trn" href="{url}" class="trn" target="_self" title="{小说分类名字}">{小说分类名字}</a></li>
-            {/小说分类}
-          </ul>
-          <li><a class="hvr-underline-from-left trn" href="{小说排行首页}" target="_self">อันดับ</a></li>
+          <li><a href="/module/article/index.php" class="hrv-underline-from-left trn" target="_self">ข่าวสาร</a></li>
+          <li><a href="/module/bbs/" class="hrv-underline-from-left trn" target="_self">เว็บบอร์ด</a></li>
+          <li><a class="hvr-underline-from-left trn" href="{url:module;novel_type;tpinyin=all&tid=0&page=1}" target="_self">เรื่องทั้งหมด</a></li>
+          <li><a class="hvr-underline-from-left trn" href="{url:module;novel_topindex;}" target="_self">อันดับ</a></li>
           <!-- Dropdown trigger -->
           <li><a href="javascript:void(0);" class="dropdown-trigger hvr-underline-from-left" data-target="drop_about"><span
                 class="trn">เกี่ยวกับ</span><i class="fa fal-angle-down fa-right"></i></a></li>
@@ -36,7 +25,7 @@
             <li><a class="hvr-underline-from-left trn" href="#" target="_self" title="เกี่ยวกับ">เกี่ยวกับ</a></li>
           </ul>
           <li><a class="hvr-underline-from-left trn"
-              href="https://drive.google.com/open?id=1iQk9ytDucc7SmwK2pvPD77HDtIaYmCpa"
+              href="{作者中心}"
               target="_blank">ลงนิยาย</a></li>
         </ul>
         <ul id="nav-mobile nav_second" class="right hide-on-med-and-down">
@@ -58,37 +47,25 @@
             <a href="#settings" class="waves-effect waves-light modal-trigger hvr-underline-from-left"><i class="fa fas-gear"></i></a>
           </li>
           <li class="right">
-            {已登录}<a href="javascript:void(0);" class="dropdown-trigger hvr-underline-from-left" id="pc_login"
-              data-target="drop_login"><img class="circle" id="user_icon" src="{用户头像}" /></a>
+            <a href="javascript:void(0);" class="dropdown-trigger hvr-underline-from-left" id="pc_login"
+              data-target="drop_login" title="บัญชีของฉัน"><i class="fa far-user fa-2x"></i></a>
             <ul id="drop_login" class="dropdown-content">
-              <li><a href="javascript:void(0);" class="subheader center trn">ศูนย์ผู้ใช้</a></li>
               <li><a href="{用户中心}" target="_self" class="hvr-underline-from-left"><i class="fa far-home"></i><span
                     class="trn">พื้นที่ส่วนตัว</span></a></li>
-              <li><a href="{头像设置}" target="_self" class="hvr-underline-from-left"><i class="fa far-user-gear"></i><span
-                    class="trn">รูปประจำตัว</span></a></li>
               <li><a href="{消息列表}" target="_self" class="hvr-underline-from-left"><i class="fa far-envelope"></i><span
                     class="trn">ข้อความ</span></a></li>
-              <li><a href="{我的书架}" target="_self" class="hvr-underline-from-left"><i class="fa far-books"></i><span
-                    class="trn">ชั้นหนังสือ</span></a></a></li>
-              <li><a href="{我的收藏}" target="_self" class="hvr-underline-from-left"><i class="fa far-heart"></i><span
-                    class="trn">เรื่องที่ชอบ</span></a></li>
               <li><a href="{签到中心}" target="_self" class="hvr-underline-from-left"><i class="fa far-calendar-check"></i><span
                     class="trn">เช็คชื่อ</span></a></li>
+              <li class="divider"></li>
+              <li><a href="{登录}" target="_self" class="hvr-underline-from-left"><i class="fa far-arrow-right-to-bracket"></i><span
+                    class="trn">เข้าสู่ระบบ</span></a></li>
+              <li><a href="{注册}" target="_self" class="hvr-underline-from-left"><i class="fa far-user-plus"></i><span
+                    class="trn">ลงทะเบียน</span></a></li>
+              <li><a href="{找回密码}" target="_self" class="hvr-underline-from-left"><i class="fa far-lock"></i><span
+                    class="trn">กู้คืนรหัสผ่าน</span></a></li>
               <li><a href="{退出登录}" target="_self" class="hvr-underline-from-left"><i class="fa far-arrow-right-from-bracket"></i><span
                     class="trn">ออกจากระบบ</span></a></li>
-              <li><a href="javascript:void(0);" class="subheader center trn">ศูนย์นักเขียน</a></li>
-              <li><a href="/module/author/novel_novellist.php?page=1" target="_self" class="hvr-underline-from-left"><i class="fa far-pen-to-square"></i><span
-                    class="trn">จัดการนิยาย</span></a></li>
-              <li><a href="/module/author/article_articlelist.php?page=1" target="_self" class="hvr-underline-from-left"><i class="fa far-pen-to-square"></i><span
-                    class="trn">จัดการบทความ</span></a></li>
-            </ul>{/已登录}
-            {未登录}<a href="javascript:void(0);" class="dropdown-trigger hvr-underline-from-left" id="pc_logout"
-              data-target="drop_logout"><img class="circle" id="user_icon" src="{用户头像}" /></a>
-            <ul id="drop_logout" class="dropdown-content">
-              <li><a href="{登录}" target="_self" class="hvr-underline-from-left modal-trigger" title="เข้าสู่ระบบ"><i class="fa far-arrow-right-to-bracket"></i><span class="trn">เข้าสู่ระบบ</span></a></li>
-              <li><a href="#terms" class="modal-trigger hvr-underline-from-left" title="ลงทะเบียน"><i class="fa far-user-plus"></i><span class="trn">ลงทะเบียน</span></a></li>
-              <li><a href="{找回密码}" target="_self" class="hvr-underline-from-left" title="กู้คืนรหัสผ่าน"><i class="fa far-lock"></i><span class="trn">กู้คืนรหัสผ่าน</span></a></li>
-            </ul>{/未登录}
+            </ul>
           </li>
         </ul>
       </div>
@@ -97,20 +74,8 @@
   <!-- Main Sidenav -->
   <ul id="nav_main" class="sidenav nav_left">
     <li><a href="{首页}" target="_self"><i class="fa far-home"></i><span class="trn">หน้าหลัก</span></a></li>
-    <li><a href="{全部小说}" target="_self"><i class="fa fas-book"></i><span class="trn">เรื่องทั้งหมด</span></a></li>
-    <li class="no-padding">
-      <ul class="collapsible collapsible-accordion">
-        <li>
-          <a href="javascript:void(0);" class="collapsible-header"><i class="fa fas-table-cells-large"></i><span class="trn">หมวดหมู่</span><i class="fa fal-angle-down fa-right"></i></a>
-          <div class="collapsible-body">
-            <ul>
-              {小说分类:数量=15;排序=分类排序}<li><a href="{url}" target="_self" title="{小说分类名字}"><i class="fa fal-angle-right fa-right"></i><span class="trn">{小说分类名字}</span></a></li>{/小说分类}
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </li>
-    <li><a href="{小说排行首页}" target="_self"><i class="fa fas-star"></i><span class="trn">อันดับ</span></a></li>
+    <li><a href="{url:module;novel_type;tpinyin=all&tid=0&page=1}" target="_self"><i class="fa fas-book"></i><span class="trn">เรื่องทั้งหมด</span></a></li>
+    <li><a href="{url:module;novel_topindex;}" target="_self"><i class="fa fas-star"></i><span class="trn">อันดับ</span></a></li>
     <li class="no-padding">
       <ul class="collapsible collapsible-accordion">
         <li>
@@ -129,76 +94,12 @@
         </li>
       </ul>
     </li>
-    <li><a href="https://drive.google.com/open?id=1iQk9ytDucc7SmwK2pvPD77HDtIaYmCpa" target="_blank"><i class="fa far-arrow-up-right-from-square"></i><span class="trn">ลงนิยาย</span></a></li>
+    <li><a href="{作者中心}" target="_self"><i class="fa far-arrow-up-right-from-square"></i><span class="trn">ลงนิยาย</span></a></li>
   </ul>
-  {已登录}<ul id="nav_user_login" class="sidenav nav_right">
-    <li>
-      <div>
-        <img class="circle" src="{用户头像}" id="nav-profile" alt="{作者}">
-        <dl class="nav_detail">
-          <dt>{用户昵称}</dt>
-          <dt><span class="trn">ระดับ</span> : {用户等级}</dt>
-          <dt><span class="trn">ประสบการณ์</span> : {用户经验} / {下级经验}</dt>
-        </dl>
-      </div>
-    </li>
-    <li>
-      <div class="divider"></div>
-    </li>
-    <li><a href="javascript:void(0);" class="subheader center trn">ตั้งค่า</a></li>
-    <li>
-      <div class="divider"></div>
-    </li>
-    <li><center>
-      <div class="switch">
-        <i class="fa far-sun"></i>
-        <label>
-        <input type="checkbox" id="switch">
-        <span class="lever"></span>
-        </label>
-        <i class="fa far-moon"></i>
-      </div>
-      <div class="switch">
-        <i class="fa fas-stop"></i>
-        <label>
-        <input type="checkbox" id="swap">
-        <span class="lever"></span>
-        </label>
-        <i class="fa fas-play"></i>
-      </div>
-      <li id="langs">
-        <a data-value="th" class="lang" id="th"><span class="flag-icon flag-icon-th"></span></a>
-        <a data-value="en" class="lang" id="en"><span class="flag-icon flag-icon-um"></span></a>
-      </li></center>
-    </li>
-    <li>
-      <div class="divider"></div>
-    </li>
-    <li><a href="javascript:void(0);" class="subheader center trn">ศูนย์ผู้ใช้</a></li>
-    <li>
-      <div class="divider"></div>
-    </li>
+  <ul id="nav_user" class="sidenav nav_right">
     <li><a href="{用户中心}" target="_self"><i class="fa far-home"></i><span class="trn">พื้นที่ส่วนตัว</span></a></li>
-    <li><a href="{头像设置}" target="_self"><i class="fa far-user-gear"></i><span class="trn">รูปประจำตัว</span></a></li>
     <li><a href="{消息列表}" target="_self"><i class="fa far-envelope"></i><span class="trn">ข้อความ</span></a></li>
-    <li><a href="{我的书架}" target="_self"><i class="fa far-books"></i><span class="trn">ชั้นหนังสือ</span></a></li>
-    <li><a href="{我的收藏}" target="_self"><i class="fa far-heart"></i><span class="trn">เรื่องที่ชอบ</span></a></li>
     <li><a href="{签到中心}" target="_self"><i class="fa far-calendar-check"></i><span class="trn">เช็คชื่อ</span></a></li>
-    <li><a href="{退出登录}" target="_self"><i class="fa far-arrow-right-from-bracket"></i><span class="trn">ออกจากระบบ</span></a></li>
-    <li>
-      <div class="divider"></div>
-    </li>
-    <li><a href="javascript:void(0);" class="subheader center trn">ศูนย์นักเขียน</a></li>
-    <li>
-      <div class="divider"></div>
-    </li>
-    <li><a href="/module/author/novel_novellist.php?page=1" target="_self"><i class="fa far-pen-to-square"></i><span class="trn">จัดการนิยาย</span></a></li>
-    <li><a href="/module/author/article_articlelist.php?page=1" target="_self"><i class="fa far-pen-to-square"></i><span class="trn">จัดการบทความ</span></a></li>
-  </ul>{/已登录}
-  {未登录}<ul id="nav_user_logout" class="sidenav nav_right">
-    <li><a href="{登录}" target="_self" title="เข้าสู่ระบบ"><i class="fa far-arrow-right-to-bracket"></i><span class="trn">เข้าสู่ระบบ</span></a></li>
-    <li><a href="{注册}" class="modal-trigger" title="ลงทะเบียน"><i class="fa far-user-plus"></i><span class="trn">ลงทะเบียน</span></a></li>
-    <li><a href="{找回密码}" target="_self" title="กู้คืนรหัสผ่าน"><i class="fa far-lock"></i><span class="trn">กู้คืนรหัสผ่าน</span></a></li>
     <li>
       <div class="divider"></div>
     </li>
@@ -228,31 +129,41 @@
         <a data-value="en" class="lang" id="en"><span class="flag-icon flag-icon-um"></span></a>
       </li></center>
     </li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a href="{作者中心}" target="_self"><i class="fa far-pen-to-square"></i><span class="trn">ศูนย์นักเขียน</span></a></li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a href="{登录}" target="_self"><i class="fa far-arrow-right-to-bracket"></i><span class="trn">เข้าสู่ระบบ</span></a></li>
+    <li><a href="{注册}" target="_self"><i class="fa far-user-plus"></i><span class="trn">ลงทะเบียน</span></a></li>
+    <li><a href="{找回密码}" target="_self"><i class="fa far-lock"></i><span class="trn">กู้คืนรหัสผ่าน</span></a></li>
+    <li><a href="{退出登录}" target="_self"><i class="fa far-arrow-right-from-bracket"></i><span class="trn">ออกจากระบบ</span></a></li>
   </ul>
-  {/未登录}
   <!-- Terms Modal Structure -->
   <div id="terms" class="modal modal-fixed-footer">
     <div class="modal-header">
       <h5 class="center trn">ข้อตกลงการใช้งาน</h5>
     </div>
     <div class="modal-content">
-      <p class="agreement indent">เมื่อผู้ใช้ลงทะเบียนบนเว็บไซต์ NAY-NOI และแพลตฟอร์มออนไลน์นี้ (ซึ่งเรียกว่า
+      <p class="agreement indent">เมื่อผู้ใช้ลงทะเบียนบนเว็บไซต์ {网站名} และแพลตฟอร์มออนไลน์นี้ (ซึ่งเรียกว่า
         "เว็บไซต์") ผู้ที่ประสงค์จะลงทะเบียนเป็นสมาชิกจำเป็นต้องอ่านรายละเอียดและข้อตกลงต่อไปนี้อย่างรอบคอบ
         เมื่อลงทะเบียนเป็นสมาชิกบนเว็บไซต์ การเผยแพร่ผลงาน/ความคิดเห็น/ข้อความ/บทความ/ข้อมูลต่าง ๆ
         บนเว็บไซต์ของเราควรเป็นไปตามกฎในการใช้งาน ดำเนินการ และเผยแพร่ข้อมูลที่เกี่ยวข้องบนเว็บไซต์
-        หากคุณไม่ยอมรับข้อตกลงทั้งหมดของเรา คุณจะไม่ได้รับอนุญาตให้ลงทะเบียนเป็นสมาชิกบนเว็บไซต์ NAY-NOI ของเรา
-        สมาชิกที่จะลงทะเบียนบนเว็บไซต์ NAY-NOI
+        หากคุณไม่ยอมรับข้อตกลงทั้งหมดของเรา คุณจะไม่ได้รับอนุญาตให้ลงทะเบียนเป็นสมาชิกบนเว็บไซต์ {网站名} ของเรา
+        สมาชิกที่จะลงทะเบียนบนเว็บไซต์ {网站名}
         ของเราถือว่าได้อ่านและยอมรับข้อตกลงนี้ทั้งหมดแล้ว<br /><br /><strong>ข้อตกลงส่วนที่ 1
-          การลงทะเบียนเป็นสมาชิก</strong><br /><br />1. หลังจากลงทะเบียนเป็นสมาชิกบนเว็บไซต์ NAY-NOI ของเรา
+          การลงทะเบียนเป็นสมาชิก</strong><br /><br />1. หลังจากลงทะเบียนเป็นสมาชิกบนเว็บไซต์ {网站名} ของเรา
         คุณจำเป็นต้องเก็บรักษาชื่อผู้ใช้และรหัสผ่านของคุณ รวมทั้งรับผิดชอบต่อการดำเนินการและพฤติกรรมทั้งหมดในบัญชีของคุณ
-        ทาง NAY-NOI ขอแนะนำให้คุณเก็บรักษาชื่อผู้ใช้และรหัสผ่านไว้อย่างมิดชิด
+        ทาง {网站名} ขอแนะนำให้คุณเก็บรักษาชื่อผู้ใช้และรหัสผ่านไว้อย่างมิดชิด
         เมื่อเสร็จสิ้นการดำเนินการใด ๆ ควรออกจากระบบทันทีเพื่อความปลอดภัยของบัญชีของคุณ เนื่องจากหากดูแลรักษาได้ไม่ดีพอ
         จะส่งผลร้ายต่อบัญชีของคุณ ซึ่งอาจจะเกิดการโจรกรรมหรือขโมยบัญชีและข้อมูลของคุณไปได้
         ซึ่งในกรณีนี้ทางเราไม่ขอรับผิดชอบใด ๆ ทั้งสิ้น<br /><br />2.
-        ทาง NAY-NOI ขอแนะนำให้คุณใช้อักขระอย่างน้อยสามรูปแบบในการตั้งรหัสผ่าน อาทิ ตัวพิมพ์ใหญ่ ตัวพิมพ์เล็ก ตัวเลข
+        ทาง {网站名} ขอแนะนำให้คุณใช้อักขระอย่างน้อยสามรูปแบบในการตั้งรหัสผ่าน อาทิ ตัวพิมพ์ใหญ่ ตัวพิมพ์เล็ก ตัวเลข
         และตัวอักษรพิเศษ หากคุณถูกแฮกหรือถูกขโมยบัญชีไป นั่นเป็นเพราะรหัสผ่านที่คุณตั้งไว้ง่ายจนเกินไป
         โปรดติดต่อผู้ดูแลระบบเพื่อดำเนินการแก้ไข<br /><br />3. การลงทะเบียนเป็นสมาชิกบนเว็บไซต์
-        NAY-NOI ของเรา
+        {网站名} ของเรา
         นั่นหมายความว่าคุณเห็นด้วยที่จะมอบสิทธิ์ในการเผยแพร่และโปรโมทงานของคุณบนเว็บไซต์และแพลตฟอร์มออนไลน์ที่เกี่ยวข้องภายใต้อำนาจการจัดการของเว็บไซต์ของเรา<br /><br />4.
         ชื่อผู้ใช้ การแนะนำตัว และข้อมูลอื่น ๆ จะต้องไม่ละเมิดกฎหมายของประเทศ
         รวมถึงจรรยาบรรณทางสังคมและข้อตกลงของเว็บไซต์
@@ -275,20 +186,20 @@
         ๆ<br /><br />หากพบเห็นสมาชิกละเมิดข้อตกลงข้างต้น
         ทางเว็บไซต์ขอสงวนสิทธิ์ในการนำบัญชีและเนื้อหาที่เกี่ยวข้องทั้งหมดของคุณออกจากระบบของเราโดยไม่แจ้งให้ทราบล่วงหน้า
         <br /><br /><strong>ข้อตกลงส่วนที่ 3 ขีดจำกัดความรับผิดชอบ</strong><br /><br />1.
-        หากมีผู้ไม่ประสงค์ดีส่งบทความ/ผลงาน/ความคิดเห็น/กระทู้ เข้ามาในระบบเว็บไซต์ NAY-NOI และทางระบบรับมันเข้ามา
+        หากมีผู้ไม่ประสงค์ดีส่งบทความ/ผลงาน/ความคิดเห็น/กระทู้ เข้ามาในระบบเว็บไซต์ {网站名} และทางระบบรับมันเข้ามา
         ทางเว็บไซต์ขอปฎิเสธความรับผิดชอบใด ๆ ที่เกิดความเสียหายจากบทความ/เนื้อหา/ความคิดเห็น/กระทู้นั้น ๆ
         และทางเราให้สัญญาว่าจะนำบทความ/ผลงาน/ความคิดเห็น/กระทู้ที่เกิดปัญหานั้น
-        ๆ ออกจากระบบในทันทีที่ทราบโดยไม่แจ้งให้ทราบล่วงหน้า<br /><br />2. ในกรณีที่ผู้ใช้บนเว็บไซต์ NAY-NOI
-        ละเมิดผลงาน ทำซ้ำโดยไม่ได้รับอนุญาตลงในเว็บไซต์ NAY-NOI ทางเว็บไซต์ขอปฎิเสธความรับผิดชอบใด ๆ
+        ๆ ออกจากระบบในทันทีที่ทราบโดยไม่แจ้งให้ทราบล่วงหน้า<br /><br />2. ในกรณีที่ผู้ใช้บนเว็บไซต์ {网站名}
+        ละเมิดผลงาน ทำซ้ำโดยไม่ได้รับอนุญาตลงในเว็บไซต์ {网站名} ทางเว็บไซต์ขอปฎิเสธความรับผิดชอบใด ๆ
         ที่เกิดความเสียหายจากการกระทำนั้น ๆ และทางเราให้สัญญาว่าจะนำผลงานนั้น
         ๆ ออกจากระบบในทันทีที่ทราบโดยไม่แจ้งให้ทราบล่วงหน้า<br /><br />3. ข้อมูลจำพวกรีวิวหนังสือหรือวรรณกรรมต่าง ๆ
-        หากละเมิดข้อตกลงใด ๆ คุณสามารถแจ้งผู้ดูแลระบบเว็บไซต์ NAY-NOI เพื่อนำมันออกจากระบบได้<br /><br />4. เว็บไซต์
-        NAY-NOI ขอสงวนสิทธิ์ในการจำกัดความเสียหายที่เกิดจากพฤติกรรม
-        การดำเนินการ และกิจกรรมทั้งหมดบนเว็บไซต์ที่เกิดจากสมาชิกและตัวระบบ<br /><br />5. เว็บไซต์ NAY-NOI
+        หากละเมิดข้อตกลงใด ๆ คุณสามารถแจ้งผู้ดูแลระบบเว็บไซต์ {网站名} เพื่อนำมันออกจากระบบได้<br /><br />4. เว็บไซต์
+        {网站名} ขอสงวนสิทธิ์ในการจำกัดความเสียหายที่เกิดจากพฤติกรรม
+        การดำเนินการ และกิจกรรมทั้งหมดบนเว็บไซต์ที่เกิดจากสมาชิกและตัวระบบ<br /><br />5. เว็บไซต์ {网站名}
         ไม่สามารถรับประกันความปลอดภัยในผลงานต้นฉบับของคุณได้ โปรดรักษาผลงานของคุณด้วยตัวของคุณเอง<br /><br />6. เว็บไซต์
-        NAY-NOI
+        {网站名}
         ขอสงวนสิทธิ์ที่จะนำผลงานของคุณไปใช้ในการประชาสัมพันธ์โดยไม่แจ้งให้ทราบล่วงหน้า<br /><br />หากพบปัญหาใด
-        ๆ สามารถแจ้งผู้ดูแลระบบได้ที่<br />E-mail : admin@nay-noi.com<br />Facebook : naynoith</p><br /><br />
+        ๆ สามารถแจ้งผู้ดูแลระบบได้ที่<br />E-mail : {邮箱}<br />QQ : {qq}</p><br /><br />
     </div>
     <div class="modal-footer">
       <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat trn">ยกเลิก</a>

@@ -1,0 +1,100 @@
+{header:header/page.html}
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+{header:global.body.html}
+{header:novel/nav.html}
+<section id="page">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>เช็คอินประจำวัน</h5>
+        </div>
+        <div class="col s12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <a class="chip" href="{用户中心}"><i class="fa far-home"></i> <span class="trn">พื้นที่ส่วนตัว</span></a>
+          <a class="chip" href="{基本资料}"><i class="fa far-user-gear"></i> <span class="trn">ข้อมูลทั่วไป</span></a>
+          <a class="chip" href="{我的书架}"><i class="fa far-books"></i> <span class="trn">ชั้นหนังสือ</span></a>
+          <a class="chip" href="{消息列表}"><i class="fa far-envelope"></i> <span class="trn">ข้อความ</span></a>
+        </div>
+      </div>
+      <div class="col s12 l4">
+        <div class="card z-depth-3 center" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <div class="card-content">
+            <img class="circle responsive-img" src="{用户头像}" alt="{用户昵称}" style="width:100px;height:100px;">
+            <h5 class="card-title">{用户昵称}</h5>
+            <p>ระดับ : {用户等级}</p>
+            <p>ประสบการณ์ : {用户经验}</p>
+          </div>
+          <div class="card-action center">
+            {未签到}<a class="waves-effect waves-light btn" href="{签到}"><i class="fa far-calendar-check"></i> เช็คอิน</a>{/未签到}
+            {已签到}<span class="btn disabled"><i class="fa far-calendar-check"></i> เช็คอินแล้ว</span>{/已签到}
+          </div>
+        </div>
+      </div>
+      <div class="col s12 l8">
+        <div class="row">
+          <div class="col s12 m6">
+            <div class="card z-depth-3 center" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+              <div class="card-content">
+                <span class="card-title">เช็คอินต่อเนื่อง</span>
+                <h3>{连续签到天数}</h3>
+                <p><span class="trn">วัน</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6">
+            <div class="card z-depth-3 center" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+              <div class="card-content">
+                <span class="card-title">เช็คอินสะสม</span>
+                <h3>{总共签到天数}</h3>
+                <p><span class="trn">วัน</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12">
+            <div class="card z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+              <div class="card-content">
+                <p><strong>เวลาเช็คอินวันนี้ :</strong> {今日签到时间}</p>
+                <p><strong>อันดับวันนี้ :</strong> {今日签到排名}</p>
+                <p><strong>เวลาเช็คอินครั้งก่อน :</strong> {上次签到时间}</p>
+                <p><strong>อันดับครั้งก่อน :</strong> {上次签到排名}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>อันดับผู้เช็คอินวันนี้</h5>
+        </div>
+        <div class="card z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <div class="card-content">
+            <table class="highlight centered responsive-table">
+              <thead>
+                <tr>
+                  <th>อันดับ</th>
+                  <th>ผู้ใช้</th>
+                  <th>เวลา</th>
+                  <th>ต่อเนื่อง</th>
+                </tr>
+              </thead>
+              <tbody>
+                {签到列表:数量=10;排序=签到时间}
+                {无数据}<tr><td colspan="4">ยังไม่มีการเช็คอินวันนี้</td></tr>{/无数据}
+                <tr>
+                  <td>{i}</td>
+                  <td><a href="{url}" target="_self">{签到用户昵称}</a></td>
+                  <td>{用户签到时间}</td>
+                  <td>{用户连续签到} วัน</td>
+                </tr>
+                {/签到列表}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{footer:footer.global.html}

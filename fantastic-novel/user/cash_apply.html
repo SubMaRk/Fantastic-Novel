@@ -1,100 +1,67 @@
-{header:user/inc_header.html}
-<style>
-#pbbs,#psts .pf_l{overflow: hidden;border: solid #f4f4f4;border-width: 2px 2px 1px 1px;}
-#pbbs div,#psts .pf_l div{float: left;width: 357px;border-bottom: 1px solid #f4f4f4;}
-#pbbs span,#psts .pf_l span{padding: 11px 0 11px 10px;display: inline-block;color: #5a5a5a;}
-#pbbs .th,#psts .pf_l .th{width: 84px;border: solid #f4f4f4;border-width: 0 1px 0 1px; color: #acacac;}
-#psts{margin-top: 20px;}
-
-.textCenter{text-align: center;width: 100%;}
-.textCenter input{border: 1px solid #e0dfdf;border-radius: 5px;height:25px;width:150px}
-.textCenter button{cursor: pointer;background: #fd6440;width: 80px;border: 0px;border-radius: 5px;font-size: 14px;color: white;}
-</style>
-<div id="ct" class="ct2 wp cl">
-	<div class="mn">
-		<div class="bm">
-			<div class="bm_h">
-				<span class="xi2 y"><a href="{提现记录}" style="color:red">提现记录</a></span>
-				<h1 class="mt">在线提现申请</h1>
-			</div>
-			<div class="bm_c">
-				<div class="bm_c u_profile">
-				    <div class="pbm mbm bbda cl" style="position: relative;">
-						<div style="clear: both"></div>
-						<div id="pbbs" class="pf_l">
-							<div><span class="th">{金币2名字}</span><span>{用户金币2数量} {金币2单位}</span></div>
-							<div><span class="th">ค่าธรรมเนียมการถอน</span><span>{提现手续费} %</span></div>
-							<div><span class="th">คาดว่าจะได้</span><span>{可提现金额} 元</span></div>
-							<div><span class="th">อัตราแลกเปลี่ยน</span><span>1({金币2名字}) = {兑换余额比例}(余额)</span></div>
-							{关闭提现}
-							<div class="textCenter">
-								<span>ขออภัย! ฟังก์ชั่นเงินถูกปิดใช้งานอยู่</span>
-							</div>
-							{/关闭提现}
-							{开启提现}
-							<div class="textCenter" style="width: 100%;">
-								<span><input class="pt" type="text" id="money" autocomplete="off" placeholder="สกุลบาท ถอนได้ต่ำสุด {最低提现金额} บาท"> <button id="sub">ทันที</button>
-								&nbsp;&nbsp;เข้าบัญชีจริง <b style="color:red" id="real">0</b> บาท
-							</div>
-							{/开启提现}
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="sd">
-		<div id="pcd" class="bm cl">
-			<div class="bm_c">
-				<div class="hm">
-					<p><a href="{头像设置}" class="avtm"><img src="{用户头像}"></a></p>
-					<h2 class="xs2">{用户昵称}</h2>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<script type="text/javascript" src="/files/js/common.js"></script>
-<script>
-$(function(){
-	$("#money").keyup(function(){
-		if( $(this).val() > {可提现金额} ){
-			$(this).val({可提现金额});
-		}if( !isPositiveNum($(this).val()) ){
-			$(this).val('');
-			easydialog_autoclose("ขออภัย! โปรดกรอกจำนวนเต็มบวก");
-		}
-		$("#real").html(Math.floor($(this).val()*((100-{提现手续费})/100)*100)/100);
-    });
-	$("#sub").click(function(){
-		var money = $("#money").val();
-		if(money < {最低提现金额}){
-			easydialog_autoclose("ขออภัย! ถอนได้ต่ำสุด {最低提现金额} บาท");
-		}if( !isPositiveNum(money) ){
-			$("#money").val('');
-			easydialog_autoclose("ขออภัย! โปรดกรอกจำนวนเต็มบวก");
-		}else if(money > {可提现金额}){
-			easydialog_autoclose("ขออภัย! จำนวนเงินที่กรอกต้องไม่เกินยอดคงเหลือในบัญชี");
-		}else if({是否开启提现} == 0 ){
-			easydialog_autoclose("ขออภัย! ฟังก์ชั่นเงินถูกปิดใช้งานอยู่");
-		}else{
-			//提现操作
-			$.ajax({
-				type:"POST",
-				url:"{url:action;finance.cash_apply&ajax=yes}",
-				data:{'money':money},
-				dataType:"json",
-				success:function(data){
-					if(data.code==200){
-						easydialog_autoclose(data.msg,'success',2000);
-						setTimeout(function(){window.parent.location.reload();},2000);
-					}else{
-						easydialog_autoclose(data.msg,'',2000);
-					}
-				}
-			});
-		}
-	})
-})
-</script>
-{footer:user/inc_footer.html}
+{header:header/page.html}
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+{header:global.body.html}
+{header:novel/nav.html}
+<section id="page">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12 l3 left" id="user_side">
+        <div class="card z-depth-3 center" data-aos="fade-up">
+          <div class="card-content">
+            <a href="{头像设置}"><img class="circle z-depth-1" src="{用户头像}" alt="{用户昵称}" style="width:110px;height:110px;object-fit:cover;"></a>
+            <h5 style="margin-top:15px;">{用户昵称}</h5>
+            <p class="grey-text">ID: {用户id}</p>
+          </div>
+        </div>
+        <div class="collection z-depth-3" data-aos="fade-up">
+          <a class="collection-item" href="{用户中心}"><i class="far fa-home"></i> <span class="trn">ศูนย์ผู้ใช้</span></a>
+          <a class="collection-item" href="{基本资料}"><i class="far fa-users-cog"></i> <span class="trn">ข้อมูลทั่วไป</span></a>
+          <a class="collection-item active" href="{充值}"><i class="far fa-books"></i> เติมเงิน</a>
+          <a class="collection-item" href="{消息列表}"><i class="far fa-envelope"></i> <span class="trn">ข้อความ</span></a>
+          <a class="collection-item" href="{签到中心}"><i class="far fa-calendar-check"></i> <span class="trn">เช็คชื่อ</span></a>
+          <a class="collection-item" href="{退出登录}"><i class="far fa-sign-out"></i> <span class="trn">ออกจากระบบ</span></a>
+        </div>
+      </div>
+      <div class="col s12 l9 right" id="user_content">
+        <div class="text_block z-depth-3" data-aos="fade-up">
+          <h5>คำขอถอนเงินออนไลน์</h5>
+        </div>
+        <div class="card z-depth-3" data-aos="fade-up">
+          <div class="card-content">
+            <div class="right"><a class="btn-flat waves-effect" href="{提现记录}">ประวัติการถอนเงิน</a></div>
+            <div style="clear:both;"></div>
+            <table class="striped">
+              <tbody>
+                <tr><th>ยอดคงเหลือในบัญชี</th><td>{用户余额}</td></tr>
+                <tr><th>ค่าธรรมเนียมการถอนเงิน</th><td>{提现手续费} %</td></tr>
+                {开启เมิ่งเป่า兑换余额}
+                <tr><th>{金币2名字}</th><td>{用户金币2数量} {金币2单位}</td></tr>
+                <tr><th>อัตราแลกเปลี่ยน</th><td>1({金币2名字}) : {兑换余额比例} (ยอดคงเหลือประมาณ {เมิ่งเป่า兑换余额数量})</td></tr>
+                {/开启เมิ่งเป่า兑换余额}
+                <tr><th>ยอดที่คาดว่าจะถอนได้</th><td>{可提现金额} บาท</td></tr>
+              </tbody>
+            </table>
+            {关闭提现}
+            <p class="center grey-text">ขออภัย ฟีเจอร์ถอนเงินปิดใช้งานแล้ว</p>
+            {/关闭提现}
+            {开启提现}
+            <div class="row" style="margin-top:25px;">
+              <div class="input-field col s12 m6">
+                <input type="text" id="money" autocomplete="off" placeholder="หน่วยเป็นบาท ถอนขั้นต่ำ {最低提现金额} บาท">
+                <label for="money" class="active">จำนวนเงินที่ต้องการถอน</label>
+              </div>
+              <div class="col s12 m6" style="padding-top:20px;">
+                <button id="sub" type="button" class="btn waves-effect waves-light">ถอนเงินทันที</button>
+                <span class="grey-text">ยอดเข้าบัญชีจริง <b style="color:red" id="real">0</b> บาท</span>
+              </div>
+            </div>
+            {/开启提现}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{header:footer.global.html}

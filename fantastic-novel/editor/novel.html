@@ -1,0 +1,60 @@
+{header:header/page.html}
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+{header:global.body.html}
+{header:novel/nav.html}
+<section id="page">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>ตรวจสอบนิยาย</h5>
+        </div>
+        <div class="col s12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <a class="chip" href="{编辑小说审核}"><span class="trn">ทั้งหมด</span></a>
+          <a class="chip {cur:status=0}teal white-text{/cur}" href="{待审核新书}">รอตรวจสอบ</a>
+          <a class="chip {cur:status=1}teal white-text{/cur}" href="{已审核新书}">ตรวจสอบแล้ว</a>
+          <a class="chip {cur:status=2}teal white-text{/cur}" href="{未通过新书}">ไม่ผ่าน</a>
+        </div>
+      </div>
+      {编辑小说列表:数量=15;排序=申请排序}
+      {无数据}
+      <div class="col s12" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+        <div class="card z-depth-3">
+          <div class="card-content center">
+            <p>ยังไม่มีข้อมูลที่เกี่ยวข้อง</p>
+          </div>
+        </div>
+      </div>
+      {/无数据}
+      <div class="col s12 m6 l4" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+        <div class="card z-depth-3">
+          <div class="card-content">
+            <span class="card-title">{小说名字}</span>
+            <p><span class="chip">#{编辑小说申请id}</span></p>
+            <p><strong>สถานะ :</strong>
+              <span class="{cur:{编辑小说申请状态码}=0}red-text{/cur}{cur:{编辑小说申请状态码}=1}green-text{/cur}{cur:{编辑小说申请状态码}=2}grey-text{/cur}">{编辑小说申请状态}</span>
+            </p>
+            <p><strong>กลุ่มผู้แก้ไข :</strong> {编辑小说编辑组}</p>
+            <p><strong>ประเภทนิยาย :</strong> {小说分类名字}</p>
+            <p><strong>ผู้แต่ง :</strong> {小说作者}</p>
+            <p><strong>ยื่นคำขอ :</strong> {编辑小说申请时间}</p>
+            <p><strong>ดำเนินการ :</strong> {编辑小说处理时间}</p>
+          </div>
+          <div class="card-action">
+            <a href="{编辑小说url}" target="_self"><i class="fa far-eye"></i> ดูรายละเอียด</a>
+          </div>
+        </div>
+      </div>
+      {/编辑小说列表}
+      <div class="col s12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+        <p class="center">ทั้งหมด {总数据} รายการ | หน้า {当前页} / {总页数}</p>
+        <ul class="pagination center">
+          {跳页:3}<li class="waves-effect z-depth-3"><a href="{url}" target="_self">{i}</a></li>{/跳页}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{footer:footer.global.html}

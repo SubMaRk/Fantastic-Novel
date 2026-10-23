@@ -1,0 +1,84 @@
+<!-- Load Header -->
+{header:header/page.html}
+<!-- Load Functions Script -->
+{header:header/main.js.html}
+<!-- Load Functions CSS -->
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+<!-- Load Global body -->
+{header:global.body.html}
+<!-- Load Global Nav -->
+{header:novel/nav.html}
+<section id="bbs_search">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12" id="bbs_breadcrumb">
+        <div class="bbs_breadcrumb">
+          <a href="{论坛首页}" target="_self">หน้าแรกเว็บบอร์ด</a>
+          <span>/</span>
+          <a href="{论坛版块}" target="_self">บอร์ดทั้งหมด</a>
+          <span>/</span>
+          <span>ค้นหากระทู้</span>
+        </div>
+      </div>
+      <div class="col s12 l8 left" id="bbs_search_result">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>ผลการค้นหากระทู้ : {搜索词} <i class="fa fas-comments"></i></h5>
+        </div>
+        <ul class="collection z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          {搜索结果:数量=10}
+          {无数据}
+          <li class="collection-item center">ไม่พบกระทู้ที่ตรงกับคำค้นนี้</li>
+          {/无数据}
+          <li class="collection-item">
+            <a class="title" href="{url}" target="_self" title="{帖子标题}">{帖子标题}</a>
+            <span class="secondary-content"><i class="fa fas-comments"></i> {帖子回帖量} <i class="fa far-eye"></i> {帖子浏览量}</span>
+            <p class="bbs_meta">
+              <span class="trn">ผู้แต่ง</span> : {帖子作者昵称}
+              | <a href="{turl}" target="_self">{帖子版块名字}</a>
+              | {帖子发布时间}
+            </p>
+            <p class="bbs_search_info">{帖子内容:120}</p>
+          </li>
+          {/搜索结果}
+        </ul>
+      </div>
+      <div class="col s12 l4" id="bbs_search_sidebar">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>ค้นหากระทู้ <i class="fa fas-bars"></i></h5>
+        </div>
+        <div class="card z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <form class="col s12" action="{搜索提交地址}" method="post">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="search_key" name="key" type="text" value="{搜索词}" required>
+                <label for="search_key" class="active">คำค้น</label>
+              </div>
+              <div class="input-field col s12">
+                <select id="search_type" name="type" class="browser-default">
+                  <option value="0">ทั้งหมด</option>
+                  <option value="1">ชื่อกระทู้</option>
+                  <option value="2">ชื่อผู้โพสต์</option>
+                  <option value="3">แท็ก</option>
+                </select>
+                <label for="search_type" class="active">ขอบเขตการค้นหา</label>
+              </div>
+              <input type="hidden" name="module" value="bbs">
+              <div class="input-field col s12 center">
+                <button class="waves-effect waves-light btn white" type="submit"><i class="fa fas-bars"></i> ค้นหา</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5 class="trn">หมวดหมู่</h5>
+        </div>
+        <div class="tag_item" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          {版块分类:数量=30;排序=版块排序}<a href="{url}" class="tag_color_{i}" target="_self" title="{版块分类名字}">{版块分类名字}</a>{/版块分类}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Load Global Footer -->
+{footer:footer.global.html}

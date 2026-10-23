@@ -32,7 +32,7 @@
               </div>
             </div>
             <span class="text-info"><span class="trn">เข้าชมวันนี้</span> : <span class="view">{日点击}</span> <span class="trn">ครั้ง</span> | <span class="trn">สัปดาห์นี้</span> : <span class="view">{周点击}</span> <span class="trn">ครั้ง</span> | <span class="trn">เดือนนี้</span> : <span class="view">{月点击}</span> <span class="trn">ครั้ง</span> | <span class="trn">ทั้งหมด</span> : <span class="view">{总点击}</span> <span class="trn">ครั้ง</span></span>
-            <span class="text-info"><span class="trn">ผู้แต่ง</span> : <strong><a href="{header:novel/fb_link.html}" target="_blank" title="{header:novel/fb_name.html}">{作者}</a></strong><span> | </span><span class="trn">แปลอังกฤษ</span> : <strong>{header:novel/source_eng.html}</strong><span>| <span class="trn">ต้นฉบับ</span> : <strong>{header:novel/raw_link.html}</strong></span></span>
+            <span class="text-info"><span class="trn">ผู้แต่ง</span> : <strong>
             <span class="text-info"><span class="trn">อัปเดทล่าสุด</span> : <span>{小说章节列表:排序=章节倒序;数量=1}{小说章节创建时间:r-y-n s:f:m}{/小说章节列表}</span></span>
             <div class="tag_item" id="info_tag" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
               <span class="icon-tag"><i class="fa fas-tags"></i></span>
@@ -90,7 +90,7 @@
                 <a href="{url}" target="_self" title="{小说名字}"><i class="fa fas-book fa-cover"></i></a>
               </div>
               <figure>
-                <img class="lazy center" src="{templates}/static/image/book.svg" data-src="{小说封面}" title="{小说名字}"
+                <img class="lazy center" src="{templates}/static/image/book.svg" data-src="{封面}" title="{小说名字}"
                   alt="{小说名字}" />
               </figure>
               <div class="card_content">
@@ -135,16 +135,6 @@
             <p data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">{作者公告}</p>
           </div>
         </div>
-        <!-- Author FB Fanpage -->
-        <div class="col s12 m6 l12 author_fb_page">
-          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
-            <h5><span class="trn">ติดตามผู้แต่งบนเฟซบุ๊ก</span> <i class="fa fab-facebook-square"></i></h5>
-          </div>
-          <div class="fb-page" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500" data-href="{header:novel/fb_link.html}" data-tabs="timeline, messages" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
-            data-show-facepile="true">
-            <blockquote cite="{header:novel/fb_link.html}" class="fb-xfbml-parse-ignore"><a href="{header:novel/fb_link.html}">{header:novel/fb_name.html}</a></blockquote>
-          </div>
-        </div>
         <!-- Novel Recommend -->
         <div class="col s12 rec">
           <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
@@ -155,7 +145,7 @@
               {同分类小说:数量=5}
               <li class="info_rec col s12 m6 l12" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
                 <a title="{小说名字}" class="hvr-grow-shadow" href="{url}" target="_self">
-                  <img class="lazy book_cover margin-0 col s4 m5 l5" src="{templates}/static/image/book.svg" data-src="{小说封面}" alt="{小说名字}">
+                  <img class="lazy book_cover margin-0 col s4 m5 l5" src="{templates}/static/image/book.svg" data-src="{封面}" alt="{小说名字}">
                   <div class="book_info col s8 m7 l7">
                     <h5 id="rec-title">{小说名字}</h5>
                     <p class="rec-author"><i class="fa fas-feather-pointed"></i> {小说作者}</p>

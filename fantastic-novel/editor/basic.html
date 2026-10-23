@@ -1,0 +1,78 @@
+{header:header/page.html}
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+{header:global.body.html}
+{header:novel/nav.html}
+<section id="page">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>ข้อมูลส่วนตัวของบรรณาธิการ</h5>
+        </div>
+      </div>
+      <div class="col s12 l8">
+        <div class="card z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <div class="card-content">
+            <form method="post" action="{表单提交地址}">
+              <div class="row">
+              <div class="input-field col s12">
+                <i class="fa far-user-gear prefix"></i>
+                <input id="editor_id" type="text" value="{编辑id}" disabled />
+                <label for="editor_id" class="active">ID บรรณาธิการ</label>
+              </div>
+              <div class="input-field col s12">
+                <input id="editor_name" type="text" name="name" value="{编辑名字}" />
+                <label for="editor_name" class="active">ชื่อเล่นบรรณาธิการ</label>
+              </div>
+              <div class="input-field col s12">
+                <input id="editor_realname" type="text" name="realname" value="{编辑姓名}" />
+                <label for="editor_realname" class="active">ชื่อบรรณาธิการ</label>
+              </div>
+              <div class="input-field col s12 m6">
+                <input id="editor_qq" type="text" name="qq" value="{编辑qq}" />
+                <label for="editor_qq" class="active">QQ บรรณาธิการ</label>
+              </div>
+              <div class="input-field col s12 m6">
+                <input id="editor_weixin" type="text" name="weixin" value="{编辑微信}" />
+                <label for="editor_weixin" class="active">WeChat บรรณาธิการ</label>
+              </div>
+              <div class="input-field col s12">
+                <input id="editor_tel" type="text" name="tel" value="{编辑手机}" />
+                <label for="editor_tel" class="active">เบอร์มือถือบรรณาธิการ</label>
+              </div>
+              <div class="input-field col s12">
+                <textarea id="editor_desc" name="desc" class="materialize-textarea">{编辑简介}</textarea>
+                <label for="editor_desc" class="active">แนะนำตัวบรรณาธิการ</label>
+              </div>
+              <div class="col s12 center">
+                <button class="waves-effect waves-light btn" type="submit" name="submit" value="true"><i class="fa far-pen-to-square"></i> บันทึกข้อมูล</button>
+              </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 l4">
+        <div class="card z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <div class="card-content">
+            <img class="circle responsive-img" src="{用户头像}" alt="{编辑名字}" style="width:100px;height:100px;">
+            <h5 class="card-title">{编辑名字}</h5>
+            <p>เข้าร่วมเมื่อ : {编辑加入时间}</p>
+            <p>ตำแหน่ง :</p>
+            <ul class="browser-default">
+              {编辑分组成员:排序=分组排序}
+              <li>{编辑分组成员分组名字} - {编辑分组成员类型}</li>
+              {/编辑分组成员}
+            </ul>
+          </div>
+          <div class="card-action">
+            <a href="{编辑首页}">กลับศูนย์บรรณาธิการ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{footer:footer.global.html}

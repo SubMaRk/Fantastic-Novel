@@ -1,81 +1,94 @@
-{header:user/inc_header.html}
-<script>
-$(document).ready(function(){
-	$("#nv").find("li a").eq("4").addClass("nvcur");
-});
-</script>
-<style>
-h2{font-size: 14px;}
-.xw0{margin-left: 15px;font-size: 12px;}
-.pf_l li{float: left;width: auto;margin-right: 35px;color: #5a5a5a;}
-.pf_l em{padding-right: 2px;}
-.bm_h{height: 32px;line-height: 36px;}
-.table_show,#pcr{border: 2px solid #f4f4f4;width: 100%;margin: 15px 0;}
-.table_show th,.table_show td,#pcr td,#pcr th{padding: 11px 0 11px 8px;}
-.table_show th,#pcr th{color: #acacac;}
-.table_show td,#pcr td{color: #5a5a5a;}
-.md_ctrl{margin: 15px 0;}
-.block_title{padding-bottom: 8px;border-bottom: 1px dashed #cdcdcd;}
-.group_show{position: absolute;top: 0px;right: 0px;}
-.group_show li{float: left;margin-left: 30px;}
-#pbbs,#psts .pf_l{overflow: hidden;border: solid #f4f4f4;border-width: 2px 2px 1px 1px;}
-#pbbs div,#psts .pf_l div{float: left;width: 357px;border-bottom: 1px solid #f4f4f4;}
-#pbbs span,#psts .pf_l span{padding: 11px 0 11px 10px;display: inline-block;color: #5a5a5a;}
-#pbbs .th,#psts .pf_l .th{width: 84px;border: solid #f4f4f4;border-width: 0 1px 0 1px; color: #acacac;}
-#psts{margin-top: 20px;}
-</style>
-<div id="ct" class="ct2 wp cl">
-	<div class="mn">
-		<div class="bm">
-			<div class="bm_h"><h1 class="mt">ข้อมูลส่วนตัว</h1></div>
-			<div class="bm_c">
-				<div class="bm_c u_profile">
-				    <div class="pbm mbm bbda cl" style="position: relative;">
-						<h2 class="mbn">ข้อมูลส่วนตัวของผู้ใช้</h2>
-						<div style="clear: both"></div>
-						<div id="pbbs" class="pf_l">
-							<div><span class="th">ชื่อเล่น</span><span>{用户昵称}</span></div>
-							<div><span class="th">ไอดี</span><span>{用户id}</span></div>
-							<div><span class="th">เพศ</span><span>{用户性别}</span></div>
-							<div><span class="th">อายุ</span><span>{用户年龄}岁({用户出生日期})</span></div>
-							<div><span class="th">QQ</span><span>{用户qq}</span></div>
-							<div><span class="th">มือถือ</span><span>{用户手机}</span></div>
-							<div><span class="th">ผู้เข้าชม</span><span>{用户人气}</span></div>
-							<div><span class="th">ที่อยู่อีเมล์</span><span>{用户邮箱} <a style="color:red" href="{验证邮箱}">ยืนยัน</a></span></div>
-							<div><span class="th">{金币1名字}</span><span>{用户金币1} {金币1单位}</span></div>
-							<div><span class="th">{金币2名字}</span><span>{用户金币2} {金币2单位} <a style="color:red" href="{充值}">เติมเงิน</a></span></div>
-							<div><span class="th">ยอดคงเหลือ</span><span>{用户余额} {余额名字}</span></div>
-							<div><span class="th">冻结余额</span><span>{用户冻结金额} {余额名字}</span></div>
-							<div><span class="th">ระดับปัจจุบัน</span><span>{用户等级}</span></div><div><span class="th">&nbsp;</span><span>&nbsp;</span></div>
-							<div><span class="th">ข้อมูลประสบการณ์</span><span>{用户经验}/{下级经验}</span></div>
-							<div><span class="th">อัปเกรดผู้ใช้</span><span>{升级经验}{经验名字} เป็น {下一等级}</span></div>
-							<div><span class="th">วันที่ลงทะเบียน</span><span>{用户注册时间}</span></div>
-							<div><span class="th">เข้าสู่ระบบล่าสุด</span><span>{用户登陆时间}</span></div>
-						</div>
-					</div>
-					<div id="psts" class="cl">
-						<h2 class="mbn">【ข้อมูลเรื่องที่ชอบ】</h2>
-						<div class="pf_l">
-							<div><span class="th">ความจุชั้นหนังสือ</span><span>ใช้ไป {书架已用容量} / จากทั้งหมด {书架总容量} = คงเหลือ {书架剩余容量}</span></div>
-							<div><span class="th">ความจุเรื่องที่ชอบ</span><span>ใช้ไป {收藏已用容量} / จากทั้งหมด {收藏总容量} = คงเหลือ {收藏剩余容量}</span></div>
-							<div><span class="th">คงเหลือ {月票名字} : </span><span>คงเหลือ {月票} แต้ม</span></div>
-							<div><span class="th">คงเหลือ{推荐票名字} : </span><span>คงเหลือ {推荐票} แต้ม</span></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="sd">
-		<div id="pcd" class="bm cl">
-			<div class="bm_c">
-				<div class="hm">
-					<p><a href="{头像设置}" class="avtm"><img src="{用户头像}"></a></p>
-					<h2 class="xs2">{用户昵称}</h2>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-{footer:user/inc_footer.html}
+{header:header/page.html}
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+{header:global.body.html}
+{header:novel/nav.html}
+<section id="page">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12 l3 left" id="user_side">
+        <div class="card z-depth-3 center" data-aos="fade-up">
+          <div class="card-content">
+            <a href="{头像设置}"><img class="circle z-depth-1" src="{用户头像}" alt="{用户昵称}" style="width:110px;height:110px;object-fit:cover;"></a>
+            <h5 style="margin-top:15px;">{用户昵称}</h5>
+            <p class="grey-text">ID: {用户id}</p>
+          </div>
+        </div>
+        <div class="collection z-depth-3" data-aos="fade-up">
+          <a class="collection-item active" href="{用户中心}"><i class="far fa-home"></i> <span class="trn">ศูนย์ผู้ใช้</span></a>
+          <a class="collection-item" href="{基本资料}"><i class="far fa-users-cog"></i> <span class="trn">ข้อมูลทั่วไป</span></a>
+          <a class="collection-item" href="{充值}"><i class="far fa-books"></i> เติมเงิน</a>
+          <a class="collection-item" href="{消息列表}"><i class="far fa-envelope"></i> <span class="trn">ข้อความ</span></a>
+          <a class="collection-item" href="{签到中心}"><i class="far fa-calendar-check"></i> <span class="trn">เช็คชื่อ</span></a>
+          <a class="collection-item" href="{退出登录}"><i class="far fa-sign-out"></i> <span class="trn">ออกจากระบบ</span></a>
+        </div>
+      </div>
+      <div class="col s12 l9 right" id="user_content">
+        <div class="text_block z-depth-3" data-aos="fade-up">
+          <h5><i class="fas fa-user-circle"></i> ข้อมูลส่วนตัวของผู้ใช้</h5>
+        </div>
+        <div class="card z-depth-3" data-aos="fade-up">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s12 m4 center">
+                <a href="{头像设置}"><img class="circle responsive-img z-depth-1" src="{用户头像}" alt="{用户昵称}" style="width:120px;height:120px;object-fit:cover;"></a>
+                <p class="grey-text">คลิกที่รูปเพื่อเปลี่ยนรูปประจำตัว</p>
+              </div>
+              <div class="col s12 m8">
+                <table class="striped">
+                  <tbody>
+                    <tr><th>ชื่อเล่น</th><td>{用户昵称}</td></tr>
+                    <tr><th>ID</th><td>{用户id}</td></tr>
+                    <tr><th>เพศ</th><td>{用户性别}</td></tr>
+                    <tr><th>อายุ</th><td>{用户年龄} ปี ({用户出生日期})</td></tr>
+                    <tr><th>QQ</th><td>{用户qq}</td></tr>
+                    <tr><th>มือถือ</th><td>{用户手机}</td></tr>
+                    <tr><th>ผู้เข้าชม</th><td>{用户人气}</td></tr>
+                    <tr><th>ที่อยู่อีเมล์</th><td>{用户邮箱} <a href="{验证邮箱}">ยืนยัน</a></td></tr>
+                    <tr><th>{金币1名字}</th><td>{用户金币1} {金币1单位}</td></tr>
+                    <tr><th>{金币2名字}</th><td>{用户金币2} {金币2单位} <a href="{充值}">เติมเงิน</a></td></tr>
+                    <tr><th>ยอดคงเหลือ</th><td>{用户余额} {余额名字}</td></tr>
+                    <tr><th>ยอดคงเหลือที่ถูกพักไว้</th><td>{用户冻结金额} {余额名字}</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text_block z-depth-3" data-aos="fade-up">
+          <h5>ระดับและประสบการณ์</h5>
+        </div>
+        <div class="card z-depth-3" data-aos="fade-up">
+          <div class="card-content">
+            <table class="striped">
+              <tbody>
+                <tr><th>ระดับปัจจุบัน</th><td>{用户等级}</td></tr>
+                <tr><th>ข้อมูลประสบการณ์</th><td>{用户经验}/{下级经验}</td></tr>
+                <tr><th>อัปเกรดผู้ใช้</th><td>{升级经验}{经验名字} เป็น {下一等级}</td></tr>
+                <tr><th>วันที่ลงทะเบียน</th><td>{用户注册时间}</td></tr>
+                <tr><th>เข้าสู่ระบบล่าสุด</th><td>{用户登陆时间}</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="text_block z-depth-3" data-aos="fade-up">
+          <h5>ข้อมูลเรื่องที่ชอบ</h5>
+        </div>
+        <div class="card z-depth-3" data-aos="fade-up">
+          <div class="card-content">
+            <table class="striped">
+              <tbody>
+                <tr><th>ความจุชั้นหนังสือ</th><td>ใช้ไป {书架已用容量} / จากทั้งหมด {书架总容量} = คงเหลือ {书架剩余容量}</td></tr>
+                <tr><th>ความจุเรื่องที่ชอบ</th><td>ใช้ไป {收藏已用容量} / จากทั้งหมด {收藏总容量} = คงเหลือ {收藏剩余容量}</td></tr>
+                <tr><th>คงเหลือ {月票名字}</th><td>คงเหลือ {月票} แต้ม</td></tr>
+                <tr><th>คงเหลือ {推荐票名字}</th><td>คงเหลือ {推荐票} แต้ม</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{header:footer.global.html}

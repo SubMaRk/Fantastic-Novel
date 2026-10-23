@@ -1,0 +1,123 @@
+<!-- Load Header -->
+{header:header/page.html}
+<!-- Load Functions Script -->
+{header:header/main.js.html}
+<!-- Load Functions CSS -->
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+<!-- Load Global body -->
+{header:global.body.html}
+<!-- Load Global Nav -->
+{header:novel/nav.html}
+<section id="app_replay">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12" id="app_breadcrumb">
+        <div class="app_breadcrumb">
+          <a href="{应用首页}" target="_self">หน้าแรกแอปพลิเคชัน</a>
+          <span>/</span>
+          <a href="{分类链接}" target="_self">{分类名字}</a>
+          <span>/</span>
+          <a href="{内容链接}" target="_self">{名字}</a>
+          <span>/</span>
+          <span>ความคิดเห็น</span>
+        </div>
+      </div>
+      <div class="col s12 l8 left" id="app_replay_list">
+        <div class="card z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s4 m2 center">
+                <img class="responsive-img circle z-depth-3" src="{图标}" alt="{名字}">
+              </div>
+              <div class="col s8 m10">
+                <span class="card-title"><a href="{内容链接}" target="_self" title="{名字}">{名字}</a></span>
+                <p class="app_meta">เวอร์ชัน {版本} | {大小} | <span class="trn">คะแนน</span> {评分}</p>
+                <p class="app_meta"><i class="fa fas-comments"></i> {评论量} ความคิดเห็น</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-action">
+            <a href="{内容链接}" target="_self"><i class="fa far-arrow-right"></i> กลับไปหน้าแอป</a>
+          </div>
+        </div>
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5><span class="trn">แสดงความคิดเห็น</span> ({评论数量}) <i class="fa fas-comments"></i></h5>
+        </div>
+        {评论:数量=50}
+        {无数据}<div class="no_more_work center" data-aos="fade-up">ยังไม่มีความคิดเห็นสำหรับแอปนี้</div>{/无数据}
+        <div class="card z-depth-3 app_reply" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s12 m2 center">
+                <img class="circle responsive-img z-depth-3" src="{评论用户头像}" alt="{评论用户昵称}">
+                <p><a href="{url}" target="_self" title="{评论用户昵称}">{评论用户昵称}</a></p>
+              </div>
+              <div class="col s12 m10">
+                <p class="app_meta"><i class="fa fal-clock"></i> {评论时间} | {评论楼层}</p>
+                <div>{评论内容}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/评论}
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>แสดงความคิดเห็นของคุณ <i class="fa fas-comments"></i></h5>
+        </div>
+        <div class="card z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <form class="col s12" action="{评论提交地址}" method="post">
+            <div class="row">
+              <div class="col s12">
+                <p class="app_meta">แสดงความคิดเห็นในชื่อ : {评论提交昵称}</p>
+              </div>
+              <div class="input-field col s12">
+                <textarea id="app_replay_content" name="content" class="materialize-textarea" required></textarea>
+                <label for="app_replay_content" class="active">เขียนความคิดเห็นของคุณ</label>
+              </div>
+              {发表评论验证码开启}
+              <div class="input-field col s12 m6">
+                <input id="app_replay_code" name="code" type="text" required>
+                <label for="app_replay_code" class="active"><span class="trn">โค้ดยืนยัน</span></label>
+              </div>
+              <div class="col s12 m6">{发表评论验证码}</div>
+              {/发表评论验证码开启}
+              {评论隐藏表单}
+              {表单锁}
+              <div class="input-field col s12 center">
+                <button class="waves-effect waves-light btn white" type="submit"><i class="fa fas-comments"></i> ส่งความคิดเห็น</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col s12 l4" id="app_sidebar">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>เกี่ยวกับแอป</h5>
+        </div>
+        <ul class="collection z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <li class="collection-item"><span class="trn">หมวดหมู่</span> : {分类名字}</li>
+          <li class="collection-item">เวอร์ชัน : {版本}</li>
+          <li class="collection-item">ขนาด : {大小}</li>
+          <li class="collection-item">แพลตฟอร์ม : {平台}</li>
+          <li class="collection-item">ภาษา : {语言}</li>
+          <li class="collection-item">ค่าบริการ : {资费}</li>
+          <li class="collection-item">ดาวน์โหลด : {下载量}</li>
+        </ul>
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>แอปที่เกี่ยวข้อง <i class="fa fas-star"></i></h5>
+        </div>
+        <ul class="collection z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          {同标签应用:数量=6}
+          {无数据}<li class="collection-item center">ยังไม่มีแอปที่เกี่ยวข้อง</li>{/无数据}
+          <li class="collection-item">
+            <a class="title" href="{url}" target="_self" title="{应用名字}">{应用名字}</a>
+            <p class="app_meta">{应用分类名字} | <span class="trn">คะแนน</span> {应用评分}</p>
+          </li>
+          {/同标签应用}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Load Global Footer -->
+{footer:footer.global.html}

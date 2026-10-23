@@ -1,0 +1,153 @@
+<!-- Load Header -->
+{header:header/page.html}
+<!-- Load Functions Script -->
+{header:header/main.js.html}
+<!-- Load Functions CSS -->
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+<!-- Load Global body -->
+{header:global.body.html}
+<!-- Load Global Nav -->
+{header:novel/nav.html}
+<section id="bbs_bbs">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12" id="bbs_breadcrumb">
+        <div class="bbs_breadcrumb">
+          <a href="{论坛首页}" target="_self">หน้าแรกเว็บบอร์ด</a>
+          <span>/</span>
+          <a href="{帖子列表}" target="_self">{版块}</a>
+          <span>/</span>
+          <span>{标题}</span>
+        </div>
+      </div>
+      <div class="col s12 l9 left" id="bbs_content">
+        {帖子信息}
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>{标题}</h5>
+        </div>
+        <div class="card z-depth-3 bbs_first_post" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s12 m3 center" id="bbs_author">
+                <img class="circle responsive-img z-depth-3" src="{作者头像}" alt="{作者昵称}">
+                <p><a href="{作者空间}" target="_self" title="{作者昵称}">{作者昵称}</a></p>
+                <p class="bbs_meta">{作者性别}</p>
+              </div>
+              <div class="col s12 m9">
+                <p class="bbs_meta">
+                  <i class="fa fal-clock"></i> {发布时间}
+                  <span>|</span> <i class="fa far-eye"></i> {浏览量}
+                  <span>|</span> <i class="fa fas-comments"></i> {回帖量}
+                  <span>|</span> ถูกใจ {顶} <span>|</span> ไม่ถูกใจ {踩}
+                </p>
+                <div class="bbs_content">{内容}</div>
+                <div class="tag_item" id="bbs_tags">
+                  <span class="icon-tag"><i class="fa fas-tags"></i></span>
+                  <span>{标签}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-action">
+            <a href="{帖子列表}" target="_self"><i class="fa fal-angle-right"></i> กลับไปยังบอร์ด</a>
+            <a href="{发表帖子}" target="_self" class="right"><i class="fa fas-plus"></i> ตั้งกระทู้ใหม่</a>
+          </div>
+        </div>
+        {/帖子信息}
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5><span class="trn">แสดงความคิดเห็น</span> ({评论数量}) <i class="fa fas-comments"></i></h5>
+        </div>
+        {评论:数量=10}
+        {无数据}<div class="no_more_work center" data-aos="fade-up">ยังไม่มีการตอบกลับ เป็นคนแรกที่ตอบกระทู้นี้</div>{/无数据}
+        <div class="card z-depth-3 bbs_reply" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s12 m3 center">
+                <img class="circle responsive-img z-depth-3" src="{评论用户头像}" alt="{评论用户昵称}">
+                <p><a href="{url}" target="_self" title="{评论用户昵称}">{评论用户昵称}</a></p>
+                <p class="bbs_meta">{评论楼层}</p>
+              </div>
+              <div class="col s12 m9">
+                <p class="bbs_meta"><i class="fa fal-clock"></i> {评论时间}</p>
+                <div class="bbs_content">{评论内容}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/评论}
+        <div class="pagination col s12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <ul class="pagination center">
+            <li class="waves-effect waves-light btn"><a href="{第一页}" target="_self"><span class="trn">หน้าแรก</span></a></li>
+            <li class="waves-effect waves-light btn"><a href="{上一页}" target="_self"><span class="trn">ก่อนหน้า</span></a></li>
+            {跳页:2}{选中页}<li class="waves-effect z-depth-3"><a href="javascript:void(0);" class="visited" target="_self">{i}</a></li>{/选中页}
+            <li class="waves-effect z-depth-3"><a href="{url}" target="_self">{i}</a></li>{/跳页}
+            <li class="waves-effect waves-light btn"><a href="{下一页}" target="_self"><span class="trn">ถัดไป</span></a></li>
+            <li class="waves-effect waves-light btn"><a href="{最后页}" target="_self"><span class="trn">ท้ายสุด</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col s12 l3" id="bbs_sidebar">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>บอร์ดนี้ <i class="fa fas-comments"></i></h5>
+        </div>
+        <div class="card z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <div class="card-content">
+            <span class="card-title">{版块}</span>
+            <p>กระทู้ทั้งหมด : {版块总发帖}</p>
+            <p>ตอบกลับทั้งหมด : {版块总回帖}</p>
+            <p>เข้าชมทั้งหมด : {版块总浏览}</p>
+          </div>
+          <div class="card-action">
+            <a href="{帖子列表}" target="_self">ดูกระทู้ทั้งหมด</a>
+            <a href="{发表帖子}" target="_self" class="right">ตั้งกระทู้</a>
+          </div>
+        </div>
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>กระทู้ที่เกี่ยวข้อง <i class="fa fas-tags"></i></h5>
+        </div>
+        <ul class="collection z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          {同标签帖子:数量=6}
+          {无数据}<li class="collection-item center">ยังไม่มีกระทู้ที่เกี่ยวข้อง</li>{/无数据}
+          <li class="collection-item">
+            <a class="title" href="{url}" target="_self" title="{帖子标题}">{帖子标题}</a>
+            <p class="bbs_meta"><span class="trn">ผู้แต่ง</span> : {帖子作者昵称} | {帖子发布时间}</p>
+          </li>
+          {/同标签帖子}
+        </ul>
+      </div>
+      <div class="col s12" id="bbs_replay_form">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>ตอบกลับกระทู้ <i class="fa fas-comments"></i></h5>
+        </div>
+        <div class="card z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <form class="col s12" action="{评论提交地址}" method="post">
+            <div class="row">
+              <div class="col s12">
+                <p class="bbs_meta">ตอบกลับในชื่อ : {评论提交昵称}</p>
+              </div>
+              <div class="input-field col s12">
+                <textarea id="replay_content" name="content" class="materialize-textarea" required></textarea>
+                <label for="replay_content" class="active">เขียนความคิดเห็นของคุณ</label>
+              </div>
+              {发表评论验证码开启}
+              <div class="input-field col s12 m6">
+                <input id="replay_code" name="code" type="text" required>
+                <label for="replay_code" class="active"><span class="trn">โค้ดยืนยัน</span></label>
+              </div>
+              <div class="col s12 m6">{发表评论验证码}</div>
+              {/发表评论验证码开启}
+              {评论隐藏表单}
+              {表单锁}
+              <div class="input-field col s12 center">
+                <button class="waves-effect waves-light btn white" type="submit"><i class="fa fas-comments"></i> ส่งความคิดเห็น</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Load Global Footer -->
+{footer:footer.global.html}

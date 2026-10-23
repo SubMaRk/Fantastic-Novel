@@ -1,0 +1,119 @@
+<!-- Load Header -->
+{header:header/page.html}
+<!-- Load Functions Script -->
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+<!-- Load Global body -->
+{header:global.body.html}
+<!-- Load Global Nav -->
+{header:novel/nav.html}
+<section id="replay">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12 l9" id="content">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5><span class="trn">แสดงความคิดเห็น</span> <i class="fa fas-comments"></i></h5>
+        </div>
+        <!-- Novel Info -->
+        <div class="col s12" id="replay_info">
+          <div class="col s12 m3">
+            <img class="lazy z-depth-3" src="{templates}/static/image/book.svg" data-src="{封面}" alt="{名字}" />
+          </div>
+          <div class="col s12 m9">
+            <p><a href="{内容链接}" target="_self"><strong>{名字}</strong></a></p>
+            <p>
+              <span class="trn">ผู้แต่ง</span> : {作者} |
+              <span class="trn">หมวดหมู่</span> : <a href="{分类链接}" target="_self">{分类名字}</a> |
+              <span class="trn">เข้าชม</span> : {总点击} <span class="trn">ครั้ง</span> |
+              ความคิดเห็น : {评论量}
+            </p>
+            <p>{简介:150}</p>
+            <p>
+              <a class="waves-effect waves-light btn white" href="{内容链接}" target="_self"><i class="fa fas-book"></i> กลับไปที่นิยาย</a>
+            </p>
+          </div>
+        </div>
+        <!-- Comment Form -->
+        <div class="comment col s12" id="replay_post">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5>ความคิดเห็นของคุณ</h5>
+          </div>
+          <div class="input-field col s12">
+            <form name="re" action="{评论提交地址}" method="post">
+              {表单锁}{评论隐藏表单}
+              <textarea class="materialize-textarea" name="content" rows="5" placeholder="{评论输入框提示}"></textarea>
+              {发表评论验证码开启}
+              <div class="input-field col s12 m6">
+                {发表评论验证码}
+                <input type="text" name="code" placeholder="กรุณากรอกรหัสยืนยัน" />
+              </div>
+              {/发表评论验证码开启}
+              <div class="col s12">
+                <button class="btn waves-effect waves-light" type="submit" name="go">แสดงความคิดเห็น <i class="fa fas-comments"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Comment List -->
+        <div class="col s12" id="replay_list">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5>ความคิดเห็นทั้งหมด ( <span>{总数据}</span> )</h5>
+          </div>
+          {评论:数量=10;排序=时间}
+          {无数据}<p class="center" data-aos="fade-up">{评论无数据提示}</p>{/无数据}
+          <div class="card z-depth-1" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+            <div class="card-content">
+              <div class="comment_head">
+                <a href="{评论用户空间}" target="_self"><img class="circle" src="{评论用户头像}" alt="{评论用户昵称}" /></a>
+                <a href="{评论用户空间}" target="_self"><strong>{评论用户昵称}</strong></a>
+                <span class="chip">{评论楼层}</span>
+                <span class="right">{评论时间}</span>
+              </div>
+              <p class="comment_body">{评论内容}</p>
+            </div>
+            <div class="card-action">
+              <a href="{评论顶链接}" target="_self">ถูกใจ ( {评论顶} )</a>
+              <a href="{评论踩链接}" target="_self">ไม่ถูกใจ ( {评论踩} )</a>
+            </div>
+          </div>
+          {/评论}
+          <!-- Pagination -->
+          <div class="pagination col s12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <ul class="pagination center">
+              <li class="waves-effect waves-light btn"><a href="{第一页}" target="_self"><span class="trn">หน้าแรก</span></a></li>
+              <li class="waves-effect waves-light btn"><a href="{上一页}" target="_self"><span class="trn">ก่อนหน้า</span></a></li>
+              <li class="waves-effect z-depth-3"><a href="javascript:void(0);" class="visited" target="_self">{当前页} / {总页数}</a></li>
+              <li class="waves-effect waves-light btn"><a href="{下一页}" target="_self"><span class="trn">ถัดไป</span></a></li>
+              <li class="waves-effect waves-light btn"><a href="{最后页}" target="_self"><span class="trn">ท้ายสุด</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Sidebar -->
+      <div class="col s12 l3" id="sidebar">
+        <div class="col s12" id="same_type">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5>เรื่องแนะนำ <i class="fa fal-award"></i></h5>
+          </div>
+          <ul class="collection z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+            {同分类小说:数量=5}
+            <li class="collection-item"><a href="{url}" target="_self" title="{小说名字}">{小说名字:30}</a></li>
+            {/同分类小说}
+          </ul>
+        </div>
+        <div class="col s12" id="categories">
+          <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <h5>หมวดหมู่นิยาย <i class="fa fas-table-cells-large"></i></h5>
+          </div>
+          <div class="tag_item" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+            {小说分类:数量=15;排序=分类排序}
+            <a href="{url}" target="_self" class="tag_color_{i}" title="{小说分类名字}">{小说分类名字}</a>{/小说分类}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Load Global Footer -->
+{footer:footer.global.html}

@@ -1,68 +1,61 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>{title}</title>
-<meta name="Keywords" content="{key}" />
-<meta name="Description" content="{desc}" />
-<link href="{templates}/static/user/static/charge.css" type="text/css" rel="stylesheet" />
-<script src="/files/js/common.js"></script>
-<style>
-.conTable{margin-top: 100px;}
-.account_box td{text-align:center;font-size:16px;}
-.money{font: 40px/1 Arial; color: #ed4259;}
-</style>
-</head>
-<body>
-    <div class="main">
-		<div class="layout_top">
-			<ul class="clearfix">
-				<li style="width:100%"><a class="on">{支付方式} สแกนโค้ดเพื่อชำระ</a></li>
-			</ul>
-		</div>
-
-
-        <div class="content pt25">
-            <table class="conTable">
-                <tr class="account_box">
-                    <td><img src="/files/images/pay/{支付标识}.jpg" width="140"><br/>{支付方式} สแกนโค้ดเพื่อชำระ</td>
-                </tr>
-                <tr class="account_box">
-                    <td><img src="{二维码}"></td>
-                </tr>
-                <tr class="account_box">
-                    <td>โปรดเปิด [สแกน {支付方式}] สแกน QR โค้ดเพื่อเสร็จสิ้นการชำระเงิน</td>
-                </tr>
-                <tr class="account_box">
-                    <td><span class="money">{支付金额}</span>&nbsp;&nbsp;บาท</td>
-                </tr>
-                <tr class="account_box">
-                    <td style="font-size: 12px;line-height:0;color:#bbbbbb;">หมายเลขคำสั่ง : {订单号}</td>
-                </tr>
-            </table>
+{header:header/page.html}
+{header:header/main.js.html}
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+<link href="{templates}/user/static/charge.css" type="text/css" rel="stylesheet">
+{header:global.body.html}
+{header:novel/nav.html}
+<section id="page">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12 l3 left" id="user_side">
+        <div class="card z-depth-3 center" data-aos="fade-up">
+          <div class="card-content">
+            <a href="{头像设置}"><img class="circle z-depth-1" src="{用户头像}" alt="{用户昵称}" style="width:110px;height:110px;object-fit:cover;"></a>
+            <h5 style="margin-top:15px;">{用户昵称}</h5>
+            <p class="grey-text">ID: {用户id}</p>
+          </div>
         </div>
+        <div class="collection z-depth-3" data-aos="fade-up">
+          <a class="collection-item" href="{用户中心}"><i class="far fa-home"></i> <span class="trn">ศูนย์ผู้ใช้</span></a>
+          <a class="collection-item" href="{基本资料}"><i class="far fa-users-cog"></i> <span class="trn">ข้อมูลทั่วไป</span></a>
+          <a class="collection-item active" href="{充值}"><i class="far fa-books"></i> เติมเงิน</a>
+          <a class="collection-item" href="{消息列表}"><i class="far fa-envelope"></i> <span class="trn">ข้อความ</span></a>
+          <a class="collection-item" href="{签到中心}"><i class="far fa-calendar-check"></i> <span class="trn">เช็คชื่อ</span></a>
+          <a class="collection-item" href="{退出登录}"><i class="far fa-sign-out"></i> <span class="trn">ออกจากระบบ</span></a>
+        </div>
+      </div>
+      <div class="col s12 l9 right" id="user_content">
+        <div class="text_block z-depth-3" data-aos="fade-up">
+          <h5><i class="far fa-books"></i> {支付方式} สแกนโค้ดเพื่อชำระ</h5>
+        </div>
+        <div class="card z-depth-3" data-aos="fade-up">
+          <div class="card-content">
+            <div class="main" style="width:100%;min-height:auto;margin:0;border:0;box-shadow:none;background:transparent;">
+              <div class="content pt25">
+                <table class="conTable">
+                  <tr class="account_box">
+                    <td><img src="/files/images/pay/{支付标识}.jpg" width="140" alt="{支付方式}"><br>{支付方式} สแกนโค้ดเพื่อชำระ</td>
+                  </tr>
+                  <tr class="account_box">
+                    <td><img src="{二维码}" alt="คิวอาร์โค้ด"></td>
+                  </tr>
+                  <tr class="account_box">
+                    <td>โปรดเปิด [สแกน {支付方式}] สแกน QR โค้ดเพื่อเสร็จสิ้นการชำระเงิน</td>
+                  </tr>
+                  <tr class="account_box">
+                    <td><span class="money">{支付金额}</span>&nbsp;&nbsp;บาท</td>
+                  </tr>
+                  <tr class="account_box">
+                    <td style="font-size: 12px;line-height:1.6;color:#bbbbbb;">หมายเลขคำสั่ง : {订单号}</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-<script>
-function CheckOrder(){
-	$.ajax({
-		type:"GET",
-		url:"/wmcms/ajax/index.php?action=finance.get_charge_order_list",
-		dataType:"json",
-		success:function(json){
-			if( json.code == 200 ){
-				if(json.data.charge_status == '1'){
-					easydialog_autoclose('เติมเงินสำเร็จ!','success');
-					setTimeout(function(){window.close();},2000);
-				}
-			}else{
-				easydialog_autoclose(json.msg,'error');
-			}
-		},
-		async:true,
-	});
-}
-window.setInterval(CheckOrder, 4000);
-</script>
-</body>
-</html>
+  </div>
+</section>
+{header:footer.global.html}

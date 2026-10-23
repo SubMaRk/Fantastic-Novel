@@ -1,0 +1,92 @@
+<!-- Load Header -->
+{header:header/page.html}
+<!-- Load Functions Script -->
+{header:header/main.js.html}
+<!-- Load Functions CSS -->
+{header:header/main.css.html}
+<link rel="stylesheet" href="{templates}/static/css/main.index.css">
+<!-- Load Global body -->
+{header:global.body.html}
+<!-- Load Global Nav -->
+{header:novel/nav.html}
+<section id="app">
+  <div class="container" id="gb_w">
+    <div class="row">
+      <div class="col s12" id="app_intro">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>ศูนย์แอปพลิเคชัน <i class="fa fas-table-cells-large"></i></h5>
+        </div>
+        <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+          รวบรวมแอปพลิเคชันและโปรแกรมต่าง ๆ ที่เกี่ยวข้องกับนิยาย การอ่าน และความบันเทิง
+          พร้อมรายละเอียดเวอร์ชัน ขนาด ภาษาที่รองรับ และลิงก์ดาวน์โหลด
+          เลือกหมวดหมู่ที่สนใจหรือเข้าดูแอปทั้งหมดได้จากปุ่มด้านล่าง
+        </p>
+        <div class="center" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          <a href="{全部应用}" class="waves-effect waves-light btn white" target="_self"><i class="fa fas-table-cells-large"></i> <span>แอปทั้งหมด</span></a>
+        </div>
+      </div>
+      <div class="col s12" id="app_categories">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5><span class="trn">หมวดหมู่</span> ของแอป</h5>
+        </div>
+        <div class="row">
+          {应用分类:数量=20;排序=分类排序}
+          {无数据}<div class="col s12 center">ยังไม่มีหมวดหมู่แอปในขณะนี้</div>{/无数据}
+          <div class="col s12 m6 l4" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+            <div class="card z-depth-3">
+              <div class="card-content">
+                <span class="card-title"><a href="{url}" target="_self" title="{应用分类名字}"><i class="fa fas-table-cells-large"></i> {应用分类名字}</a></span>
+                <p>{应用分类简介}</p>
+              </div>
+              <div class="card-action">
+                <a href="{url}" target="_self" title="{应用分类名字}">ดูแอปในหมวดนี้ <i class="fa far-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          {/应用分类}
+        </div>
+      </div>
+      <div class="col s12" id="app_latest">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>แอปมาใหม่ <i class="fa fas-star"></i></h5>
+        </div>
+        <div class="row">
+          {应用:数量=8;排序=时间}
+          {无数据}<div class="col s12 center">ยังไม่มีแอปในขณะนี้</div>{/无数据}
+          <div class="col s6 m4 l3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+            <div class="card_cover">
+              <div class="card_book">
+                <a href="{url}" target="_self" title="{应用名字}"><i class="fa fas-table-cells-large fa-cover"></i></a>
+              </div>
+              <figure>
+                <img class="lazy center" src="{templates}/static/image/android-icon-192x192.png" data-src="{应用图标}" title="{应用名字}" alt="{应用名字}" />
+              </figure>
+              <div class="card_content">
+                <h3 class="card_title"><a href="{url}" target="_self" title="{应用名字}">{应用名字}</a></h3>
+                <div class="card_info">{应用分类名字} | <span class="trn">คะแนน</span> {应用评分}</div>
+              </div>
+            </div>
+          </div>
+          {/应用}
+        </div>
+      </div>
+      <div class="col s12" id="app_popular">
+        <div class="text_block z-depth-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <h5>แอปยอดนิยม <i class="fa fal-award"></i></h5>
+        </div>
+        <ul class="collection z-depth-3" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">
+          {应用:数量=10;排序=阅读}
+          {无数据}<li class="collection-item center">ยังไม่มีข้อมูลแอป</li>{/无数据}
+          <li class="collection-item">
+            <a class="title" href="{url}" target="_self" title="{应用名字}">{应用名字}</a>
+            <span class="secondary-content"><i class="fa far-eye"></i> {应用阅读量}</span>
+            <p class="bbs_meta">{应用分类名字} | เวอร์ชัน {应用版本} | ขนาด {应用大小}</p>
+          </li>
+          {/应用}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Load Global Footer -->
+{footer:footer.global.html}
